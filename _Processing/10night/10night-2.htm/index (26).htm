@@ -1,0 +1,1104 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=gb2312">  
+	<STYLE type='text/css'>
+		<!-- 
+		 a{text-transform: none; text-decoration: none;} 
+		 a:hover {color: #FF0000; text-decoration: underline} 
+		 td {  font: 11pt '宋体'} 
+		 -->
+		pre { 
+		
+			white-space: pre-wrap; /* css-3 */ 
+			white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ 
+			white-space: -pre-wrap; /* Opera 4-6 */ 
+			white-space: -o-pre-wrap; /* Opera 7 */ 
+			word-wrap: break-word; /* Internet Explorer 5.5+ */ 
+			width:998px;
+			overflow:hidden;
+		} 
+	</STYLE>	
+    <title>（二届）三十夜 驾训班艳遇 -rich98.com</title>
+	<meta name="Keywords" content="二届,三十,艳遇,（二届）三十夜 驾训班艳遇,接触零距离,">
+	<meta name="Description" content="（二届）三十夜 驾训班艳遇">
+  </head>
+<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
+<div class="body_center" id="head_ad">
+	<center><center>
+<IFRAME ID=topictop FRAMEBORDER=NO SCROLLING=NO name=iframe_topictop SRC=http://list.6park.com/web/topictop.html width=1000 height=64></IFRAME>
+</center></center>
+</div>
+<hr width=1000 size=1></center>
+<script charset="utf-8" src="./public/js/jquery.js"></script>
+<script charset="utf-8" src="./public/js/editor/kindeditor.js"></script>
+<script charset="utf-8" src="./public/js/editor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="./public/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script language="javascript">
+	var editor;		
+	function changeeditor(obj){
+		
+		if(editor){
+			editor.sync();
+			editor.remove('textarea[name="content"]');
+			editor = undefined;
+			obj.innerHTML='即见即所得模式|预览模式';
+			$("#parktools").show();
+		}
+		else{
+			$("#parktools").hide();
+			editor = KindEditor.create('textarea[name="content"]', {
+			resizeType : 0,
+			allowPreviewEmoticons : true,
+			allowImageUpload:false,
+			width:"470px",
+			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
+			});
+			obj.innerHTML='旧版发帖模式';
+		}
+	}
+	
+	
+	
+	function dovote(tid){
+		window.open("index.php?app=forum&act=vote&old=1&tid="+tid); 
+	}
+	
+
+			
+	function checktitle(){
+		var _title = $("#subject").val();
+		var _content = $("#content").get(0).value;
+		var _status = $("#rename").val();
+		_content = nl2br_js(_content);
+		$("#content").get(0).value = _content;
+		if(_title.length>60){
+			alert("标题长度过长，标题长度不能超过60个字符或30个汉字长度");
+			return false;
+		}
+		else{
+			if(_status == 1){
+				var date=new Date();
+				date.setTime(date.getTime()-10000);
+				document.cookie="scode=828; expire="+date.toGMTString()+";path=/"
+			}
+			
+			return true;
+		}
+	}		
+	function doImgOnload(img){
+			var   maxWidth=800;
+			var   maxHeight=10000;
+			var   width=img.width;
+			var   height=img.height;
+
+			if(!(width> maxWidth || height> maxHeight))
+				return;
+			if(width/height >= maxWidth/maxHeight){
+					img.width=maxWidth;
+			}else{
+					img.height=maxHeight;
+			}
+
+	}
+
+
+	$(document).ready(function(){
+	  $(".show_content img").bind("load",function (){
+			doImgOnload(this);
+	  });
+		$(".replyViewBtn").fancybox({
+				'onStart':function(){
+					var _content = $("#content").get(0).value;
+					_content = nl2br_js(_content);
+					$("#replyView").html(_content);
+					$("#replyView").show();
+				},
+				'onComplete':function(){
+					
+				},
+				'onCleanup':function(){
+					
+				},
+				'onClosed':function(){
+					$("#replyView").hide();	
+				}
+		})
+	});	
+
+
+
+
+//留园编辑器
+Selection = function(input){
+					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
+			};
+			with({o: Selection.prototype}){
+					o.setCaret = function(start, end){
+							var o = this.input;
+							if(Selection.isStandard)
+									o.setSelectionRange(start, end);
+							else if(Selection.isSupported){
+									var t = this.input.createTextRange();
+									end -= start + o.value.slice(start + 1, end).split("\n").length - 1;
+									start -= o.value.slice(0, start).split("\n").length - 1;
+									t.move("character", start), t.moveEnd("character", end), t.select();
+							}
+					};
+					o.getCaret = function(){
+							var o = this.input, d = document;
+							if(Selection.isStandard)
+									return {start: o.selectionStart, end: o.selectionEnd};
+							else if(Selection.isSupported){
+									var s = (this.input.focus(), d.selection.createRange()), r, start, end, value;
+									if(s.parentElement() != o)
+											return {start: 0, end: 0};
+									if(this.isTA ? (r = s.duplicate()).moveToElementText(o) : r = o.createTextRange(), !this.isTA)
+											return r.setEndPoint("EndToStart", s), {start: r.text.length, end: r.text.length + s.text.length};
+									for(var $ = "[###]"; (value = o.value).indexOf($) + 1; $ += $);
+									r.setEndPoint("StartToEnd", s), r.text = $ + r.text, end = o.value.indexOf($);
+									s.text = $, start = o.value.indexOf($);
+									if(d.execCommand && d.queryCommandSupported("Undo"))
+											for(r = 3; --r; d.execCommand("Undo"));
+									return o.value = value, this.setCaret(start, end), {start: start, end: end};
+							}
+							return {start: 0, end: 0};
+					};
+					o.getText = function(){
+							//获取选中内容
+							var o = this.getCaret();
+							return this.input.value.slice(o.start, o.end);
+					};
+					o.setText = function(text){
+							//设置选中内容
+							var o = this.getCaret(), i = this.input, s = i.value;
+							i.value = s.slice(0, o.start) + text + s.slice(o.end);
+							this.setCaret(o.start += text.length, o.start);
+					};
+					new function(){
+							var d = document, o = d.createElement("input"), s = Selection;
+							s.isStandard = "selectionStart" in o;
+							s.isSupported = s.isStandard || (o = d.selection) && !!o.createRange();
+					};
+			}
+			var selection;
+			var textId = "content";
+			//设置粗体
+			function Cbold(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<b>"+selection.getText()+"</b>";
+				selection.setText(s);
+			}
+			//设置斜体
+			function Citalic(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<i>"+selection.getText()+"</i>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Cunder(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<u>"+selection.getText()+"</u>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Ccenter(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<center>"+selection.getText()+"</center>";
+				selection.setText(s);
+			}
+			//插入图片
+			function Cimage(){
+				selection = new Selection(document.getElementById(textId));
+				var s = prompt("请输入图片的网络地址:", selection.getText());
+				if(s !== null){
+					s = "<img src='"+s+"' />";
+					selection.setText(s);
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			//插入flash
+			function flash() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("Flash URL 地址","http://");      
+				if (txt!=null) {
+					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
+					selection.setText(AddTxt);
+					} 
+					else if(s == ''){
+					alert('您输入的内容为空');
+				} 
+			}
+			function music() {
+				txt=prompt("音乐文件地址","http://");      
+				if (txt!=null) {
+					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
+					selection.setText(AddTxt);
+				}
+			}
+
+			function real() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("请输入电影文件地址","http://");  
+				if (txt!=null) {
+					$.get("./public/movie.php", {url:txt,width:0,height:0},
+						function(data){
+						selection.setText(data);
+						});        
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			function nl2br_js(text){
+				return text;
+			}
+			
+
+			function changeuser(obj){
+				//$("#login_user_info").remove();
+				var _status = $("#rename").val();
+				if(_status == 1){
+					$("#login_hidden").hide();
+					$("#rename").val('0');
+					$(obj).html('切换发帖账号');
+				}
+				else{
+					$("#login_hidden").show();
+					$("#rename").val('1');
+					$(obj).html('取消切换');
+				}
+			}
+			
+</script>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">加跟贴</a>]·[<a href="index.php?app=sys&act=threadmanage&tid=13868100">版主管理</a>]·[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="http://news.6park.com" target='_blank'>分区新闻</a>]·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">繁體閱讀</span></a>]</td></tr>
+ <tr bgcolor='#E6E6DD'> <td class="show_content">
+ <center><font size=6><b>（二届）三十夜 驾训班艳遇</b></font></center>
+
+送交者: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=接触零距离' target=_blank>接触零距离</a>[虎威将军★★☆] 于 2013-09-01 19:27 已读 200 次 <a href="http://t.6park.com/index.php?mod=接触零距离" target=_blank>@接触零距离@的微博</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13868100&tag=禁忌书屋&title=（二届）三十夜 驾训班艳遇&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='转发本贴到微博'></a><p></p>
+	<p>回答: <a href="index.php?app=forum&act=threadview&tid=13868067">【十日谈】（第二届） 作者：多人</a> 由 接触零距离 于 2013-09-01 18:53</p>
+	<!--bodybegin-->
+<pre>
+来源:巨豆情色网 作者:ＦＥＥＬ 
+
+　　处理∶ＦＥＥＬ 
+
+　　第一章百合夫人的尿片 
+
+　　为让考取学习执照的百合握方向盘，本田是她的道路驾驶教练。 
+
+　　「在下一个十字路右转！」大约经过二十分钟后，本田说道。 
+
+　　百合在绿灯的十字路口慢慢向右转。 
+
+　　刹那间，一个幼稚园的小男孩冲出到车前。 
+
+　　「危险！」本田大叫的同时，尽速踩下助手席前的脚煞车。 
+
+　　教练车的车头冲出斑马线，熄火停住。 
+
+　　男孩露出恐惧的眼光，几乎要撞上教练车穿过马路跑走。 
+
+　　百合伏在方向盘上，后背起伏不停。 
+
+　　「啊┅┅吓死我了！我以为撞上那男孩了┅┅」不久后，百合抬头说。 
+
+　　后面的车按喇叭催促开车，百合发动引擎，通过十字路后在路旁停车。 
+
+　　「啊！我怎么办？」百合扭动身体。 
+
+　　「你怎么了？」本田看着百合，他心脏直跳动。 
+
+　　本田心里想∶有时女人在受到惊吓时，月经就提前开始。若是这样，就要暂 时停止驾驶，去买生理用品。 
+
+　　「是不是月信突然来了？这是经常发生的事┅┅」本田温和地问。 
+
+　　负责教百合，本田今天是第一天。 
+
+　　百合她的身高约一百六十公分，胸罩可能是穿Ｃ罩杯。坐上教练车时，态度 很镇定，判断她是有夫之妇。年龄是二十八，不会超过三十岁。说她是位美女， 不如说可爱更妥当，留下幼女般的表情。 
+
+　　本田看到她时，心里想∶她是个使男人搂在怀里的那种女人。 
+
+　　「不，月信刚过去，我是标准的三十天型，从没有差误。」百合红着脸摇头 说道∶「可是┅┅」 
+
+　　「可是什么？」 
+
+　　「我有很怪癖的毛病┅┅」 
+
+　　「怪癖的毛病？」 
+
+　　「受到惊吓时，就会┅┅」百合低下头。 
+
+　　「知道了，是不是受惊会漏尿？」本田说着。 
+
+　　以前曾教过几名有这种毛病的女人，教驶完后女人下车后座位是湿淋淋的。 漏尿后不说一声就走了，那样的女人就不会再来驾训班。 
+
+　　百合转开脸，轻轻点头。 
+
+　　「如果有这样的毛病，最好来驾训班前先用好卫生棉┅┅」 
+
+　　「卫生棉是不够用的。」 
+
+　　「那么，就用成人纸尿片。我看过有这样的女人，一旦漏尿后就不来，已经 拿起学习执照，实在可惜，所以下次遇到这样的女性，要建议她使用纸尿片。」 
+
+　　「我是用了纸尿片啊┅┅」百合的声音小的几乎听不见。 
+
+　　「那就好了，不用担心啊！」 
+
+　　「可是，我想换！刚才的惊吓使那个东西湿了┅┅」 
+
+　　「原来如此┅┅」本田露出困惑的表情向四周观望∶「如果有公共厕所或车 站就好了，但这一带没有┅┅」 
+
+　　这时突然注意到路边的旅馆广告牌上面写下一个「红绿灯转二百公尺」。 
+
+　　百合也在看着广告牌，好像只好去那里，除此之外没有办法。 
+
+　　「没有办法了，请把汽车开到那里去吧！」 
+
+　　「正在学习中，你自己开吧！」 
+
+　　「要我开车进入旅馆吗？」 
+
+　　「是啊！」 
+
+　　「那样我会出车祸！只是想到要进入旅馆，就紧张得身体发抖了┅┅」 
+
+　　「好吧！我来开。」本田从助手席下来，改坐到驾驶座上，百合从驾驶座上 移到助手席。 
+
+　　本田将车开到十字路口左转，照广告牌的指示开进旅馆的大门。 
+
+　　旅馆的一楼是车库，二楼是客房。客房分为卧房和浴室，二间的大小都差不 多。 
+
+　　进入客房后，立刻响起电话铃声，是确定是否已进入客房的电话。 
+
+　　「临走时请打电话到柜台！请休息吧！」女人的声音说完后就挂断。 
+
+　　「什么电话？」 
+
+　　「柜台打来的，要我们休息。」 
+
+　　「哦！那就好，我还以为有熟人看到我进入旅馆打来的，害我又漏尿了。」 百合靠在墙上说。 
+
+　　「我去浴室取下尿片，然后去洗澡，如果不洗会过敏生红疹。」百合深呼吸 后，想往浴室走去，本田立即抓住她的手拉过来。百合摇摇摆摆地倒入本田的怀 里，本田立刻把嘴压在百合的嘴上。 
+
+　　百合挣扎着，但不久就不动了。 
+
+　　本田一面吻，一面把手伸入裙子里。 
+
+　　百合穿的不是裤袜，是膝上的长袜。长袜上是光滑的大腿，上面有隆起的纸 尿片。 
+
+　　本田把百合推倒在床上，撩起她的裙子，露出用纸尿片的下半身，雪白的大 腿在纸尿片下显得特别性感。 
+
+　　纸尿片是裤状，在腰部用魔术带固定。 
+
+　　「你要做什么？」百合软弱无力的问。 
+
+　　「看你像少女般的脸，我就觉得像保护者，很想替你更换尿片。」本田开始 拉开魔术带。 
+
+　　「啊！那样太难为情了，有尿在上面的┅┅」百合压住本田的手。 
+
+　　「还是我给你换，就交给我吧！」 
+
+　　「吱吱」的拉开腰上两侧的魔术带，解开纸尿片。 
+
+　　「啊！」百合用双手盖在脸上。 
+
+　　出现湿湿的黑毛贴在上面的耻丘，闻到强烈的尿味。 
+
+　　本田用换尿片的要领，用尿片干的部份擦拭阴毛和阴户的肉缝以及屁股，然 后把纸尿片弄成一团。 
+
+　　湿湿的黑毛很快就干了，离开耻丘站立造成立体的三角地带。 
+
+　　本田把嘴压在毛丛上，干的尿味变成女人的味道，进入本田的鼻孔，本田的 舌头找到肉缝。从阴户中涌出不是尿的液体，用舌尖捞起那液体，涂在肉缝上端 露出在花蕊上。 
+
+　　「啊┅┅」百合的屁股弹动一下，「不要舔那样脏的地方┅┅」百合说。 
+
+　　百合虽这样说，但把双腿分开抬起花蕊。，这样一来，更容易向花蕊攻击。 
+
+　　用舌尖在花蕊上拨弄时，百合的身体多次弹动。 
+
+　　「你不觉得脏吗？」百合哼一声，然后才这样问。 
+
+　　「我不觉得脏，但有一点酸酸的，可是口渴了┅┅」 
+
+　　本田回答时，不能用舌头，所以用手指摸弄花蕊。 
+
+　　「啊┅┅」百合的上身向后仰，肉缝缩短成一半。 
+
+　　本田一面玩弄花蕊，一面仔细看百合的阴户。 
+
+　　在花蕊下分成两片的淫唇，内侧是粉红色，外侧是红色。淫唇的发育很好， 但不是很厚。肉缝不长，因此尿道口是一半向着通路开启，这样在尿水出来时应 该会绕到通路的入口处。 
+
+　　本田觉得，漏尿的毛病可能和肉缝的长短有密切关系。如尿水没有碰到通路 能有力的形成秘物线时，女人的肉体只会感受到放出感。可是尿水直接射击在通 路的入口上，就会产生快感，而且浇在入口的尿水在这里改变流向，会沾湿肛门 和大腿流下去，这样也会产生快感。 
+
+　　换句话说，下半身被尿水弄湿的同时，暂时徘徊在恍惚的境地。如果身体已 经习惯漏尿，很快就能产生快感，以后就更容易漏尿。 
+
+　　「你漏尿时，不会一直向前飞吧？」本田一面玩弄花蕊，一面问。 
+
+　　「好像不是向前的┅┅」 
+
+　　「会从屁股上流下来吧？」 
+
+　　「你┅┅为什么知道？」百合从盖在脸上的手指缝中看本田。 
+
+　　本田脱下衣服后变成赤裸，挺立着的肉棒好像是冲着百合的黑丛地带瞪大眼 睛。 
+
+　　本田把百合的衣服脱光，她完全没有反抗。 
+
+　　「我可以弄吗？」本田跪在百合两腿之间，再问一次。 
+
+　　「你已经知道我全部的秘密，还有什么办法？但你不能告诉别人！」 
+
+　　「当然不会说了！」本田用肉棒的龟头在溢出蜜汁的短小肉缝上摩擦着，同 时点头。 
+
+　　龟头对正通路的入口处，屁股用力向前挺，「啊┅┅啊┅┅」百合仰头发出 哼声，同时迎接肉棒进入，百合雪白的肌肤被泄成粉红色。 
+
+　　乳房是很适当，不会太大也不会太小，微量褐色的乳头在乳晕中直立，她的 乳头发育超过乳房。 
+
+　　把肉棒插入到根部后，本田把乳头含在嘴里。在这刹那，原来软软包围肉棒 的通路猛烈收缩。 
+
+　　「唔┅┅」百合叫了一声，握住本田没有含乳头的乳房，向乳头的方向摸过 去。 
+
+　　通路的收缩有节奏的进行，就如乳头和通路是直接的，在乳头上刺激时通路 就会收缩。 
+
+　　本田停止在乳头上亲吻，专心抽插动作上，这样一来通路就松弛。再度把乳 头含在嘴里时，通路也又开始收缩。本田决定要继续爱抚乳头。 
+
+　　「啊┅┅」百合的兴奋逐渐高昂，发出苦闷的哼声，「我快要泄了┅┅」百 合抱紧本田的头这样说。 
+
+　　「啊┅┅我要漏出来了┅┅」百合又说。 
+
+　　「漏出来？」 
+
+　　「每次都是忍耐的，但忍耐时泄的程度就会浅，我不想用忍耐的泄出来。」 
+
+　　「那就不要用忍耐啊！」 
+
+　　「可是会把床弄湿了！」 
+
+　　「有没有准备纸尿片？」 
+
+　　「有！」百合把弄在床上的皮包拉过去，从里面拿出新的纸尿片。 
+
+　　本田让百合抬起屁股，把纸尿片铺在下面∶「这样就不用担心弄湿床了，不 用忍耐的泄出来吧！」 
+
+　　「好的，谢谢！」百合闭上眼睛。 
+
+　　本田再把乳头含在嘴里，恢复原来抽插的动作。 
+
+　　「啊┅┅啊┅┅好┅┅」百合用很大的声音，一面叫一面挺起屁股，声音越 来越大，也变成迫不及待的音调。 
+
+　　肉的通路夹紧，几乎要把肉棒夹断的样子。 
+
+　　「漏出来┅┅漏出来了┅┅」百合的身体向后仰，嘴里喃喃的念着。 
+
+　　就在这刹那，本田感到耻骨一带开始增加温度，这样的温度引起快感，唯有 那里有怀炉般奇妙的温暖。 
+
+　　百合的头向后仰，翻出白眼，全身小幅度的痉挛。 
+
+　　本田悄悄的看去结合部位，就如同喷泉慢慢的冒水一样，从百合的阴户有流 出，沾湿本田的阴毛。只有这里感到温暖，就是这道水流的关系。 
+
+　　压迫结合部时，温暖的快感顺着扩散，强烈的快感使本田不停的发出哼声， 射出精液。 
+
+　　百合软绵绵的，一直不肯从床上起来。 
+
+　　因为学习驾车的时间快到了，所以必须回训练班。 
+
+　　「起来！去浴室洗一洗好回驾训班。」本田拉起百合进入浴室。 
+
+　　百合勉强站立，本田在百合身上涂抹香皂。 
+
+　　「泄出来时也漏尿了┅┅」 
+
+　　用篷头在黑毛上冲洗时，百合好像怕痒的扭动身体。 
+
+　　「暖暖的很舒服┅┅」 
+
+　　「不会讨厌吗？」 
+
+　　「正好相反啊！」 
+
+　　「我也很舒服。过去和丈夫性交时，拼命的忍耐。」 
+
+　　「该漏出来！我想你先生也一定会高兴。」 
+
+　　「会那样吗？」 
+
+　　「你是喷潮的女人，那是最好的性器，不用怕羞，大大的漏出来。」 
+
+　　「如果丈夫会高兴，我倒愿意试试看，可是他讨厌闹出离婚事件。如让他知 道，我要你负责！」 
+
+　　「绝对不会的！」本田给她保证，用手指拨开阴唇，插入中指把里面的精液 洗出来。 
+
+　　「准备的纸尿片也不能用，我不穿内裤回去，开车时怕尿会尿湿驾驶座上， 还是你开吧！」百合说。 
+
+　　「好吧！」 
+
+　　本田付帐后，驾驶教练车离开旅馆。想到助手席上的百合没有穿内裤，虽然 刚刚才做爱，但肉棒又抬起头。 
+
+　　「改日还想和你做爱┅┅」本田对着百合看一眼。 
+
+　　「这样可怕的秘密都被你知道了，我还能拒绝吗？」百合叹一口气，接下去 说∶「但不要拖拖拉拉，这种事久了一定会被发现！」 
+
+　　「那么再见面二次，不会再要求了！」本田定下次数，他不希望和驾训班的 学生发生关系的事被公开。 
+
+　　「能保证吗？」百合叮咛一句。 
+
+　　「我保证！」本田点头答应。 
+
+　　「那么下一次在星期四的下午六点吧！」 
+
+　　「好啊！」 
+
+　　「那个时间我在驾训班前的公车站等你！」 
+
+　　「知道了！」本田心里重复一次时间和地点。 
+
+　　「喂！」百合握着本田的手∶「下次约会时，我也会穿纸尿片来哦！」百合 说。 
+
+　　「那是最好的！打开纸尿片是比脱三角裤更有性感！」 
+
+　　「我不是那个意思，我是说有了纸尿片，就不用再铺毛巾或塑胶布，就可以 在开放的情形能那个了！」 
+
+　　「原来是这个意思。但下次我会要你在上面或我从背后插入，不一定在屁股 下。」 
+
+　　「不要叫我做太奇怪的姿势啊！」百合的呼吸有点急促，大概是幻想女人在 上或背后的姿势吧！ 
+
+　　本田一只手握方向盘，另一只手伸入百合的裙子里，在耻丘毛下抚摸着，那 里有新的蜜汁不停地涌出。 
+
+　　本田在星期四下午六时，驾驶自己的车离开驾训班。 
+
+　　百合一个人站在公车站前，让百合上车后，开往上次去的旅馆。 
+
+　　跑那一次已经六天。 
+
+　　「你的脸看起来好像很疲倦的样子┅┅」本田从百合的侧边看去说着。 
+
+　　「因为从那次后是每天啊！」 
+
+　　「什么那次以后？」 
+
+　　「就是和你睡觉的那天晚上，因为很舒适，回去时你又把我的身体弄湿了， 所以又和老公做爱。结果从那次后，丈夫每天晚上都来，星期六到星期日，还要 求四次┅┅」 
+
+　　「每次都漏了吗？」 
+
+　　「铺了纸尿片┅┅」 
+
+　　「我说过你丈夫会高兴的。」 
+
+　　「可是没有想到会那样着迷啊！」百合露出艳丽的眼神看着本田。 
+
+　　次数太多时，子宫形成持续充血的状态，出现在眼上就会艳丽了。 
+
+　　「那么今夜他还会要求吧？」 
+
+　　「因为要出差。如果早知道丈夫会这样，今天就不和你约会了，现在真想休 息┅┅」 
+
+　　「那┅┅就这样回去吗？」 
+
+　　「不用了！反正已经出来了，也想早点完成我们的约定。」百合懒懒的说。 
+
+　　本田伸手到百合的裙子，她穿了纸尿片，证明她准备和本田做爱，裤子里的 肉棒硬起来。本田让百合从裤子上握住硬起来的肉棒，踩下油门。 
+
+　　进入旅馆的房间，本田一面吻一面把百合推在床上。脱掉裤子，拉开纸尿片 的魔术带，露出秘密的黑毛。 
+
+　　没有像上次那样漏尿，所以没有尿的味道，但散发出闷热的女人味，透过毛 看到毛下的肌肤发红。 
+
+　　「做爱是很激烈吧？」本田用手摸百合的阴毛。 
+
+　　「能看出来吗？」 
+
+　　「肿肿的还有热度┅┅」本田用手指拨开阴唇。肉洞里不是粉红色，红红的 肿起来。 
+
+　　看完后脱去百合的衣服，本田自己也脱着精光。把百合的双腿分开得很大， 用舌头舔女人的花蕊，花蕊的粘膜也有热度。 
+
+　　「今晚没有酸味┅┅」很体贴的用舌头轻轻在花蕊上爱抚。 
+
+　　「因为我在出来以前洗过澡┅┅」百合说话时身体不停的弹动。 
+
+　　本田很细腻的在花蕊上用舌尖爱抚，蜜汁慢慢涌出来，一直到蜜汁流到纸尿 片上，不停地用手指头轻轻舔花蕊和花瓣，同时不忘记抚摸乳头。 
+
+　　百合的身体像被溶化时，本田要她把身体转过去，这是从背后结合的姿势。 
+
+　　「我是不太喜欢这样的。」百合虽这样说，但还是做出本田要求的姿势。 
+
+　　本田将肉棒对正百合的肉洞口，就从背后插入，洞里像火一般的炽热。本田 用双手抱住屁股，开始进行抽插运动。 
+
+　　「啊┅┅」百合用手抱着肚子扭动着屁股。 
+
+　　从肉洞流出蜜汁，但一直都没有出现喷潮现象。 
+
+　　「对不起，用这种背后插入的姿势没泄出来过┅┅」百合说。 
+
+　　「女人在上的姿势呢？」 
+
+　　「有过几次┅┅」 
+
+　　「那么你就到上面来吧！」 
+
+　　本田铺好纸尿片，自己仰卧在上面。 
+
+　　「真好笑，像婴儿一样┅┅」百合笑起来。 
+
+　　「婴儿能这样吗？」本田把沾上蜜汁而发出光泽的肉棒对向百合。 
+
+　　「婴儿会这样的话，妈妈们会引起欲望，说不定会强奸婴儿了。」百合一面 说，一面握好肉棒导向自己的肉洞，轻轻坐下去，肉棒很顺畅的进入肉洞。 
+
+　　「啊┅┅好舒服┅┅」百合骑在本田的身上，开始巧妙的活动屁股。 
+
+　　本田期盼将有出现喷潮的现象，从下面配合百合的动作挺起屁股┅┅ 
+
+　　第二章偷情的经验 
+
+　　「请多指教！」 
+
+　　当美雪第一次坐在本田的教练车时，本田的心脏跳动是不规则的。因为美雪 所穿的迷你裙，几乎能看到三角裤。她坐下去时，大腿快要露到屁股。 
+
+　　本田不由得看美雪的脸。 
+
+　　大概是二十四、五岁，从镇定的感觉知道她是有夫之妇。美雪幼稚的脸孔， 好像没有性交经验。说她是美女，不如用可爱形容更妥切。 
+
+　　你今天开始要公路驾驶了，本田假装看卡片偷看大腿。 
+
+　　她大腿完美无缺，和幼稚的脸孔相反，本田把视线从大腿移向胸部。 
+
+　　安全带使乳房显得更突出，胸部也相当有量感。方向盘显得高一些，这表示 美雪的身材娇小。 
+
+　　「那么在场内开一圈后出发吧！」本田催促。 
+
+　　「是！」美雪踩下离合器，放进一档，松开手煞车，开动教练车。 
+
+　　每次美雪踩离合器，迷你裙就越来越撩起。 
+
+　　「这个女人也是性欲不能满足的有夫之妇┅┅」本田看着美雪的侧脸，留有 少女影子的脸上唯有嘴唇不相配，她的嘴唇厚又极富有性感。 
+
+　　来驾驶班的大多是有夫之妇，都穿长裤。就是穿裙子，也穿盖住膝的长裙。 
+
+　　本田等教练们一方是教练，一方面也是对丈夫不满足的已婚女人最适当的畸 恋对象。 
+
+　　开到公路上，美雪开车的动作很熟练，不像是第一次上路的人。 
+
+　　「你不像是第一次开车┅┅」本田看着美雪的侧脸说。 
+
+　　「因为过去我有执照，忘记更换，已经过期三年了。」美雪说话时露出雪白 的牙齿。 
+
+　　「你可以直接去监理所申请啊！」 
+
+　　「算了！反正有空决定从头开始┅┅」 
+
+　　「那么就没有什么教你的了。」本田露出讶异的表情。 
+
+　　「说实话┅┅我是想偷男人的┅┅」美雪对着本田看一眼，说出大胆的话∶ 「因为现在不是流行婚外情吗？我也想试试。我这生和男人发生关系的只有一个 人，那就是我丈夫┅┅」 
+
+　　「那样不是很好吗？」 
+
+　　「当然不好！只知道丈夫的身体，不觉得可怜吗？」 
+
+　　「是那样吗？」本田再度在美雪身上打量，她的身体生来就是和男人做爱∶ 「不错，有这样的身体只让丈夫一个人享用，岂不是太可惜了？」 
+
+　　「我听有过婚外情的朋友说，男性的生殖器有各种形状，大小都不一样。」 
+
+　　「好像是的！我知道女性是各不相同，但男人的我还没有比较过。」 
+
+　　「你没有比较吗？听说真的不一样，硬度、勃起的角度不同，持续时间也不 一样┅┅」 
+
+　　眼前的斑马线上有位老妇人走过，美雪想踩煞车，但脚滑落了，靠本田踩紧 急煞车才能免一场车祸。 
+
+　　「你怎么了？」 
+
+　　「对不起！我的脚滑掉了┅┅」 
+
+　　「脚滑了？」 
+
+　　「我的三角裤里是洪水状态呀！」美雪看着本田，她的眼睛湿润露出欲火， 还轻微充血∶「你换我开车，带我去能偷情的地方。公路教练太无聊，我们去床 上教练吧！」 
+
+　　「我可以吗？」 
+
+　　「你是我喜欢的那种男人┅┅」美雪恨不得马上就想接吻。 
+
+　　『已送上门了，不能不要吧┅┅』本田想着，从助手席下来。 
+
+　　美雪跨过排档杆移到助手席，很清楚的看到穿裤袜的三角裤。 
+
+　　本田把教练车开到一家豪华的旅馆。 
+
+　　「啊！我终于要偷情了，心跳快要爆炸了！」美雪把手放在胸前。 
+
+　　「如果让你的老公知道可不得了啦！」本田把车开进停车场说着。 
+
+　　「我现在是不会想那种事的。」 
+
+　　美雪先走下教练车，等本田下车后，紧靠在本田的身上，紧紧搂住他∶「我 好像走不了┅┅」美雪的表情很兴奋。 
+
+　　本田搂着美雪的脸，走进旅馆到柜台拿锁匙。 
+
+　　「请坐电梯到三楼。」女人说。 
+
+　　按那女人的指示坐电梯上三楼，有一间房前红灯在闪亮，就是这一间。 
+
+　　美雪先走进去，本田跟着进去后把门锁上。美雪站着直发抖，本田把她的身 体转过来，抱在怀里接吻。美雪伸出舌头，本田的肉棒已勃起。 
+
+　　那是很长的吻。 
+
+　　「嘻嘻┅┅」吻后美雪不再发抖，很难为情的笑着，用屁股顶在坚硬的肉棒 上。 
+
+　　本田脱下上衣，美雪松开他的腰带，拉下拉炼，裤子滑落在脚下。美雪跪在 本田前面，把脸靠近隆起的地方，从内裤上咬肉棒一部份，在那里留下淡淡的口 红印。 
+
+　　「不能弄上口红啊！被老婆看到就不好解释了！」本田温和的指责。 
+
+　　「对不起！不习惯偷男人的女人真没有用！等一下我给你洗┅┅」美雪说完 就把内裤拉到脚下，凶猛耸立的肉棒瞪着美雪的脸。 
+
+　　「好棒啊！肉茎上的血管冒出来┅┅」美雪瞪大眼睛看肉棒，然后轻轻的伸 手握住，「啊！好硬又好热！」好像要测试硬度，不停在手里握住。 
+
+　　「又硬又热！你老公也一样吧？」 
+
+　　「可是硬度不一样，好像你的硬多了！」美雪比较保守的揉搓∶「就是热度 也有微妙的差异，你的至少热一、二度┅┅」 
+
+　　「和已习惯的对象性交也会低潮，硬度和热度都会降低一点吧？」 
+
+　　「这样说来，对象若是我，我丈夫的硬度是马马虎虎了。」美雪咬下嘴唇∶ 「而且你的这个龟头是胀起的，插在里面一定会刮里面的肉。」 
+
+　　美雪轻轻摸龟头。大概美雪老公的龟头是直桶式的，没有龟头伞。 
+
+　　「我可以闻一闻吗？」美雪抬头看本田。 
+
+　　「好啊！但今天还没有洗澡，味道也许强烈┅┅」 
+
+　　「如果洗澡了，只能闻到香皂的味道了吧？还是不洗的好┅┅」 
+
+　　美丽的鼻尖几乎要碰到肉棒，做深呼吸。 
+
+　　「啊！这就是男人味吧？」美雪闭上眼睛，露出陶醉的表情说∶「好味道！ 比我丈夫的味道更有男人味！」 
+
+　　美雪每闻一下就深呼吸一次，不停的闻。 
+
+　　「不知道是什么味道？」抬起头问本田。 
+
+　　「我不知道┅┅」本田摇头。 
+
+　　除非是特效演员，男人是没有办法把自己的肉茎含在嘴里。 
+
+　　「我可以尝尝吗？」美雪红着脸，征求本田的同意。 
+
+　　「请吧！」本田的腰向前挺，龟头碰到柔软的嘴唇。 
+
+　　美雪把嘴张大，轻轻把肉棒含进嘴里，但只能勉强让龟头进去。温暖的感觉 包围着龟头，那种感觉很舒服。 
+
+　　美雪用舌尖在龟头上摩擦，「好吃！咸味刚刚好┅┅」美雪的嘴离开一下， 口水从龟头拉成一条线。再次把龟头放进嘴里，美雪就把本田的屁股搂住，前后 摇动头，用嘴唇爱抚肉棒。 
+
+　　那可爱的脸又小小的那样弄，本田已经有点冲动，很想射出精液。 
+
+　　本田把这种感觉告诉美雪，只要美雪说想比较男人的精液味道，就准备放射 在她嘴里。 
+
+　　「要和你老公的精液比一比吗？」 
+
+　　「啊！不要！我不是个很贪吃的人，只有这个我无论如何也吞不下去，还不 如┅┅」美雪红了脸有点犹豫。 
+
+　　「还不如什么？」本田催促。 
+
+　　「想把这个放进去┅┅」美雪握住肉棒低下头。 
+
+　　「知道了，给你插进去吧！」本田让美雪站起，带到床上使她仰卧∶「立刻 插进去没有意思，按我的方法给你做前戏吧！你来比较老公的前戏，看谁弄得好 也很有意思啊！」 
+
+　　本田脱光衣服。 
+
+　　「我丈夫很会弄前戏！」美雪的口吻像在煽动本田的竞争心。 
+
+　　「我可不能输给他，要看我的手腕不要？看我用舌头和手指好好的给你又舔 又摸一番┅┅」 
+
+　　本田开始脱美雪身上的衣服。 
+
+　　「啊！听到你的话我就要醉了┅┅」美雪深深的吸一口气。 
+
+　　脱上衣出现粉红色的胸罩，没有动胸罩，先撩起迷你裙脱裤袜。雪白的大腿 有一层汗，虽然可惜，但也只好脱下了。 
+
+　　拿住裙摆向下拉，美雪配合动作抬起屁股，顺利地将裙子脱下。 
+
+　　美雪是穿在侧腰系带的三角裤，三角裤的布只能掩盖耻骨的部份，阴毛很勉 强的没有从那块布溢出来。 
+
+　　「这是想偷情的女人想穿的三角裤┅┅」本田手指顺着布边摸过去。 
+
+　　「啊！好像有虫在爬！」美雪扭动下半身。 
+
+　　本田伸手到美雪的后背，解开乳罩。取下乳罩时乳房摇动几下，大概擅长前 戏的丈夫每天晚上爱抚，乳头是凸出挺立。乳晕是浅褐色，乳头是粉红色，这种 不平衡的色彩散发出奇妙的性感。 
+
+　　「你的身材真美！会使男人疯狂的身躯！你的老公一定很不放心吧？」本田 说出美雪期盼的赞美词。 
+
+　　「嘻嘻！但你不能迷上我，只是想偷一口吃而已，没有继续下去的意思！」 
+
+　　「真是坏太太！」 
+
+　　本田轻轻吸吮红色的乳头，乳晕的汗毛一张开出现粟米，在乳头和乳晕舔一 下。 
+
+　　「啊┅┅」美雪的腰挺起摇动。 
+
+　　乳房上有女人的体臭，在两个乳房上玩一阵后，本田将舌头向黑毛移动。到 达挺起的腰部，女人的体臭更强烈。 
+
+　　「不知道会出现什么样的东西？真兴奋！」本田一面抚摸双乳，一面用鼻尖 在女人的肉缝上摩擦。 
+
+　　三角裤含有湿气，薄薄的布上有女人的体臭。本田用牙咬住三角裤的腰带用 力拉，另一边也同样的被解开。就如同打开罐装香烟时一样，香醇的女人体臭冒 出来。 
+
+　　出现和三角裤的布片相同形状的草丛，大小虽然比三角裤的布小一点，但好 像经过整理，形成美好的倒三角形。草丛很茂密，几乎看不见下面的肌肤，因为 受到三角裤的压迫，卷曲的毛紧紧贴在身上。本田从左方向抚摸草丛，立即变成 立体状。 
+
+　　本田拉三角裤，从屁股下取出三角裤，陷入肉缝的部份沾上粘粘的蜜液。 
+
+　　「她很可能是蜜液很多的女人┅┅」 
+
+　　本田将美雪的双腿分开，在草丛下有张开口的肉缝，在窄小的肉缝里好像密 集许多道具。肉芽很发达，尖端的三分之一从包皮中露出，从洞口有蜜液快要溢 出，从蜜液散发出女人的香味。 
+
+　　本田没有立即用舌头舔肉芽，而拿起美雪的脚用力咬脚趾。 
+
+　　「啊┅┅」美雪没有想到他会咬那种地方，发出很大的哼声。 
+
+　　本田咬过每一只脚趾后，开始舔脚掌。 
+
+　　「啊！那个地方┅┅」 
+
+　　当美雪这样说时，本田已经从小腿肚舔到膝盖的背后。 
+
+　　「啊！这样┅┅」美雪的大腿在颤抖。 
+
+　　本田从大腿内侧向女阴慢慢舔上去。 
+
+　　「我知道了┅┅你弄得好比我丈夫弄得好┅┅」美雪大叫。 
+
+　　「还没有完！这是刚开始┅┅」 
+
+　　本田的舌头缓慢接近肉缝。 
+
+　　「啊┅┅」在舌头来到以前，肉缝已经抖抖的收缩，收缩的刹那，留在洞口 的蜜液溢出，滴落在床单上。 
+
+　　本田的舌头来到肉缝上，舌头立刻感受到刺激，嘴里扩散女人的味道和海水 味。 
+
+　　本田想用舌头顶开通路的入口，「啊┅┅」女人的花蕊收缩，拒绝舌头的进 入。 
+
+　　有些女蕊能顺畅接受舌头，但美雪的女蕊紧闭不肯开启。本田只好放弃，向 女蕊的内侧前进，最后到达肉芽，在露出约三分之一肉芽继续用舌头剥开包皮。 
+
+　　「啊！我会发疯┅┅」美雪抓自己的头，身体抖抖的跳动不停地起伏。 
+
+　　「很会前戏的先生每次都这样爱你吧？」本田推下肉芽的包皮，使肉芽露出 到根部，用舌尖轻轻舔着肉。 
+
+　　「他只是偶尔舔而已，夫妻是不会每次都做这种淫邪的事┅┅」美雪的肚子 仍旧激烈起伏，呼吸也像快要断气的说。 
+
+　　「这是淫邪的事吗？」本田每用舌尖弹一下肉芽，「啊┅┅」美雪便大腿颤 抖。 
+
+　　「啊！快一点进来吧！不然我会就这样泄出来┅┅」美雪的声音快要哭泣。 
+
+　　本田在心里想∶『她快要泄了，就以前戏而言，还有用手指挖弄通路的最后 阶段。』可是本田决定省略，如果仔细地做下去，说不定可能开始正式插入前， 美雪已晕过去。 
+
+　　「想用什么姿势？」本田看美雪的脸。 
+
+　　「你在上面吧！」美雪明确地指定正常姿势。 
+
+　　本田压在美雪身上，然后用手引导肉棒到通路的入口，体重加在下体上。通 路的入口好像拒绝偷情似的抗拒，强力突破那里的抗拒。 
+
+　　「啊┅┅」美雪伸直双腿，身体向后翘，本田顺畅地进入滑润的女体里。 
+
+　　本田原以为美雪的身材短小，所以通路也短，但肉棒竟能完全插入到根部。 
+
+　　「啊！舒服得快晕过去了┅┅」本田在结合的部位用力压迫时，美雪闭上眼 睛深深叹一口气。 
+
+　　本田缓慢做抽插运动，从美雪的耻丘传来舒畅的压迫感，因为耻丘隆起，相 对的觉得入口偏向下方。 
+
+　　「啊！在里面刮到了┅┅」将插到根部的肉棒向外拉出时，美雪用强大力量 夹紧肉棒，同时挺起的山丘。 
+
+　　「你那大龟头在里面刮太舒服了┅┅」美雪用快要哭泣的声音说。 
+
+　　龟头膨胀的头脑，要将积存在肉洞里的蜜汁刮出来，这种感觉大概使美雪感 到特别舒服。 
+
+　　「和丈夫是没有这种滋味的┅┅」美雪的身体颤抖。 
+
+　　「怎么样？偷吃的味道┅┅」 
+
+　　「好┅┅我会迷上的┅┅」美雪拼命抱紧本田的身体。 
+
+　　「你觉得我的身体怎么样？」美雪用颤抖的声音问。 
+
+　　「太好了！咬紧的感觉很好！肉洞的深度也好，而且肉棒头硬硬隆起的感觉 也无话可说┅┅」 
+
+　　本田一面说，一面慢慢插入到底后迅速拔出，这样的运动能使膨胀的龟头发 挥最大限的效果。 
+
+　　「我丈夫不会用这种方法┅┅啊┅┅啊┅┅」美雪抬起后背∶「啊！我要泄 了┅┅」猛烈夹紧肉棒，全身不停的痉挛，她是达到高潮了。 
+
+　　本田也感到自己的煞车松开，「我也要射了┅┅」本田抱紧娇小的肉体，加 快抽插运动。 
+
+　　美雪的肉洞好像要引诱本田放射，有节奏的收缩。在这样的节奏中，本田也 有节奏的放射出男人的精液。 
+
+　　接受本田放射的东西后，美雪将挺起的后背跌回到床上，松弛全身的力量， 将放射后变软的肉棒推出。 
+
+　　本田下床走进浴室淋浴，用香皂仔细洗沾满蜜液和精液的肉棒。手指也有女 人的味道，用香皂洗净。 
+
+　　从浴室出来，美雪还是赤裸的仰卧，双腿微微分开，像昏迷一样的睡着了。 
+
+　　「回去吧！」本田摇醒美雪。 
+
+　　美雪慢慢的爬起，穿上三角裤，在腰的两侧打结。 
+
+　　「不去淋浴吗？」本田惊讶的问。 
+
+　　「不要！这是第一次偷情，我要把你的味道好好的带回去。」美雪一面穿上 乳罩一面摇头。 
+
+　　在美雪的眼下出现黑晕，好像在证明她的偷情。 
+
+　　「老公发现我可不管。」 
+
+　　「不要紧，他今晚不会回家。」 
+
+　　「不回家？」 
+
+　　「说实话┅┅」美雪对本田做出调皮的表情∶「我不是正房，是一位议员的 小老婆┅┅」 
+
+　　「什么？真的吗？」 
+
+　　「惊讶了吗？」美雪愉快的校着穿上迷你裙。 
+
+　　「议员的小老婆忘记更换驾照？还会穿迷你裙？我不相信！是你骗我吧？」 本田呆呆的望着美雪。 
+
+　　「在这个世界上有很多无法相信的事啦！如果他不是那样古板的人，我也不 会想到要出来偷情了。」 
+
+　　穿好衣服，美雪对着镜子化。 
+
+　　本田急忙穿上衣服，付款后离开旅馆。 
+
+　　「谁开车？」 
+
+　　「当然是你！快到驾训班时再换过来。」美雪毫不考虑的坐上助手席∶「偷 情这件事比我想象的还要好玩┅┅」 
+
+　　本田坐在驾驶座，握着方向盘，美雪把头靠在本田的肩上。 
+
+　　「以后还要┅┅」美雪说。 
+
+　　「太太，你真淫荡啊！」本田开动汽车。 
+
+　　「啊！」没有多久美雪轻轻的惊呼。 
+
+　　「偷情的证据倒流出来了吗？」本田微笑着问。心想∶「当驾训班的教练真 好！」 
+
+　　【完】 
+
+　　☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆ 
+
+　　召集人∶「由于ＦＥＥＬ贤伉俪事务繁忙，所以本次不克出席， 仅以书面道贺。」 
+
+　　从不乱∶「那就念来听听吧！」 
+
+　　召集人∶「根据巾雍大姊夫的解释∶本来打算写《菲尝男女》， 但考虑到读者有限，又考虑要写个《风尘劫最终章》，但我老婆要照 顾小孩，而我的文笔又┅┅请多包涵！！」 
+
+　　鹰魔∶「虽然看不见亲创作品，但有这份心意也够了。好，我们 继续欢迎十日谈的第三十一夜?重罪。」<!--bodyend-->
+</pre>
+<div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
+</td></tr>
+	<tr bgcolor='#E6E6DD'>
+		<td height=25>
+			<center>喜欢接触零距离朋友的这个贴子的话，[<a href="javascript:void(0)" onclick='dovote(13868100)'><font color=FF0000>请点这里投票加分支持</font></a>]
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td>
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="index.php?app=forum&act=userview&username=接触零距离" >ID前期主贴发言</a>]·[<a href="./index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">-->>加跟贴</a>]·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13868100">--向朋友推荐--</a>]·[<a href="javascript:history.go(-1)">返回前页</a>]
+			</div>
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">贴子内容是网友自行贴上分享，如果您认为其中内容违规或者侵犯了您的权益，请与我们联系，我们核实后会第一时间删除。</td></tr>
+</table>
+<center><center>
+<IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
+</center></center>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>所有跟贴:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">加跟贴（积极回贴支持发贴的朋友，才能欣赏到更多精品好贴！）</a>
+<div style="width:530px;float:left;border-right:1px #cccccc dashed">
+<form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
+				<p style='margin-top:5px;margin-bottom:5px;'>用户名:<input type="text" name="username" >密码:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--注册ID--]</a></p>
+					<input type="hidden" name="uptid" id="in_uptid" value="13868100" />
+		<input type="hidden" name="rootid" value="13868067" />
+		<input type="hidden" name="fid" value="" />
+		<input type='hidden' id="rename" name='rename' value='0'>
+		<span id="subject_info">标　题:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">所见即所得|预览模式</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">旧版发帖帮助</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">所见即所得发帖帮助</a>]<br>
+		<p>
+			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
+			<p id="parktools">
+				<img onclick="Cbold()" height=37 alt="粗体" src="./images/parkeditor/bold.gif"  border=0 alt="将选中文字设置为粗体">
+				<img onclick="Citalic()" height=37 alt="斜体" src="./images/parkeditor/italicize.gif"  alt="将选中文字设置为倾斜样式"   border=0>
+				<img onclick="Cunder()" height=37 alt="下划线" src="./images/parkeditor/underline.gif"  alt="将选中文字添加下划线"  border=0>
+				<img onclick="Ccenter()" height=37 alt="居中" src="./images/parkeditor/center.gif"  alt="将选中文字居中"  border=0>
+				<a onclick="Cimage()"><u>插入图片</u><img height=22 alt="插入图片" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>插入Flash</u><img height=22 alt="插入Flash动画" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>插入音乐</u><img src="./images/parkeditor/av.gif" alt="插入音乐" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>插入视频</u></a>
+			</p>
+			<br><input type="submit" name="submit" value="确认发布" /> &nbsp;<a href="#replyView" class="replyViewBtn">发布前预览</a>
+		</p>
+	</form>
+</div>
+<div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
+<p><b>相关话题推荐：</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=二届' target='_blank'>二届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=三十' target='_blank'>三十</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=艳遇' target='_blank'>艳遇</a>&nbsp;</span></p>
+<ul style="">
+	<li><a href="index.php?app=forum&act=threadview&tid=13868099" target="_blank">（二届）廿九夜 千面人</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868098" target="_blank">（二届）廿八夜 眉娘传</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868097" target="_blank">（二届）廿七夜 理惠老师</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868096" target="_blank">（二届）廿六夜 律子的秘密空间 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868095" target="_blank">（二届）廿六夜 律子的秘密空间 上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868094" target="_blank">（二届）廿五夜 超常感觉 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868093" target="_blank">（二届）廿五夜 超常感觉 上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868092" target="_blank">（二届）廿四夜 淫熟美妇的肉壶</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868091" target="_blank">（二届）廿三夜 ２１个淫荡女学生（4）</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868090" target="_blank">（二届）廿二夜 野间智惠子忙碌的一天</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868088" target="_blank">（二届）二十夜 6~9</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868087" target="_blank">（二届）二十夜 通灵师手记 作者：ＹＳＥ９９ 1~5</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868084" target="_blank">（二届）十九夜 实验</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868082" target="_blank">（二届）十八夜 暴乱  　</a></li>
+	
+</ul>
+</div>
+<div style="clear:both;">
+</div>
+	</td></tr></table>
+<script src="http://t.6park.com/index.php?mod=showid&username=接触零距离" language="javascript" ></script> <br>
+
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> 广告服务 </a>] [<a href="http://www.6park.com/contact/con2.htm"> 联系我们 </a>] [<a href="http://www.rich98.com/home/index.php"> 个人帐户 </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> 版主申请 </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<script language="JavaScript" type="text/javascript">
+	$("input[type='image']").each(function (){
+		if($(this).width()>940){
+			$(this).width(940);
+		}
+	})
+	
+	$("table[width='948']").width(998);
+</script>
+</div>
+
+<div style="width:300px;border:1px solid #dedede;height:150px;background:#efefef;display:none;" id="login_form">
+        <style type="text/css">
+            #login_form_tab td{font-size:12px;height:25px;}
+             #login_form_tab{
+                    width:200px;
+                    margin-left:50px;
+                    margin-top:30px;
+            }
+        </style>
+	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
+        <table border="0" id='login_form_tab'>
+            <tbody><tr>
+                   <td width='45px'>用户名:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+            </tr>
+            <tr>
+                    <td>密码:</td><td><input type="password" class="ulogin" name="password"></td>
+            </tr>
+	    <tr>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="login"></td>
+            </tr>
+				
+				
+        </tbody></table>
+	</form>
+</div>
+
+<div style="width:900px;border:1px solid #dedede;background:#efefef;display:none;font-size:14px;" id="replyView">
+&nbsp;
+</div>
+<script type='text/javascript' src='http://www.rich98.com/wordex.js'></script>
+</body></html>

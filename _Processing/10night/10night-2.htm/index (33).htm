@@ -1,0 +1,798 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=gb2312">  
+	<STYLE type='text/css'>
+		<!-- 
+		 a{text-transform: none; text-decoration: none;} 
+		 a:hover {color: #FF0000; text-decoration: underline} 
+		 td {  font: 11pt '宋体'} 
+		 -->
+		pre { 
+		
+			white-space: pre-wrap; /* css-3 */ 
+			white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ 
+			white-space: -pre-wrap; /* Opera 4-6 */ 
+			white-space: -o-pre-wrap; /* Opera 7 */ 
+			word-wrap: break-word; /* Internet Explorer 5.5+ */ 
+			width:998px;
+			overflow:hidden;
+		} 
+	</STYLE>	
+    <title>（二届）最终夜 速写～念 -rich98.com</title>
+	<meta name="Keywords" content="二届,最终,速写,（二届）最终夜 速写～念,接触零距离,">
+	<meta name="Description" content="（二届）最终夜 速写～念">
+  </head>
+<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
+<div class="body_center" id="head_ad">
+	<center><center>
+<IFRAME ID=topictop FRAMEBORDER=NO SCROLLING=NO name=iframe_topictop SRC=http://list.6park.com/web/topictop.html width=1000 height=64></IFRAME>
+</center></center>
+</div>
+<hr width=1000 size=1></center>
+<script charset="utf-8" src="./public/js/jquery.js"></script>
+<script charset="utf-8" src="./public/js/editor/kindeditor.js"></script>
+<script charset="utf-8" src="./public/js/editor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="./public/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script language="javascript">
+	var editor;		
+	function changeeditor(obj){
+		
+		if(editor){
+			editor.sync();
+			editor.remove('textarea[name="content"]');
+			editor = undefined;
+			obj.innerHTML='即见即所得模式|预览模式';
+			$("#parktools").show();
+		}
+		else{
+			$("#parktools").hide();
+			editor = KindEditor.create('textarea[name="content"]', {
+			resizeType : 0,
+			allowPreviewEmoticons : true,
+			allowImageUpload:false,
+			width:"470px",
+			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
+			});
+			obj.innerHTML='旧版发帖模式';
+		}
+	}
+	
+	
+	
+	function dovote(tid){
+		window.open("index.php?app=forum&act=vote&old=1&tid="+tid); 
+	}
+	
+
+			
+	function checktitle(){
+		var _title = $("#subject").val();
+		var _content = $("#content").get(0).value;
+		var _status = $("#rename").val();
+		_content = nl2br_js(_content);
+		$("#content").get(0).value = _content;
+		if(_title.length>60){
+			alert("标题长度过长，标题长度不能超过60个字符或30个汉字长度");
+			return false;
+		}
+		else{
+			if(_status == 1){
+				var date=new Date();
+				date.setTime(date.getTime()-10000);
+				document.cookie="scode=828; expire="+date.toGMTString()+";path=/"
+			}
+			
+			return true;
+		}
+	}		
+	function doImgOnload(img){
+			var   maxWidth=800;
+			var   maxHeight=10000;
+			var   width=img.width;
+			var   height=img.height;
+
+			if(!(width> maxWidth || height> maxHeight))
+				return;
+			if(width/height >= maxWidth/maxHeight){
+					img.width=maxWidth;
+			}else{
+					img.height=maxHeight;
+			}
+
+	}
+
+
+	$(document).ready(function(){
+	  $(".show_content img").bind("load",function (){
+			doImgOnload(this);
+	  });
+		$(".replyViewBtn").fancybox({
+				'onStart':function(){
+					var _content = $("#content").get(0).value;
+					_content = nl2br_js(_content);
+					$("#replyView").html(_content);
+					$("#replyView").show();
+				},
+				'onComplete':function(){
+					
+				},
+				'onCleanup':function(){
+					
+				},
+				'onClosed':function(){
+					$("#replyView").hide();	
+				}
+		})
+	});	
+
+
+
+
+//留园编辑器
+Selection = function(input){
+					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
+			};
+			with({o: Selection.prototype}){
+					o.setCaret = function(start, end){
+							var o = this.input;
+							if(Selection.isStandard)
+									o.setSelectionRange(start, end);
+							else if(Selection.isSupported){
+									var t = this.input.createTextRange();
+									end -= start + o.value.slice(start + 1, end).split("\n").length - 1;
+									start -= o.value.slice(0, start).split("\n").length - 1;
+									t.move("character", start), t.moveEnd("character", end), t.select();
+							}
+					};
+					o.getCaret = function(){
+							var o = this.input, d = document;
+							if(Selection.isStandard)
+									return {start: o.selectionStart, end: o.selectionEnd};
+							else if(Selection.isSupported){
+									var s = (this.input.focus(), d.selection.createRange()), r, start, end, value;
+									if(s.parentElement() != o)
+											return {start: 0, end: 0};
+									if(this.isTA ? (r = s.duplicate()).moveToElementText(o) : r = o.createTextRange(), !this.isTA)
+											return r.setEndPoint("EndToStart", s), {start: r.text.length, end: r.text.length + s.text.length};
+									for(var $ = "[###]"; (value = o.value).indexOf($) + 1; $ += $);
+									r.setEndPoint("StartToEnd", s), r.text = $ + r.text, end = o.value.indexOf($);
+									s.text = $, start = o.value.indexOf($);
+									if(d.execCommand && d.queryCommandSupported("Undo"))
+											for(r = 3; --r; d.execCommand("Undo"));
+									return o.value = value, this.setCaret(start, end), {start: start, end: end};
+							}
+							return {start: 0, end: 0};
+					};
+					o.getText = function(){
+							//获取选中内容
+							var o = this.getCaret();
+							return this.input.value.slice(o.start, o.end);
+					};
+					o.setText = function(text){
+							//设置选中内容
+							var o = this.getCaret(), i = this.input, s = i.value;
+							i.value = s.slice(0, o.start) + text + s.slice(o.end);
+							this.setCaret(o.start += text.length, o.start);
+					};
+					new function(){
+							var d = document, o = d.createElement("input"), s = Selection;
+							s.isStandard = "selectionStart" in o;
+							s.isSupported = s.isStandard || (o = d.selection) && !!o.createRange();
+					};
+			}
+			var selection;
+			var textId = "content";
+			//设置粗体
+			function Cbold(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<b>"+selection.getText()+"</b>";
+				selection.setText(s);
+			}
+			//设置斜体
+			function Citalic(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<i>"+selection.getText()+"</i>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Cunder(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<u>"+selection.getText()+"</u>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Ccenter(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<center>"+selection.getText()+"</center>";
+				selection.setText(s);
+			}
+			//插入图片
+			function Cimage(){
+				selection = new Selection(document.getElementById(textId));
+				var s = prompt("请输入图片的网络地址:", selection.getText());
+				if(s !== null){
+					s = "<img src='"+s+"' />";
+					selection.setText(s);
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			//插入flash
+			function flash() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("Flash URL 地址","http://");      
+				if (txt!=null) {
+					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
+					selection.setText(AddTxt);
+					} 
+					else if(s == ''){
+					alert('您输入的内容为空');
+				} 
+			}
+			function music() {
+				txt=prompt("音乐文件地址","http://");      
+				if (txt!=null) {
+					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
+					selection.setText(AddTxt);
+				}
+			}
+
+			function real() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("请输入电影文件地址","http://");  
+				if (txt!=null) {
+					$.get("./public/movie.php", {url:txt,width:0,height:0},
+						function(data){
+						selection.setText(data);
+						});        
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			function nl2br_js(text){
+				return text;
+			}
+			
+
+			function changeuser(obj){
+				//$("#login_user_info").remove();
+				var _status = $("#rename").val();
+				if(_status == 1){
+					$("#login_hidden").hide();
+					$("#rename").val('0');
+					$(obj).html('切换发帖账号');
+				}
+				else{
+					$("#login_hidden").show();
+					$("#rename").val('1');
+					$(obj).html('取消切换');
+				}
+			}
+			
+</script>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">加跟贴</a>]·[<a href="index.php?app=sys&act=threadmanage&tid=13868107">版主管理</a>]·[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="http://news.6park.com" target='_blank'>分区新闻</a>]·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">繁體閱讀</span></a>]</td></tr>
+ <tr bgcolor='#E6E6DD'> <td class="show_content">
+ <center><font size=6><b>（二届）最终夜 速写～念</b></font></center>
+
+送交者: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=接触零距离' target=_blank>接触零距离</a>[虎威将军★★☆] 于 2013-09-01 19:31 已读 115 次 <a href="http://t.6park.com/index.php?mod=接触零距离" target=_blank>@接触零距离@的微博</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13868107&tag=禁忌书屋&title=（二届）最终夜 速写～念&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='转发本贴到微博'></a><p></p>
+	<p>回答: <a href="index.php?app=forum&act=threadview&tid=13868067">【十日谈】（第二届） 作者：多人</a> 由 接触零距离 于 2013-09-01 18:53</p>
+	<!--bodybegin-->
+<pre>
+来源:巨豆情色网 作者:ＸＸＸ 
+
+　　作者∶ＸＸＸ 
+
+　　在典雅的大厅里，落拓潦倒的年轻男人和雍容华贵的中年贵妇相对而坐。 
+
+　　「听别人说你一直都是四海为家？」那个贵妇人问道。 
+
+　　「是的。」 
+
+　　「听别人说你很会找人？」 
+
+　　「是的。」 
+
+　　「无论是谁，无论他在哪里，你都能找得到？」 
+
+　　「是的。」 
+
+　　「我想请你帮我找一个人。」 
+
+　　「找谁？」 
+
+　　「找一个男人。年龄比你小一点，走的时候个子不高，不过现在可能又长高了许多。」 
+
+　　「这个人和你是什么关系？」 
+
+　　「我的儿子。三年前他离开家以后，就一去不返，你能找到他吗？」 
+
+　　「找人的代价是很高的。」 
+
+　　「这里有一百万。如果不够，我还可以再加一百万。」 
+
+　　「我不要钱。」 
+
+　　「┅┅那你要什么？」 
+
+　　「我要你陪我一夜。」 
+
+　　「┅┅」贵妇人沉吟着。 
+
+　　年轻男人好整以暇的看着面前美丽的妇人，这时中年的贵妇抬起了头∶「我答应你。」 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　男人走进浴室，脱去了身上的全部衣物。他的身体强壮而灵活，然而眉目间带着抹不去的风尘之色。 
+
+　　他躺进浴池，将全身浸泡在池水中，暖和的池水使他舒服的吐出一口长气。 
+
+　　「你一定很累了吧？」从浴室的门口传来女人充满怜惜的话音。 
+
+　　男人扭转头，看到只披了一件白袍的贵妇人站在门口。 
+
+　　女人走到他的面前，褪去薄薄的白衣。从男人口中发出不能自抑的吸气声，他的眼睛凝视着女人的胴体。 
+
+　　女人俯下身体，滑入池中。两具赤裸的身体立刻纠缠在一起。 
+
+　　「不知道我能否略微消解你的疲累呢？」 
+
+　　男人没有说话，只是用手指在女人高耸的乳房上一下一下的画着圈。浅褐色的乳头，迅速地变得坚硬起来。 
+
+　　「啊┅┅啊┅┅」女人发出细不可闻却足以销魂蚀骨的喘息，她闭上眼睛，将头无力地靠在男人肩上。 
+
+　　「你为什么要这样做？」 
+
+　　「我只是希望你能够帮我找回我的儿子。」 
+
+　　「为了要找回自己的儿子，就可以付出这样的代价吗？」 
+
+　　「这不是你提的条件吗？」 
+
+　　「如果我现在收回这个要求呢？如果我现在又要那两百万了呢？」 
+
+　　「随便你。」 
+
+　　「┅┅你寂寞吗？」 
+
+　　「是的，我寂寞，所以，今晚请你爱我，好吗？」 
+
+　　「我还不认识你，该怎么称呼你呢？」 
+
+　　「你想怎么称呼我？」 
+
+　　「能够让我叫你妈妈吗？」 
+
+　　「那你，不就成了我的儿子吗？」 
+
+　　「妈妈。」 
+
+　　「儿子。」 
+
+　　「妈妈！」 
+
+　　「儿子！」 
+
+　　赤裸的拥抱着的两个人，在这相互呼唤的时候，突然感到彼此的身体变得火烫。 
+
+　　「那么，今晚就请你允许我用自己的身体来抚慰你的劳累吧。我的儿子！」 
+
+　　「谢谢你啊，妈妈。」 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　灯亮了。 
+
+　　陈设精致的卧室，呈现出温馨的气氛。 
+
+　　在晕黄灯光的笼罩下，已经沐浴过的两人搂抱着坐在床头。从女人身体里面散发出来的、沁人心脾的淡淡幽香充溢着室内。 
+
+　　「能够帮我吹一下吗，妈妈？」男人笑着，看到女人疑问的目光，他指了指自己双腿之间，那正蠢蠢欲动的雄性象征。 
+
+　　女人一下子明白了他的意思，她红着脸摇了摇头。 
+
+　　「觉得这么做很难堪？」 
+
+　　「不是的。」 
+
+　　「那么┅┅？」 
+
+　　「我只会为一个人做这种事，可是那个人不是你。」 
+
+　　「我明白了。能够得到你的青睐，那个人，他真是幸福。」 
+
+　　女人忧伤的笑了起来，「是吗？」她喃喃说道∶「这真的是幸福吗？」 
+
+　　此时，男人抱住了女人的脑袋，凝视着完全没有一点人工修饰的，小小的，浅樱色的唇。 
+
+　　他微微的笑了一下，「既然如此，我就只有这样做来弥补遗憾了。」他对准女人淡淡的两瓣红唇吻了下去。 
+
+　　彷佛是时间凝滞住了的漫长一吻。舌尖纠缠着交流勃勃的欲望之火，磨蹭着彼此的牙齿和柔软的口腔内侧，四只手臂犹如章鱼的触手一般紧紧搂住对方的身体。 
+
+　　「嗯┅┅嗯┅┅」女人饮泣似的呻吟着，突然放松了手臂，软软的环扣在男人腰间。 
+
+　　当两人嘴唇终于分开一线的时候，女人眼波朦胧，香腮上的红晕娇艳欲滴。 
+
+　　「放开一切顾虑，过一个痛快的夜晚吧，妈妈。」 
+
+　　在耳边传来女人的请求∶「请让我快乐吧！请给我快乐，我的儿子。」 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　男人尽量把舌头伸长，舔舐着女人犹如最上等瓷器一般的细腻面颊。 
+
+　　慢慢的，一下一下，从下巴尖开始，一直舔到太阳穴的地方，就像是野兽在看到自己心爱事物的时候，做出的那种亲昵动作。然后，头部缓慢的顺着女性美好的曲线下移，从修长的脖子，到略微下陷的锁骨，然后又突然高耸起来的美好曲线。 
+
+　　舌尖仔细的舔舐着经过的每一寸肌肤，然后在饱满的乳房的尖端停了下来。轻轻的，在两粒肿胀的樱桃上啜吸着。有时候故意的用牙齿咬住樱桃的根部，然后舌尖缓慢的摩擦着口中熟透了的樱桃。 
+
+　　女人皱紧眉头忍耐着，然而，却不自禁「嗯啊┅┅嗯啊┅┅」的喘着气。 
+
+　　实在是太诱人了，那像是在忍耐什么痛苦似的呻吟声，极大的鼓舞了男人原本就已经非常蓬勃的斗志。恋恋不舍离开了乳首的舌尖继续下滑，终于抵达女性那神秘的花园上方。 
+
+　　女人丰腴的双腿夹在一起，然而，这一道并不严密的防线根本无法抵抗敌人的进攻──或者说是来自己身体深处欲望的进攻也许更为合适。 
+
+　　只见男人抓住身前女性双腿纤细的部位轻轻向两边一分，神秘花园的全景立刻无遮挡的呈现在贪婪的眼神面前，「啊┅┅」情不自禁的发出惊叹声。 
+
+　　在茂盛的萋萋芳草掩映中，那一朵淫荡娇艳的妖花已经盛开。大概是因为已经完全成熟的关系，深红色的花瓣比一般的女性更饱满，也更柔软，濡湿的花瓣微微颤动着，召唤着来访者做更深入的探讨。 
+
+　　「太丢脸了┅┅」从头顶的上方传来女人害羞的声音，而原本白皙的肌肤，此时也泄上了一层桃色。 
+
+　　然而── 
+
+　　「把那里打开让我看看吧！」男人对成熟的贵妇人提出这样的要求∶「请你自己用双手打开让我看看吧，妈妈！」 
+
+　　实在是太过分的要求啊！ 
+
+　　「唔┅┅唔┅┅不要啊┅┅那样的事┅┅」 
+
+　　「打开让我看看吧，妈妈！」 
+
+　　早已羞涩到极点的女人，在听到男子一再用撒娇的口吻喊着「妈妈」的字样以后，不由得轻轻的吐出一口长气，羞之堡垒动摇了。双手从浑圆的臀部下面绕上来，修长纤细的手指捏住花唇的两端以后向两侧拉开。 
+
+　　女性神秘花园中最绚丽、最隐秘的中心部位露出了庐山真面目。比花瓣颜色略浅、因而也更艳丽的花蕊，在灯光下泛着耀眼的光芒，犹如初生的旭日一般灿烂。为这美景所震撼的男人屏住呼吸，目不转睛的看着眼前的景色。 
+
+　　由于手指的拉扯，花蕊裂开了，形成曲径幽深的洞户，在洞壁的四周，鲜红的膣肉因为激动的关系收缩着。彷佛能够感觉到那灼热的视线，此时从花瓣的中心涌出更多的透明液体。黏糊糊、亮晶晶，散发着奇异的芳香，充斥着男人的鼻端。 
+
+　　而在花心的上端，原本被两片花瓣覆盖着的汇合处，那粒小小的坚果已经充份的膨胀，光滑娇嫩的果实淫荡的诱惑着男人的嘴唇。 
+
+　　「哧溜┅┅」一声，男人吸住了红色的果实，细细的品味着这淫荡的滋味。 
+
+　　舔、磨、吮、咬┅┅在完全盛开的淫花的花瓣上、花蕊上、花心里┅┅凡是肉眼可以看到的地方都布满了细小的水滴，而更多的大量花蜜还在像潮水般从身体的深处涌出。 
+
+　　女人的大腿像蛇一般缠住男人的头，挟紧的力量几乎可以使人窒息。然而，男人的嘴唇却脱离了花唇部位，他笑着用手指蘸着黏稠的花蜜，举到女人眼前∶「你看啊，妈妈。」 
+
+　　「我真的是┅┅是一个如此淫荡的女人吗？」 
+
+　　「不，这是爱的证明，妈妈！」 
+
+　　男人像举行什么仪式似的，用坚定的动作把缠绕着细亮丝线的指尖放进自己的口中，将上面的花蜜吮吸干净。 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　「让我来抚慰你的寂寞和饥渴吧，妈妈！」巨大的红色蘑菇头颤动着，一下子刺入已经被充分滋润的膣腔。 
+
+　　「啊呀┅┅」女性喜悦的叹息声。 
+
+　　在停顿了一下以后，开始有节奏的抽插。女性扭动柔软的腰肢，配合男性的节奏。女人搭在男人肩上的雪白脚掌晃动着，连脚趾尖都泄上了令人陶醉的粉红色。 
+
+　　因为实在是太让人着迷了，男人情不自禁的用手掌抚摩着圆润修长的小腿肌肤。与此同时，女人的双手也不自觉的按在自己高耸的乳房上，搓揉着，从放在被挤压变形的雪白胸肌上的手指缝中，可以看到被纤长手指夹住的坚硬乳头。 
+
+　　多重的刺激使女人露出恍惚的神情，无力的闭上了眼睛。 
+
+　　「舒服吗，妈妈？」 
+
+　　「太，太幸福了。我┅┅」 
+
+　　沙哑的声音，已经充分表达了女人的心情，这时珍珠般的泪水从女人的眼角流下来，滑落到床单上，床单很快湿透了。 
+
+　　「请，请爱我吧，让我尽情的燃烧吧，我的儿子呀！」女人用颤抖的声音说出这样的请求。 
+
+　　那并不是完全对自己做出的祈求──在这一瞬间，男人突然产生出这样的感觉，然而他还是做出这样的承诺∶「我会让你幸福的，妈妈！」 
+
+　　腹部的挺动更加迅速而用力，有如凶恶的猛兽在女性的体内横冲直撞，而女性则用温柔的坚韧包容着猛兽的肆虐。 
+
+　　即将抵达极限了，「哈┅┅哈┅┅哈┅┅」两个人都只能不自觉的发出单调的喘息声音。 
+
+　　「啊┅┅妈妈┅┅」男人嘶吼着，分身的尖端放射出大量火热的汁液，打在早已在迅速缩放的花园深处，女性的洪水也随之爆发。 
+
+　　两个无力的人体叠在一起，静静的等待着狂风暴雨后的宁静。 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　「舒服吗？」 
+
+　　「已经好久没有这么舒服过了啊！」 
+
+　　「我也很少这么舒服。这些年我一直在外面漂泊，很少做这种事情。」 
+
+　　「为什么你不找一个地方安定下来呢？比如说找一个妻子，或者做点什么生意？」 
+
+　　「因为我一直都在找一个能够让我安定的人。」 
+
+　　「还没有找到吗？」 
+
+　　「找到过，可是我没有珍惜，我一直都在找回她。」 
+
+　　「所以你找人的本领天下第一？」 
+
+　　「可是我还是找不到她。」 
+
+　　「其实我真的很羡慕她。」 
+
+　　「为什么？」 
+
+　　「因为在这世上，至少还有一个人在念着她。」 
+
+　　「你呢？难道没有人在念着你？」 
+
+　　「有吗？」 
+
+　　「你一直都是这么寂寞？」 
+
+　　「是的。」 
+
+　　「你的寂寞，是因为你的儿子？」 
+
+　　「┅┅你为什么这么想？」 
+
+　　「因为感觉。」 
+
+　　「感觉？」 
+
+　　「是的，我感觉得到你的心情。」 
+
+　　「我的心情？┅┅难道我的心情这么明显，连你都感觉到了吗？」 
+
+　　「因为我也怀有和你一样的感情。」 
+
+　　「哦？」 
+
+　　「你知道我为什么要叫你妈妈？」 
+
+　　「┅┅为什么？」 
+
+　　「你知道我要找的那个人是谁吗？」 
+
+　　「是谁？难道是┅┅」 
+
+　　「是的，是我的妈妈。」 
+
+　　「你的妈妈┅┅」 
+
+　　「是的，我的妈妈。这件事我谁都没有说，可是我现在想把它告诉你，因为你也是──妈妈┅┅」 
+
+　　「你说吧。」 
+
+　　「我们家很穷，爸爸在我很小的时候就死了，只剩下我和妈妈相依为命。为了把我养大，我的妈妈把自己卖入了青楼，她每天受尽屈辱，却从来不肯让我受一点委屈，她每天都有不同的男人，可是她爱的人始终只有我一个，而我，我却嫌弃她┅┅我这辈子爱过的人，也只有她一个┅┅可是我却嫌弃她做妓女丢我的脸，我偷偷的赚了一大笔钱，伪装成一个嫖客每天去找她┅┅我在床上打她，用种种下流、卑鄙、变态的手法去折磨她。可是，每次当我把她折磨得死去活来以后，我又会温柔的亲吻她、爱她，我们维持这样的关系有半年之久┅┅其实我去找她的第一天她就知道了我的身份，但是她一直没有说，因为她自己也觉得她是不干净的、下贱的女人。其实她是天使，是我的母亲，这世界上只有她一个人爱我，我也只爱她。」 
+
+　　「后来呢？」 
+
+　　「后来我打她，她在最痛苦的时候含着眼泪问我，问我为什么要这样┅┅」 
+
+　　「你怎么回答？」 
+
+　　「我说我恨她。第二天，我就再也找不到她，等到她走了，我才知道我的感情，才知道我对她的感情。」 
+
+　　「所以你要找回她？」 
+
+　　「是的，我一定要找到她，哪怕用我这一生。」 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　「说说你的儿子吧，他为什么要离家出走呢？」 
+
+　　「因为我爱他。」 
+
+　　「爱？」 
+
+　　「是的。我一直都很爱他，我希望让他成为我希望的那种人，所以我从小就从各个方面培养他。我花钱给他请最好的教师，希望他成为一个学识渊博、身体强壮、头脑灵活的男人，成为我心中的男子汉。」 
+
+　　「然后呢？」 
+
+　　「可是，他并没有好好学，至少我以为他没有好好学。他不爱念书，调皮捣蛋，我每天都骂他，打他。然而有一天，我在骂他的时候，他突然抓住我，把我绑起来放在床上。他拿出钱来羞辱我，原来他背着我凭自己的本事已经干出了一番事业，而我这个失职的母亲却一无所知。」 
+
+　　「他一边骂我，一边脱去了我的衣服，就在我的床上强奸了我。我当时愤怒的和他争吵，让他滚，结果，他出去了以后就再也没有回来。」 
+
+　　「其实我并不是怪他强奸我，我只是觉得我一直是他的母亲，现在却被他绑起来强暴很没面子。我太骄傲了，我没有办法告诉他，其实当他插进来的时候，我真的觉得好舒服，是的，那是一种被征服的感觉，从那一刻起，我就知道我再也不能离开他了。」 
+
+　　「可是你却没有告诉他。」 
+
+　　「┅┅是的。所以我希望你能够把他找回来。」 
+
+　　「为什么我们总是要等到失去以后，才追悔莫及呢？」 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　「如果你找到你的妈妈，你会对她说什么呢？」 
+
+　　「我什么也不会说。」 
+
+　　「哦。」 
+
+　　「我会把她抱住，然后去闻她头发间的香气。」 
+
+　　「哦？」 
+
+　　「只要能够找到她，我就不会再松开手臂。」 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　在黑暗中，他们分头而卧，彼此用手指探索着对方的每一寸身体。成熟的身体，和强壮的身体。 
+
+　　在他们的心里都清楚，当他们在抚摸的时候，他们所想的是自己那个最亲的人。 
+
+　　远方传来公鸡的鸣叫声。 
+
+　　天亮了。 
+
+　　＊＊＊＊＊＊＊＊＊ 
+
+　　「天已破晓，我该走了。」 
+
+　　「你又要上路了吗？」 
+
+　　「是的。如果见到你的儿子，我会告诉他，他的妈妈在等他。」 
+
+　　「如果不愿意回来呢？」 
+
+　　「我会把我妈妈的事情告诉他。」 
+
+　　「如果他还是不愿意回来呢？」 
+
+　　「┅┅我想他总有一天会回来的。」 
+
+　　「┅┅」 
+
+　　「再见！」 
+
+　　房门关上了。 
+
+　　女人朦胧的眼神慢慢投射到身旁的空位上。昨夜曾经睡在这里的男人还要去找他的妈妈，而她会一直在这里等待儿子回来。 
+
+　　【全文完】 
+
+　　☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆ 
+
+　　ＸＸＸ∶「所谓速写，就是写一些不能演绎成长篇的构思。从去年初就叫嚷着要参加「十日谈」，还信誓旦旦的说要写一部长篇，现在却只能拿这样的东西来滥竽充数，人要有脸，树要有皮，所以实在不好意思在标题栏署上自己的名字。」 
+
+　　召集人∶「的确让我很伤心，这根本不是ＸＸＸ应该写出来的东西┅┅」 
+
+　　ＸＸＸ∶「这个短篇只是一种尝试，原本是想用对话的形式贯穿始终的，然而┅┅我毕竟只是一个人而已。」 
+
+　　林彤∶「没关系，今年里头好好加油吧！」 
+
+　　ＸＸＸ∶「如果能够在今年交出一篇像样的东西，再请林彤大大把这片不成气的东西收进图书馆我的档案夹吧！」 
+
+　　鹰魔∶「本年度『十日谈』到此告一段落。」 
+
+　　********************************************************************** 
+
+　　召集人∶ 
+
+　　「本年的『十日谈』到此告一段落。」现在说或许嫌早了点，不过在门里表决之后，决定明年仍然继续举办十日谈活动，只是，由于这次参加的人远少于前两次，加上不对外发表的作品，大概凑不满十个。 
+
+　　因此，在今年度十日谈结束的此刻，同时开始招募外部朋友加入十日谈。 
+
+　　作品长短、题材全部不论，创作、扫瞄、翻译均可，只要别没头没尾就行。所谓别没头没尾，经过大家要求后，已经重新定义。由于这是情色小说的写作，所以只要里头有一场完整的床戏（自慰不算），就算是有头有尾了。 
+
+　　任何一篇文章都是很宝贵的，所以欢迎各方的参与，千万不要说「我觉得自己能力不够，没资格参加」，这话对我们太沉重了。 
+
+　　凡是正式参加者，都可以获得该年十日谈的全文，这是我们唯一的谢礼。<!--bodyend-->
+</pre>
+<div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
+</td></tr>
+	<tr bgcolor='#E6E6DD'>
+		<td height=25>
+			<center>喜欢接触零距离朋友的这个贴子的话，[<a href="javascript:void(0)" onclick='dovote(13868107)'><font color=FF0000>请点这里投票加分支持</font></a>]
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td>
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="index.php?app=forum&act=userview&username=接触零距离" >ID前期主贴发言</a>]·[<a href="./index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">-->>加跟贴</a>]·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13868107">--向朋友推荐--</a>]·[<a href="javascript:history.go(-1)">返回前页</a>]
+			</div>
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">贴子内容是网友自行贴上分享，如果您认为其中内容违规或者侵犯了您的权益，请与我们联系，我们核实后会第一时间删除。</td></tr>
+</table>
+<center><center>
+<IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
+</center></center>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>所有跟贴:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">加跟贴（积极回贴支持发贴的朋友，才能欣赏到更多精品好贴！）</a>
+<div style="width:530px;float:left;border-right:1px #cccccc dashed">
+<form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
+				<p style='margin-top:5px;margin-bottom:5px;'>用户名:<input type="text" name="username" >密码:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--注册ID--]</a></p>
+					<input type="hidden" name="uptid" id="in_uptid" value="13868107" />
+		<input type="hidden" name="rootid" value="13868067" />
+		<input type="hidden" name="fid" value="" />
+		<input type='hidden' id="rename" name='rename' value='0'>
+		<span id="subject_info">标　题:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">所见即所得|预览模式</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">旧版发帖帮助</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">所见即所得发帖帮助</a>]<br>
+		<p>
+			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
+			<p id="parktools">
+				<img onclick="Cbold()" height=37 alt="粗体" src="./images/parkeditor/bold.gif"  border=0 alt="将选中文字设置为粗体">
+				<img onclick="Citalic()" height=37 alt="斜体" src="./images/parkeditor/italicize.gif"  alt="将选中文字设置为倾斜样式"   border=0>
+				<img onclick="Cunder()" height=37 alt="下划线" src="./images/parkeditor/underline.gif"  alt="将选中文字添加下划线"  border=0>
+				<img onclick="Ccenter()" height=37 alt="居中" src="./images/parkeditor/center.gif"  alt="将选中文字居中"  border=0>
+				<a onclick="Cimage()"><u>插入图片</u><img height=22 alt="插入图片" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>插入Flash</u><img height=22 alt="插入Flash动画" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>插入音乐</u><img src="./images/parkeditor/av.gif" alt="插入音乐" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>插入视频</u></a>
+			</p>
+			<br><input type="submit" name="submit" value="确认发布" /> &nbsp;<a href="#replyView" class="replyViewBtn">发布前预览</a>
+		</p>
+	</form>
+</div>
+<div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
+<p><b>相关话题推荐：</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=二届' target='_blank'>二届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=最终' target='_blank'>最终</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=速写' target='_blank'>速写</a>&nbsp;</span></p>
+<ul style="">
+	<li><a href="index.php?app=forum&act=threadview&tid=13868106" target="_blank">（二届）卅七夜 落红记</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868105" target="_blank">（二届）卅六夜 拷贝</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868104" target="_blank">（二届）卅五夜 鸡巴历险记（第二部）</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868103" target="_blank">（二届）卅三夜 一个母亲的告白</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868102" target="_blank">（二届）卅二夜 刑天的传说</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868101" target="_blank">（二届）卅一夜 重罪</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868100" target="_blank">（二届）三十夜 驾训班艳遇</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868099" target="_blank">（二届）廿九夜 千面人</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868098" target="_blank">（二届）廿八夜 眉娘传</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868097" target="_blank">（二届）廿七夜 理惠老师</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868096" target="_blank">（二届）廿六夜 律子的秘密空间 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868095" target="_blank">（二届）廿六夜 律子的秘密空间 上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868094" target="_blank">（二届）廿五夜 超常感觉 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868093" target="_blank">（二届）廿五夜 超常感觉 上</a></li>
+	
+</ul>
+</div>
+<div style="clear:both;">
+</div>
+	</td></tr></table>
+<script src="http://t.6park.com/index.php?mod=showid&username=接触零距离" language="javascript" ></script> <br>
+
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> 广告服务 </a>] [<a href="http://www.6park.com/contact/con2.htm"> 联系我们 </a>] [<a href="http://www.rich98.com/home/index.php"> 个人帐户 </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> 版主申请 </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<script language="JavaScript" type="text/javascript">
+	$("input[type='image']").each(function (){
+		if($(this).width()>940){
+			$(this).width(940);
+		}
+	})
+	
+	$("table[width='948']").width(998);
+</script>
+</div>
+
+<div style="width:300px;border:1px solid #dedede;height:150px;background:#efefef;display:none;" id="login_form">
+        <style type="text/css">
+            #login_form_tab td{font-size:12px;height:25px;}
+             #login_form_tab{
+                    width:200px;
+                    margin-left:50px;
+                    margin-top:30px;
+            }
+        </style>
+	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
+        <table border="0" id='login_form_tab'>
+            <tbody><tr>
+                   <td width='45px'>用户名:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+            </tr>
+            <tr>
+                    <td>密码:</td><td><input type="password" class="ulogin" name="password"></td>
+            </tr>
+	    <tr>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="login"></td>
+            </tr>
+				
+				
+        </tbody></table>
+	</form>
+</div>
+
+<div style="width:900px;border:1px solid #dedede;background:#efefef;display:none;font-size:14px;" id="replyView">
+&nbsp;
+</div>
+<script type='text/javascript' src='http://www.rich98.com/wordex.js'></script>
+</body></html>

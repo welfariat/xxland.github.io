@@ -1,0 +1,810 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=gb2312">  
+	<STYLE type='text/css'>
+		<!-- 
+		 a{text-transform: none; text-decoration: none;} 
+		 a:hover {color: #FF0000; text-decoration: underline} 
+		 td {  font: 11pt '宋体'} 
+		 -->
+		pre { 
+		
+			white-space: pre-wrap; /* css-3 */ 
+			white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ 
+			white-space: -pre-wrap; /* Opera 4-6 */ 
+			white-space: -o-pre-wrap; /* Opera 7 */ 
+			word-wrap: break-word; /* Internet Explorer 5.5+ */ 
+			width:998px;
+			overflow:hidden;
+		} 
+	</STYLE>	
+    <title>（一届）第八夜 暗夜女警 -rich98.com</title>
+	<meta name="Keywords" content="一届,第八,女警,（一届）第八夜 暗夜女警,接触零距离,">
+	<meta name="Description" content="（一届）第八夜 暗夜女警">
+  </head>
+<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
+<div class="body_center" id="head_ad">
+	<center><center>
+<IFRAME ID=topictop FRAMEBORDER=NO SCROLLING=NO name=iframe_topictop SRC=http://list.6park.com/web/topictop.html width=1000 height=64></IFRAME>
+</center></center>
+</div>
+<hr width=1000 size=1></center>
+<script charset="utf-8" src="./public/js/jquery.js"></script>
+<script charset="utf-8" src="./public/js/editor/kindeditor.js"></script>
+<script charset="utf-8" src="./public/js/editor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="./public/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script language="javascript">
+	var editor;		
+	function changeeditor(obj){
+		
+		if(editor){
+			editor.sync();
+			editor.remove('textarea[name="content"]');
+			editor = undefined;
+			obj.innerHTML='即见即所得模式|预览模式';
+			$("#parktools").show();
+		}
+		else{
+			$("#parktools").hide();
+			editor = KindEditor.create('textarea[name="content"]', {
+			resizeType : 0,
+			allowPreviewEmoticons : true,
+			allowImageUpload:false,
+			width:"470px",
+			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
+			});
+			obj.innerHTML='旧版发帖模式';
+		}
+	}
+	
+	
+	
+	function dovote(tid){
+		window.open("index.php?app=forum&act=vote&old=1&tid="+tid); 
+	}
+	
+
+			
+	function checktitle(){
+		var _title = $("#subject").val();
+		var _content = $("#content").get(0).value;
+		var _status = $("#rename").val();
+		_content = nl2br_js(_content);
+		$("#content").get(0).value = _content;
+		if(_title.length>60){
+			alert("标题长度过长，标题长度不能超过60个字符或30个汉字长度");
+			return false;
+		}
+		else{
+			if(_status == 1){
+				var date=new Date();
+				date.setTime(date.getTime()-10000);
+				document.cookie="scode=828; expire="+date.toGMTString()+";path=/"
+			}
+			
+			return true;
+		}
+	}		
+	function doImgOnload(img){
+			var   maxWidth=800;
+			var   maxHeight=10000;
+			var   width=img.width;
+			var   height=img.height;
+
+			if(!(width> maxWidth || height> maxHeight))
+				return;
+			if(width/height >= maxWidth/maxHeight){
+					img.width=maxWidth;
+			}else{
+					img.height=maxHeight;
+			}
+
+	}
+
+
+	$(document).ready(function(){
+	  $(".show_content img").bind("load",function (){
+			doImgOnload(this);
+	  });
+		$(".replyViewBtn").fancybox({
+				'onStart':function(){
+					var _content = $("#content").get(0).value;
+					_content = nl2br_js(_content);
+					$("#replyView").html(_content);
+					$("#replyView").show();
+				},
+				'onComplete':function(){
+					
+				},
+				'onCleanup':function(){
+					
+				},
+				'onClosed':function(){
+					$("#replyView").hide();	
+				}
+		})
+	});	
+
+
+
+
+//留园编辑器
+Selection = function(input){
+					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
+			};
+			with({o: Selection.prototype}){
+					o.setCaret = function(start, end){
+							var o = this.input;
+							if(Selection.isStandard)
+									o.setSelectionRange(start, end);
+							else if(Selection.isSupported){
+									var t = this.input.createTextRange();
+									end -= start + o.value.slice(start + 1, end).split("\n").length - 1;
+									start -= o.value.slice(0, start).split("\n").length - 1;
+									t.move("character", start), t.moveEnd("character", end), t.select();
+							}
+					};
+					o.getCaret = function(){
+							var o = this.input, d = document;
+							if(Selection.isStandard)
+									return {start: o.selectionStart, end: o.selectionEnd};
+							else if(Selection.isSupported){
+									var s = (this.input.focus(), d.selection.createRange()), r, start, end, value;
+									if(s.parentElement() != o)
+											return {start: 0, end: 0};
+									if(this.isTA ? (r = s.duplicate()).moveToElementText(o) : r = o.createTextRange(), !this.isTA)
+											return r.setEndPoint("EndToStart", s), {start: r.text.length, end: r.text.length + s.text.length};
+									for(var $ = "[###]"; (value = o.value).indexOf($) + 1; $ += $);
+									r.setEndPoint("StartToEnd", s), r.text = $ + r.text, end = o.value.indexOf($);
+									s.text = $, start = o.value.indexOf($);
+									if(d.execCommand && d.queryCommandSupported("Undo"))
+											for(r = 3; --r; d.execCommand("Undo"));
+									return o.value = value, this.setCaret(start, end), {start: start, end: end};
+							}
+							return {start: 0, end: 0};
+					};
+					o.getText = function(){
+							//获取选中内容
+							var o = this.getCaret();
+							return this.input.value.slice(o.start, o.end);
+					};
+					o.setText = function(text){
+							//设置选中内容
+							var o = this.getCaret(), i = this.input, s = i.value;
+							i.value = s.slice(0, o.start) + text + s.slice(o.end);
+							this.setCaret(o.start += text.length, o.start);
+					};
+					new function(){
+							var d = document, o = d.createElement("input"), s = Selection;
+							s.isStandard = "selectionStart" in o;
+							s.isSupported = s.isStandard || (o = d.selection) && !!o.createRange();
+					};
+			}
+			var selection;
+			var textId = "content";
+			//设置粗体
+			function Cbold(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<b>"+selection.getText()+"</b>";
+				selection.setText(s);
+			}
+			//设置斜体
+			function Citalic(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<i>"+selection.getText()+"</i>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Cunder(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<u>"+selection.getText()+"</u>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Ccenter(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<center>"+selection.getText()+"</center>";
+				selection.setText(s);
+			}
+			//插入图片
+			function Cimage(){
+				selection = new Selection(document.getElementById(textId));
+				var s = prompt("请输入图片的网络地址:", selection.getText());
+				if(s !== null){
+					s = "<img src='"+s+"' />";
+					selection.setText(s);
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			//插入flash
+			function flash() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("Flash URL 地址","http://");      
+				if (txt!=null) {
+					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
+					selection.setText(AddTxt);
+					} 
+					else if(s == ''){
+					alert('您输入的内容为空');
+				} 
+			}
+			function music() {
+				txt=prompt("音乐文件地址","http://");      
+				if (txt!=null) {
+					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
+					selection.setText(AddTxt);
+				}
+			}
+
+			function real() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("请输入电影文件地址","http://");  
+				if (txt!=null) {
+					$.get("./public/movie.php", {url:txt,width:0,height:0},
+						function(data){
+						selection.setText(data);
+						});        
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			function nl2br_js(text){
+				return text;
+			}
+			
+
+			function changeuser(obj){
+				//$("#login_user_info").remove();
+				var _status = $("#rename").val();
+				if(_status == 1){
+					$("#login_hidden").hide();
+					$("#rename").val('0');
+					$(obj).html('切换发帖账号');
+				}
+				else{
+					$("#login_hidden").show();
+					$("#rename").val('1');
+					$(obj).html('取消切换');
+				}
+			}
+			
+</script>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">加跟贴</a>]·[<a href="index.php?app=sys&act=threadmanage&tid=13867099">版主管理</a>]·[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="http://news.6park.com" target='_blank'>分区新闻</a>]·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">繁體閱讀</span></a>]</td></tr>
+ <tr bgcolor='#E6E6DD'> <td class="show_content">
+ <center><font size=6><b>（一届）第八夜 暗夜女警</b></font></center>
+
+送交者: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=接触零距离' target=_blank>接触零距离</a>[虎威将军★★☆] 于 2013-08-25 18:08 已读 1521 次 <a href="http://t.6park.com/index.php?mod=接触零距离" target=_blank>@接触零距离@的微博</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13867099&tag=禁忌书屋&title=（一届）第八夜 暗夜女警&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='转发本贴到微博'></a><p></p>
+	<p>回答: <a href="index.php?app=forum&act=threadview&tid=13867088">【十日谈】 作者：多人</a> 由 接触零距离 于 2013-08-25 18:00</p>
+	<!--bodybegin-->
+<pre>
+　来源:巨豆情色网 作者:Ｎｕｔｓ 
+
+　　作者： Ｎｕｔｓ
+
+　　暗夜女警（全）
+
+　　“哈┅哈┅哈┅” 
+
+　　急促的脚步声，在暗夜中响起，少女从视线的尽头喘着粗气，不顾一切地跑 来。 
+
+　　明亮的大眼睛中满是恐惧，就彷佛她的身後，正有来自地狱的恶鬼在追赶着 一般。 
+
+　　“甩脱了麽？” 
+
+　　少女甩过头去一看，身後除了寂静，什麽都没有。 
+
+　　这多少让她松了点气，但毕竟还并不能因此完全放心。 
+
+　　她重新转向正面，尝试着再跑。 
+
+　　但是，凌乱的呼吸急待调整，双腿的疲劳也像突然涌上来一般，不能挪动半 步。 
+
+　　“应该，没事了吧？” 
+
+　　豆大的汗珠沿着发梢滴落，分不清是缘於疲惫还是惊恐。 
+
+　　少女抹了一把额头，挥手甩去。 
+
+　　刚才有人再盯着自己，那是无庸置疑的。 
+
+　　彷佛还能看到黑暗中那双令人不适的眼睛，闪动着黄绿的光芒，就像发现了 猎物的豺狼似的。 
+
+　　但是，应该不会跟过来吧？ 
+
+　　少女注视了一眼顶上路灯的亮光，虽然还嫌昏暗，但总比刚才伸手不见五指 的漆黑要让人安心许多。 
+
+　　应该，不会有人敢在这里为非作歹的吧？ 
+
+　　不过下次放晚班，还是不要再走这里了比较好。 
+
+　　自觉气息平复了许多，少女中止了胡思乱想，准备离开。 
+
+　　但此时，身後突然一只大手一把捂上了她的嘴。 
+
+　　“呀！” 
+
+　　凄厉的呼喊未及传出口，只能更加百倍的回想在少女的心里。 
+
+　　一刹那的惊恐甚至扭曲了她秀丽的脸庞。 
+
+　　“不要！” 
+
+　　她被猛转过去。 
+
+　　身後直面着的，是一张因得意而狰狞无比的笑脸。 
+
+　　********************************************************************** 
+
+　　“哒、哒”的脚步声在月光下响起，从道路的远处慢慢向这边靠近。 
+
+　　“来了。” 
+
+　　路旁某个漆黑的角落，一张男人的脸藏在其中暗暗狞笑着。 
+
+　　看到了，是的，他看到了。 
+
+　　不远处，俏丽的身影已然出现在视线之内，那是身着警察制服的年轻女子， 右手握着手电筒，不时向四处提防的瞧一眼，似乎是在搜索什麽，却又似带着畏 惧。 
+
+　　“嘿嘿嘿，怕吗？” 
+
+　　低沉的声音卡在喉咙里，黑暗中潜伏着的男人克制不住自己的兴奋与得意。 
+
+　　那女警为了谁而巡逻，他知道得很清楚。 
+
+　　但是这并不重要。 
+
+　　夜晚的风有些寒冷，在空旷无人的街道上犹能感觉到。 
+
+　　男人彷佛看见了走来的女警在制服下瑟瑟颤抖的娇躯。 
+
+　　那应该是白晰之上带了点粉红。 
+
+　　绿色的制服太单薄了，对这秋天来说。 
+
+　　但是却更能勾勒出年轻女子凹凸有致丰满诱人的身段。 
+
+　　“真好。” 
+
+　　男人忍不住咽了口口水。 
+
+　　上衣遮掩不住的地方，是女人胸前挺立的双峰，不必挑逗，也自呼之欲出； 警用皮带束缚出的纤细腰身；短襟下是後翘的臀部，应该是浑圆丰满的屁股，等 待着自己开采的後庭；当然，还有掩藏在短裙内的肥美阴户，一定正流淌着淫水 ，在等待自己的插入呢。 
+
+　　“唔。” 
+
+　　像野兽一样，男人在心底里低吼了一声。 
+
+　　越来越近了。 
+
+　　虽然这附近的路灯也像别处的一样昏暗罔灭，但是籍着女人手中电筒的光芒 ，还是能多少辨认出一些她的容貌。 
+
+　　哦，那似乎是张很清丽的脸。 
+
+　　眼睛大大的，不知道待会儿会不会流露出淫荡与渴望的眼神；还有那张红润 的樱桃小嘴，不知道将自己的肉棒插进去会是多麽的爽的事。 
+
+　　其他的┅┅ 
+
+　　就实在看不真切了。 
+
+　　“不过这没关系。” 
+
+　　男人兴奋的想，比之前所预料的要好许多了呢。 
+
+　　实在没想到，女警中间还能有这麽动人“性”趣的尤物。 
+
+　　早知道就该早点找两个女警来玩玩。 
+
+　　一念及此，男人多少有点後悔。 
+
+　　但是没关系，现在也不算晚。 
+
+　　最重要的是，这是个向警界示威的好机会。 
+
+　　“她没有发现我吧？” 
+
+　　看着即将到手的猎物离自己愈来愈近，男人心中不禁泛起了些许不安。 
+
+　　“不，不会！” 
+
+　　如果她发现了，应该不会继续走过来才对。 
+
+　　她会转身就跑，请求支援才对，甚至吓的大喊，就像他曾经遇到过的女人一 样。 
+
+　　看上去一脸的高贵，底子里却是惊人的胆小。 
+
+　　还保持这样战战兢兢的前进，应该是没有发现我才对。 
+
+　　对这个藏身处，我有信心，不会那麽容易被发现的。 
+
+　　女人的身形越来越接近自己的捕猎范围，兴奋的电波替代了紧张在男人的脑 海中奔流。 
+
+　　三步，两步，一步，终於┅┅ 
+
+　　黑暗中的野兽一步抢出，一手捂住猎物的嘴，另一只手一把抓住对方的双手 反剪到她身後，顺势推向路边暗处按倒。 
+
+　　“呀！” 
+
+　　那是被狩猎的女人未发出的悲鸣。 
+
+　　却只留下了手中电筒落地，玻璃敲碎的声音。 
+
+　　********************************************************************** 
+
+　　“日前，杨浦区内发生的连续强奸案又有最新动向。昨晚，中原小区内又有 一名单身晚归的青年女子不幸蒙受凌辱。致此为止，受害人数已然高达八名。市 府警方在表示要加大破案力度的同时，恳请市民在这段时间内能够尽量避免不必 要的夜间外出。尤其是青年妇女，至少也希望能保证结伴同行。” 
+
+　　“日前发生在杨浦区内的连续强奸案，市委发言人再次出面，并援引了犯罪 学专家的话，否认了社会上关於此事件，是由国外反动势力或国内妄图分裂祖国 的一小撮人处心积虑所为的谣言。认为这只是个别的恶性犯罪事件。希望广大市 民能够认清形式，继续坚定不移的跟随在以党中央为核心的市委市府周围，与邪 恶的犯罪分子做殊死的斗争。最终胜利一定是属於我们的。” 
+
+　　“下面播送体育新闻，意大利ＡＣ米兰队主场再平英格兰切尔西队，冠军杯 小组出线前景黯淡，主教练扎切罗尼┅┅” 
+
+　　“啪”的一声，电视上俏丽的新闻发布员随之消失。 
+
+　　某件屋子的一角，看了那接二连三的犯罪报导，一个声音得意的呵呵低笑起 来。 
+
+　　“想抓住我吗？没那麽容易呢。” 
+
+　　各种生活用品杂乱无章的被随意丢在屋子四处，一个男人横坐在褥子上，右 手支隅，呵呵笑着。 
+
+　　“不过刚才的女主播真漂亮。” 
+
+　　男人的左手轻轻抚摸着胯下露出勃起的阴茎，一脸意犹未尽的模样。 
+
+　　“如果也能用我这根肉棒惩罚一下就好了。嘿嘿。不过没关系，昨天晚上的 那个妞也很够劲。又骚又辣，开始还抗拒得蛮像回事儿的，但是没让我抽插几下 就屈服了，後来还主动甩着她那对大奶子迎合我。嘿嘿。真够爽的。” 
+
+　　似乎回想起昨晚听到的淫声浪语，男人的手势越来越快，舒服的表情更是溢 於言表。 
+
+　　“啊！好想再来一次。呀，受不了了┅┅” 
+
+　　一阵痉挛般的颤动，乳白色的浑浊液体从某个突出昂立之处飞溅而出，射向 远方。 
+
+　　********************************************************************** 
+
+　　“不要！” 
+
+　　这喊声透过男人的手变成了几不可辩的低声悲鸣，但被压倒在路边的女警仍 然痛苦地想避开男人身体的压迫，拼命摇着头。 
+
+　　但是力气无论如何也不够吧？ 
+
+　　更何况面对着的显然还是一个老手，她的努力完全变成了软弱无力的锤打。 
+
+　　“呀。真是让人不能不兴奋呢。” 
+
+　　体会着女人身体凸出的部位不断磨擦着自己的身体，男人像残忍的猫一样饶 有兴趣的注视着女人。 
+
+　　终於看清楚了，那是张不修脂粉的清素面容。 
+
+　　鼻梁小而挺俏，脸则因惊慌而失色。 
+
+　　但是依然是张漂亮的脸蛋，不逊色於电视台那个女主播呢。 
+
+　　放开了挡住女人嘴的手转而掐住她的脖子，男人一把痛吻下去。 
+
+　　“如果不听话的话。就掐死你。” 
+
+　　“呜┅” 
+
+　　拼命摇着头，那是该在说“不”吧？ 
+
+　　男人想。 
+
+　　但是兴趣却丝毫没有因之降低。 
+
+　　因为有反抗，才有强奸的乐趣，不是吗？ 
+
+　　他不理女人的反对，膝盖与胸则将身下的尤物抵得更紧，尽情享受着身体间 的厮磨，而放开一只手慢慢伸向女人的腰间。 
+
+　　“嗯。呜┅” 
+
+　　似乎意识到了男人想做什麽。 
+
+　　女警的反应更加强烈，但这只是更加强了男人的性趣。 
+
+　　“事到如今。还指望我会停手吗？” 
+
+　　短裙被撕开，雪白的大腿裸露在冷风中。 
+
+　　“呜┅” 
+
+　　如果说适才的反应是不愿，那麽现在的反应则更近於绝望前的悲鸣。 
+
+　　那下面的内裤是什麽颜色的？ 
+
+　　男人不知道。 
+
+　　但是他可以感觉到自己的手正隔着一层薄薄软软的丝绸，接触到触手可陷的 神秘花园。 
+
+　　“湿了哟。” 
+
+　　虽然这麽挑逗着。 
+
+　　但是男人心里并不感到特别得意。 
+
+　　一如之前强奸的那些女人，无论上身反抗的多麽激烈，下身都很坦率，早早 水灾泛滥了。 
+
+　　“嗯┅┅” 
+
+　　“很好。” 
+
+　　制服与衬衫也被粗暴的扯下，粉红色蕾丝的胸罩也露了出来。 
+
+　　花瓣扭曲卷起，红色的樱桃硬了。 
+
+　　男人彷佛在女人的眼睛里，读到了叫渴望的东西。 
+
+　　“那麽希望我进入吗？” 
+
+　　内裤一下子就被扯了下来。 
+
+　　裤兜的拉链也被飞快的解开，里面早已蓄势待发的肉棒猛然撺出，傲立在暗 阎中，一口气挺入女人的下体。 
+
+　　********************************************************************** 
+
+　　“就目前造成市民恐慌的此事件，市委书记陈至立同志日前发表讲话，督促 我警务人员一定要加快步伐、加大力度、尽快破案，早日还市民一个安定团结的 社会环境。” 
+
+　　“就杨浦区发生的连续妇女强奸案，市委领导龚学平同志与市公安局局长朱 达人同志已亲临现场指挥，朱达人同志还同时表示，将立即抽调全市有能力与经 验的骨干警务力量全力增援专案小组，加速破案工作的顺利进行。并请广大市民 放心。一定会将犯罪分子尽快绳之以法，还公众一个和平安宁的环境。” 
+
+　　“想抓我的话就尽管来吧。” 
+
+　　注视着新民晚报上与电视里一样的新闻，男人自言自语着。 
+
+　　能抓的到我的话，早就抓住我了。 
+
+　　今天晚上还要去街上守候哟。 
+
+　　感谢永远修不亮的路灯，我会让你们抓的。 
+
+　　可是你们不能太无能哟。 
+
+　　就像是对手都聚集在眼前，男人奚落地笑了起来。 
+
+　　突然，脑子里灵光一现。 
+
+　　不，不如就把下一个目标定为女警好了。 
+
+　　嗯，强奸一个女警，嘿嘿！ 
+
+　　警界震动的景像用想的都觉得很过瘾很刺激。 
+
+　　愤怒与悔恨，会化作屈辱之鞭，狠狠地痛击着他们吧。 
+
+　　对，不如就再定为专案小组里的一员好了。 
+
+　　哈哈哈哈┅┅ 
+
+　　定下了这个怎麽都觉得很满意的计划，男人激动了很久。 
+
+　　然後就是仔细耐心的开始调查。 
+
+　　再怎麽得意，男人并不傻。 
+
+　　然後，就是到了昨天。 
+
+　　终於，终於确定了专案组夜巡逻中，会有一名女警参与，而且还常常落单。 
+
+　　那些指挥者的安排真是有问题呀。 
+
+　　就是她了，连她巡逻的范围和时间都详细的调查了。 
+
+　　选定了合适的地点，剩下的就只有耐心的等待了。 
+
+　　一切都应该没有问题。 
+
+　　居然没有其他办法对付我，只能夜夜巡逻吗？ 
+
+　　那样的话，就是自寻死路吧？ 
+
+　　男人得意的想。 
+
+　　狂笑声再次回想在斗室之内。 
+
+　　********************************************************************** 
+
+　　“呜┅┅” 
+
+　　女人皱着眉头，眼泪从眼角流了下来。 
+
+　　而此时，男人则正在享受着甫插入时阴户温暖紧缩的美妙感觉。 
+
+　　“呵呵，没有多少人进出过你这个小穴吧？” 
+
+　　“别┅” 
+
+　　“嘿嘿”男人乾笑了两声。 
+
+　　掐在女人脖子上的手加强了力量，腰部也开始有节奏的活动起来。 
+
+　　“啊┅” 
+
+　　女人因呼吸困难而痛苦的颤抖着，阴户也因之收缩得更紧。 
+
+　　两人的下腹部猛烈碰撞着，不断发出啪啪的淫荡交合声。 
+
+　　“真是收缩得恰到好处呀！” 
+
+　　男人慢慢加大了活塞运动的频率，不断用力往里面挺着。 
+
+　　“这里也硬起来了哟。” 
+
+　　注意到女人胸前颤立红硬的樱桃，男人兴奋的俯下去用牙齿咬啮起来。 
+
+　　“不要，好痛。” 
+
+　　粗暴的举动痛的女人皱起眉头，泪珠进一步淌了下来，但是下身的反应却越 来越激烈，抵抗也越来越小。 
+
+　　“ㄛ┅舒服吗？” 
+
+　　看到女人脸上渐渐浮现出的愉悦神情，男人甚至可以感觉到对方开始迎合起 自己的动作来。 
+
+　　这股兴奋使腰部律动的速度一直加速着，男人的气息也越来越粗。 
+
+　　可女人最敏感的部位被狂风暴雨般一再刺激着，激烈的已经连话也回答不出 了。 
+
+　　“啊┅嗯┅啊、啊，那里┅” 
+
+　　终於，痉挛扩散至女人全身，喉咙深处发出不成样的声音，整个人不断剧颤 着。 
+
+　　“真是好容易满足的女人呀。哦，我也┅┅” 
+
+　　本来是有些遗憾的说辞未及讲完，对方秘道深处传来的阵阵强烈痉挛紧紧地 夹住分身，像是要整个吞进去似的狂吸。 
+
+　　那是什麽？ 
+
+　　从未在其他女人身上体会过的强大吸力，使男人瞬间失去自持，就这样热烈 的爆发出来。 
+
+　　“呀┅┅” 
+
+　　灼热的液体喷射在体内，女人再也不顾任何限制，厉声的长呼刺穿了寂静的 黑夜。 
+
+　　“糟了！” 
+
+　　顾不得细品适才激情的馀韵，男人栗然从高潮中惊醒，会把其他巡逻的人叫 来的。 
+
+　　不行，不快走的话就真的有麻烦了。 
+
+　　恨恨的看了一眼正失神的女人，男人立刻将分身拔出，长长丝线滴到地上。 
+
+　　发射过的长枪已经萎缩了下去，失去了原先的光亮。 
+
+　　男人飞快的将它放回裤兜，迅速拉上拉链，整理了一下着装，一晃眼又闪入 了无垠的黑暗之中。 
+
+　　********************************************************************** 
+
+　　初秋的夜晚天很黑，一具半裸的女体，无力的横躺在月光照不到的街道边某 处。 
+
+　　从她身旁被撕碎的衣服和掉落的电筒来看，她是名正在巡逻的女警。 
+
+　　瑟瑟的寒风吹来，将她身边不知何时被从制服口袋里掉落的两片薄纸卷起。 
+
+　　“二级警员陈虹同志，接到此命令後请立即向杨浦区公安局连续强奸案专案 小组报到。并参与其一切有关行动。” 
+
+　　“陈虹小姐，我们十分遗憾的通知你，你的血液中检查出ＨＩＶ呈阳性。” 
+
+　　☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆ 
+
+　　Ｎｕｔｓ∶「一篇不成气候的小短文，谢谢各位指点，也祝大家新春如意。」 
+
+　　路人∶「和雀萍怨、暗黑魔法师手记比起来，此篇稍微有点逊色啊！」 
+
+　　Ｎｕｔｓ∶「时间紧迫，来不及写好东西，这篇故事，主要是我偶然闪过的一个念头，就快手快脚地写出来了。」 
+
+　　ＮＥＰＴＵＮＥ∶「的确满有趣的，那个男人真可怜啊。」 
+
+　　鹰魔∶∶「好，我们接下来，欢迎十日谈的第九夜·恶魔的婚前仪式。」<!--bodyend-->
+</pre>
+<div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
+</td></tr>
+	<tr bgcolor='#E6E6DD'>
+		<td height=25>
+			<center>喜欢接触零距离朋友的这个贴子的话，[<a href="javascript:void(0)" onclick='dovote(13867099)'><font color=FF0000>请点这里投票加分支持</font></a>]
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td>
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="index.php?app=forum&act=userview&username=接触零距离" >ID前期主贴发言</a>]·[<a href="./index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">-->>加跟贴</a>]·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13867099">--向朋友推荐--</a>]·[<a href="javascript:history.go(-1)">返回前页</a>]
+			</div>
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">贴子内容是网友自行贴上分享，如果您认为其中内容违规或者侵犯了您的权益，请与我们联系，我们核实后会第一时间删除。</td></tr>
+</table>
+<center><center>
+<IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
+</center></center>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>所有跟贴:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">加跟贴（积极回贴支持发贴的朋友，才能欣赏到更多精品好贴！）</a>
+<div style="width:530px;float:left;border-right:1px #cccccc dashed">
+<form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
+				<p style='margin-top:5px;margin-bottom:5px;'>用户名:<input type="text" name="username" >密码:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--注册ID--]</a></p>
+					<input type="hidden" name="uptid" id="in_uptid" value="13867099" />
+		<input type="hidden" name="rootid" value="13867088" />
+		<input type="hidden" name="fid" value="" />
+		<input type='hidden' id="rename" name='rename' value='0'>
+		<span id="subject_info">标　题:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">所见即所得|预览模式</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">旧版发帖帮助</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">所见即所得发帖帮助</a>]<br>
+		<p>
+			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
+			<p id="parktools">
+				<img onclick="Cbold()" height=37 alt="粗体" src="./images/parkeditor/bold.gif"  border=0 alt="将选中文字设置为粗体">
+				<img onclick="Citalic()" height=37 alt="斜体" src="./images/parkeditor/italicize.gif"  alt="将选中文字设置为倾斜样式"   border=0>
+				<img onclick="Cunder()" height=37 alt="下划线" src="./images/parkeditor/underline.gif"  alt="将选中文字添加下划线"  border=0>
+				<img onclick="Ccenter()" height=37 alt="居中" src="./images/parkeditor/center.gif"  alt="将选中文字居中"  border=0>
+				<a onclick="Cimage()"><u>插入图片</u><img height=22 alt="插入图片" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>插入Flash</u><img height=22 alt="插入Flash动画" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>插入音乐</u><img src="./images/parkeditor/av.gif" alt="插入音乐" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>插入视频</u></a>
+			</p>
+			<br><input type="submit" name="submit" value="确认发布" /> &nbsp;<a href="#replyView" class="replyViewBtn">发布前预览</a>
+		</p>
+	</form>
+</div>
+<div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
+<p><b>相关话题推荐：</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=一届' target='_blank'>一届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=第八' target='_blank'>第八</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=女警' target='_blank'>女警</a>&nbsp;</span></p>
+<ul style="">
+	<li><a href="index.php?app=forum&act=threadview&tid=13867098" target="_blank">（一届）第七夜 仙人跳</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867097" target="_blank">（一届）第六夜 美肉娘外传</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867096" target="_blank">（一届）第五夜 征服神奇女侠 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867095" target="_blank">（一届）第五夜 征服神奇女侠  上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867093" target="_blank">（一届）第四夜 邻家保姆</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867092" target="_blank">（一届）第三夜 强暴女子银行员</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867091" target="_blank">（一届）第二夜虎头狗尾（缺）</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867090" target="_blank">（一届）第一夜虚像庭园</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867089" target="_blank">十日谈第一届前夜</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867006" target="_blank">【如影逐形】第八十六章 天道仇勤</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866301" target="_blank">「第八章」再斗浪女</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866291" target="_blank">【诱红楼】第八集 作者：知乐</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866255" target="_blank">第四部　第八册　自寻变数</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866118" target="_blank">第八册4~6</a></li>
+	
+</ul>
+</div>
+<div style="clear:both;">
+</div>
+	</td></tr></table>
+<script src="http://t.6park.com/index.php?mod=showid&username=接触零距离" language="javascript" ></script> <br>
+
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> 广告服务 </a>] [<a href="http://www.6park.com/contact/con2.htm"> 联系我们 </a>] [<a href="http://www.rich98.com/home/index.php"> 个人帐户 </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> 版主申请 </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<script language="JavaScript" type="text/javascript">
+	$("input[type='image']").each(function (){
+		if($(this).width()>940){
+			$(this).width(940);
+		}
+	})
+	
+	$("table[width='948']").width(998);
+</script>
+</div>
+
+<div style="width:300px;border:1px solid #dedede;height:150px;background:#efefef;display:none;" id="login_form">
+        <style type="text/css">
+            #login_form_tab td{font-size:12px;height:25px;}
+             #login_form_tab{
+                    width:200px;
+                    margin-left:50px;
+                    margin-top:30px;
+            }
+        </style>
+	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
+        <table border="0" id='login_form_tab'>
+            <tbody><tr>
+                   <td width='45px'>用户名:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+            </tr>
+            <tr>
+                    <td>密码:</td><td><input type="password" class="ulogin" name="password"></td>
+            </tr>
+	    <tr>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="login"></td>
+            </tr>
+				
+				
+        </tbody></table>
+	</form>
+</div>
+
+<div style="width:900px;border:1px solid #dedede;background:#efefef;display:none;font-size:14px;" id="replyView">
+&nbsp;
+</div>
+<script type='text/javascript' src='http://www.rich98.com/wordex.js'></script>
+</body></html>

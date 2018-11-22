@@ -1,0 +1,1044 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=gb2312">  
+	<STYLE type='text/css'>
+		<!-- 
+		 a{text-transform: none; text-decoration: none;} 
+		 a:hover {color: #FF0000; text-decoration: underline} 
+		 td {  font: 11pt '宋体'} 
+		 -->
+		pre { 
+		
+			white-space: pre-wrap; /* css-3 */ 
+			white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ 
+			white-space: -pre-wrap; /* Opera 4-6 */ 
+			white-space: -o-pre-wrap; /* Opera 7 */ 
+			word-wrap: break-word; /* Internet Explorer 5.5+ */ 
+			width:998px;
+			overflow:hidden;
+		} 
+	</STYLE>	
+    <title>（二届）廿九夜 千面人 -rich98.com</title>
+	<meta name="Keywords" content="二届,面人,（二届）廿九夜 千面人,接触零距离,">
+	<meta name="Description" content="（二届）廿九夜 千面人">
+  </head>
+<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
+<div class="body_center" id="head_ad">
+	<center><center>
+<IFRAME ID=topictop FRAMEBORDER=NO SCROLLING=NO name=iframe_topictop SRC=http://list.6park.com/web/topictop.html width=1000 height=64></IFRAME>
+</center></center>
+</div>
+<hr width=1000 size=1></center>
+<script charset="utf-8" src="./public/js/jquery.js"></script>
+<script charset="utf-8" src="./public/js/editor/kindeditor.js"></script>
+<script charset="utf-8" src="./public/js/editor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="./public/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script language="javascript">
+	var editor;		
+	function changeeditor(obj){
+		
+		if(editor){
+			editor.sync();
+			editor.remove('textarea[name="content"]');
+			editor = undefined;
+			obj.innerHTML='即见即所得模式|预览模式';
+			$("#parktools").show();
+		}
+		else{
+			$("#parktools").hide();
+			editor = KindEditor.create('textarea[name="content"]', {
+			resizeType : 0,
+			allowPreviewEmoticons : true,
+			allowImageUpload:false,
+			width:"470px",
+			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
+			});
+			obj.innerHTML='旧版发帖模式';
+		}
+	}
+	
+	
+	
+	function dovote(tid){
+		window.open("index.php?app=forum&act=vote&old=1&tid="+tid); 
+	}
+	
+
+			
+	function checktitle(){
+		var _title = $("#subject").val();
+		var _content = $("#content").get(0).value;
+		var _status = $("#rename").val();
+		_content = nl2br_js(_content);
+		$("#content").get(0).value = _content;
+		if(_title.length>60){
+			alert("标题长度过长，标题长度不能超过60个字符或30个汉字长度");
+			return false;
+		}
+		else{
+			if(_status == 1){
+				var date=new Date();
+				date.setTime(date.getTime()-10000);
+				document.cookie="scode=828; expire="+date.toGMTString()+";path=/"
+			}
+			
+			return true;
+		}
+	}		
+	function doImgOnload(img){
+			var   maxWidth=800;
+			var   maxHeight=10000;
+			var   width=img.width;
+			var   height=img.height;
+
+			if(!(width> maxWidth || height> maxHeight))
+				return;
+			if(width/height >= maxWidth/maxHeight){
+					img.width=maxWidth;
+			}else{
+					img.height=maxHeight;
+			}
+
+	}
+
+
+	$(document).ready(function(){
+	  $(".show_content img").bind("load",function (){
+			doImgOnload(this);
+	  });
+		$(".replyViewBtn").fancybox({
+				'onStart':function(){
+					var _content = $("#content").get(0).value;
+					_content = nl2br_js(_content);
+					$("#replyView").html(_content);
+					$("#replyView").show();
+				},
+				'onComplete':function(){
+					
+				},
+				'onCleanup':function(){
+					
+				},
+				'onClosed':function(){
+					$("#replyView").hide();	
+				}
+		})
+	});	
+
+
+
+
+//留园编辑器
+Selection = function(input){
+					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
+			};
+			with({o: Selection.prototype}){
+					o.setCaret = function(start, end){
+							var o = this.input;
+							if(Selection.isStandard)
+									o.setSelectionRange(start, end);
+							else if(Selection.isSupported){
+									var t = this.input.createTextRange();
+									end -= start + o.value.slice(start + 1, end).split("\n").length - 1;
+									start -= o.value.slice(0, start).split("\n").length - 1;
+									t.move("character", start), t.moveEnd("character", end), t.select();
+							}
+					};
+					o.getCaret = function(){
+							var o = this.input, d = document;
+							if(Selection.isStandard)
+									return {start: o.selectionStart, end: o.selectionEnd};
+							else if(Selection.isSupported){
+									var s = (this.input.focus(), d.selection.createRange()), r, start, end, value;
+									if(s.parentElement() != o)
+											return {start: 0, end: 0};
+									if(this.isTA ? (r = s.duplicate()).moveToElementText(o) : r = o.createTextRange(), !this.isTA)
+											return r.setEndPoint("EndToStart", s), {start: r.text.length, end: r.text.length + s.text.length};
+									for(var $ = "[###]"; (value = o.value).indexOf($) + 1; $ += $);
+									r.setEndPoint("StartToEnd", s), r.text = $ + r.text, end = o.value.indexOf($);
+									s.text = $, start = o.value.indexOf($);
+									if(d.execCommand && d.queryCommandSupported("Undo"))
+											for(r = 3; --r; d.execCommand("Undo"));
+									return o.value = value, this.setCaret(start, end), {start: start, end: end};
+							}
+							return {start: 0, end: 0};
+					};
+					o.getText = function(){
+							//获取选中内容
+							var o = this.getCaret();
+							return this.input.value.slice(o.start, o.end);
+					};
+					o.setText = function(text){
+							//设置选中内容
+							var o = this.getCaret(), i = this.input, s = i.value;
+							i.value = s.slice(0, o.start) + text + s.slice(o.end);
+							this.setCaret(o.start += text.length, o.start);
+					};
+					new function(){
+							var d = document, o = d.createElement("input"), s = Selection;
+							s.isStandard = "selectionStart" in o;
+							s.isSupported = s.isStandard || (o = d.selection) && !!o.createRange();
+					};
+			}
+			var selection;
+			var textId = "content";
+			//设置粗体
+			function Cbold(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<b>"+selection.getText()+"</b>";
+				selection.setText(s);
+			}
+			//设置斜体
+			function Citalic(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<i>"+selection.getText()+"</i>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Cunder(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<u>"+selection.getText()+"</u>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Ccenter(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<center>"+selection.getText()+"</center>";
+				selection.setText(s);
+			}
+			//插入图片
+			function Cimage(){
+				selection = new Selection(document.getElementById(textId));
+				var s = prompt("请输入图片的网络地址:", selection.getText());
+				if(s !== null){
+					s = "<img src='"+s+"' />";
+					selection.setText(s);
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			//插入flash
+			function flash() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("Flash URL 地址","http://");      
+				if (txt!=null) {
+					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
+					selection.setText(AddTxt);
+					} 
+					else if(s == ''){
+					alert('您输入的内容为空');
+				} 
+			}
+			function music() {
+				txt=prompt("音乐文件地址","http://");      
+				if (txt!=null) {
+					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
+					selection.setText(AddTxt);
+				}
+			}
+
+			function real() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("请输入电影文件地址","http://");  
+				if (txt!=null) {
+					$.get("./public/movie.php", {url:txt,width:0,height:0},
+						function(data){
+						selection.setText(data);
+						});        
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			function nl2br_js(text){
+				return text;
+			}
+			
+
+			function changeuser(obj){
+				//$("#login_user_info").remove();
+				var _status = $("#rename").val();
+				if(_status == 1){
+					$("#login_hidden").hide();
+					$("#rename").val('0');
+					$(obj).html('切换发帖账号');
+				}
+				else{
+					$("#login_hidden").show();
+					$("#rename").val('1');
+					$(obj).html('取消切换');
+				}
+			}
+			
+</script>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">加跟贴</a>]·[<a href="index.php?app=sys&act=threadmanage&tid=13868099">版主管理</a>]·[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="http://news.6park.com" target='_blank'>分区新闻</a>]·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">繁體閱讀</span></a>]</td></tr>
+ <tr bgcolor='#E6E6DD'> <td class="show_content">
+ <center><font size=6><b>（二届）廿九夜 千面人</b></font></center>
+
+送交者: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=接触零距离' target=_blank>接触零距离</a>[虎威将军★★☆] 于 2013-09-01 19:26 已读 119 次 <a href="http://t.6park.com/index.php?mod=接触零距离" target=_blank>@接触零距离@的微博</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13868099&tag=禁忌书屋&title=（二届）廿九夜 千面人&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='转发本贴到微博'></a><p></p>
+	<p>回答: <a href="index.php?app=forum&act=threadview&tid=13868067">【十日谈】（第二届） 作者：多人</a> 由 接触零距离 于 2013-09-01 18:53</p>
+	<!--bodybegin-->
+<pre>
+　来源:巨豆情色网 作者:瘦子 
+
+　　作者︰瘦子
+
+　　（一） 
+
+　　美穗慢慢滑进自家浴室的大浴缸里，温暖的热水马上将她美丽丰满的肉体包 容起来，如同无数双温柔的小手在轻轻抚摸，让美穗从心里感到非常的舒适。 
+
+　　成熟如梨形的丰硕美乳由于浮力的关系在水中晃荡，美穗忍不住伸出一双玉 手从下面轻轻地握住自己两个柔软美丽的乳房，低头骄傲地看着。 
+
+　　雪白的乳房是如此的光滑而富有弹性，乳尖上小巧玲珑的乳头像樱花般有着 美丽的粉红色，不是很大的乳晕的颜色很浅\，淡雅的溶入乳房那白嫩的肌肤中。 那微微陷入浅\粉色乳晕中的乳头，当指尖轻轻一踫便会快活地凸起。 
+
+　　美穗知道自己的乳头非常的敏感，多踫几下身体就会热起来，那样的话，又 会忍不住要在水中手淫了。 
+
+　　心中轻叹了口气，美穗把手放下来，看到在热水中，两条修长大腿根部那黑 色的阴毛如海草般摇曳着。美穗的阴毛软硬长短适中，和她的知性丽容高雅气质 十分的相称，在雪白的小腹下形成一个美丽的倒三角形。 
+
+　　美穗用手指抚弄了一阵柔软的阴毛后，把较大的两片阴唇用两根手指轻轻分 开，露出里面粉红色娇嫩的花瓣。当她的手指尖轻轻触到柔嫩的花瓣，心中就产 生出一丝淫荡的感觉。 
+
+　　“好舒服啊！”她不禁想念起那个温柔地抚摸自己这里，给自己带来极大快 感的那个人。 
+
+　　“中山美穗的身体，是所有男人都渴望的……” 
+
+　　一想到身边那些男人迷恋的眼神，美穗鄙夷的一笑，用稍钏驧M的声音自言 自语。 
+
+　　二十六岁的美穗是个让人难以忘怀的美女，身材苗条、匀称，极具女人的魅 力。自从大学毕业后，到有着精英学园之称的“岩月学园”任教已近四年。 
+
+　　美丽的面貌和轮廓清晰的表情，就是做时装模特儿也是有第一流身材的美穗 进校后，就被称为“学校之花”。面对众多的追求者，美穗却总是一笑置之，于 是她又得了个“冰山美人”的外号。 
+
+　　钗h人不禁暗中传播美穗是个同性恋，但美穗在学园的出色表现和严谨的作 风让这些谣传不攻自破，无声无息的消失。 
+
+　　从浴室里出来，美穗只用一条大浴巾简单地包住自己的身体，披散着略带湿 气的过肩长发，她非常喜欢这种自在的舒适感，有自由释放的快乐。 
+
+　　为自己倒了杯水后，美穗顺手打开电视机，里面正在播出的一条消息引起了 美穗的注意。 
+
+　　“现在播出紧急通知，一名罪犯下午越狱逃跑，现警方正全力追捕。望市民 提高警惕，如看到有可疑人物，请通知警方。” 
+
+　　接下来电视里开始播出该犯人的图像，三十三岁的逃犯看起来就像是社会精 英份子，一点都不像是个穷凶极恶的罪犯。 
+
+　　“现在的警察可真是……”美穗刚想换台，电话响起。 
+
+　　＊＊＊　　　　＊＊＊　　　　＊＊＊　　　　＊＊＊ 
+
+　　“他想干什么吗？”西城警署的副署长浅\井裕美接到报告后苦苦思索着。 
+
+　　她深知这个罪犯的可怕，被称为“千面恶魔”的佐藤彰是个非常狡猾难缠的 人，曾经被美国中央情报局列为头号通缉犯，日本警方这次也是费尽心机才抓住 他的。但没想到一个月后就被他成扒V狱了，这下要想再抓住他就难上加难了。 
+
+　　二十八岁的裕美是今年刚到任的，她真正是那种所谓的社会上层精英，名牌 大学毕业后留学深造，然后回国考公务员，一帆风顺地就任副署瑾。 
+
+　　这个本府有史以来最年轻的副署长身材娇小玲珑，一头利索的短发，看上去 根本不像是个二十八岁的女人，就像个清纯的大学生。 
+
+　　刚上任的时候，被手下的警员戏称为“花瓶署长”。的确，裕美长得比那些 演艺圈的美女还要秀丽迷人，但她很快就展示了自己的能力，把手下的警员震得 服服贴贴的，虽然现在他们还叫她的雅号“美人署长”，但语气却是带着敬佩。 
+
+　　裕美的脑中灵光一现︰“糟糕！那个女人会是第一目标。”裕美连忙召来手 下的刑警︰“尚子小姐那里有人去了吗？” 
+
+　　尚子她原是佐藤的情妇，被警方说动后，协助警方抓获了佐藤。 
+
+　　“去了两个。” 
+
+　　“不够的，再派几个。动作要快。”裕美催促道。 
+
+　　“不会吧。”一个警官质疑道︰“佐藤还不逃之夭夭，敢去找尚子？” 
+
+　　裕美很有信心的说道︰“不会错的。我深入研究过这个人。” 
+
+　　身为罪犯心理学的专家，裕美的判断是惊人的准确，在以前的案件里已经证 明无误。这也是让手下佩服的一个方面。 
+
+　　几个警察刚想走，一个警官冲了进来叫道︰“佐藤袭击了一个路面巡警。” 
+
+　　“什么？”众人一楞，纷纷上前追问。 
+
+　　原来佐藤居然把警察打昏后，还剥走了他的衣服。 
+
+　　裕美的反应最快，她马上命令︰“通知市民，如果是单独一个警察来叫门， 千万不要开。最好是马上报警。”然后裕美转过身来︰“你们几个快去尚子小姐 那里。” 
+
+　　众人轰然应答。 
+
+　　＊＊＊　　　　＊＊＊　　　　＊＊＊　　　　＊＊＊ 
+
+　　听着电话里母亲喋喋不休的说教，美穗心不在焉地应对，巴不得快点结束。 
+
+　　“总之，你们两姐妹真让我用心。”母亲在电话里总结着︰“你还是早点找 个对象吧，省得老让我担心。我跟你说的这个人不错的，要不要约时间见见。” 
+
+　　听到这些，美穗的头都大了，她的母亲老是逼着她去相亲，十个电话里有九 个是介绍男人给美穗的。 
+
+　　美穗正在想法子推辞的时候，门铃响了。 
+
+　　“啊，有人来了，就这样吧。”美穗如释重担，连忙说道。 
+
+　　“喔，那你星期天回来吗？” 
+
+　　“妈妈，再说吧。”美穗赶快挂断了电话。 
+
+　　美穗从鱼眼向外面的走廊看，只见一个警察正站在门口。 
+
+　　在警察再次按门铃之前，美穗打开了房门，“警官先生，有什么事吗？”美 穗语气轻松地问道。因为这个的敲门太及时了，把她从母亲的唠叨中解救出来。 
+
+　　“对不起，打扰一下。”警察把手中的证件亮了一下，走进房间后，随手把 门关上了。 
+
+　　美穗看着警察奇怪的动作，觉得他的脸好像在哪里见过。 
+
+　　“你一个人住？” 
+
+　　“是的。”美穗不解地看着这个警察。 
+
+　　美穗感到警察的眼神突然变得古怪起来，她猛然间想到自己现在全身只裹着 一条浴巾，模样十分的性感撩人。 
+
+　　知道那是男人好色的眼神，美穗的脸红了一下，不悦地问道︰“警官先生， 到底是什么事？” 
+
+　　“就是这件事！”那个警察突然露出了一个奇怪的笑容。 
+
+　　“啊……”美穗一声尖叫，双手抱胸，浑身缩成一团。因为那个警察居然伸 手一把抓下了她身上的浴巾，让美穗丰满诱人的肉体暴露无遗。 
+
+　　“先自我介绍一下吧，”警察露出一个得意的微笑︰“我叫佐藤彰。小姐贵 姓？” 
+
+　　美穗一听，马上尖叫一声，下意识地转身就往房间里跑。 
+
+　　佐藤从后面看着这个美丽的女人双手抱胸，扭着雪白的屁股跑的样子，喃喃 地说道︰“这真是意外的收获啊！” 
+
+　　赶在美穗把卧室的门关上之前，佐藤一脚把门踢开，猛烈的冲击把美穗撞倒 在卧室的地毯上。 
+
+　　看着男人露出不怀好意的笑容，美穗害怕地往后退缩。 
+
+　　佐藤上去把美穗压在地上，掏出手铐想把美穗的双手铐在背后。美穗拼命地 挣扎，从小就练习体操的身体所具有的柔韧和弹力让佐藤一时间无法得逞。 
+
+　　“该死，”佐藤骂道︰“你给我老实点。” 
+
+　　美穗感到臀部一凉。 
+
+　　“再动就杀了你。”佐藤拔出手枪，在美穗雪白丰隆的肉丘上戳了一下。 
+
+　　“啊……”美穗的心一凉，身体僵硬住了。 
+
+　　初期的冲动过去后，美穗冷静下来，开始为自己的生命而担忧了。 
+
+　　“请不要杀我。”美穗的声音发僵。 
+
+　　“嘿嘿，把手放到背后。”佐藤恶作剧地用枪管踫踫美穗的阴唇。 
+
+　　美穗浑身一颤，乖乖地把手放到背后。 
+
+　　“呜……”美穗悲鸣了一声，感到自己干燥而温暖的肉洞被塞进一个又硬又 冷的东西。原来佐藤用枪管顶开闭合的阴唇后塞进来，让手枪插了一下美穗娇嫩 的阴道。 
+
+　　“这个滋味不错吧？”佐藤笑嘻嘻地问道。 
+
+　　他的双手也不空闲，把美穗的双手铐起来后，便在美穗的后背和臀部抚摸起 来。 
+
+　　沐浴之后的肌肤光滑而润泽，摸上去的触感好极了。但对于美穗来说，却好 像是毛毛虫在身上爬行一般，让她浑身起汗毛直立，心中感到一阵恶寒。 
+
+　　“你要干什么？求你放过我吧！”美穗脸朝下无助地挣扎着，哀求着。 
+
+　　虽然心中有被强奸的觉悟，她却不知道这个眼前的佐藤彰是个可怕的恶魔， 将要临到她身上的是她想象不到的凌辱。 
+
+　　“真让人受不了，这么恼人的屁股。” 
+
+　　佐藤自言自语的说道，手开始轻拍打起丰隆高耸的雪白肉丘，弹力十足的臀 肉颤巍巍的抖动，看得男人的兽性大发。 
+
+　　对于一个多月没接触女人的佐藤来说，眼前这个美丽丰满的肉体有着绝对的 诱惑力，让他的肉棒猛烈地硬起。 
+
+　　“先来一下吧，可把我憋死了！”佐藤说着，解开了自己的皮带。 
+
+　　“不要！……不要！……”双手被铐在背后的美丽裸体被翻过来仰卧，美穗 踢着一双修长的美腿拼命大叫。 
+
+　　可是失去了大半抵抗力的女人，如何会是身为虐待狂的男人的对手？眼前这 个双手失去自由，全裸的美女踢动雪白大腿全力抵抗的模样，反而让佐藤心中的 虐待欲望更加的高涨。 
+
+　　“你就乖乖的认命吧！只要我的肉棒一插进去，你就会呜呜的叫。” 
+
+　　佐藤将美穗的两条大腿分别夹在自己的两肋，暴涨的肉棒伸到了娇嫩的蜜穴 上，对准了那道粉红的裂缝。美穗只能无望地扭动细腰，踢着小腿，对佐藤的行 动造不成丝毫的影响，反而带动胸前那对硕大的乳房不停的晃动，给男人更大的 快乐。 
+
+　　“啊！……”窄小紧密的肉洞被巨大火热的肉棒插入的痛苦，让美穗发出了 悲惨的叫声，身体向上挪动想逃避，可是佐藤拉紧她的大腿，肉棒慢慢更深入到 干燥的蜜穴深处。 
+
+　　“好痛啊！……不要啦！……”美穗只有仰头露出纤细雪白的颈部，背部用 力弓起。 
+
+　　“好紧！……真舒服！……”感到包裹着自己肉棒的温暖的肉壁一阵阵猛烈 的收缩，佐藤不禁也叫出声来。 
+
+　　这里是最高级的公寓楼，每户人家的隔音都是很好的，加上美穗的房间又是 在最边上的，所以他们无论如何叫喊都不会惊动别人的。 
+
+　　“你用力叫吧！”把肉棒插到底后，佐藤陶醉的看着美女痛苦的表情，开始 缓慢地抽插起来。 
+
+　　逃出来的第一天就遇到这样一个女人，让佐藤身上的虐待血液流得更快了。 
+
+　　“停止！哎呀……不要……” 
+
+　　美穗悲惨的呼叫声，加上肉洞里紧密温暖的感触，极大地满足了佐藤的虐待 欲。 
+
+　　“你就尽量地叫吧！” 
+
+　　佐藤现在将仍在抵抗的双腿扛在肩上，肉棒进行更深插入，猛烈地扭动，用 几乎要把肉洞插裂的力气做活塞运\动。 
+
+　　“啊！……不要啦！……会弄坏的！……” 
+
+　　火辣辣的疼痛让美穗不停地发出凄厉的哀叫和痛苦的呻吟，却让佐藤犹如吃 了最好的兴奋剂一般，奋力抽插着。 
+
+　　“对，就这样继续叫吧！” 
+
+　　佐藤为快要冲到顶的兴奋快感加快了抽插的速度，小腹如暴风雨般地打在美 穗的耻丘上，发出“啪啪”的响声。 
+
+　　终于佐藤心中的欲火爆发了，他猛的将肉棒顶到肉洞的最深处，一股股火烫 的精液射进了子宫里。 
+
+　　拼命挣扎的美穗，感觉出有火热的东西深深射进入体内时，便放松全身的力 量开始啜泣起来。双眼紧闭，略翿q眼角不住地滑落，美穗断断续续地抽泣着， 被放下的双腿无意识地张着，白浊的精液从遭到蹂躏的嫩穴里慢慢流出来。 
+
+　　以为就此结束的她没有看到站起来的佐藤正走上两步，分腿慢慢坐下来。佐 藤骑在了美穗的胸上，屁股压得美穗那丰满高耸的乳房扁扁的，他还故意扭动了 一下。 
+
+　　“唔！……”美穗发出痛苦的哼声，同时睁开了眼楮，那根萎缩的阴睫马上 映入眼帘。 
+
+　　“现在你来清理后事，你要把它舔干净，上面有我们二人的淫水精液，味道 应该是很好的。” 
+
+　　佐藤无耻地说道，同时用发出性臭味的阴睫在美穗的脸上摩擦，让美穗的哭 声越发的凄惨。 
+
+　　看到美穗美丽的眼中露出厌恶的表情，紧闭着双唇，佐藤马上无情地抽了她 几个耳光︰“你要哭到什么时候，还不快点给我弄！” 
+
+　　说着，他又伸手捏住细细的脖子勒紧它，从美穗的嘴里发出破裂的气喘声， 不由得张开了花瓣一般的嘴唇，伸出粉嫩的舌头。沾满淫液的阴睫，被柔软嫩滑 的舌尖从根部舔到顶端后，很快就又膨胀起来，硬度也增加了。 
+
+　　身为虐待狂的佐藤，是没有办法靠一次的射精就达到满足的。佐藤把自已恢 复精神的肉棒又强迫塞入美穗的嘴里，开始进出抽插起来。 
+
+　　低头看着女人发出沉闷哼声的痛苦表情，佐藤兴奋地抽插着，心中升起更加 强烈的虐待欲望。 
+
+　　“好久有看到这么好的女人了，高雅的气质，性感的身材。看来这几天的等 待的日子也不再是珊磪F味了。” 
+
+　　美穗流异V力转动舌头，艰难地舔着进出于嘴唇之间的肉棒，泛起几道红印 的脸颊不断凹凸变化着。 
+
+　　被压在背后的双手早已麻木了，但被强大的屈辱所笼\罩的美穗丝毫感觉不到 这些，因为好几次肉棒插入时，硕大的龟头都撞到了她的喉咙，让她连呼吸都发 生困难。 
+
+　　就在美穗感到自己快要昏过去的时候，口中的肉棒突然惊人的膨胀开来，在 她还没有意识到怎么回事时，佐藤的屁股一抬，肉棒跳跃间，一股粘稠腥热的精 液猛烈地喷涌进了她的嘴里。 
+
+　　“不！呜……”美穗来不及叫出来，大量的精液灌满了她的小嘴，让她只能 发出一阵模糊的呜咽。 
+
+　　“给我吞下去！”佐藤抓住美穗的秀发，大叫道︰“如果漏出来的话，我就 杀了你！” 
+
+　　可怜的女人只有强忍心中的呕吐感，像喝毒药一般的将腥热的精液一口一口 吞下去。 
+
+　　虽然美穗已经很小心了，但还是有部份的液体从嘴角漏了出来。 
+
+　　看到美女嘴角边挂着一丝白浊的液体，佐藤站起来，高兴地淫笑着︰“你没 有把我的牛奶喝完，我要好好地惩罚你这个不听话的女人！” 
+
+　　美穗惊慌地摇头，哀求道︰“你要干什么？……不要！……” 
+
+　　佐藤毫不理会美穗的哀求，将她拉起来，拖到沙发边，让她头朝下，腹部压 在真皮沙发的靠背上。被强奸和口交折磨得全身无力的女体软绵绵地挂在高高的 沙发靠背上，柔韧的身体形成几乎对折的样子，只有那个丰满肥美的屁股高高蹶 起，成为身体上最显眼的位置。 
+
+　　不知道佐藤要干什么的美穗听到了皮带在空中挥舞的破风声，不禁害怕地大 叫起来︰“不要啊！……” 
+
+　　话音未落，皮带就打在雪白的屁股上，发出清脆的着肉声。 
+
+　　“啊！……”美穗哭叫起来，她感到自己的屁股一阵火辣辣的疼痛，不禁扭 动赤裸的屁股来。 
+
+　　“不错！你发出悲惨哭声和扭动屁股的模样更加好看，好好的哭，让我高兴 吧！” 
+
+　　有着烈虐待欲望的佐藤扬起眉毛，用力挥动皮带。随着轻脆的着肉声，雪白 的屁股上出现第二条火红的条纹。 
+
+　　“啊！……好痛啊！……饶了我吧！……” 
+
+　　美穗全身一震，努力地抬起头，流眶o出尖叫的哭声，殊不知这样会让虐待 狂的男人更高兴，造成煽动他行为的结果。 
+
+　　“你那肥肥胖胖的屁股打起来真够带劲的。我会好好地对待它的！” 
+
+　　听着女人的尖叫声，看到她痛苦流痕獐瓞芊A以及透过皮带而感到的那种快 感，都让佐藤的变态虐待心理得到极大的满足。他以一定的间隔挥动着手中的皮 带，抽在美穗不住颤动的丰满肉丘上，让她的哭声越来越大。 
+
+　　当美穗那如大白桃般的肉丘变得像蕃茄一样红润时，她的双脚也在不停的抖 动，口中的尖叫声也失去了那份锐利。 
+
+　　在美穗的屁股上充份享受完鞭打的乐趣后，佐藤把她放下来，解开了手铐。 美穗趴在沙发前面的地毯上，双手摸着又红又肿的屁股，为屁股的疼痛呜呜哭泣 着。 
+
+　　佐藤走到窗户边，将窗帘拉开一丝缝隙，锐利的眼神看到对面大楼那个熟悉 的窗户。通过半遮掩的布帘，里面有几个穿着制服的男人正在走来走去，一副忙 碌的样子，佐藤的嘴角泛起一丝可怕的笑意。 
+
+　　“他们好快的动作啊！”佐藤喃喃地道了一句，然后转头对着还在哭泣的美 穗，用愉快的口吻发出命令︰“我肚子饿了！快去给我弄东西吃！” 
+
+　　被他的手段吓坏了的美穗毫无办法，只有停下擦拭阴户的动作，慢慢地爬起 来，伸手拿起旁边的衣服。 
+
+　　“混蛋！还穿什么衣服，干都被我干了。就这样子去做！快！”佐藤扬起一 边的眉毛骂道。 
+
+　　可怜的美穗只有扭着红红的屁股走进了厨房，为这凌辱了自己的男人准备酒 菜。 
+
+　　佐藤仔细观察了一会儿，放好窗帘坐到沙发上。从他这个角度是看不到厨房 的，于是他站起来走进了厨房。 
+
+　　干净明亮的厨房里，美穗只围了一件围裙，美丽的胴体几乎全裸露着。佐藤 看到这样的美景，不禁上前伸手去摸那成熟美艳的肉体。美穗咬牙忍受着男人的 侵犯，双手微微的颤抖，说明她心中的屈辱。 
+
+　　佐藤的手法和美穗熟悉的那种温柔是完全不同的，是近乎粗暴的蹂躏，但男 人有力的动作带给她一种异样的感受。 
+
+　　让美穗感到更难堪的是，她那二十六岁成熟敏感的肉体在佐藤有技巧的抚摸 下，开始有了诚\实的反应，樱红的乳头慢慢的发硬凸起，挺立在浑圆洁白的乳房 上，下腹部也产生出火热的感觉。 
+
+　　“你真的很敏感啊！”佐藤在美穗的耳边嘲弄道，让美穗听得全身都发热。 
+
+　　这时他的手指已经不客气地伸到美穗的两腿间，触摸着娇嫩的肉瓣。大拇指 则顶在丰满的肉丘之间，轻揉着深藏的菊花蕾。 
+
+　　羞耻的排泄器官被受到这样的玩弄，美穗感到极大的恶心，几乎想大叫着要 逃开了，她不禁这样悲哀的想到︰这个男人还有什么可怕的手段没使出呢？但事 到如今，也只有再忍耐一下，也陶o个男人吃饱了就会离开这里的，受到通缉的 罪犯应该是急着想潜逃远方的。 
+
+　　美穗在心中这样告诫自己，同时加快了手上的动作。 
+
+　　佐藤终于坐下来开始享受美穗弄的酒菜。出身名门的美穗受过最好的家政教 育，她的手艺绝不输那些一流的大厨师，在监狱里吃了一个多月牢饭的佐藤更是 吃得赞叹不已。 
+
+　　而此时的美穗却连围裙也被剥掉了，漂亮的胴体毫无遮掩的跪在佐藤身边， 像个下女一般为他倒酒。 
+
+　　美穗感到自己连最下贱的妓女都不如，这让她的脑子开始出现混乱，受到了 男人最彻底的凌辱，还能微笑着服侍他，而且动作越发的自然起来，这让她自己 也感到奇怪。 
+
+　　佐藤舒服地吃完最后一口，伸出拿着酒杯的手，美穗马上为他倒满。佐藤满 意地一口气喝光，然后摸着肚子站起来，四处看了一下。 
+
+　　“他终于要走了！”美穗心中一阵高兴，恶梦就要过去了。 
+
+　　这时佐藤找出了几根带子，开始将美穗的手脚捆绑起来。 
+
+　　“我不会去报警的，你别绑了！”美穗毫不反抗，只是这样哀求道。 
+
+　　佐藤也不说话，让美穗坐在椅子上，双手绑在椅子背后，双脚则分别和椅子 的两只椅脚捆在一起。这样弄好以后，他站起来仔细看了一下，确认美穗无法挣 脱，不能动弹后，佐藤拿了美穗的包到浴室里待了一会儿，离开了她的家。 
+
+　　听到房门关闭的声音后，美穗开始使劲挣扎，但绳子的捆绑实在是太牢了， 任凭美穗怎么扭动身躯，都纹丝不动。 
+
+　　不多时，美穗的身上已经是汗津津的，赤裸的屁股出汗后和椅面的接触变得 粘粘的，让她感到非常不舒服。美穗停下了无望的挣扎，开始动起脑筋来，坐以 待毙可不是她的作风，她可不想就这样被绑在椅子上祈求别人能发现后来解救。 
+
+　　终于她的眼楮一亮，好办法跃然而出。美穗开始使劲的扭动屁股，椅子发出 摇晃的声响。 
+
+　　＊＊＊　　　　＊＊＊　　　　＊＊＊　　　　＊＊＊ 
+
+　　裕美从车上下来，抬头望了望对面熟悉的公寓楼，这时从那装潢考究的门厅 走出了一个中年男人，上了一辆出租车。 
+
+　　“这么眼熟，好像在哪里看过的？”裕美低头思量着。 
+
+　　一眼看过去似乎有点面熟，但仔细回想起来，却只有那个男人脸上的断眉和 下巴的黑印，其它都是模糊的感觉，裕美不禁摇头笑笑，也闭O最近工作太紧张 了，记忆力没有以前那么好了。 
+
+　　“署长！”一个手下的声音把裕美的思绪打断了︰“我们进去吧！” 
+
+　　“待会儿再打电话给她吧，没想到就住在附近，说不定还可以去……”一想 到这里，裕美的心中不由得一荡，加快脚步，轻快的随着手下进了大楼。 
+
+　　“这个女人真漂亮啊！”佐藤坐在车上，从后车窗里望着裕美进了尚子住的 大楼。 
+
+　　他第一眼就看到了裕美制服上面的肩章和领花，不禁惊讶于裕美的美丽和身 份。 
+
+　　“一个年轻漂亮的女人居然能坐上那么高的职位，也闭O靠那张漂亮的脸蛋 吧！”佐藤邪恶的笑了笑，转回头来。 
+
+　　（二） 
+
+　　几经努力，美穗终于让椅子侧翻在地上，她顾不上手臂被压得生痛，挣扎着 连人带椅一点一点的挪动，往电话机的方向靠近。 
+
+　　当听到门锁转动的声音时，美穗离电话机只有一步之遥了，由于消耗的体力 太多了，她正在无力地趴在那里大口大口的喘气，心中却是欣喜若狂。 
+
+　　“是谁吗？” 
+
+　　美穗心中一阵迷惑，她吃力地扭过头，抬起眼楮望向来人。 
+
+　　映入眼帘的，首先是一双男人黑色的皮鞋；视线上移，是一张美穗不熟的面 孔，他正微笑着。 
+
+　　美穗来不及细想这个男人为什么可以打开自己家的房门，就忙出声求救道︰ “先生，快帮我解开绳子！” 
+
+　　男人不慌不忙地上前把美穗连人带椅子重新础n，顺手还在她高耸的乳峰上 捏了一把，嘲笑道︰“真够努力的，居然全是汗呢！” 
+
+　　美穗羞耻的低叫了一声，刚想发怒，突然发现这个男人的眼神十分的熟悉， 不禁楞住了。 
+
+　　这个男人开始用纸巾在脸上擦拭起来，似乎他脸上某些东西被擦掉了，随着 下巴的黑印被擦去，美穗的心猛然下沉，全身发冷，张口尖叫道︰“是你！？” 
+
+　　佐藤满意地轻笑道︰“不错嘛，认出我来了。” 
+
+　　“你还想干什么？”美穗惊慌地问道。 
+
+　　“嘿嘿，我想在你这里呆几天！等把事情办完了就走，不过到时候说不定你 会舍不得我走了。”佐藤淫笑着端起美穗的下巴，说出了让美穗几乎昏倒的话。 
+
+　　“啊……请你离开这里吧！……我求求你了……”美穗心慌意乱地说道。 
+
+　　“你这个女人，真是太不会招呼客人了。” 
+
+　　佐藤挥手就是一记耳光，美穗不由得痛呼出声。 
+
+　　“看来我要好好地教导一下，让你学会待客之道。”佐藤不怀好意地说道， 同时伸手抓住她丰满的乳房，手指深深陷入了柔软的乳房中︰“首先你要表示欢 迎……” 
+
+　　美穗的嘴里冒出痛苦哼声︰“痛啊！……饶了我……” 
+
+　　佐藤用双手的食指和拇指各捏住一个粉红色的乳头，将软软的乳房拉得长长 的。 
+
+　　当完美的梨形被拉成长纺锤形时，美穗痛得流下眼瓷A表示屈服道︰“我说 了，放过我的乳房吧……” 
+
+　　“很好。你记住，下次如果反抗的话，就要受到更加严厉的惩罚。” 
+
+　　佐藤松开了可怜的乳头，敏感柔嫩的乳头因疼痛而充血凸起，像颗红宝石一 般挺立在雪白的乳房上面。 
+
+　　按照佐藤的要求，美穗低头强忍住伤心，慢慢说道︰“欢迎您光临我家…… 您的到来是……是我最大的快乐……请随便……”她的声音越来越小，到后来几 乎听不见了。 
+
+　　无缘无故的让恶魔般的罪犯留在自己家，还要表示感谢，这种极大的屈辱感 像火般灼烧着美穗的身心，让她感到浑身发烫。 
+
+　　“还有呢……”佐藤冷冷地说道︰“你这个淫贱的女人，是不是要我再说一 遍？” 
+
+　　美穗抬头哀怨地望着佐藤，可铁石心肠的罪犯冰冷的眼神告诉可怜的女人， 他不会心软的。美穗只好认命地念道︰“我，中山美穗是个不知好歹的女人，请 佐藤先生原谅我的无礼。为赎我的罪过，请您尽情地教导我吧！” 
+
+　　美穗断断续续的将这段话说完，就放声大哭起来，从小到大，一直受人呵护 的她几时受过这样的侮辱，她不禁伤心欲绝。 
+
+　　可美穗的伤心没有多久，她就被佐藤的举动打断了。 
+
+　　佐藤从带来得一个大袋子里掏出了一条的绳子，在美穗的眼前晃动了一下， 这绳子黝黑而且很有弹性。 
+
+　　“我会好好地教你的。”佐藤把美穗从椅子上解下来，将赤裸裸的她推倒在 沙发上，开始用这黑绳捆绑美穗︰“首先，给你穿上漂亮的上衣。这绳子是我特 意为你买的，会使你那迷人的身体更加出色。” 
+
+　　被绑的美穗一脸的苍白，口中乱叫道︰“不要再绑我了……你不要乱来…… 我不要啊！” 
+
+　　但浑身无力的她任何抵抗都是枉然的，那冷冷的绳子好像蛇一样缠在她的身 上，让美穗从心里感到绝望。 
+
+　　佐藤手法非常熟练地将美穗的双手扭到背后在手腕上绑好，然后将绳子绕到 乳房上下绑了一圈。绳子绑得很紧，富有弹性的绳子开始收缩，陷入柔软的乳房 里，让忍不住美穗发出微微的喘息声。 
+
+　　她那美丽的乳房，在黑色绳子的缠绕之下，更形丰满硕大，显得是那么的突 出迷人。美穗皱着形状优美的双眉，恐惧和焦虑使她的身体更加的火热。在她急 促的呼吸中，丰满的胸部不停的起伏，带动沉甸甸的美乳在灯光下做着诱人的跳 动。 
+
+　　“好漂亮的乳房，捏下去会不会滴出新鲜的乳汁来呢？”佐藤忍不住伸手去 揉捏美穗的美乳，口中喃喃说道。 
+
+　　那滑嫩又膨胀的美丽乳房，在佐藤有力的揉搓下，连粉红的乳晕都向上突出 了，乳头上的乳孔也微微张开，好像真的从里面出乳汁来一样。 
+
+　　美穗不住地呻吟着，哀求道︰“不要啊！不要啊！” 
+
+　　佐藤的玩弄和美穗习惯了的温柔抚摸是完全不同的，让美穗感到即痛苦又新 鲜。 
+
+　　佐藤一边粗暴地玩弄着娇嫩滑腻的双乳，一边开始吻美穗的红唇。 
+
+　　他用舌尖在美穗柔软的嘴唇上摩擦着，像个温柔的情人一样，然后又慢慢地 把舌头插进美穗的嘴里搅动，似曾相识的热吻让美穗感到迷惑，不禁产生一丝反 应，嘴里习惯性的溢出香甜的唾液。 
+
+　　被捆绑起来的乳房受到粗暴的玩弄，嘴唇却是接受着情人般温柔的接吻，使 美穗产生异于往常的感受。 
+
+　　她感到自己犹如身在梦幻之中一般，“这只是一场梦吧！”美穗在心中不禁 升起这样的想法。 
+
+　　随之而来的是整个人变得放松起来，感受也就越发的强烈了，全身开始骚痒 起来，她不禁轻轻地扭动身体。 
+
+　　美穗的这种反应让恶魔般的男人暗自欢喜，作为玩弄女人的老手，佐藤知道 美穗的身上那种女人特有的心理开始苏醒了。他要将深藏在女人心灵深处的受虐 欲望开发出来，对于如何调教女人，佐藤是太有办法了。 
+
+　　佐藤将美穗嘴里溢出的香甜唾液，吸吮后不断吞食下去，让美穗的鼻中发出 难耐的火热哼声。 
+
+　　突然，他抬起头，一只手离开了美穗的乳房，伸到她的胯下，指尖摸到温热 的肉缝。 
+
+　　“居然这么湿淋淋了！”佐藤将湿润的指尖伸到美穗的眼前，晶莹的淫水在 灯下闪着淫靡的光芒，让美穗羞湿禶瞴C 
+
+　　不可否认，美穗的阴户在佐藤的高超淫技下，慢慢的溢出黏黏的蜜汁，濡湿 了微微膨胀的肉瓣。 
+
+　　“果然是个淫荡的女人啊！”佐藤用这样的话打击美穗的自尊心︰“既然这 么想吃粗大的东西，我就满足你的要求。” 
+
+　　他从袋子里拿出了一根型号中等的电动假阳具，在她的眼前晃了晃。 
+
+　　美穗心中一紧，忙叫道︰“求求你……不要用这种东西……” 
+
+　　佐藤笑嘻嘻地说道︰“是不是太小啊？待会儿给你大的。来，把腿张开！” 
+
+　　见美穗只是摇头，还把雪白的大腿夹得紧紧的，佐藤不禁恐吓道︰“又不听 话了。这样的话，就要用鞭子了。”说着，他又从袋子里拿出了一条多头鞭。 
+
+　　美穗不禁身不由己地颤抖了一下，真不知道那个袋子里还有些什么可怕的工 具，不过她心里有点数了，佐藤带来的这个袋子里都是折磨女人的工具，看来他 不得到满足是不会罢手的。只有顺从他，才可以少受些皮肉之苦。 
+
+　　一旦有了这样的觉悟，美穗忙叫道︰“别……我听话……”她说着，将眼楮 闭上，两条修长的大腿无奈地张开了，露出根部那美丽的花园。 
+
+　　“还要再分开些！”佐藤一边说着，一边在电动假阳具上狺W春药，他要让 美穗彻底跌入官能的地狱里。 
+
+　　美穗只有双眼紧闭，将大腿慢慢的再分开。 
+
+　　双腿张开到一百二十度左右，佐藤叫住了︰“就这样吧，不要动！” 
+
+　　美穗松了口气，其实练过艺术体操的她可以轻易地张到一百八十度，但她实 在不愿在这个淫猥男人面前作这种样子。 
+
+　　佐藤把头凑到美穗的阴部，暗中赞叹了一声，真是美丽的阴户，便细细地观 察起来。 
+
+　　乌黑发亮的阴毛微微的卷曲着，恰到好处的长到丰满的阴唇边，微湿的阴唇 呈现艳丽的粉色，给人以丰腻柔软的感觉。随着双腿的大张，阴唇也向两边分开 了，挂着丝丝的蜜汁，小小的花瓣也探出了头，娇嫩粉红带着湿润。 
+
+　　用手指将滑腻的花瓣向左右再分开，就可以看到阴户里一直连到子宫的粉红 色黏膜。 
+
+　　在美穗的呜咽声中，佐藤的肉棒开始不争气的跳动，的确是太诱人的女性性 器，让老于此道的他也情不自禁地想立刻插入。 
+
+　　佐藤站起来长出一口气，拿起电动假阳具旋转着慢慢插入了美穗的肉洞里。 当假阳具的头部踫到敏感的花瓣，美穗忍不住发出了轻微的呼声，但她已经微湿 的肉洞没有太大的困难就吞下了比佐藤的肉棒要小上一号的电动假阳具。 
+
+　　佐藤将电动假阳具插到底部后，又使劲转动几下，摩擦着娇嫩的子宫口，美 穗的臀肉一阵发紧，口中露出了闷哼声。 
+
+　　佐藤见美穗强忍的样子，心中冷笑︰“你会很快乐的！” 
+
+　　他按下了遥控器的开关，肉洞里的假阳具开始慢慢地扭动起来。 
+
+　　美穗的嘴里冒出了尖叫声，雪白的大腿有力的夹紧，似乎要把在肉洞里扭动 的假阳具夹住一般，但这样带来的更强烈刺激让美穗的肉洞嫩肉不停颤动，她忍 不住扭动屁股，大腿也分合不止。 
+
+　　看着眼前美女在空中挥舞着雪白的大腿，扭着屁股，被绳子绑得更加突出的 丰满雪乳不住的抖动，佐藤高兴的坐下来，打开了一罐啤酒。 
+
+　　“比什么下酒菜都要好，真是一幅赏心悦目的美景啊！”这样想着，佐藤开 始喝起啤酒来。 
+
+　　美穗雪白丰满的肉体上冒出汗珠，呼应假阳具的动作而扭动屁股，双腿有时 分开到一字状，疯狂的样子让佐藤咋舌不已。 
+
+　　这时的美穗已经感到肉洞里发生的异常变化，黏膜异常的火热和骚痒，她只 有用力的夹紧大腿，让电动假阳具和黏膜作全面的摩擦，可越是这样，那里的骚 痒就越发的厉害，淫水不停的流出来，把雪白的大腿根部弄得湿淋淋的。 
+
+　　“嘿嘿嘿……你真是个变态的女人。这样子也会发浪，我倒是从来没有见过 啊！”佐藤淫笑着说出刺激美穗的话。 
+
+　　“我不是……”美穗从快感的边缘被惊醒了，她的心好像被什么东西重重的 敲打了一下，她猛然大叫出来。 
+
+　　“是吗？可你在这样难看的姿态下，光插进假阳具也会高兴的发浪，你就不 能不承认自己是个变态的女人。”佐藤无情的说道。 
+
+　　让美穗羞楫熊L话可说，只是摇头。 
+
+　　“我这是怎么啦？光是被电动假阳具玩弄，就会有快感。” 
+
+　　美穗拼命告诉自己要冷静下来，竭力地分开大腿，小腹显出用力的样子，想 要把假阳具挤出火热的肉洞。越是想这样就越发清楚地感到肉洞的惊人需要，火 热的黏膜猛烈地缠绕着假阳具。 
+
+　　“我真的是个变态的女人吗？” 
+
+　　美穗悲哀的想到，可怜的她不知道佐藤用的春药是最强烈的一种，肉体的忠 实反应开始击碎美穗的心防，让她慢慢坠入淫邪的地狱。 
+
+　　这时的她只有做着最后的挣扎，不住的告诉自己︰“我绝对不是个变态的女 人！绝对不是！” 
+
+　　知道春药已经完全发挥作用了，佐藤便把假阳具拔出来︰“嘿嘿，你的小穴 好像舍不得这个东西嘛？” 
+
+　　拔出时感到肉洞有很大的吸附力，佐藤不禁为春药的效力和女人的肉洞而惊 讶。 
+
+　　美穗的脑海开始昏沉沉了，她已经挡不住肉体对快感的追求，张开性感的小 嘴，不住的喘息，失去了假阳具的肉洞可怜地张开着，吐出火热的气息。 
+
+　　“都这么湿淋淋了，你漂亮的阴户在蠕动啊！”佐藤发出淫邪的笑声，看着 美丽的美穗摇头作出苦闷的样子，强烈刺激他的性欲。 
+
+　　他的手指开始刺激着阴户，玩弄着膨胀变厚了的阴唇，不时轻弹着勃起的阴 核，让美穗发出哭泣般的呻吟。 
+
+　　“唔，阴核的肉芽都膨胀得这么厉害了，你还不是普通的淫荡啊！”佐藤把 手指插进湿透了的肉洞里轻轻搅动，慢慢搔着。 
+
+　　“啊！不行了……唔……啊……” 
+
+　　美穗感到自己快要疯了，如果双手是自由的话，她就要疯狂的手淫了，肉洞 里的骚痒似乎传遍了全身，连被绑得发胀的乳房都痒得难受，乳头竖得高高的， 恨不得谁来抓几下。 
+
+　　“是不是很想要啊？只要承认了就让你吃最好的东西！” 
+
+　　佐藤在快要到悬崖边的美穗身上再推了一把，随着他手指的巧妙玩弄，美穗 充满性感的屁股淫荡的扭动。 
+
+　　“我不是……不是……是……” 
+
+　　美穗的心终于向肉体投降了，她哭喊着叫出来︰“我……我是……淫荡的变 态女人！” 
+
+　　随着屈辱的话语一出口，美穗的屁股就轻微的痉挛着，一股淫水从子宫里猛 烈喷出，她居然因为这样的说话而达到了一个轻微的高潮。 
+
+　　佐藤不禁得意的淫笑起来，知道美穗已经踏出了最重要的一步，接下来的调 教更让他期待。 
+
+　　佐藤将硬挺如铁的肉棒顶在火热的花瓣上，温热的触感立刻从敏感的龟头处 传来。美穗的双腿马上缠上他的腰，抬起性感的屁股，想把粗大的肉棒迎进骚痒 的淫穴里。 
+
+　　佐藤的屁股往后退，不让肉棒进入张开的湿淋淋肉洞里。 
+
+　　美穗失望地叫出声来︰“啊！……快进来……求求你……” 
+
+　　“想要肉棒，就要这样请求……”佐藤的嘴凑到美穗的耳边，悄悄的说道， 他要进一步折磨女人的自尊心。 
+
+　　见美穗的眼中露出一丝的犹豫，佐藤把宽厚的胸脯压在美穗娇美的胸上，用 力地摩擦乳房。被绳索捆绑而特别隆起的乳房，受到这样强大的压迫，美穗几乎 感到呼吸困难，一双美腿也随着发抖，鼻子里“唔唔”的哼着。 
+
+　　“舒服吧！快说……”佐藤开始用肉棒浅\浅\的进出，轻轻的刺激着已经敏感 无比的花瓣。 
+
+　　“啊……太过份了……啊……”美穗发出浪声啜泣着，晃动着丰满的屁股， 很希望他能深深地插入肉洞里。 
+
+　　受过最好的教育，出身名门的美穗一时实在难以把那些话说出口。但她的坚 持不到一分钟，当佐藤的手在她被缚的极为突出的乳房上重揉轻捏时，她仅存的 一丝自尊心也消失了。 
+
+　　“求……求你，干……我吧！”她红着脸把佐藤要求的话叫了出来。既然开 了头，下面的话就很流利了︰ 
+
+　　“我要肉棒……我要大肉棒……干我……” 
+
+　　“主人，把你尊贵的大肉棒插进母狗的淫穴吧！” 
+
+　　最后的一句话美穗几乎是用心吼叫出来，感到自己连淫贱的妓女都不如，这 样的觉悟让她产生心灵破裂的感觉。与此同时，子宫不断的收缩着，淫水不停的 流出，异常的快感连续不断的升起，让她对自己的肉体感到陌生。 
+
+　　佐藤双手抓住两只硕大浑圆的雪乳，猛烈地将肉棒挺进湿淋淋的肉洞里，一 直插到最深处，龟头打在娇嫩的子宫口。 
+
+　　就这一下，美穗就双眼翻白，脑中产生轻度的昏厥。 
+
+　　佐藤虽然有过钗h的女人，对美穗的剧烈反应还感到一丝惊讶，嘴上却继续 嘲弄道︰“看你的高雅模样，竟然能不要脸到这种程度，真是只淫贱的母狗。哈 哈哈！” 
+
+　　“啊……唔……啊……”在强烈的快感中，美穗的美丽眼楮中流出了悔恨的 略禲A为受到在这样极大的羞辱自己还会燃烧的肉体感到难过。 
+
+　　“啊，不管怎么说，这样的快感实在是太强烈了。”美穗完全沉浸在官能的 火焰中︰“啊，亲爱的，对不起！” 
+
+　　她内心深处的一个人随着这句话消失得无影无踪了。 
+
+　　每当佐藤的肉棒深深插入时，美穗都要弓起腰，把被绳子捆绑得无限妖美的 赤裸上身向后仰，用力扭着性感的屁股。她感到自己阴道里火热的粘膜就好像要 融化一样，受到龟头的摩擦，连子宫都产生一阵阵的灼热感。 
+
+　　佐藤抓紧乳房，肉棒进行着有节奏的活塞运\动，一边还在美穗的耳边说着淫 秽的话︰“你的淫洞真是太好啦！淫肉把肉棒缠得真紧啊！” 
+
+　　美穗听得全身滚烫，大腿却是不由自主地夹得更加紧，口里却不停地念着︰ “不要啊……好难为情……啊……” 
+
+　　那骚痒发浪到了极点的肉洞，却是更加贪婪地缠住佐藤钢铁般火热的肉棒， 使劲地吞噬着。 
+
+　　“啊！……完了，怎么会这样……”美穗原来对男人丑陋的性器插入自己的 体内感到无比的厌恶，可现在自己的身体居然变成这个样子，连她自己也感到意 外。 
+
+　　“没法子了！” 
+
+　　一旦这样想后，美穗就开始像她习惯的样子发出甜美的声音不停的啜泣着， 因为极度的兴奋而变得粉红色的肉体无比性感地扭动起来，将全身心都投入了官 能的享受中，浑身表现出一副极其陶醉的样子。 
+
+　　“对，就是这样的表情！……很好，用力夹紧！” 
+
+　　佐藤还是第一次看到像这样一个美女居然能表现出如此的淫荡性，就连钗h 经过调教的女人都没有像这般的发自内心的对淫欲的追求。他不禁为美穗心中潜 藏的性向而兴奋，对于嗜好调教女人的他来说，就像是挖到了一个巨大的宝藏一 般。 
+
+　　“我会把你心中真实的一面完全挖出来！”佐藤在美穗的耳边喃喃说道，同 时将深深插入到湿热美妙的肉洞里那根钢铁般壮硕火热的肉棒做着巧妙的旋转， 在里面产生全面的摩擦，而尖端的龟头则慢慢地探进了子宫口。 
+
+　　这时候的美穗已经完全听不到别人的说话了，从下腹部传来的让她疯狂的快 感如潮水般将她淹没了，全身都在为从未经历的快美感觉而颤抖，被绑在身后的 手无意识地抓扰着沙发的真皮表面，性感诱人的小嘴喘呼呼地大张︰“啊！…… 不行了……我该怎么办……啊！……” 
+
+　　佐藤“嘿嘿”的淫笑起来，知道美穗的肉体已经完全屈服了，他不让美穗有 多思考的机会，胯下的巨棒做着更加猛烈的运\动，把高潮边缘的美穗不断的往上 推，同时在她的耳边说道︰“你要这样子说︰我要泄了！” 
+
+　　美穗的大脑早已是一片混乱，快感的火焰不断升起、爆炸，她本能的随着佐 藤的话叫道︰“啊！……我要……泄了……” 
+
+　　“很好！你这变态的女人，痛快地泄出来吧！” 
+
+　　佐藤高兴地用力将肉棒插进开始发生颤动收缩的肉洞里，龟头甚至将子宫口 撑得开开的，口中大叫道︰“随便你泄多少次都没有关系！” 
+
+　　“哎哟！……啊……要泄了……泄了……” 
+
+　　美穗把头往后拼命地仰起，露出雪白纤细的脖颈，不停的扭动细细而又柔韧 的腰肢，两条修长有力的美腿紧紧缠在佐藤的腰上，猛烈的夹紧阴道里的肉棒， 疯狂地泄出自己的性欲。 
+
+　　感到美穗的子宫口猛烈的张缩，在泄出来的同时，把探进去的一个龟头紧紧 包裹起来，用力的握住。那种异样的快感是佐藤从来没有尝到过的，佐藤大叫一 声，差点也要射出来了。 
+
+　　佐藤连忙伏在美穗的身上，一口咬住一颗硬绷绷的充血肿胀成拇指大的紫红 色乳头，拼命地吸吮起来，手则抓住因高潮而涨大钗h的乳房用力揉搓。 
+
+　　被绳子绑紧的可怜乳房像个充满气的球体，上面的青筋都隐约可见，但弹力 却是十分的惊人，无论佐藤怎么抓，只要一放手，便会恢复原状。 
+
+　　缓过气后，佐藤挺起身子，望着还在享受高潮余韵的美穗，一双手依然抓着 丰满硕大的乳房玩弄不休，坚挺的肉棒则在她那不停收缩的湿淋淋的肉洞里做着 小幅度的活动，让快感不停地刺激着因高潮而更加敏感的女体。 
+
+　　“啊！……啊……” 
+
+　　美穗完全陶醉在男人肉棒带来的绝顶快感之中，这时她的双腿朝天举得高高 的，举在半空中的纤巧如玉的雪白脚掌绷紧，美丽的脚尖用力向内弯曲着，小嘴 则张得大大的，露着洁白的牙齿，从无力的嘴角还流出了一丝口水，那潮湿的眼 眶中，原本乌黑亮丽的美丽眼楮也翻起了白眼，完全是一副淫荡女人性欲满足的 淫靡模样！ 
+
+　　看到美穗快要被自己干昏过去的样子，佐藤满意地停下了肉棒的动作，就让 淫水狂涌不休抽搐不停的肉洞夹紧自己的巨棒，手抓着乳房得意地宣布道︰“嘿 嘿，你就慢慢地享受吧！” 
+
+　　接下来的一段时间对美穗来说，简直是一直在天堂和地狱之间徘徊，佐藤用 各式各样的姿势去奸淫她，而且是很巧妙的逗弄她，让快感像波浪一般地反复无 常。 
+
+　　每当美穗快要到顶点时，佐藤就故意停下来，让燃烧的欲火煎熬着可怜的女 人，看着堕入官能地狱的女人因为渴望获得更大的刺激而哭泣哀求，来满足他那 虐待狂的欲望。 
+
+　　当美穗为自己的肉体需求感到疯狂时，佐藤就给她最猛烈的冲击，让她坠入 更深的淫欲之中，为情欲的爆发而疯狂。 
+
+　　这等于是在女人肉体上打上深深的烙印，经过这样折磨的女人，对性欲的要 求会变得非常高，平常普通的性交再也不会让她们得到满足。 
+
+　　现在的美穗在心中就隐隐有了这样的觉悟。 
+
+　　“我已经再也逃不了了……”美穗悲哀的想道。与此同时，她却更加卖力地 扭动自己的纤腰，让男人的肉棒在火热肉洞里做更深的插入。 
+
+　　这个时候美穗的双手已经被解开了，正面坐在佐藤的肉棒上，受到男人有力 的奸淫。 
+
+　　那对被黑色绳子紧紧缚住的硕大乳房随着她美丽的臀部起伏而在空中诱人的 晃荡着，引得佐藤忍不住张口叼住一个勃起如紫红色葡萄般的乳头又咬又吸，他 的手则不放过另外的一个，抓在手中又揉又扭，使得美穗在快乐的美感中又感到 丝丝的痛楚，这种异样的刺激，让她的神智处于崩溃，从而进一步产生受虐的快 感。 
+
+　　两人已经连续交媾五十分钟了，美穗也早已经爬到最高峰四、五次，而且是 一次比一次强烈，但佐藤一次也没有射精。经过前面两次的射精后，他那积蓄已 久的欲望得到了释放，原来那个百战不泄的他马上就复活了。 
+
+　　硕大的肉棒依然硬如钢铁，被淫水长时间浸泡的缘故反而更加粗壮可怕了， 给多次高潮后极其敏感的阴户带来更加剧烈的刺激，每一次插入都会让美穗发出 啜泣般的呻吟。 
+
+　　随着佐藤猛烈地一挺，美穗也发出了尖锐的悲鸣，她感到佐藤的肉棒似乎已 经插到了自己的子宫里面一般，从子宫深处升起一股前所未有的滋味让她感到害 怕，就像是无数的电流在身上狂舞乱窜。 
+
+　　美穗全身都在颤抖，整个人软化在佐藤的身上，除了肉洞里的淫肉在疯狂地 缠绞着肉棒外，她连张口的力气都没有了，她已经到达了第六次的绝顶高峰。 
+
+　　让她不可思议的是在这六次到达绝顶高峰的过程中，性高潮根本就是一波按 一波的紧跟而来，好像没有停止的时刻。 
+
+　　每当到了一个高潮时，就像是跨过一个台阶，然后再向另一个更高的顶峰爬 升，她的肉体好像在经历一个全新的重生过程一般，藏在女人内心深处的性感完 全的燃烧起来了。 
+
+　　☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆ 
+
+　　召集人︰“拖了三夜，终于等到了，现在请元元的首位万点作家 　　——瘦子兄为各位致词。” 
+
+　　瘦子︰“珠玉在前，岂敢抛砖，然大人有令，小的自有作卒子的 　　觉悟，勉为其难吧！写的什么东西嘛，乱七八糟。老实说，这是我写 　　好后从头看起的第一感觉，当初自不量力，兴冲冲的赶去应老大的号 　　令，也构思了好久，可写出来的还是难看，我真是佩服那些写出短篇 　　的大大。” 
+
+　　失落︰“别客气，你的长篇也很不错啊！” 
+
+　　瘦子︰“也闭O写长篇的惯性吧，写着写着，就会想到很远的地 　　方，把戏拖沓起来，看起来有种虎头蛇尾的感觉。短篇小说就要用最 　　简洁的文字，表达出最强烈的感情，不像长篇，可以慢慢烘托出来， 　　让人渐渐发挥，文笔差点也没什么关系，可短篇就难了，如果分配的 　　轻重缓急不对，文章就像是放错了油盐的菜肴，倒人胃口。” 
+
+　　西门春雪︰“这样说来，你的长篇确实比短篇精采啊！” 
+
+　　“我看来是不适合写短篇的，还是老老实实的写长篇小说吧，至 　　少是中篇的幅度，那样的话，还可以发挥一下。（厚着脸皮胡吹！） 　　有空的时候，我会重新把它发展下去，就像老大所说的，有空间可续 　　的，让它丰满一点。” 
+
+　　瘦子︰“最后，谢谢给我这个机会，能和这么多的前辈高手共攘 　　大举。想起去年我还是‘十日谈’的看客，对写出好文的大家击节叫 　　好；没想到今年自己也可作为一个小卒子在这里摇旗吶喊，实在是感 　　谢老大将小弟召之麾下！” 
+
+　　鹰魔︰“现在，我们欢迎十日谈的第三十夜?驾驶班艳遇。”<!--bodyend-->
+</pre>
+<div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
+</td></tr>
+	<tr bgcolor='#E6E6DD'>
+		<td height=25>
+			<center>喜欢接触零距离朋友的这个贴子的话，[<a href="javascript:void(0)" onclick='dovote(13868099)'><font color=FF0000>请点这里投票加分支持</font></a>]
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td>
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="index.php?app=forum&act=userview&username=接触零距离" >ID前期主贴发言</a>]·[<a href="./index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">-->>加跟贴</a>]·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13868099">--向朋友推荐--</a>]·[<a href="javascript:history.go(-1)">返回前页</a>]
+			</div>
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">贴子内容是网友自行贴上分享，如果您认为其中内容违规或者侵犯了您的权益，请与我们联系，我们核实后会第一时间删除。</td></tr>
+</table>
+<center><center>
+<IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
+</center></center>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>所有跟贴:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">加跟贴（积极回贴支持发贴的朋友，才能欣赏到更多精品好贴！）</a>
+<div style="width:530px;float:left;border-right:1px #cccccc dashed">
+<form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
+				<p style='margin-top:5px;margin-bottom:5px;'>用户名:<input type="text" name="username" >密码:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--注册ID--]</a></p>
+					<input type="hidden" name="uptid" id="in_uptid" value="13868099" />
+		<input type="hidden" name="rootid" value="13868067" />
+		<input type="hidden" name="fid" value="" />
+		<input type='hidden' id="rename" name='rename' value='0'>
+		<span id="subject_info">标　题:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">所见即所得|预览模式</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">旧版发帖帮助</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">所见即所得发帖帮助</a>]<br>
+		<p>
+			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
+			<p id="parktools">
+				<img onclick="Cbold()" height=37 alt="粗体" src="./images/parkeditor/bold.gif"  border=0 alt="将选中文字设置为粗体">
+				<img onclick="Citalic()" height=37 alt="斜体" src="./images/parkeditor/italicize.gif"  alt="将选中文字设置为倾斜样式"   border=0>
+				<img onclick="Cunder()" height=37 alt="下划线" src="./images/parkeditor/underline.gif"  alt="将选中文字添加下划线"  border=0>
+				<img onclick="Ccenter()" height=37 alt="居中" src="./images/parkeditor/center.gif"  alt="将选中文字居中"  border=0>
+				<a onclick="Cimage()"><u>插入图片</u><img height=22 alt="插入图片" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>插入Flash</u><img height=22 alt="插入Flash动画" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>插入音乐</u><img src="./images/parkeditor/av.gif" alt="插入音乐" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>插入视频</u></a>
+			</p>
+			<br><input type="submit" name="submit" value="确认发布" /> &nbsp;<a href="#replyView" class="replyViewBtn">发布前预览</a>
+		</p>
+	</form>
+</div>
+<div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
+<p><b>相关话题推荐：</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=二届' target='_blank'>二届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=面人' target='_blank'>面人</a>&nbsp;</span></p>
+<ul style="">
+	<li><a href="index.php?app=forum&act=threadview&tid=13868098" target="_blank">（二届）廿八夜 眉娘传</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868097" target="_blank">（二届）廿七夜 理惠老师</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868096" target="_blank">（二届）廿六夜 律子的秘密空间 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868095" target="_blank">（二届）廿六夜 律子的秘密空间 上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868094" target="_blank">（二届）廿五夜 超常感觉 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868093" target="_blank">（二届）廿五夜 超常感觉 上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868092" target="_blank">（二届）廿四夜 淫熟美妇的肉壶</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868091" target="_blank">（二届）廿三夜 ２１个淫荡女学生（4）</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868090" target="_blank">（二届）廿二夜 野间智惠子忙碌的一天</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868088" target="_blank">（二届）二十夜 6~9</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868087" target="_blank">（二届）二十夜 通灵师手记 作者：ＹＳＥ９９ 1~5</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868084" target="_blank">（二届）十九夜 实验</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868082" target="_blank">（二届）十八夜 暴乱  　</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868081" target="_blank">（二届）十六夜 与狼共舞  　</a></li>
+	
+</ul>
+</div>
+<div style="clear:both;">
+</div>
+	</td></tr></table>
+<script src="http://t.6park.com/index.php?mod=showid&username=接触零距离" language="javascript" ></script> <br>
+
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> 广告服务 </a>] [<a href="http://www.6park.com/contact/con2.htm"> 联系我们 </a>] [<a href="http://www.rich98.com/home/index.php"> 个人帐户 </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> 版主申请 </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<script language="JavaScript" type="text/javascript">
+	$("input[type='image']").each(function (){
+		if($(this).width()>940){
+			$(this).width(940);
+		}
+	})
+	
+	$("table[width='948']").width(998);
+</script>
+</div>
+
+<div style="width:300px;border:1px solid #dedede;height:150px;background:#efefef;display:none;" id="login_form">
+        <style type="text/css">
+            #login_form_tab td{font-size:12px;height:25px;}
+             #login_form_tab{
+                    width:200px;
+                    margin-left:50px;
+                    margin-top:30px;
+            }
+        </style>
+	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
+        <table border="0" id='login_form_tab'>
+            <tbody><tr>
+                   <td width='45px'>用户名:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+            </tr>
+            <tr>
+                    <td>密码:</td><td><input type="password" class="ulogin" name="password"></td>
+            </tr>
+	    <tr>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="login"></td>
+            </tr>
+				
+				
+        </tbody></table>
+	</form>
+</div>
+
+<div style="width:900px;border:1px solid #dedede;background:#efefef;display:none;font-size:14px;" id="replyView">
+&nbsp;
+</div>
+<script type='text/javascript' src='http://www.rich98.com/wordex.js'></script>
+</body></html>

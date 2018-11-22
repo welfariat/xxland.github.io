@@ -1,0 +1,766 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=gb2312">  
+	<STYLE type='text/css'>
+		<!-- 
+		 a{text-transform: none; text-decoration: none;} 
+		 a:hover {color: #FF0000; text-decoration: underline} 
+		 td {  font: 11pt '宋体'} 
+		 -->
+		pre { 
+		
+			white-space: pre-wrap; /* css-3 */ 
+			white-space: -moz-pre-wrap; /* Mozilla, since 1999 */ 
+			white-space: -pre-wrap; /* Opera 4-6 */ 
+			white-space: -o-pre-wrap; /* Opera 7 */ 
+			word-wrap: break-word; /* Internet Explorer 5.5+ */ 
+			width:998px;
+			overflow:hidden;
+		} 
+	</STYLE>	
+    <title>（一届）第六夜 美肉娘外传 -rich98.com</title>
+	<meta name="Keywords" content="一届,第六,外传,（一届）第六夜 美肉娘外传,接触零距离,">
+	<meta name="Description" content="（一届）第六夜 美肉娘外传">
+  </head>
+<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
+<div class="body_center" id="head_ad">
+	<center><center>
+<IFRAME ID=topictop FRAMEBORDER=NO SCROLLING=NO name=iframe_topictop SRC=http://list.6park.com/web/topictop.html width=1000 height=64></IFRAME>
+</center></center>
+</div>
+<hr width=1000 size=1></center>
+<script charset="utf-8" src="./public/js/jquery.js"></script>
+<script charset="utf-8" src="./public/js/editor/kindeditor.js"></script>
+<script charset="utf-8" src="./public/js/editor/lang/zh_CN.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script charset="utf-8" src="./public/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="./public/js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script language="javascript">
+	var editor;		
+	function changeeditor(obj){
+		
+		if(editor){
+			editor.sync();
+			editor.remove('textarea[name="content"]');
+			editor = undefined;
+			obj.innerHTML='即见即所得模式|预览模式';
+			$("#parktools").show();
+		}
+		else{
+			$("#parktools").hide();
+			editor = KindEditor.create('textarea[name="content"]', {
+			resizeType : 0,
+			allowPreviewEmoticons : true,
+			allowImageUpload:false,
+			width:"470px",
+			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
+			});
+			obj.innerHTML='旧版发帖模式';
+		}
+	}
+	
+	
+	
+	function dovote(tid){
+		window.open("index.php?app=forum&act=vote&old=1&tid="+tid); 
+	}
+	
+
+			
+	function checktitle(){
+		var _title = $("#subject").val();
+		var _content = $("#content").get(0).value;
+		var _status = $("#rename").val();
+		_content = nl2br_js(_content);
+		$("#content").get(0).value = _content;
+		if(_title.length>60){
+			alert("标题长度过长，标题长度不能超过60个字符或30个汉字长度");
+			return false;
+		}
+		else{
+			if(_status == 1){
+				var date=new Date();
+				date.setTime(date.getTime()-10000);
+				document.cookie="scode=828; expire="+date.toGMTString()+";path=/"
+			}
+			
+			return true;
+		}
+	}		
+	function doImgOnload(img){
+			var   maxWidth=800;
+			var   maxHeight=10000;
+			var   width=img.width;
+			var   height=img.height;
+
+			if(!(width> maxWidth || height> maxHeight))
+				return;
+			if(width/height >= maxWidth/maxHeight){
+					img.width=maxWidth;
+			}else{
+					img.height=maxHeight;
+			}
+
+	}
+
+
+	$(document).ready(function(){
+	  $(".show_content img").bind("load",function (){
+			doImgOnload(this);
+	  });
+		$(".replyViewBtn").fancybox({
+				'onStart':function(){
+					var _content = $("#content").get(0).value;
+					_content = nl2br_js(_content);
+					$("#replyView").html(_content);
+					$("#replyView").show();
+				},
+				'onComplete':function(){
+					
+				},
+				'onCleanup':function(){
+					
+				},
+				'onClosed':function(){
+					$("#replyView").hide();	
+				}
+		})
+	});	
+
+
+
+
+//留园编辑器
+Selection = function(input){
+					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
+			};
+			with({o: Selection.prototype}){
+					o.setCaret = function(start, end){
+							var o = this.input;
+							if(Selection.isStandard)
+									o.setSelectionRange(start, end);
+							else if(Selection.isSupported){
+									var t = this.input.createTextRange();
+									end -= start + o.value.slice(start + 1, end).split("\n").length - 1;
+									start -= o.value.slice(0, start).split("\n").length - 1;
+									t.move("character", start), t.moveEnd("character", end), t.select();
+							}
+					};
+					o.getCaret = function(){
+							var o = this.input, d = document;
+							if(Selection.isStandard)
+									return {start: o.selectionStart, end: o.selectionEnd};
+							else if(Selection.isSupported){
+									var s = (this.input.focus(), d.selection.createRange()), r, start, end, value;
+									if(s.parentElement() != o)
+											return {start: 0, end: 0};
+									if(this.isTA ? (r = s.duplicate()).moveToElementText(o) : r = o.createTextRange(), !this.isTA)
+											return r.setEndPoint("EndToStart", s), {start: r.text.length, end: r.text.length + s.text.length};
+									for(var $ = "[###]"; (value = o.value).indexOf($) + 1; $ += $);
+									r.setEndPoint("StartToEnd", s), r.text = $ + r.text, end = o.value.indexOf($);
+									s.text = $, start = o.value.indexOf($);
+									if(d.execCommand && d.queryCommandSupported("Undo"))
+											for(r = 3; --r; d.execCommand("Undo"));
+									return o.value = value, this.setCaret(start, end), {start: start, end: end};
+							}
+							return {start: 0, end: 0};
+					};
+					o.getText = function(){
+							//获取选中内容
+							var o = this.getCaret();
+							return this.input.value.slice(o.start, o.end);
+					};
+					o.setText = function(text){
+							//设置选中内容
+							var o = this.getCaret(), i = this.input, s = i.value;
+							i.value = s.slice(0, o.start) + text + s.slice(o.end);
+							this.setCaret(o.start += text.length, o.start);
+					};
+					new function(){
+							var d = document, o = d.createElement("input"), s = Selection;
+							s.isStandard = "selectionStart" in o;
+							s.isSupported = s.isStandard || (o = d.selection) && !!o.createRange();
+					};
+			}
+			var selection;
+			var textId = "content";
+			//设置粗体
+			function Cbold(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<b>"+selection.getText()+"</b>";
+				selection.setText(s);
+			}
+			//设置斜体
+			function Citalic(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<i>"+selection.getText()+"</i>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Cunder(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<u>"+selection.getText()+"</u>";
+				selection.setText(s);
+			}
+			//设置下划线
+			function Ccenter(){
+				selection = new Selection(document.getElementById(textId));
+				s = "<center>"+selection.getText()+"</center>";
+				selection.setText(s);
+			}
+			//插入图片
+			function Cimage(){
+				selection = new Selection(document.getElementById(textId));
+				var s = prompt("请输入图片的网络地址:", selection.getText());
+				if(s !== null){
+					s = "<img src='"+s+"' />";
+					selection.setText(s);
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			//插入flash
+			function flash() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("Flash URL 地址","http://");      
+				if (txt!=null) {
+					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
+					selection.setText(AddTxt);
+					} 
+					else if(s == ''){
+					alert('您输入的内容为空');
+				} 
+			}
+			function music() {
+				txt=prompt("音乐文件地址","http://");      
+				if (txt!=null) {
+					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
+					selection.setText(AddTxt);
+				}
+			}
+
+			function real() {
+				selection = new Selection(document.getElementById(textId));
+				txt=prompt("请输入电影文件地址","http://");  
+				if (txt!=null) {
+					$.get("./public/movie.php", {url:txt,width:0,height:0},
+						function(data){
+						selection.setText(data);
+						});        
+				}
+				else if(s == ''){
+					alert('您输入的内容为空');
+				}
+			}
+			function nl2br_js(text){
+				return text;
+			}
+			
+
+			function changeuser(obj){
+				//$("#login_user_info").remove();
+				var _status = $("#rename").val();
+				if(_status == 1){
+					$("#login_hidden").hide();
+					$("#rename").val('0');
+					$(obj).html('切换发帖账号');
+				}
+				else{
+					$("#login_hidden").show();
+					$("#rename").val('1');
+					$(obj).html('取消切换');
+				}
+			}
+			
+</script>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">加跟贴</a>]·[<a href="index.php?app=sys&act=threadmanage&tid=13867097">版主管理</a>]·[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="http://news.6park.com" target='_blank'>分区新闻</a>]·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">繁體閱讀</span></a>]</td></tr>
+ <tr bgcolor='#E6E6DD'> <td class="show_content">
+ <center><font size=6><b>（一届）第六夜 美肉娘外传</b></font></center>
+
+送交者: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=接触零距离' target=_blank>接触零距离</a>[虎威将军★★☆] 于 2013-08-25 18:07 已读 1918 次 <a href="http://t.6park.com/index.php?mod=接触零距离" target=_blank>@接触零距离@的微博</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13867097&tag=禁忌书屋&title=（一届）第六夜 美肉娘外传&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='转发本贴到微博'></a><p></p>
+	<p>回答: <a href="index.php?app=forum&act=threadview&tid=13867088">【十日谈】 作者：多人</a> 由 接触零距离 于 2013-08-25 18:00</p>
+	<!--bodybegin-->
+<pre>
+来源:巨豆情色网 作者:唐寅 
+
+　　作者：唐寅
+
+　　美肉娘外传（全）
+
+　　１、淫美的堂嫂 
+
+　　在堂哥的婚礼上看过，只能用妖艳来形容的丽娟──堂嫂後，对堂嫂就难忘 地记忆深刻。 
+
+　　水漾般勾魂的媚眼┅┅ 
+
+　　像似能掐出水来般的雪嫩肌肤┅┅ 
+
+　　巧笑倩兮的神情，配上微扬的翘嘴┅┅ 
+
+　　一对虽称不上巨乳却坚挺诱人的美乳┅┅ 
+
+　　尤其在低胸的白纱下；两团白肉更好似要蹦脱出来般的惹眼，那芭蕾舞者出 身的婀娜诱人身段，更不知羡煞多少宾客。 
+
+　　堂哥的狐群狗友们，恐怕不知用眼睛强奸过堂嫂几百遍了；更有些人趁混乱 伸出「禄山之爪」，偷抓堂嫂的两团嫩白乳，就连站在旁边敬酒的姑丈，双眼也 几乎没离开过丽娟堂嫂的两团美肉。 
+
+　　２、引狼入室 
+
+　　几年後我上了大学，便借住在台北堂哥家。 
+
+　　由於堂哥的摄影公司在台中；因此常不在家只剩堂嫂在家开了一家照相馆； 而我则算打工为刚上国一的堂弟补习功课。 
+
+　　自从丽娟嫁给堂哥；一直都是我想泄指的对象，现在自己送上门来；真让我 见猎心喜。 
+
+　　从搬进堂哥家的第一天开始，我就处心积虑想要怎样才能 到丽娟。 
+
+　　虽然在梦中我不知道已经操过堂嫂几百遍了，但是每次见到堂嫂，我的鸡巴 仍是无法克制的硬起来。 
+
+　　起先我仍强迫压抑自己的淫欲；但是淫欲这种东西似乎是越压抑；越是一次 比一次高涨。 
+
+　　我於是告戒自己∶丽娟是堂哥的老婆；这是乱伦。况且；堂哥又对我这麽好 ┅┅ 
+
+　　这样想不但没让我好过一点；反而因此让我的鸡巴更涨的难过。 
+
+　　好死不死，上次我要去暗房冲相片时，又让我撞见堂哥正在把手伸进裙子里 ；挑逗正在洗相片的堂嫂， 
+
+　　堂嫂∶「不要嘛┅┅待会被看到不好啦！」 
+
+　　堂哥∶「不会啦；没人会进来的啦。」 
+
+　　堂嫂∶「不要在这啦┅┅不要┅┅不┅┅」 
+
+　　堂哥∶「好啦；别装了；下面都湿透了。」 
+
+　　堂哥∶「来轮到你帮我含我的大鸡巴了。」 
+
+　　堂嫂∶「嗯┅┅嗯┅┅好大噢┅┅磔磔┅┅呕」 
+
+　　从缝中，看到堂嫂一边帮堂哥吃鸡巴，一边用手指拨开湿漉漉的嫩 。 
+
+　　那骚浪模样；使我的鸡巴差点涨爆。 
+
+　　跟着，堂哥一边 着堂嫂，一边捏着那白嫩欲滴的淫乳，我只好套弄自己的 鸡巴泄洪。 
+
+　　看着堂嫂那娇俏的粉嫩脸，因为正挨插，而露出那像Ａ片里的女星一般的表 情，不；是更淫荡，一边喘气，一边还叫得如泣如诉的。 
+
+　　「嗯┅┅嗯┅┅呕┅┅呕┅┅啊┅┅啊┅┅要丢了┅┅呜┅┅唔┅┅」 
+
+　　真是销魂！ 
+
+　　终於堂哥在丽娟的「两口」夹攻之下丢兵卸甲。 
+
+　　「还要┅┅还要嘛┅┅殴┅┅不要拔出去嘛！」 
+
+　　堂嫂不满的叫着，只见堂哥丧气的，任丽娟怎样叫都不动，让丽娟在他身上 磨蹭，见状的我，恨不得把此刻像铁棒的鸡巴；插到那湿热的骚 里。 
+
+　　３、半妖姑妈 
+
+　　我不可置信的从堂弟的口中听到竟是┅┅ 
+
+　　「我第一次看到的男女相奸，是爸爸正从屁股後面 奶奶耶。」 
+
+　　本来以为会听到堂哥狂 堂嫂的答案，竟意外听到这劲暴的答案。我假装这 没什麽；并说我同学有单亲家庭的，也都跟妈妈睡在一起，而我家隔壁的阿明； 也被我看到过正在插他妈妈的肥穴。 
+
+　　堂弟被我这一说，也觉的这好像很自然似的。而我奸淫丽娟堂嫂的计划也更 往前进了一步。 
+
+　　但堂弟的回答，却也让我回想起小时候；艳丽的惠雯姑妈，到家里时的一些 怪事。 
+
+　　记得那几天，妈咪刚好出国，而姑妈正好到台南办事，只记得那时候姑妈虽 嫁人；但打扮的却不输美丽的服装model，反而因为一股少妇的妩媚，更显娇艳 动人。 
+
+　　记得一天夜里半夜醒来时；去上厕所时正巧碰见爸爸，慌张的抱着仅罩一件 透明薄纱的姑妈，往房间里走去，看见我的爸爸，只心虚的∶「小孩子还不快去 睡觉」，就碰的一声把房门关上了。 
+
+　　後来，只隐约听到房内传出一些呜咽声┅┅ 
+
+　　当时的我，就回去睡了。 
+
+　　後来，早上醒来听到爸爸似乎正跟哽咽的姑妈大声争吵，不一会，听到碰碰 的巨响及啪啪的拍打声；就沉寂了下来。 
+
+　　哥哥告诉我说，大人的事小孩少管！ 
+
+　　但是，房内传来的呜呜声┅┅似乎告诉我们，已平息了这场争吵。 
+
+　　接下来的几天，姑妈就没出过房门；只有爸爸把饭送进房内。 
+
+　　爸爸只对我跟哥说∶「姑妈生病了你们不准去吵她，知道吗？」 
+
+　　对平日威严的爸爸；我们当然不敢违抗，只是平时姑妈很疼哥哥；於是哥哥 冒着被爸爸打的危险；偷偷地从门缝中想要看姑妈到底怎麽了。 
+
+　　不幸後来被爸爸发现，被打个半死。 
+
+　　据哥哥描述∶「好奇怪；姑妈不是生病。可是姑妈都没穿衣服；还被爸爸用 麻绳绑的两个奶奶都凸出来了。」 
+
+　　「而且爸爸还抓着姑妈的头发，要姑妈用嘴吃爸爸的弟弟。」 
+
+　　「姑妈好像不愿意；一直呜呜的叫，但是不久又好像很好吃的样子一直舔及 吞吐呢！」 
+
+　　「後来，爸爸又让姑妈趴下，把弟弟插到姑妈的大腿中间。」 
+
+　　「姑妈本来好像不要，因为姑妈一直在叫∶『不要┅┅不┅┅不可以┅┅嗯 ┅┅嗯┅┅小强┅┅不要┅┅』，但是被绑住了奶奶；又被爸爸一直抓住，只好 趴着。」 
+
+　　「而且爸爸一直叫姑妈∶『骚货┅┅干┅┅ 死你┅┅浪 ┅┅』但是，後 来我也不知道姑妈是痛苦还是舒服？」 
+
+　　「只见姑妈一直摇摆她白嫩的屁股，而且一直叫爸爸的名字，真怪！」 
+
+　　我说∶「後来呢？」 
+
+　　哥哥说∶「後来，爸爸好像从镜中看到，我就被抓到了。」 
+
+　　「不过姑妈真的好漂亮欧！奶奶又白又大，叫声又好好听呦。」 
+
+　　後来姑妈一直待到妈咪回国前一天；才又打扮的好妖艳，被爸爸送回台北， 爸爸不但各给了我跟哥１０００元，还要我们不准把姑妈生病的事，告诉任何人 ，尤其是妈咪。 
+
+　　４、奸淫的理由 
+
+　　从堂弟那里，得知堂哥跟姑妈的母子乱伦。 
+
+　　虽然让我淫兴高涨，但也不禁怀疑我们家族是否流着喜好乱伦的血液。 
+
+　　接着，堂弟神秘的告诉我，每回堂哥只要一回台北，奶奶总是不久就会到家 里来；尤其妈咪不在家时，奶奶更是整天和爸爸待在房间都，不出房门。 
+
+　　虽然家里的隔音算是相当不错，但是仍然多少会听到奶奶的嘶喊声，及嫩肉 被用力拍击的啪啪声。 
+
+　　堂弟说，他用镜子透过门缝，竟看到爸爸骑在奶奶身上，不断的冲刺，并用 力拍击着奶奶的肥嫩臀。 
+
+　　堂弟甚至觉得，奶奶比他曾不小心看到的妈咪，还粉还嫩呢！ 
+
+　　後来，只要姑妈一来，他就先躲到堂哥房间的窗外，观看爸爸跟奶奶大战， 也因此堂弟变得很早熟。 
+
+　　後来有好几次，我特别去注意，姑妈来表哥家时，两人的精彩母子乱伦的淫 戏。 
+
+　　真想不到，国立大学毕业生的堂哥，竟会去搞自己的母亲。 
+
+　　不过也不能怪表哥，都快５０岁了的姑妈，看来还像３５岁的美妇，谁不想 呢？所谓肥水不落外人田嘛！ 
+
+　　连我都想 姑妈的 ，抓她那对弹性依旧的白乳。 
+
+　　正巧，今天堂弟跟堂嫂回新竹娘家，而堂哥又说这礼拜要提早回家，我本来 也要回南部的；但想到这个堂嫂不在的夜，也许又是一个乱伦的淫乱夜也不一定 ？就决定不走了。 
+
+　　结果姑妈竟还先来了，一副风骚欠干样，人未到，迷人的香水味倒先传到了 ，不知道我还在家的姑妈，已经等不及挨插的，在客厅张开大腿，淫荡的先自慰 起来。 
+
+　　那湿漉漉的肥穴来了，突然，我想我找到了奸淫堂嫂之後的护身符了！ 
+
+　　（嘿┅┅嘿！即使堂哥知道，也不怕了！哈┅┅哈┅┅） 
+
+　　我偷偷的预先潜到堂哥房间，放置了一台Ｖ８；把镜头对准着那张大床。 
+
+　　（总有一天，我要在这张床， 丽娟堂嫂的美 ；玩她的雪白乳房！） 
+
+　　想到就连退路都有了；自己不禁笑出来。 
+
+　　没注意到以为家里都没人的堂哥，已经抱着脱的只剩缕空的蕾丝内裤的姑妈 进来了。情急之下，只好躲到床下。 
+
+　　接下来的一场「活塞大战」都被我全程的记录下来了，卖命 妈咪的堂哥、 失声浪叫的姑妈；一个要求儿子插死她的母亲，一个是把自己母亲当母狗， 遍 全身三个肉洞的儿子；好一对纵欲乱伦的母子啊！ 
+
+　　难怪堂哥在丽娟堂嫂的 里撑不住；我想有惠雯姑妈这种妈咪，大概谁的阳 精都会泄光的，看刚才姑妈那一副贪婪、舔着堂哥肉棒上残馀的精液模样，彷佛 与吸精为生的美艳妖女没有两样。 
+
+　　好不容易等到堂哥说要出去买吃的，在床下快憋不住的我，总算可以松口气 了。 
+
+　　爬出床底的我，被眼前的景像震撼了，白嫩赤裸裸的姑妈，正阖眼、微喘着 气在床上休息。 
+
+　　瞬间，我想自己理智是荡然无存的了！ 
+
+　　我用床边的乳罩蒙住姑妈的双眼，把快胀爆的肉棒塞入姑妈的淫小嘴。 
+
+　　姑妈∶「志明┅┅志┅┅你┅┅顽皮┅┅呜┅┅呜┅┅好┅┅大┅┅」 
+
+　　（ ！骚货还叫得出来，等下让你知道我肉棒的厉害！） 
+
+　　姑妈∶「呜┅┅呜┅┅好坏┅┅妈┅┅咪都┅┅殴┅┅」 
+
+　　（这母狗才被干完又要了，够淫荡的） 
+
+　　姑妈∶「妈┅┅咪想┅┅要┅┅啊┅┅要┅┅要┅┅要┅┅给┅┅嘛┅┅」 
+
+　　（才搓了一下阴蒂，就湿成这样，欠插！） 
+
+　　姑妈∶「插┅┅插┅┅进来┅┅嘛┅┅插┅┅我嘛┅┅」 
+
+　　（哼！我就故意多在洞口折磨你一下！） 
+
+　　姑妈∶「志┅┅明┅┅不要┅┅折┅┅腾┅┅妈咪┅┅了要上┅┅天了，我 的亲亲┅┅爱死你了┅┅快┅┅进来┅┅」 
+
+　　（好吧！让我成全你，母狗！） 
+
+　　姑妈∶「噢┅┅噢噢┅┅噢┅┅噢┅┅死┅┅死了┅┅插死我┅┅干我┅┅ 我┅┅志┅┅明哥┅┅哥┅┅呜┅┅呜┅┅」 
+
+　　（铐，干大力了；奶罩掉了；糟糕！） 
+
+　　姑妈∶「小┅┅杰！怎┅┅麽┅┅是┅┅你不？！┅┅不┅┅不可以的！」 
+
+　　「你儿子的鸡巴都 过了，还有甚麽不可以的？操！骚货 死你；还装！」 我叫着。 
+
+　　姑妈∶「小┅┅小┅┅杰，我┅┅是姑┅┅妈呀！不┅┅不可以啊！」 
+
+　　「话都说不清楚，你说不可以停，是吗？」我说。 
+
+　　（姑妈，这时候就连亲妈都要 ！） 
+
+　　姑妈哭泣着∶「不┅┅不┅┅呜┅┅呜┅┅噢┅┅噢┅┅」 
+
+　　「那我拔出来可以吧！不要哭了嘛！」我说。 
+
+　　（干；那麽淫还装；靠！） 
+
+　　姑妈∶「求┅┅你┅┅小┅┅杰┅┅不┅┅要拔┅┅出去┅┅我┅┅我┅┅ 会┅┅死┅┅」 
+
+　　「干死你这骚浪母狗的淫蜜 」我叫着。 
+
+　　（原来；是爽到失神哭的，害我×××） 
+
+　　姑妈∶「要丢┅┅丢了┅┅呜┅┅呜呃啊┅┅」 
+
+　　趁着淫姑妈的热淫液，冲浇在龟头上，我也大叫着，射在姑妈的淫蜜穴里。 
+
+　　看着姑妈失神颤栗，而我的白色热精缓缓流出；带着我的Ｖ８，得意的离开 房间。 
+
+　　从此，淫骚的惠雯姑妈，私下瞒着堂哥，不但她的蜜穴让我插，还给我很多 钱呢！ 
+
+　　由於姑妈是贵夫人协会的理事长，透过惠雯，虽然 到很多有钱人的情妇、 夫人、小姐，但我还是忘情不了，那如狐狸精般妖艳的丽娟堂嫂。 
+
+　　而且我的计划正一步步得逞┅┅ 
+
+　　５、表嫂的美 
+
+　　随着我帮堂弟补习，堂弟的功课大有进步，堂嫂堂哥都很称赞我的功劳，对 我的信任也一天天加深。 
+
+　　而我觉得，随着青春期的到来，堂弟似忽对女人愈来愈感性趣。 
+
+　　（真笨！家里现成的烂熟美 不会搞。） 
+
+　　於是，我渐渐地一步步引导堂弟奸淫女人（当然先从自己妈咪开始喽！） 
+
+　　起先，我从带一些美女写真给他，渐渐看他不能满足，就常常带那些『真枪 实弹』的Ａ书给他看。 
+
+　　起初，小超看到那些被男人肉棒插满的淫蜜穴，惊讶得说不出话来。 
+
+　　後来，看到Ａ书里还有插淫菊花蕊，及被白浊的精液喷的满脸的女人的淫荡 表情，不禁问我。 
+
+　　「堂哥，插入女人的洞穴真的那麽舒服吗？」堂弟问道。 
+
+　　「何止舒服，根本是爽上天了。」我陶醉的说道。 
+
+　　「可是，那些女人怎麽好像很痛苦的样子。」堂弟说 
+
+　　「其实她们是太舒服了，她们都巴不得肉棒插她们呢！等你搞到女人你就知 道了。」我说。 
+
+　　看他的样子，一副跃跃欲试的样子，我的计划已经成功一半了。 
+
+　　６、艳姬淫嫂 
+
+　　有次我在补完习後，故意不小心留下一片ＶＣＤ；片名叫「迷奸烂熟母」。 
+
+　　片子是描述，几个青春期的国中生不知怎麽弄来ＦＭ２，把其中一个年青貌 美的母亲给迷奸了。 
+
+　　然後，几个同学轮流奸淫她，其中那个国中生，本来不敢奸淫自己母亲的， 但後来实在忍不住；而且反正妈咪是昏迷不醒。 
+
+　　好死不死，偏偏他把肉棒插入妈咪的淫蜜穴时，他妈妈好像被 到醒过来。 
+
+　　正看到自己的乖儿子，正压在自己身上；边玩自己的双乳；边作活塞运动， 而且旁边又围着几个儿子的同学，随即吓的哭喊着要挣脱。 
+
+　　但马上被几个国中生给制服了，那个儿子迟疑了一下，在夥伴的鼓动下反而 更猛烈的 穴。 
+
+　　而刚才泄精的同学，也不客气的把沾满精液的肉棒，塞入他母亲的美嘴。 
+
+　　而母亲的肉 也没闲着，马上被另一个同学给填满了。 
+
+　　一群国中生把他们青春期的腥臭精液，射了那母亲满脸及身体，才满意的离 去。 
+
+　　从此，小男孩就以此要胁母亲；而肆无忌惮的在爸爸不在家时，恣意的搞自 己的母亲，或找同学一起奸淫已经成为他们淫物的可怜美母。 
+
+　　过不久，我发觉最近表嫂都很早就睡了，跟以前的夜猫子习性迥然不同，而 且，阿超最近一到晚上也常找不到人，我便偷偷的注意着堂嫂的举动。 
+
+　　我发现堂嫂喝完阿华田之後，就好像很疲倦的想睡觉，而且当堂嫂进房後， 阿超也都不见人影，莫非┅┅ 
+
+　　於是，我今天特别注意着阿超的行踪，果然被我发现到，阿超左顾右盼、蹑 手蹑脚潜进堂嫂的房间。 
+
+　　我当然继续从门缝中，监视着阿超的一举一动，只见堂嫂已睡熟了，对阿超 双手恣意妄为伸进被子里的爱抚，一点反应也没有。 
+
+　　突然，堂弟掀开被子（哇！两团白奶没穿奶罩；浅蓝色的丁字内裤嫩臀中间 只剩一条蕾丝了）骑到堂嫂身上，用他那尚未完全发育完全的鸡巴； 起堂嫂的 小淫嘴来。 
+
+　　看得我欲火大盛，看到美艳的堂嫂，被平时最怕自己的亲儿子玩弄淫美体， 让我有股说不出的快感。 
+
+　　接着，当堂弟熟练的抬起母亲的淫美嫩臀，要插入湿热花蕊时；我现身喝住 堂弟。 
+
+　　「这是乱伦你不知道吗？」我说。 
+
+　　「我┅┅我┅┅我┅┅不是故意的。」堂弟支支吾吾的说。 
+
+　　「马上出去。」我故作生气的说。 
+
+　　於是堂弟心不甘、情不愿的，拿起地上衣服，悻悻然的走出去了。 
+
+　　淫美体当前，我怎能放过了，特别是我唾延许久的丽娟堂嫂。 
+
+　　我边欣赏着这上帝的杰作；不禁赞叹堂嫂的丽质天生，及羡慕堂哥的肉棒打 （淫美母＆艳美妻）。 
+
+　　边想我今晚要怎样享用这只妖艳的小狐狸精，我决定先用我的舌头，舌奸堂 嫂身上的每一寸雪肤。 
+
+　　尤其，舌淫桃花蜜 时，舌头深入堂嫂的湿热 道，真是美妙啊！ 
+
+　　两团嫩白肉，恰到好处的大小，如白馒头的柔嫩触感，让我忘情揉搓起来。 
+
+　　小淫嘴的口交也很舒服；柔美的双唇轻含着涨爆的肉棒，美呵！ 
+
+　　疯狂 着日思夜想的淫蜜 （丽娟我要干死您你！） 
+
+　　「噢┅┅噢┅┅噢┅┅噢┅┅噢┅┅嗳。」我叫着 
+
+　　「嗯┅┅嗯┅┅噢┅┅噢┅┅呜┅┅呜┅┅」堂嫂闷哼着 
+
+　　「嗯┅┅嗯┅┅噢┅┅噢┅┅嗳┅┅嗯┅┅呜┅┅呜┅┅」 
+
+　　「嗯┅┅嗯┅┅噢┅┅噢┅┅呜┅┅呜呜┅┅呜┅┅呜┅┅呜┅┅呼┅┅呼 ┅┅呜┅┅」 
+
+　　堂嫂被我几乎喘不过气来，呜呜应和着。 
+
+　　我又把堂嫂翻过来，撑开淫 ，用在沾满蜜汤汁的肉棒， 淫菊花蕊，最後 才不舍的射在淫蜜後穴的深处，且眷恋的紧紧抱紧堂嫂的美白淫肉。 
+
+　　感觉到堂嫂的淫蜜肉，不但吸吮，又紧密的包围着我，真是爽毙了！ 
+
+　　接着，把湿漉漉的鸡巴，在堂嫂艳丽的美颜上擦乾净；呼！完美（心中想着 下次一定要「颜射」）。 
+
+　　快天亮时，我才走出淫荡堂嫂的房间，後来堂弟似乎知道我的淫行，而半要 胁半央求我在别让堂哥知道的状况下，让他加入「合淫」他妈咪。 
+
+　　基於那也是他母亲，於是我在多方考量下，让阿超也加入一起奸淫堂嫂。 
+
+　　何况，堂弟答应我把家庭访问时，让我奸淫他们那长发飘逸长、很像观月亚 理沙的国文老师。 
+
+　　後来，我跟堂弟又趁堂哥不在时，把堂嫂半推半就的合奸了。 
+
+　　真不愧是虚伪的美姬淫妇！ 
+
+　　居然一边哭着挣扎，喊着不要乱伦；一边又用翘嫩臀，上下迎合我们的抽送 。最後，还是屈服在我们的淫肉根之下。 
+
+　　记得最刺激的一次，是堂嫂穿着代表淫荡的吊袜带及黑色蕾丝丁字裤；在柜 台跟客户谈话时，我就躲在柜台下；用舌尖 着堂嫂的淫肉 及香嫩 。 
+
+　　等客人一出店门，我就让堂嫂趴在柜台；从淫白嫩臀後方 她的美肉穴，真 是淫美的回忆。 
+
+　　今晚，堂哥又不回来了，阿伟及阿雄说要来找我，看来这样的夜晚，迎接好 友最好的礼物，莫过於用丽娟堂嫂的┅┅ 
+
+　　☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆ 
+
+　　抱玉轩∶「很精彩的乱文啊，唐寅兄的东西果真不错。」 
+
+　　唐寅∶「客气了，您的缘份一文，也很棒啊！」 
+
+　　乱君∶「唐寅兄的作品很放得开，在乱派中，Ｋ、旭鹤、抱玉兄，都是写复合型乱文的作者，唐寅兄也是其中之一啊！」 
+
+　　古蛇∶「不过唐寅兄的鬼畜度，是另外几人望尘莫及的。」 
+
+　　鹰魔∶「呵呵，下次再讨论吧！我们欢迎十日谈的第七夜·仙人跳。」<!--bodyend-->
+</pre>
+<div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
+</td></tr>
+	<tr bgcolor='#E6E6DD'>
+		<td height=25>
+			<center>喜欢接触零距离朋友的这个贴子的话，[<a href="javascript:void(0)" onclick='dovote(13867097)'><font color=FF0000>请点这里投票加分支持</font></a>]
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td>
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="index.php?app=forum&act=userview&username=接触零距离" >ID前期主贴发言</a>]·[<a href="./index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">-->>加跟贴</a>]·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13867097">--向朋友推荐--</a>]·[<a href="javascript:history.go(-1)">返回前页</a>]
+			</div>
+		</td>
+	</tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">贴子内容是网友自行贴上分享，如果您认为其中内容违规或者侵犯了您的权益，请与我们联系，我们核实后会第一时间删除。</td></tr>
+</table>
+<center><center>
+<IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
+</center></center>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>所有跟贴:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">加跟贴（积极回贴支持发贴的朋友，才能欣赏到更多精品好贴！）</a>
+<div style="width:530px;float:left;border-right:1px #cccccc dashed">
+<form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
+				<p style='margin-top:5px;margin-bottom:5px;'>用户名:<input type="text" name="username" >密码:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--注册ID--]</a></p>
+					<input type="hidden" name="uptid" id="in_uptid" value="13867097" />
+		<input type="hidden" name="rootid" value="13867088" />
+		<input type="hidden" name="fid" value="" />
+		<input type='hidden' id="rename" name='rename' value='0'>
+		<span id="subject_info">标　题:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">所见即所得|预览模式</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">旧版发帖帮助</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">所见即所得发帖帮助</a>]<br>
+		<p>
+			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
+			<p id="parktools">
+				<img onclick="Cbold()" height=37 alt="粗体" src="./images/parkeditor/bold.gif"  border=0 alt="将选中文字设置为粗体">
+				<img onclick="Citalic()" height=37 alt="斜体" src="./images/parkeditor/italicize.gif"  alt="将选中文字设置为倾斜样式"   border=0>
+				<img onclick="Cunder()" height=37 alt="下划线" src="./images/parkeditor/underline.gif"  alt="将选中文字添加下划线"  border=0>
+				<img onclick="Ccenter()" height=37 alt="居中" src="./images/parkeditor/center.gif"  alt="将选中文字居中"  border=0>
+				<a onclick="Cimage()"><u>插入图片</u><img height=22 alt="插入图片" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>插入Flash</u><img height=22 alt="插入Flash动画" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>插入音乐</u><img src="./images/parkeditor/av.gif" alt="插入音乐" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>插入视频</u></a>
+			</p>
+			<br><input type="submit" name="submit" value="确认发布" /> &nbsp;<a href="#replyView" class="replyViewBtn">发布前预览</a>
+		</p>
+	</form>
+</div>
+<div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
+<p><b>相关话题推荐：</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=一届' target='_blank'>一届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=第六' target='_blank'>第六</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=外传' target='_blank'>外传</a>&nbsp;</span></p>
+<ul style="">
+	<li><a href="index.php?app=forum&act=threadview&tid=13867096" target="_blank">（一届）第五夜 征服神奇女侠 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867095" target="_blank">（一届）第五夜 征服神奇女侠  上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867093" target="_blank">（一届）第四夜 邻家保姆</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867092" target="_blank">（一届）第三夜 强暴女子银行员</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867091" target="_blank">（一届）第二夜虎头狗尾（缺）</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867090" target="_blank">（一届）第一夜虚像庭园</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867089" target="_blank">十日谈第一届前夜</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867087" target="_blank">外传--秋怨</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867086" target="_blank">外传--春风</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867085" target="_blank">外传--蜕变</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867084" target="_blank">外传--成长</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867072" target="_blank">【苹果情缘】1~18章完（加前传跟外传）作者：ＫＯＭＯＪＯ</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866576" target="_blank">【我和妻子江湖行】（外传）作者：绿野</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866298" target="_blank">「第六章」新仇旧恨</a></li>
+	
+</ul>
+</div>
+<div style="clear:both;">
+</div>
+	</td></tr></table>
+<script src="http://t.6park.com/index.php?mod=showid&username=接触零距离" language="javascript" ></script> <br>
+
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> 广告服务 </a>] [<a href="http://www.6park.com/contact/con2.htm"> 联系我们 </a>] [<a href="http://www.rich98.com/home/index.php"> 个人帐户 </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> 版主申请 </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<script language="JavaScript" type="text/javascript">
+	$("input[type='image']").each(function (){
+		if($(this).width()>940){
+			$(this).width(940);
+		}
+	})
+	
+	$("table[width='948']").width(998);
+</script>
+</div>
+
+<div style="width:300px;border:1px solid #dedede;height:150px;background:#efefef;display:none;" id="login_form">
+        <style type="text/css">
+            #login_form_tab td{font-size:12px;height:25px;}
+             #login_form_tab{
+                    width:200px;
+                    margin-left:50px;
+                    margin-top:30px;
+            }
+        </style>
+	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
+        <table border="0" id='login_form_tab'>
+            <tbody><tr>
+                   <td width='45px'>用户名:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+            </tr>
+            <tr>
+                    <td>密码:</td><td><input type="password" class="ulogin" name="password"></td>
+            </tr>
+	    <tr>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="login"></td>
+            </tr>
+				
+				
+        </tbody></table>
+	</form>
+</div>
+
+<div style="width:900px;border:1px solid #dedede;background:#efefef;display:none;font-size:14px;" id="replyView">
+&nbsp;
+</div>
+<script type='text/javascript' src='http://www.rich98.com/wordex.js'></script>
+</body></html>
