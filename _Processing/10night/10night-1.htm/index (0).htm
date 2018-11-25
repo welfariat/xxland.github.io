@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
@@ -7,7 +7,7 @@
 		<!-- 
 		 a{text-transform: none; text-decoration: none;} 
 		 a:hover {color: #FF0000; text-decoration: underline} 
-		 td {  font: 11pt '����'} 
+		 td {  font: 11pt '宋体'} 
 		 -->
 		pre { 
 		
@@ -20,9 +20,9 @@
 			overflow:hidden;
 		} 
 	</STYLE>	
-    <title>ʮ��̸��һ��ǰҹ -rich98.com</title>
-	<meta name="Keywords" content="ʮ��̸,ʮ��,��̸,��һ��,��һ,һ��,ǰҹ,ʮ��̸��һ��ǰҹ,�Ӵ������,">
-	<meta name="Description" content="ʮ��̸��һ��ǰҹ">
+    <title>十日谈第一届前夜 -rich98.com</title>
+	<meta name="Keywords" content="十日谈,十日,日谈,第一届,第一,一届,前夜,十日谈第一届前夜,接触零距离,">
+	<meta name="Description" content="十日谈第一届前夜">
   </head>
 <body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
 <div class="body_center" id="head_ad">
@@ -45,7 +45,7 @@
 			editor.sync();
 			editor.remove('textarea[name="content"]');
 			editor = undefined;
-			obj.innerHTML='����������ģʽ|Ԥ��ģʽ';
+			obj.innerHTML='即见即所得模式|预览模式';
 			$("#parktools").show();
 		}
 		else{
@@ -57,7 +57,7 @@
 			width:"470px",
 			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
 			});
-			obj.innerHTML='�ɰ淢��ģʽ';
+			obj.innerHTML='旧版发帖模式';
 		}
 	}
 	
@@ -76,7 +76,7 @@
 		_content = nl2br_js(_content);
 		$("#content").get(0).value = _content;
 		if(_title.length>60){
-			alert("���ⳤ�ȹ��������ⳤ�Ȳ��ܳ���60���ַ���30�����ֳ���");
+			alert("标题长度过长，标题长度不能超过60个字符或30个汉字长度");
 			return false;
 		}
 		else{
@@ -132,7 +132,7 @@
 
 
 
-//��԰�༭��
+//留园编辑器
 Selection = function(input){
 					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
 			};
@@ -168,12 +168,12 @@ Selection = function(input){
 							return {start: 0, end: 0};
 					};
 					o.getText = function(){
-							//��ȡѡ������
+							//获取选中内容
 							var o = this.getCaret();
 							return this.input.value.slice(o.start, o.end);
 					};
 					o.setText = function(text){
-							//����ѡ������
+							//设置选中内容
 							var o = this.getCaret(), i = this.input, s = i.value;
 							i.value = s.slice(0, o.start) + text + s.slice(o.end);
 							this.setCaret(o.start += text.length, o.start);
@@ -186,56 +186,56 @@ Selection = function(input){
 			}
 			var selection;
 			var textId = "content";
-			//���ô���
+			//设置粗体
 			function Cbold(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<b>"+selection.getText()+"</b>";
 				selection.setText(s);
 			}
-			//����б��
+			//设置斜体
 			function Citalic(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<i>"+selection.getText()+"</i>";
 				selection.setText(s);
 			}
-			//�����»���
+			//设置下划线
 			function Cunder(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<u>"+selection.getText()+"</u>";
 				selection.setText(s);
 			}
-			//�����»���
+			//设置下划线
 			function Ccenter(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<center>"+selection.getText()+"</center>";
 				selection.setText(s);
 			}
-			//����ͼƬ
+			//插入图片
 			function Cimage(){
 				selection = new Selection(document.getElementById(textId));
-				var s = prompt("������ͼƬ�������ַ:", selection.getText());
+				var s = prompt("请输入图片的网络地址:", selection.getText());
 				if(s !== null){
 					s = "<img src='"+s+"' />";
 					selection.setText(s);
 				}
 				else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				}
 			}
-			//����flash
+			//插入flash
 			function flash() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("Flash URL ��ַ","http://");      
+				txt=prompt("Flash URL 地址","http://");      
 				if (txt!=null) {
 					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
 					selection.setText(AddTxt);
 					} 
 					else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				} 
 			}
 			function music() {
-				txt=prompt("�����ļ���ַ","http://");      
+				txt=prompt("音乐文件地址","http://");      
 				if (txt!=null) {
 					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
 					selection.setText(AddTxt);
@@ -244,7 +244,7 @@ Selection = function(input){
 
 			function real() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("�������Ӱ�ļ���ַ","http://");  
+				txt=prompt("请输入电影文件地址","http://");  
 				if (txt!=null) {
 					$.get("./public/movie.php", {url:txt,width:0,height:0},
 						function(data){
@@ -252,7 +252,7 @@ Selection = function(input){
 						});        
 				}
 				else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				}
 			}
 			function nl2br_js(text){
@@ -266,276 +266,276 @@ Selection = function(input){
 				if(_status == 1){
 					$("#login_hidden").hide();
 					$("#rename").val('0');
-					$(obj).html('�л������˺�');
+					$(obj).html('切换发帖账号');
 				}
 				else{
 					$("#login_hidden").show();
 					$("#rename").val('1');
-					$(obj).html('ȡ���л�');
+					$(obj).html('取消切换');
 				}
 			}
 			
 </script>
-<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">���ؽ���������ҳ</a>]��[<a href="#followups">���и���</a>]��[<a href="#postfp">�Ӹ���</a>]��[<a href="index.php?app=sys&act=threadmanage&tid=13867089">��������</a>]��[<a href="http://blog.6park.com/search.php?step=2&author=�Ӵ������">�Ӵ���������԰����</a>]��[<a href="http://news.6park.com" target='_blank'>��������</a>]��[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">���w��x</span></a>]</td></tr>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">加跟贴</a>]·[<a href="index.php?app=sys&act=threadmanage&tid=13867089">版主管理</a>]·[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="http://news.6park.com" target='_blank'>分区新闻</a>]·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">繁體閱讀</span></a>]</td></tr>
  <tr bgcolor='#E6E6DD'> <td class="show_content">
- <center><font size=6><b>ʮ��̸��һ��ǰҹ</b></font></center>
+ <center><font size=6><b>十日谈第一届前夜</b></font></center>
 
-�ͽ���: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=�Ӵ������' target=_blank>�Ӵ������</a>[������������] �� 2013-08-25 18:01 �Ѷ� 1771 �� <a href="http://t.6park.com/index.php?mod=�Ӵ������" target=_blank>@�Ӵ������@��΢��</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13867089&tag=��������&title=ʮ��̸��һ��ǰҹ&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='ת��������΢��'></a><p></p>
-	<p>�ش�: <a href="index.php?app=forum&act=threadview&tid=13867088">��ʮ��̸�� ���ߣ�����</a> �� �Ӵ������ �� 2013-08-25 18:00</p>
+送交者: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=接触零距离' target=_blank>接触零距离</a>[虎威将军★★☆] 于 2013-08-25 18:01 已读 1771 次 <a href="http://t.6park.com/index.php?mod=接触零距离" target=_blank>@接触零距离@的微博</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13867089&tag=禁忌书屋&title=十日谈第一届前夜&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='转发本贴到微博'></a><p></p>
+	<p>回答: <a href="index.php?app=forum&act=threadview&tid=13867088">【十日谈】 作者：多人</a> 由 接触零距离 于 2013-08-25 18:00</p>
 	<!--bodybegin-->
 <pre>
-����Դ:�޶���ɫ�� ����:�ټ��� 
+　来源:巨豆情色网 作者:召集人 
 
-���������ˡ��ټ���
+　　发言人∶召集人
 
-�����@�@�@�@ҹĻ�ʹ������Ʊ��£�������Ҳû�еļž�ҹ����������ĺ�ҹ���������������а��֮�
+　　夜幕低垂，乌云蔽月，半点天光也没有的寂静夜晚，最深沈的黑夜，笼罩着数不清的邪恶之物。
 
-�����@�@�@�@���ơ����������ء�����
+　　「嗥～～～～～呜～～」
 
-�����@�@�@�@Ұ��Ⱥ�����У�ӳ�ű����Ĺ⣬��ͷ����Ũ�ܺ�ҹ����ס�ط����������ݻƴ�������Ҷ�������Ǭ����Ǭ�Դ��ӵĿ�֦�����ħ����צ������������š�
+　　野狼群的眼中，映着碧绿幽光，仰头对着浓密黑夜，不住地发出咆哮。枯黄垂柳，绿叶早已落得乾净，乾涸错杂的枯枝，像恶魔的手爪，诡异地伸张着。
 
-�����@�@�@�@�紵���ڻ����ص��ϣ�ɳɳ���죬�����ڹ�ͷ�Ĳ����׻�ɢ����΢���Ĺ��ߣ��������ң���ڣ���б����ݹǡ��ƹף��������磬ɭ�����ܣ������Ǻţ���Ӱ���������������
+　　风吹拂在荒凉坟地上，沙沙作响，盘旋在棺头的惨绿磷火，散发着微弱的光线，但见左右，荒冢、残碑、枯骨、破棺；阵阵阴风，森寒诡谲，鬼哭狼号，魅影幢幢，生人勿进。
 
-�����@�@�@�@��˭������ϣ����Ǵ�������а֮�أ�
+　　任谁都会承认，这是处极阴至邪之地！
 
-�����@�@�@�@����¡����������
+　　「轰隆～～～！」
 
-�����@�@�@�@û�а�����ף��������ϵ���ܣ����״���������ħ����˸�У���Ȼ���Լ������ż��ű��İ����Ӱ����Ȼ�����������˾��ص�һ�ǡ�
+　　没有半点徵兆，天空蓦地紫电钻窜，轰雷大作。妖雷魔电闪烁中，隐然可以见到座遗迹古堡的半边身影，悄然孤立在这生人绝地的一角。
 
-�����@�@�@�@���ħ�磬ʮ�����ڣ���֪������һ��а����֯�Ļ��ء�
+　　浩瀚魔界，十方宇内，都知道这是一处邪恶组织的基地。
 
-�����@�@�@�@����ҹʮ������������𣬹ű��ĵ�¥�ϣ���Ȼ����һ��ǿ�⣬ֱ����ʣ������У���Ȼ��һ����Ҷ�����Ϥ�Ķ��響��һֻ��������������
+　　当午夜十二点的钟声响起，古堡的灯楼上，忽然发出一道强光，直射天际，光柱中，赫然有一样大家都很熟悉的动物┅┅一只大张羽翼的蝙蝠！
 
-�����@�@�@�@�ѵ�����������
+　　难道是蝙蝠侠吗？
 
-�����@�@�@�@���ҵ�����ͶӰ����·�˼���ʯͷ���е�������
+　　乓乓当！（投影机被路人甲扔石头砸中的声音）
 
-�����@�@�@�@�ǵģ���Ȼ�ǷŴ��ˣ����ط�һ��ɣ�
+　　是的！果然是放错了，请重放一遍吧！
 
-�����@�@�@�@����ҹʮ����������ٴ����𣬹ű��ĵ�¥�ϣ���Ȼ����һ��ǿ�⣬ֱ����ʣ������У���Ȼ��һ����Ҷ�����Ϥ�Ķ��響����ֻ�����е����޻���
+　　当午夜十二点的钟声再次响起，古堡的灯楼上，忽然发出一道强光，直射天际，光柱中，赫然有一样大家都很熟悉的动物┅┅两只奔跑中的亚洲虎。
 
-�����@�@�@�@��ֻ�ϻ�����ֻ�ϻ����ܵÿ죬�ܵÿ졫����������������
+　　两只老虎，两只老虎，跑得快，跑得快～～～啦啦啦～～～
 
-�����@�@�������������������������������
+　　°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 
-�����@�@�@�@�ܵ�а�������ĸ��٣���·��ħ���֡��������ˣ�춳�Ϧ�������һ�ã�������ʢ�����ף���
+　　受到邪恶真主的感召，各路妖魔鬼怪、魈魅魍魉，於除夕当日齐聚一堂，举行着盛大的庆祝活动。
 
-�����@�@�@�@���Ÿ����������ɱ����˷ֱ��ҵ��Լ���ϯλ������Χͬ־�����ĵá�
+　　依着各自所属的派别，众人分别找到自己的席位，与周围同志交换心得。
 
-�����@�@�@�@���ף������Ҳ���λ�ã���
+　　「咦？怎麽找不到位置？」
 
-�����@�@�@�@�ΣգԣӰ��յ��ڳ���������ȥ����������������ߣ���һʱ֮���Ҳ���ϯλ���ò����ײ���ǰͷ����ͬΪ�����·�ˣ��������ǵ���ǰ���к���
+　　ＮＵＴＳ懊恼地在场内走来走去，被归类成杂项作者，他一时之间找不到席位，好不容易才在前头看到同为杂项的路人，立即亲昵地上前打招呼。
 
-�����@�@�@�@���ˣ�·���֣��������ơ������滭����������
+　　「嗨！路人兄，恭禧发财。浮世绘画到哪啦？」
 
-�����@�@�@�@·��΢Ц���⣬��û���ü�˵�����ͱ������ߡ��Ա߸������˵ģ˽��͵��á�·���ָո������һ��������Ʒ�����Դ�������������������ˡ���
+　　路人微笑致意，还没来得及说话，就被人拉走。旁边负责拉人的Ｋ解释道∶「路人兄刚刚完成了一部乱派作品，所以从现在起归入我们乱派了。」
 
-�����@�@�@�@�Σգԣӡá������磥����
+　　ＮＵＴＳ∶「＠＃＄％！」
 
-�����@�@�@�@������ȥ������ϯ������������ɵ����¡������������ߣ��Ǳ��˲Ŷ�ʢ���������ơ�
+　　放眼望去，作者席次里，几乎是乱派的天下。相较於杂项作者，那边人才鼎盛，高手如云。
 
-�����@�@�@�@����ϯ�䣬���븡Ƽ�������ͣ��ǣɣã�����ɱ�����������Ҿ�����¡����������ƿ�������ǬӾ��������⾫�����Ա���ס��ʣ��ã˲廨��ģ�ս�����ң����ŵĴӲ��ң��������˲�Ŀ��һ��������ʱǣ��һͷ��������������������ֱ�ӳ������������ǲ��ɸ��˵����顣
+　　乱派席间，Ｋ与浮萍居主大打ＭＡＧＩＣ，恶名杀手扬名立万；乱君、大Ｂ、抱玉轩、酒空仔齐游乾泳，发扬国粹精华；旁边旭鹤、ＪＡＣＫ插花外赌，战况激烈；嚣张的从不乱，是最引人侧目的一名，进场时牵着一头艳丽的中年美妇，现在直接扯下拉炼，作那不可告人的事情。
 
-�����@�@�@�@�ӣ����ϣ��٣ӣţ������Ը߸裬§�ţӣ��ͣͣش��������裻���С��̣ţϣΣɣû��ܳ����ٶȡ�
+　　ＳＭ派上，ＹＳＥ９９引吭高歌，搂着Ｓ－ＭＭＸ大跳贴面舞；ＡＰ、ＬＥＯＮＩＣ互糗出稿速度。
 
-�����@�@�@�@����ϯ�Σ�ʧ���������໥��Ҿ��ӥħ���¸��еĽ���˹�Ѿ��Ի���Ǳͧ���ȣ�����Ϊ�г���ã��ٱ���ף����ȸ��Թ��ϯ�ģΣգԣӣ�������Ҫ��Ҫת�е�ħ��ʦ�������Աߵģӣ���������������Լ�Ϊ�α��������������
+　　武侠席次，失落与蓝月相互作揖；鹰魔与新改行的杰尼斯把酒言欢；潜艇、Ｈｕｓｋｙ为市场大好，举杯庆祝；以雀屏怨入席的ＮＵＴＳ，正考虑要不要转行当魔导师；坐在旁边的Ｓｕｎｒａｙ，则很奇怪自己为何被编进了武侠区。
 
-�����@�@�@�@���ŵ��������ߣ�ֱ���뷭�롢ɨ�����Ҳ�������ͬհ���������������ͷ�ķ�ɡ�
+　　其馀的杂项作者，直接与翻译、扫瞄名家并桌，共同瞻仰凡夫、无名两大巨头的风采。
 
-�����@�@�@�@��û�£���û�£�����������һ��㣬����������ҵ��¡���
+　　「没事，我没事，不过喝这麽一点点，怎麽可能让我倒下。」
 
-�����@�@�@�@æ�깫�񣬴ҴҸ�������ͮ���ܲ���ؿ�������ħ��ʦ�����κ죬����ɳ�����ϡ�
+　　忙完公务，匆匆赶来的林彤，很诧异地看见催眠魔导师满面晕红，躺在沙发椅上。
 
-�����@�@�@�@���������ܺȾͱ���˼�ƴ�������ͮ�����ӣ�һ�����������������֮�ҡ��������������硣
+　　「唉！不能喝就别和人家拼酒嘛！」林彤拿起杯子，一饮而尽，结果『酒性之烈』，让他当场狂喷。
 
-�����@�@�@�@���⩩�������Ǿƣ����Ǵ�����������������ȵģ����Ƕ��������������𣿡�
+　　「这┅┅这哪是酒？这是纯蜂蜜嘛！哪有人这样喝的？你们都是那美克星人吗？」
 
-�����@�@�@�@�ãӣ�¶������ͬ�еı��飬�Աߵ�Ұ�����͵��á��ټ���˵����Ϊ������а����֯�����Ծ�Ҫ����һЩ��а����£�������Ͼͱ�������˩�����
+　　ＣＳＨ露出甚有同感的表情，旁边的野马解释道∶「召集人说，因为我们是邪恶组织，所以就要做出一些很邪恶的事，结果饮料就变成这样了┅┅」
 
-�����@�@�@�@���⩩����Ӧ���Ǻܱ�̬���°ɣ�����ͮ��ͷ����һ������ӷ�׵����ӣ����ʵ��á�������λ�����Һ���û����������
+　　「这┅┅这应该是很变态的事吧！」林彤回头看见一名脸部臃肿的男子，疑问道∶「您是哪位啊？我好像没见过您？」
 
-�����@�@�@�@����ͮ�֣�����ܿ���ʿ������
+　　「林彤兄，我是芸阁居士啊！」
 
-�����@�@�@�@��ܿ���֣������Ϊʲ��������������
+　　「芸阁兄！你的脸为什麽变成这样？！」
 
-�����@�@�@�@��ร��������Ϊ�ղ���һ����������ʮ��·��ɣ���
+　　「喔！大概是因为刚才那一杯起码有五十万卡路里吧！」
 
-�����@�@�@�@�ϣˣɣ������˷������˾͡������ա�����ս�᡻�����ĵã�һ�Ե�����΢Ц���á�˵��������������Ҳ��ʮ���Ժ�����
+　　ＯＫＩＮ碰着了凡夫，两人就『飨宴日』、『战後』交换心得，一旁的无名微笑道∶「说起来，你们两个也该十分自豪。」
 
-�����@�@�@�@��Ϊʲ�᣿��
+　　「为什麽？」
 
-�����@�@�@�@����Ϊ������ͷ�����ǵ�������Ψһ�����Ż�С�����������ͳԵ��㡻���������ǻ���������߱ܵ����ﰡ����
+　　「因为在门里头，你们的名字是唯一可以吓唬小孩『不听话就吃掉你』，而孩子们会哭着相争走避的人物啊！」
 
-�����@�@�@�@��������
+　　「┅┅」
 
-�����@�@�@�@����������������������������һ����α���໥�����ᣬ����������ȫ���ע������ѧ�ʡ�
+　　翻译组里，古蛇造访乱派作者区，在一阵虚伪的相互寒暄後，发现众人正全神贯注地研讨学问。
 
-�����@�@�@�@���������о�ʲ�ᰡ����
+　　「你们在研究什麽啊？」
 
-�����@�@�@�@���������á���ʵ�أ����������������̬�������й�����ѧ�����⡣ֻ��һʱ֮���Ҳ����𰸡���
+　　抱玉轩道∶「其实呢，我们正以严肃的心态，讨论有关伦理学的问题。只是一时之间找不到答案。」
 
-�����@�@�@�@���������������Ȥ����Ҳ����æ����ɣ���
+　　「听起来好像很有趣，我也来帮忙想想吧！」
 
-�����@�@�@�@���á���������Ц���á���һ�����⣬һ�����˵������Ů�����ֵܵİ��̵����ã���������ʲ���ˣ���
+　　「好。」抱玉轩笑道∶「第一个问题，一个男人的妈妈的女儿的兄弟的阿姨的妹妹，会是他的什麽人？」
 
-�����@�@�@�@���ߴ�Ц���á��������Ů������������ã��ֵܾ����������İ��̾��ǰ��̣����̵���þ������谡����
+　　古蛇大笑道∶「他妈妈的女儿，是他的姊妹；兄弟就是他；他的阿姨就是阿姨；阿姨的姊妹就是他妈啊！」
 
-�����@�@�@�@���´��ˣ���Ů������
+　　「猜错了，是女儿。」
 
-�����@�@�@�@���������������
+　　「怎麽会这样？」
 
-�����@�@�@�@������ҡͷ���á�������������Ů����������Ů��������Ů������Ů����Ҳ����Ů����Ů���İ���Ҳ����Ů������Ů�������ã���������Ů��������ɣ���
+　　抱玉轩摇头道∶「他和他妈生了女儿，就是他女儿；他和女儿生的女儿，也是他女儿；女儿的阿姨也是他女儿，而女儿的妹妹，还是他的女儿。佩服吧！」
 
-�����@�@�@�@�����ⲻ�㣬����һ�⡣��
+　　「这题不算，再来一题。」
 
-�����@�@�@�@����������������ƿ��е��á���������С��ͥ���㡣һ��Ů�˵����õİ��̵��ֵܵ�Ů�������裬����ʲ���ˣ���
+　　「这次让我来。」酒空仔道∶「挑个三人小家庭给你。一个女人的妹妹的阿姨的兄弟的女儿的妈妈，是她什麽人？」
 
-�����@�@�@�@���������룬�������õİ��̣����������̣��ֵܾ������˾ˣ�Ů�����������ã�������������衣��
+　　古蛇想了想，「她妹妹的阿姨，就是她阿姨，兄弟就是她舅舅，女儿就是她表妹，妈妈就是她舅妈。」
 
-�����@�@�@�@�ƿ���̾�����á��ִ����������ǰ����ܵ�����Ů����������Ů���������Լ����ֵܾ������ܵܣ������Ϲ���Ů��������Ů�������費�������Լ�����
+　　酒空仔叹气道∶「又错。她妹妹是帮她弟弟生的女儿，是外甥女；阿姨是自己，兄弟就是她弟弟，那是老公；女儿就是她女儿，妈妈不就是她自己。」
 
-�����@�@�@�@������ʲ������Ŀ�������㣬��û�ж����ӵķ�������Ŀ����
+　　「这是什麽烂题目啊？不算，有没有独生子的非乱伦题目。」
 
-�����@�@�@�@���У������ҡ����Ӳ���Ц���á����Ǿ���û�����׵ģ���������ˣ��Ұְֵ����õ��ɷ��Ů��������ʲ���ˣ���
+　　「有，就是我。」从不乱笑道∶「我是绝对没有乱伦的，问题出来了，我爸爸的妹妹的丈夫的女儿，是我什麽人？」
 
-�����@�@�@�@����С�ĵö࣬��������һ��������á��ְֵ����þ��ǹùã��ɷ���ǹ��ɣ�Ů�����Ǳ��á���
+　　古蛇小心得多，慎重想了一会儿，道∶「爸爸的妹妹就是姑姑，丈夫就是姑丈，女儿就是表妹。」
 
-�����@�@�@�@�����Ǵ������Ӳ��ҹ�����Ц�á��Ұְֵ����ã���������ĸ������Ů�����������裻�ɷ����Ұְ֣�Ů���������衣���Դ������衣��
+　　「还是错！」从不乱哈哈大笑∶「我爸爸的妹妹，是他和祖母所生的女儿，就是我妈；丈夫是我爸爸，女儿就是我妈。所以答案是我妈。」
 
-�����@�@�@�@���߲�Ȼ��ŭ�����㲻��˵û�������𣿡�
+　　古蛇勃然大怒，「你不是说没有乱伦吗？」
 
-�����@�@�@�@�Ӳ�������һ̯�����ε��á���û�У��ҵļ����У�������ʲ��취�أ������Ҳ�ȡ���Ӳ������
+　　从不乱两手一摊，无奈道∶「我没有，我的家人有，我又有什麽办法呢？所以我才取名从不乱嘛！」
 
-�����@�@�@�@����Ƴ����ſ�ڴӲ����ȼ����������������˵��û�����ף���������ڰ����������Ƕ�����Ů�ˣ���������ʲ���ˣ���
+　　古蛇瞥向正趴在从不乱腿间的中年美妇，「你说你没有乱伦，那这个正在帮你吸┅┅那东西的女人，又是你是什麽人？」
 
-�����@�@�@�@�Ӳ��ҵ������󣬴�Ц���á������裡���������ҵ���ū��ĸ�ף�Ҳ����ĸ������ֻ��˵���޼飬����˵�����ף���
+　　从不乱得意洋洋，大笑道∶「是我妈！不过她是我的性奴隶母亲，也就是母狗，你只能说我兽奸，不能说是乱伦！」
 
-�����@�@�@�@��������Ц�����Ĺ��߼�򣬡�����������᱿���ܽ�������̸�������⣡��
+　　抱玉轩苦笑着拍拍古蛇肩膀，「唉！你怎麽会笨到跑进乱派来谈伦理问题！」
 
-�����@�@�@�@��Ԥ�������������룬�ټ�����һƬ�����У�������˷署����
+　　当预定人数慢慢到齐，召集人在一片嘘声中，拿起麦克风讲话。
 
-�����@�@�@�@����λ�����߾��ֲ�����ʮ��̸���ᣬ��ʽ��ʼ�����ȣ���֪��λ�����ڽ����Ĵ��ţ��Ǿ��ǡ���ͷ��硻����
+　　「各位，作者俱乐部贺年十日谈晚会，正式开始。首先，告知各位本人在今晚的代号，那就是『带头大哥』。」
 
-�����@�@�@�@����һ�ž��ֵ��á��ټ��ˣ����������棡��
+　　超鸟一号举手道∶「召集人！我有事禀告！」
 
-�����@�@�@�@���������࣬�����˳�����������ɣ���
+　　「有事启奏，无事退朝，快快奏来吧！」
 
-�����@�@�@�@���Ƿ��ׯ����
+　　「乔峰拜庄！」
 
-�����@�@�@�@�����������ټ졢����׽����ֲ���̨�¶�ʱ�ҳ�һƬ������֮�ף��ҵò������ҵģˣ������ƿ����������ҽ�ѹ���Ҿ�����һ��Ԥ�����Ŷ�����ѯ����û��ת���۵�֤�˵Ŀ��ܡ�
+　　比听到公安临检、警察捉奸更恐怖，台下顿时乱成一片。乱派之首，乱得不能再乱的Ｋ，左手推开抱玉轩，右脚压倒乱君，第一个预备夺门而出，询问有没有转当污点证人的可能。
 
-�����@�@�@�@������̨�����𰧺�����
+　　而主持台下响起哀嚎声。
 
-�����@�@�@�@�����������ú����㸸ĸ������ɱ�ģ���Ҳ����û��ȥ�����Źأ���������ɽ�����ﶼ��֪�������䩩����ʵ��Ҳֻ���˼ҵ�С�ܣ����Ǵ�ͷС�ܣ����Ǵ�ͷ��磬�㩩����ò������ܴ���Ӱ���ˣ�����
+　　「饶命啊！好汉，你父母不是我杀的，我也从来没有去过雁门关，我连少室山在那里都不知道┅┅其┅┅其实我也只是人家的小弟，我是带头小弟，不是带头大哥，你┅┅你该不会是跑错摄影棚了？！」
 
-�����@�@�@�@�Уԣ�һ̯�֣����Աߵģ̣ϣģϣӿ�Ц���á�Ϊʲ��ÿ�εĽ��������������νа����֯����˼��������Զ��һ��ˮƽ��������֯�𣿡�
+　　ＰＴＲ一摊手，对旁边的ＬＯＤＯＳ苦笑道∶「为什麽每次的结果都是这样，所谓邪恶组织的意思，是智商远低一般水平的收容组织吗？」
 
-�����@�@�@�@�ò�����ɧ��ƽϢ���ټ��˿��������������졢��������˵���á��������᲼����ΤС��Ҳ��������֮�ܣ�����������������������棬��һ�㶼���ɳܵĩ������ˣ�������ȺûѪû��û����ļһ�������ˣ������Թ��ټ��˷��ԣ�ֱ����ɣΣͣϴ���´ʡ���
+　　好不容易骚动平息，召集人咳了两声，脸不红、气不喘地说道∶「当年在尼布楚，韦小宝也曾有桌下之耻，所以遇到事情躲在桌子下面，是一点都不可耻的┅┅好了，你们这群没血没泪没精虫的家伙，别再嘘了！现在略过召集人发言，直接请ＩＮＭＯ大大致词。」
 
-�����@�@�@�@������д���ɻ��С��������Ա���·��ɫ������Ϊǰ����ӥħ�������޿���������ݣ���̨�´ʡ���������Χ���˸��ķ�Ҿ������˵����
+　　曾经创写『采花行』，至今仍被各路情色武侠尊为前辈的鹰魔，以其无可替代的身份，上台致词。他先往周围作了个四方揖，缓缓说道∶
 
-�����@�@�@�@����λ��ʱֵǧ�����Ϧ�����ڴ�����˵�����Ҹ��˸е��ǳ����ҡ���ν�����ң���ֻ�Ǳ����������λ�ȼ磬����ָ����һ�����������������߱ȼ���е����ҡ���
+　　「各位，时值千禧年除夕，能在此向大家说话，我个人感到非常荣幸。所谓的荣幸，不只是敝人有幸与各位比肩，更是指能有一个机会让这麽多的作者比肩而行的荣幸。」
 
-�����@�@�@�@ӥħ���á���һֱ���ţ���·�ϵ���ɫ��ѧ�ܳ�Ϊȫ���ˣ�����ȫ����Ĺ�ͨ���ԣ���ʵ�ϣ�����뷨������·ʢ�У��Ѿ����������ˡ�������ɫ��ѧ����վ�ϣ��������Կ����ۡ�̨����½������ͬ���ĺ����뽻���������Ե����ӣ������޽���������������ɣ����Ǵ�½��������̨�����ػ���Я�ֺ����ĳɹ��������ڣ����߾��ֲ�����������ʵ�֡���
+　　鹰魔道∶「我一直相信，网路上的情色文学能成为全华人，不，全人类的共通语言，事实上，这个想法随着网路盛行，已经慢慢成立了。现在情色文学的网站上，常常可以看到港、台、大陆、海外同胞的合作与交流，最明显的例子，是人妻江美子三部曲的完成，那是大陆、美国、台湾三地华人携手合作的成果。而现在，作者俱乐部是这个理想的实现。」
 
-�����@�@�@�@����������ս���߷��ʱ���ϱ�����ʵ��������п�ѧ�Ҳ��ֹ��������塢�������߳Ϻ�����Ϊ���Լ����о������ף����󱨳������Ƕ�����������Ϲ��١�ͬ���أ�����Ҳ������һȺ�ˣ����ۺ�Ͽ����������ʲ�����⣬���Ƕ��ܺ����ദ��������ɫ��ѧ�Ĵ�������δ��ϣ�������һȺ�ˣ��Ҿ�������ʵ�ک����ټ��ˡ��ټ��ˣ�������ʲ�᲻���ˣ���
+　　「在美苏冷战到颠峰的时候，南北极的实验室里，仍有科学家不分国籍、种族、信仰，竭诚合作，为着自己的研究而奉献，不求报偿，他们都是人类的无上光荣。同样地，今天也有这麽一群人，不论海峡两岸发生过什麽问题，他们都能和睦相处，继续情色文学的创作，从未间断，这样的一群人，我觉得他们实在┅┅召集人、召集人，你又有什麽不对了？」
 
-�����@�@�@�@���������������Ļ����Һ�Ȼ���ã�������������һȺ�˴��ڣ�����ȫ������ı���������
+　　「报告大大，听了您的话，我忽然觉得，有我们这样的一群人存在，真是全体人类的悲哀啊！」
 
-�����@�@�@�@�����������ⲻ�����궪�����⣬Ȼ��������ף��������죡��
+　　「警卫！把这不良中年丢出窗外，然後替我们祝他飞行愉快！」
 
-�����@�@�@�@�������˿ɶ��������Ҿ�����ϲ������ִ�С�
+　　听见有人可丢，Ｋ与乱君欢天喜地抢着执行。
 
-�����@�@�@�@�Դ��ⳤ���ҽ�Ϊ��գ�ӥħ���á������ţ����ǽ���ľۻᣬ������������ɫ��̳��һҳ����Ϊ�������ر�ĳ�Ϧҹ�����壬���ֲ������ٰ�һ����Ȥ�Ļ��ʮ��̸����
+　　以窗外长长惨叫为伴凑，鹰魔道∶「我相信，我们今天的聚会，会永留网上情色文坛的一页。而为了让这特别的除夕夜有意义，俱乐部决定举办一个有趣的活动，十日谈。」
 
-�����@�@�@�@����������ң���٤������д��һ��С˵�������ڱ������ҹ����������ʿ����Ů������������һ��ɽ�ϵ��޵�Ժ�У�Ϊ����ǲ���ģ����Ǿ���˵��������ʱ�䡣������ǵ�ʮ��̸������ǲ�ȡ����ľ����ڼ�����Χ¯ҹ�����˴�˵˵���£������ĵé�����
+　　「义大利作家，薄伽丘曾经写过一部小说。那是在暴风雨的夜晚，几名修士与修女，被风雨困在一个山上的修道院中，为了排遣无聊，他们决定说故事来打发时间。这次我们的十日谈活动，就是采取这里的精神，众家作者围炉夜话，彼此说说故事，交换心得┅┅」
 
-�����@�@�@�@�ΣգԣӾ��ַ��ʡá�����������ʣ��ҿ����������⵳�˺���ʿ��Ů��ʲ���������
+　　ＮＵＴＳ举手发问∶「大大，我有疑问，我看不出我们这党人和修士修女有什麽关连？」
 
-�����@�@�@�@���������̨��Ⱥ�ڷ׷׵�ͷ���ǡ���ӥħ���Ų�æ�ػش�á�����˫���ĵ���ˮ׼�����������ȣ����������֮��Ĺ�ϵ����
+　　问题提出，台下群众纷纷点头称是。而鹰魔不慌不忙地回答∶「我们双方的道德水准呈现完美反比，这就是我们之间的关系。」
 
-�����@�@�@�@��û���κ����⣬ӥħ����ʮ��̸��ʽ��ʼ��
+　　当没有任何问题，鹰魔宣布十日谈正式开始。
 
-�����@�@�@�@���ã����ǻ�ӭʮ��̸�ĵ�һҳ�����ף��ټ��ˣ��㻹���Ű�������
+　　「好，我们欢迎十日谈的第一页┅┅咦？召集人，你还活着啊？！」
 
-�����@�@�@�@���������������촷���⳴�����쵱��һ��ͭ�㶹������������������ľ�������ټ��ˣ��� �������߽������������ܵ���������Ź�����衢�Ⱥ����Ҷ����������ģ��������ɫ��֮�꣡��
+　　「我是蒸不烂煮不熟捶不扁炒不爆响当当一粒铜豌豆。」被绷带裹得像是木乃伊的召集人，撑 杖蹒跚走进场，「不管受到多厉害的殴打、羞辱、迫害，我都绝不屈服的，这就是情色人之魂！」
 
-�����@�@�@�@�ӣ������ҡͷ���á���ɫ��֮�ꣿ�����Ⱦ����ԣ�û�þ��ˡ���
+　　Ｓｕｎｒａｙ摇头道∶「情色人之魂？唉！谷精上脑，没得救了。」
 
-�����@�@�@�@������ٴ���������˵ȣ�Ǳͧ��̣ţϣΣɣ�Ħȭ���ƣ���ȥִ������
+　　命令警卫再次清除闲杂人等，潜艇与ＬＥＯＮＩＣ摩拳擦掌，赶去执行任务。
 
-�����@�@�@�@ӥħ���������á���ӭʮ��̸�ĵ�һҹ������ͥ԰����<!--bodyend-->
+　　鹰魔朗声宣布∶「欢迎十日谈的第一夜·虚像庭园！」<!--bodyend-->
 </pre>
 <div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
 </td></tr>
 	<tr bgcolor='#E6E6DD'>
 		<td height=25>
-			<center>ϲ���Ӵ���������ѵ�������ӵĻ���[<a href="javascript:void(0)" onclick='dovote(13867089)'><font color=FF0000>�������ͶƱ�ӷ�֧��</font></a>]
+			<center>喜欢接触零距离朋友的这个贴子的话，[<a href="javascript:void(0)" onclick='dovote(13867089)'><font color=FF0000>请点这里投票加分支持</font></a>]
 		</td>
 	</tr>
 	<tr bgcolor='#E6E6DD'><td>
-			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=�Ӵ������">�Ӵ���������԰����</a>]��[<a href="index.php?app=forum&act=userview&username=�Ӵ������" >IDǰ����������</a>]��[<a href="./index.php">���ؽ���������ҳ</a>]��[<a href="#followups">���и���</a>]��[<a href="#postfp">-->>�Ӹ���</a>]��[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13867089">--�������Ƽ�--</a>]��[<a href="javascript:history.go(-1)">����ǰҳ</a>]
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="index.php?app=forum&act=userview&username=接触零距离" >ID前期主贴发言</a>]·[<a href="./index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">-->>加跟贴</a>]·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13867089">--向朋友推荐--</a>]·[<a href="javascript:history.go(-1)">返回前页</a>]
 			</div>
 		</td>
 	</tr>
-	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">���������������������Ϸ������������Ϊ��������Υ������ַ�������Ȩ�棬����������ϵ�����Ǻ�ʵ����һʱ��ɾ����</td></tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">贴子内容是网友自行贴上分享，如果您认为其中内容违规或者侵犯了您的权益，请与我们联系，我们核实后会第一时间删除。</td></tr>
 </table>
 <center><center>
 <IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
 </center></center>
-<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>���и���:</a></p>
-<ul></ul><hr size=1 width=100%><a name="postfp">�Ӹ�������������֧�ַ��������ѣ��������͵����ྫƷ��������</a>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>所有跟贴:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">加跟贴（积极回贴支持发贴的朋友，才能欣赏到更多精品好贴！）</a>
 <div style="width:530px;float:left;border-right:1px #cccccc dashed">
 <form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
-				<p style='margin-top:5px;margin-bottom:5px;'>�û���:<input type="text" name="username" >����:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--ע��ID--]</a></p>
+				<p style='margin-top:5px;margin-bottom:5px;'>用户名:<input type="text" name="username" >密码:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--注册ID--]</a></p>
 					<input type="hidden" name="uptid" id="in_uptid" value="13867089" />
 		<input type="hidden" name="rootid" value="13867088" />
 		<input type="hidden" name="fid" value="" />
 		<input type='hidden' id="rename" name='rename' value='0'>
-		<span id="subject_info">�ꡡ��:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
-		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">����������|Ԥ��ģʽ</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">�ɰ淢������</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">���������÷�������</a>]<br>
+		<span id="subject_info">标　题:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">所见即所得|预览模式</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">旧版发帖帮助</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">所见即所得发帖帮助</a>]<br>
 		<p>
 			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
 			<p id="parktools">
-				<img onclick="Cbold()" height=37 alt="����" src="./images/parkeditor/bold.gif"  border=0 alt="��ѡ����������Ϊ����">
-				<img onclick="Citalic()" height=37 alt="б��" src="./images/parkeditor/italicize.gif"  alt="��ѡ����������Ϊ��б��ʽ"   border=0>
-				<img onclick="Cunder()" height=37 alt="�»���" src="./images/parkeditor/underline.gif"  alt="��ѡ�����������»���"  border=0>
-				<img onclick="Ccenter()" height=37 alt="����" src="./images/parkeditor/center.gif"  alt="��ѡ�����־���"  border=0>
-				<a onclick="Cimage()"><u>����ͼƬ</u><img height=22 alt="����ͼƬ" src="./images/parkeditor/image.gif" width=23 border=0></a>
-				<a onclick="flash()"><u>����Flash</u><img height=22 alt="����Flash����" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
-				<a onclick="music()"><u>��������</u><img src="./images/parkeditor/av.gif" alt="��������" width="16" height="16"></a>&nbsp;
-				<a onClick="real()"><u>������Ƶ</u></a>
+				<img onclick="Cbold()" height=37 alt="粗体" src="./images/parkeditor/bold.gif"  border=0 alt="将选中文字设置为粗体">
+				<img onclick="Citalic()" height=37 alt="斜体" src="./images/parkeditor/italicize.gif"  alt="将选中文字设置为倾斜样式"   border=0>
+				<img onclick="Cunder()" height=37 alt="下划线" src="./images/parkeditor/underline.gif"  alt="将选中文字添加下划线"  border=0>
+				<img onclick="Ccenter()" height=37 alt="居中" src="./images/parkeditor/center.gif"  alt="将选中文字居中"  border=0>
+				<a onclick="Cimage()"><u>插入图片</u><img height=22 alt="插入图片" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>插入Flash</u><img height=22 alt="插入Flash动画" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>插入音乐</u><img src="./images/parkeditor/av.gif" alt="插入音乐" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>插入视频</u></a>
 			</p>
-			<br><input type="submit" name="submit" value="ȷ�Ϸ���" /> &nbsp;<a href="#replyView" class="replyViewBtn">����ǰԤ��</a>
+			<br><input type="submit" name="submit" value="确认发布" /> &nbsp;<a href="#replyView" class="replyViewBtn">发布前预览</a>
 		</p>
 	</form>
 </div>
 <div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
-<p><b>��ػ����Ƽ���</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=ʮ��̸' target='_blank'>ʮ��̸</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ʮ��' target='_blank'>ʮ��</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=��̸' target='_blank'>��̸</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=��һ��' target='_blank'>��һ��</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=��һ' target='_blank'>��һ</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=һ��' target='_blank'>һ��</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ǰҹ' target='_blank'>ǰҹ</a>&nbsp;</span></p>
+<p><b>相关话题推荐：</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=十日谈' target='_blank'>十日谈</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=十日' target='_blank'>十日</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=日谈' target='_blank'>日谈</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=第一届' target='_blank'>第一届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=第一' target='_blank'>第一</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=一届' target='_blank'>一届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=前夜' target='_blank'>前夜</a>&nbsp;</span></p>
 <ul style="">
-	<li><a href="index.php?app=forum&act=threadview&tid=13867088" target="_blank">��ʮ��̸�� ���ߣ�����</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867067" target="_blank">��һ�� 17~25</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867066" target="_blank">��һ�� 9~16</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867065" target="_blank">��һ�� 1~8</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867058" target="_blank">��һ�� 1~10</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867027" target="_blank">��һ�η���  �����ʲô����   ������ָ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867007" target="_blank">��һ�η��������Լ���һ�¡�</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13866986" target="_blank">�����֡� ��һ��  ���ߣ�TaMeLee(Ū��)</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13866744" target="_blank">��һ��(180-181��) [��]</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13866743" target="_blank">��һ��(176-179��)</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13866742" target="_blank">��һ��(173-175��)</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13866741" target="_blank">��һ��(170-172��)</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13866740" target="_blank">��һ��(169��)</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13866739" target="_blank">��һ��(168��)</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867088" target="_blank">【十日谈】 作者：多人</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867067" target="_blank">第一卷 17~25</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867066" target="_blank">第一卷 9~16</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867065" target="_blank">第一卷 1~8</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867058" target="_blank">第一章 1~10</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867027" target="_blank">第一次发帖  如果有什么不对   版主请指出</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867007" target="_blank">第一次发主贴，自己顶一下。</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866986" target="_blank">【年轮】 第一部  作者：TaMeLee(弄尘)</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866744" target="_blank">第一部(180-181章) [完]</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866743" target="_blank">第一部(176-179章)</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866742" target="_blank">第一部(173-175章)</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866741" target="_blank">第一部(170-172章)</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866740" target="_blank">第一部(169章)</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13866739" target="_blank">第一部(168章)</a></li>
 	
 </ul>
 </div>
 <div style="clear:both;">
 </div>
 	</td></tr></table>
-<script src="http://t.6park.com/index.php?mod=showid&username=�Ӵ������" language="javascript" ></script> <br>
+<script src="http://t.6park.com/index.php?mod=showid&username=接触零距离" language="javascript" ></script> <br>
 
-<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> ������ </a>] [<a href="http://www.6park.com/contact/con2.htm"> ��ϵ���� </a>] [<a href="http://www.rich98.com/home/index.php"> �����ʻ� </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> �������� </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> 广告服务 </a>] [<a href="http://www.6park.com/contact/con2.htm"> 联系我们 </a>] [<a href="http://www.rich98.com/home/index.php"> 个人帐户 </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> 版主申请 </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
 <script language="JavaScript" type="text/javascript">
 	$("input[type='image']").each(function (){
 		if($(this).width()>940){
@@ -559,13 +559,13 @@ Selection = function(input){
 	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
         <table border="0" id='login_form_tab'>
             <tbody><tr>
-                   <td width='45px'>�û���:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+                   <td width='45px'>用户名:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
             </tr>
             <tr>
-                    <td>����:</td><td><input type="password" class="ulogin" name="password"></td>
+                    <td>密码:</td><td><input type="password" class="ulogin" name="password"></td>
             </tr>
 	    <tr>
-                    <td align="center" colspan="2"><input type="submit" value="��¼" name="login"></td>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="login"></td>
             </tr>
 				
 				

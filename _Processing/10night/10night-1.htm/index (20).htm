@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
@@ -7,7 +7,7 @@
 		<!-- 
 		 a{text-transform: none; text-decoration: none;} 
 		 a:hover {color: #FF0000; text-decoration: underline} 
-		 td {  font: 11pt '����'} 
+		 td {  font: 11pt '宋体'} 
 		 -->
 		pre { 
 		
@@ -20,9 +20,9 @@
 			overflow:hidden;
 		} 
 	</STYLE>	
-    <title>��һ�죩ʮ��ҹ ͵������Ů -rich98.com</title>
-	<meta name="Keywords" content="һ��,ʮ��,͵��,��Ů,��һ�죩ʮ��ҹ ͵������Ů,�Ӵ������,">
-	<meta name="Description" content="��һ�죩ʮ��ҹ ͵������Ů">
+    <title>（一届）十二夜 偷窥的少女 -rich98.com</title>
+	<meta name="Keywords" content="一届,十二,偷窥,少女,（一届）十二夜 偷窥的少女,接触零距离,">
+	<meta name="Description" content="（一届）十二夜 偷窥的少女">
   </head>
 <body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
 <div class="body_center" id="head_ad">
@@ -45,7 +45,7 @@
 			editor.sync();
 			editor.remove('textarea[name="content"]');
 			editor = undefined;
-			obj.innerHTML='����������ģʽ|Ԥ��ģʽ';
+			obj.innerHTML='即见即所得模式|预览模式';
 			$("#parktools").show();
 		}
 		else{
@@ -57,7 +57,7 @@
 			width:"470px",
 			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
 			});
-			obj.innerHTML='�ɰ淢��ģʽ';
+			obj.innerHTML='旧版发帖模式';
 		}
 	}
 	
@@ -76,7 +76,7 @@
 		_content = nl2br_js(_content);
 		$("#content").get(0).value = _content;
 		if(_title.length>60){
-			alert("���ⳤ�ȹ��������ⳤ�Ȳ��ܳ���60���ַ���30�����ֳ���");
+			alert("标题长度过长，标题长度不能超过60个字符或30个汉字长度");
 			return false;
 		}
 		else{
@@ -132,7 +132,7 @@
 
 
 
-//��԰�༭��
+//留园编辑器
 Selection = function(input){
 					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
 			};
@@ -168,12 +168,12 @@ Selection = function(input){
 							return {start: 0, end: 0};
 					};
 					o.getText = function(){
-							//��ȡѡ������
+							//获取选中内容
 							var o = this.getCaret();
 							return this.input.value.slice(o.start, o.end);
 					};
 					o.setText = function(text){
-							//����ѡ������
+							//设置选中内容
 							var o = this.getCaret(), i = this.input, s = i.value;
 							i.value = s.slice(0, o.start) + text + s.slice(o.end);
 							this.setCaret(o.start += text.length, o.start);
@@ -186,56 +186,56 @@ Selection = function(input){
 			}
 			var selection;
 			var textId = "content";
-			//���ô���
+			//设置粗体
 			function Cbold(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<b>"+selection.getText()+"</b>";
 				selection.setText(s);
 			}
-			//����б��
+			//设置斜体
 			function Citalic(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<i>"+selection.getText()+"</i>";
 				selection.setText(s);
 			}
-			//�����»���
+			//设置下划线
 			function Cunder(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<u>"+selection.getText()+"</u>";
 				selection.setText(s);
 			}
-			//�����»���
+			//设置下划线
 			function Ccenter(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<center>"+selection.getText()+"</center>";
 				selection.setText(s);
 			}
-			//����ͼƬ
+			//插入图片
 			function Cimage(){
 				selection = new Selection(document.getElementById(textId));
-				var s = prompt("������ͼƬ�������ַ:", selection.getText());
+				var s = prompt("请输入图片的网络地址:", selection.getText());
 				if(s !== null){
 					s = "<img src='"+s+"' />";
 					selection.setText(s);
 				}
 				else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				}
 			}
-			//����flash
+			//插入flash
 			function flash() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("Flash URL ��ַ","http://");      
+				txt=prompt("Flash URL 地址","http://");      
 				if (txt!=null) {
 					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
 					selection.setText(AddTxt);
 					} 
 					else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				} 
 			}
 			function music() {
-				txt=prompt("�����ļ���ַ","http://");      
+				txt=prompt("音乐文件地址","http://");      
 				if (txt!=null) {
 					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
 					selection.setText(AddTxt);
@@ -244,7 +244,7 @@ Selection = function(input){
 
 			function real() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("�������Ӱ�ļ���ַ","http://");  
+				txt=prompt("请输入电影文件地址","http://");  
 				if (txt!=null) {
 					$.get("./public/movie.php", {url:txt,width:0,height:0},
 						function(data){
@@ -252,7 +252,7 @@ Selection = function(input){
 						});        
 				}
 				else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				}
 			}
 			function nl2br_js(text){
@@ -266,308 +266,308 @@ Selection = function(input){
 				if(_status == 1){
 					$("#login_hidden").hide();
 					$("#rename").val('0');
-					$(obj).html('�л������˺�');
+					$(obj).html('切换发帖账号');
 				}
 				else{
 					$("#login_hidden").show();
 					$("#rename").val('1');
-					$(obj).html('ȡ���л�');
+					$(obj).html('取消切换');
 				}
 			}
 			
 </script>
-<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">���ؽ���������ҳ</a>]��[<a href="#followups">���и���</a>]��[<a href="#postfp">�Ӹ���</a>]��[<a href="index.php?app=sys&act=threadmanage&tid=13867108">��������</a>]��[<a href="http://blog.6park.com/search.php?step=2&author=�Ӵ������">�Ӵ���������԰����</a>]��[<a href="http://news.6park.com" target='_blank'>��������</a>]��[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">���w��x</span></a>]</td></tr>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">加跟贴</a>]·[<a href="index.php?app=sys&act=threadmanage&tid=13867108">版主管理</a>]·[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="http://news.6park.com" target='_blank'>分区新闻</a>]·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">繁體閱讀</span></a>]</td></tr>
  <tr bgcolor='#E6E6DD'> <td class="show_content">
- <center><font size=6><b>��һ�죩ʮ��ҹ ͵������Ů</b></font></center>
+ <center><font size=6><b>（一届）十二夜 偷窥的少女</b></font></center>
 
-�ͽ���: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=�Ӵ������' target=_blank>�Ӵ������</a>[������������] �� 2013-08-25 18:18 �Ѷ� 1439 �� <a href="http://t.6park.com/index.php?mod=�Ӵ������" target=_blank>@�Ӵ������@��΢��</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13867108&tag=��������&title=��һ�죩ʮ��ҹ ͵������Ů&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='ת��������΢��'></a><p></p>
-	<p>�ش�: <a href="index.php?app=forum&act=threadview&tid=13867088">��ʮ��̸�� ���ߣ�����</a> �� �Ӵ������ �� 2013-08-25 18:00</p>
+送交者: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=接触零距离' target=_blank>接触零距离</a>[虎威将军★★☆] 于 2013-08-25 18:18 已读 1439 次 <a href="http://t.6park.com/index.php?mod=接触零距离" target=_blank>@接触零距离@的微博</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13867108&tag=禁忌书屋&title=（一届）十二夜 偷窥的少女&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='转发本贴到微博'></a><p></p>
+	<p>回答: <a href="index.php?app=forum&act=threadview&tid=13867088">【十日谈】 作者：多人</a> 由 接触零距离 于 2013-08-25 18:00</p>
 	<!--bodybegin-->
 <pre>
-����Դ:�޶���ɫ�� ����:�Ҽ����� 
+　来源:巨豆情色网 作者:我见犹怜 
 
-�������ߣ��Ҽ�����
+　　作者：我见犹怜
 
-����͵������Ů��ȫ��
+　　偷窥的少女（全）
 
-�����@�@����һ������ѧ����У������Ƿ𵮣����Բ�����ѧ�� 
+　　我在一间佛教中学念高中，今天是佛诞，所以不用上学。 
 
-�����@�@��˯���ŵ�����������Ȼ������ѧ������ʮ���ǰ���ûص�ѧУ���μ�ѧ У����ף��� 
+　　我睡到九点多才醒来。虽然不用上学，不过十点半前还得回到学校，参加学 校的庆祝活动。 
 
-�����@�@ѧУ�����Ҽ�¥�£����Ի���Щʱ�䣬�ұ��ڴ��϶���һ�ᡣ 
+　　学校就在我家楼下，所以还有些时间，我便在床上多躺一会。 
 
-�����@�@�������Ѿ����˷����ڣ��������ţ���Ȼ���뵽��а���������� 
+　　或者我已经到了发情期，躺着躺着，竟然就想到淫邪的事情来。 
 
-�����@�@���̲�ס���ֽ�˯�ۣ������ڿ��Ū�Լ���СѨ�� 
+　　我忍不住伸手进睡袍，隔着内裤搓弄自己的小穴。 
 
-�����@�@�ܿ�أ�����ʪ�ˣ��Ҿ��ø����˷ܣ��ۿ���Ҫ����߳�ʱ������ 
+　　很快地，下面湿了，我觉得更加兴奋，眼看就要到达高潮时─── 
 
-�����@�@��ضض��������������Ҫ��˯�ˡ��� 
+　　『囟囟，快起来啦～不要再睡了～』 
 
-�����@�@�����Ȼ���ţ�Ȼ�Ὺ�Ž����������𴲡� 
+　　我妈忽然拍门，然後开门进来，催我起床。 
 
-�����@�@����ӭͷһ����ˮ���������ҵ�����һ����������ɢ�� 
+　　就像迎头一盆冷水浇过来，我的性致一下子烟消云散。 
 
-�����@�@ֻ��������Ը���´���ϴ��Ȼ�ᴩ��У��ȹ��������ѧ�� 
+　　只好蛮不情愿的下床梳洗，然後穿起校服裙，出门上学。 
 
-�����@�@�ڵ��ݴ��õȵ��ݵ�ʱ�򣬺�������һЩ������ 
+　　在电梯大堂等电梯的时候，好像听到一些异声。 
 
-�����@�@�ҿ������ŵ��ݴ��õ�һ�䷿�ӵĴ��������š� 
+　　我看到对着电梯大堂的一间房子的大门虚掩着。 
 
-�����@�@�����������Ǵ��ⷿ���ﴫ�������Ҽ���Χû�ˣ������ĵ����˹�ȥ�� 
+　　而声音就像是从这房子里传出来，我见周围没人，便悄悄的行了过去。 
 
-�����@�@������ͷ��һ������ӣ��Ҷ���һ����������һ��������Ϊ������������ɫ ��Ƭ�� 
+　　大厅尽头是一部大电视，我定神一看，倒抽了一口气，因为电视正播放着色 情片。 
 
-�����@�@���컯���´򿪴��ſ�ɫ��Ƭ����û�и����������Ȼ�����⻹��һ����բ �����Ҳ��������а�� 
+　　光天化日下打开大门看色情片？有没有搞错啊？（虽然大门外还有一道铁闸 。）我不禁在心中暗骂。 
 
-�����@�@�һ������ڣ����ָ����ҳԾ��������� 
+　　我环视室内，发现更让我吃惊的事来。 
 
-�����@�@ԭ�������Ķ��������ڵ��ϣ�һ�濴�ŵ��ӣ�һ������������ 
+　　原来户主的儿子正躺在地上，一面看着电视，一面搓玩着肉棒。 
 
-�����@�@���龰������ҽ��˳����� 
+　　这情景差点让我叫了出来。 
 
-�����@�@�찡�� 
+　　天啊！ 
 
-�����@�@�Ҳ����ٿ�����æת���ص����ã������ȵ��ݡ� 
+　　我不感再看，连忙转身回到大堂，继续等电梯。 
 
-�����@�@��Ȼ�����ڰ����������Ǹ�ɫ��񣬲����޿ɷ��ϣ��ղ�Ϩ���˵��ָ�ȼ�� �����ˡ� 
+　　虽然心中在暗骂那男生是个色情狂，不过无可否认，刚才熄灭了的又给燃点 起来了。 
 
-�����@�@�Ժ��и����˻谵�Ĵ��������ӻ���ų��Ĺ��ߣ�����������������ϣ��� �ҿ������ĳߴ磬�Լ����Ƶ���Ū������ 
+　　脑海中浮现了昏暗的大厅。电视画面放出的光线，照射在男生的肉棒上，让 我看到它的尺寸，以及手掌的套弄动作。 
 
-�����@�@���ٿ������ܣ���Ȼû���ˣ�����ŵ��ӣ����ֽ��ڿ㣬��Ū�Լ���СѨ�� 
+　　我再看看四周，依然没有人，便大着胆子，伸手进内裤，搓弄自己的小穴。 
 
-�����@�@Ҫ�Ǹ��˼ҿ������Ǳ����߼����ˡ� 
+　　要是给人家看到，那便真羞家死了。 
 
-�����@�@��������Ϊ����͵͵�����ĸо��������˸����˷ܡ� 
+　　不过正因为这种偷偷摸摸的感觉，才让人更加兴奋。 
 
-�����@�@���һ�濴ɫ��Ƭ��һ����ο�������Ǹ��ӽ����������� 
+　　如果一面看色情片，一面自慰，那岂不是更加锦上添花┅┅ 
 
-�����@�@����������ĵ��е��Ǽ��ſڡ� 
+　　於是我又悄悄的行到那家门口。 
 
-�����@�@ֻ�����ӻ����ţ���ɫ����Ѳ�֪���١� 
+　　只见电视还开着，那色情狂已不知所踪。 
 
-�����@�@����Ǹո����꣬�˿�����ԡ��ϴ��ɡ� 
+　　大概是刚刚做完，此刻正在浴室洗澡吧。 
 
-�����@�@����ҵ��۹��ֻص����ӻ����ϡ���Ȼ��Ҳ������׼���� 
+　　於是我的眼光又回到电视画面上。当然我也有两手准备。 
 
-�����@�@���ɫ���֪ʲ��ʱ��ϴ������������ԣ�����βҲ�����Ŵ���ͨ��ԡ�� �ĳ��ں����������ſڡ�ֻҪ����ʲ���Ӱ�������ҾͲ������߶�ʮһ���ܵ�¥ �ݼ�������� 
+　　这个色情狂不知什麽时候洗完澡出来，所以，我眼尾也留意着大厅通往浴室 的出口和其他房间门口。只要看到什麽黑影闪过，我就不管三七二十一，跑到楼 梯间躲起来。 
 
-�����@�@��������׼���ᣬ�ұ㿪ʼע�ӻ��档 
+　　做好心理准备後，我便开始注视画面。 
 
-�����@�@��ǰû�����������ϸ���£������ְ�����ҵ���������ֹ��ɫ��񣬼�ֱ ���Ǳ�̬����Ϊ�������Ů����һ����ò������������������������ֱ������� ������������ϣ������ָ�������ľ���ӣ�һ��ʹ�����������ӡ� 
+　　先前没看清楚，现在细看下，不禁又暗骂这家的男生。不止是色情狂，简直 就是变态，因为画面里的女孩给一个样貌猥琐的男人用绳索缚起来，又被人用蜡 烛把蜡滴在身上，身上又给夹满了木夹子，一副痛不欲生的样子。 
 
-�����@�@Ҫ���Ҹ��˼��������裬�治���������ˡ� 
+　　要是我给人家这样羞辱，真不如死掉算了。 
 
-�����@�@����ȴ�ֲ���֧����������Ű���ܿ����ᡣ�����������˰��������Ů�� �����塣 
+　　男人却乐不可支。还好这种虐待很快便完结。接下来，男人把肉棒插入女人 的下体。 
 
-�����@�@�⵹���ұȽ��뿴������ڡ����˵�Ȼ�ĺ����ܣ���Ů��ȴ���Ǻ�ʹ�ࡣ�� ���Ҿ�����ȥ��Ů����Ű���Ĳ��֡� 
+　　这倒是我比较想看到的情节。男人当然的很享受，那女孩却还是很痛苦。不 过我尽量不去想女孩被虐待的部分。 
 
-�����@�@�Ҽ��о��������˵ĳ��Ͷ�����һ�������İ���������壬һ������ָͷ ����СѨ�� 
+　　我集中精神在男人的抽送动作，一面幻想给心爱的男生抽插，一面用手指头 揉着小穴。 
 
-�����@�@СѨһ���ӱ�ʪ��������һ���»������ָͷ����ȥ�����ö����ò�� 
+　　小穴一下子便湿起来，有一两下还差点让指头滑进去，还好都滑得不深。 
 
-�����@�@ÿ���Ҷ���ʱ��ָͷ������������С�İѴ�ŮĤŪ�ƣ�����̫��ϧ�ˡ� 
+　　每次我都及时把指头抽回来。如果不小心把处女膜弄破，就真太可惜了。 
 
-�����@�@Ȼ���ҿ������˰�����ó������ð�ɫ��Һ������Ů�������ϡ� 
+　　然後我看到男人把肉棒拿出来，让白色精液喷射在女孩的身上。 
 
-�����@�@��ʱ����Ҳ�쵽�߳��ˣ������ָ�ӿ춯���������������������Ҳ����� ��ճճ��Һ�壬��Ȼ�����䵽�ҵ����ڡ� 
+　　这时，我也快到高潮了，於是手指加快动作，幻想和我做爱的男生也喷射出 白粘粘的液体，当然那是射到我的体内。 
 
-�����@�@�ڸ߳���һ�̣�����������һ�£�Ȼ�������е㷢�������ܸо�̫�̼��ɣ� �����῿����բ����������������������Һʱ�����ֵ����ȵĸо��� 
+　　在高潮的一刻，我身子震了一下，然後身子有点发软（可能感觉太刺激吧） 。我轻靠在铁闸，闭眼想像着阴道浸满精液时，那种的温热的感觉。 
 
-�����@�@��Ȼ�о����ã���Ҳ���ܾ�����û�����룬�ұ����ת����ȥ�� 
+　　虽然感觉美好，但也不能久留。没过两秒，我便赶着转身离去。 
 
-�����@�@��Ȼ���Ҿ�����������ץס�ҵ��֡� 
+　　忽然，我觉得後面有人抓住我的手。 
 
-�����@�@�Ҹ�����һ�����ع�ͷȥ��ԭ����ɫ��������Ѿ�վ���ſڣ�������բ��� ������ץ���ҵ��ұ۸죬��������ȥ�� 
+　　我给吓了一跳，回过头去，原来那色情狂男生已经站在门口，还从铁闸伸出 手来，抓着我的右臂胳，不让我离去。 
 
-�����@�@����������������Ǹ�ò��������ӡ����������֩��������Լ��ǰ���Ķ� ��������׽ס�ҵ��֩�������;��� �ĩ��� 
+　　最让我讨厌的是他那副貌猥琐的样子。还有他的手┅┅摸完自家那肮脏的东 西，又来捉住我的手┅┅想起就觉得 心┅┅ 
 
-�����@�@��С�㡫��ˬ����û������ 
+　　『小姐～你爽够了没～～』 
 
-�����@�@����ſ��ң���ɫ��񣡡��³�ͻȻ����һʱ�䷨��������˵ʲ�ᣬ��һ�� ��Ӧ������˦�������֣���������ץ�Ų��š� 
+　　『快放开我！死色情狂！』事出突然，我一时间法听得真他说什麽，第一个 反应就是想甩开他的手，但他就是抓着不放。 
 
-�����@�@����������ɫ��񣡡� 
+　　『干吗骂我色情狂！』 
 
-�����@�@�����ڼҴ򿪴��ſ�����ɫ��Ƭ����ֹ��ɫ��񣬼�ֱ���ǲ�Ҫ���Ĵ��̬ �������һ�û˵�꣬����ǬЦ�������ҷ�����˵�˲�Ӧ˵�Ļ��� 
+　　『你在家打开大门看那种色情片，不止是色情狂，简直就是不要脸的大变态 ──』我还没说完，他就乾笑起来，我方发觉说了不应说的话。 
 
-�����@�@��˵����Ҫ����˭�����㣬���˼��ſ���ο������ 
+　　『说到不要脸，谁及得你，在人家门口自慰──』 
 
-�����@�@���˼ҩ����˼ҩ������Щ������Ҹо������ѿ��������ˡ�����Ȼ��Ӳ�ţ� ��ʵ�Ѿ���ȫй���ˡ� 
+　　『人家┅┅人家┅┅那有┅┅』我感觉到心窝快跳出来了。嘴虽然还硬着， 其实已经完全泄气了。 
 
-�����@�@���ٺ٩����ղ�����������һֱ������Ү����Ȼ��������һֻ���������ֵ� ��ָ��˵�á����ģ������ָͷ��ʪʪ�ģ����������ˮ�ء��� 
+　　『嘿嘿┅┅刚才我在门後面一直看着你耶！』然後他用另一只手摸我右手的 手指，说∶『看哪，你的手指头还湿湿的，这是你的淫水呢。』 
 
-�����@�@ԭ��ͳͳ�����˼ҿ����ˡ�����ȫ�����ˡ������ỹ����Ŀ������ 
+　　原来统统都给人家看到了。我完全崩溃了。我以後还有面目见人吗？ 
 
-�����@�@��ץ�����������ҵĻӶ����֣�������ɫ�����ѣ������������������ Ҳû���ɹ��� 
+　　我抓狂起来，狂乱的挥动右手，想把这个色情狂摆脱，但不管我如何用力， 也没法成功。 
 
-�����@�@���������������ݵ�������������բ��������ץס�ҵ���������������� ���ڡ� 
+　　而且他做出更过份的事来。他打开铁闸，还用手抓住我的腰带，想把我拉进 屋内。 
 
-�����@�@���������������ɶ������ 
+　　『救命┅┅你想干啥┅┅』 
 
-�����@�@����Ҫ����������˶�֪����ĳ����ᣡ�� 
+　　『不要喊！你想别人都知道你的丑事麽！』 
 
-�����@�@�Ҵ���һ�¡���Ĳ��ܹ������ھӣ����������֪�����ڹ��ڵط���ο���� �һ�����Ŀ����ס�������᣿ 
+　　我呆了一下。真的不能够惊动邻居，如果给他们知道我在公众地方自慰，那 我还有面目继续住在这里麽？ 
 
-�����@�@ɫ�����Ҵ���һ�̵Ļ��ᣬ�����������ӡ� 
+　　色情狂趁我呆了一刻的机会，把我拉进屋子。 
 
-�����@�@Ů��ֱ�������ң������һ���������⡣������������ȥ�����һ�������� �롣 
+　　女性直觉告诉我，这个人一定不怀好意。就这样给拉进去，後果一定不堪设 想。 
 
-�����@�@�ܲ���ʲ�����Ӳ������ˣ��Ҿ���Ҫ�󺰡������������Ѻ��������ˡ����� �������ݵ�ͬʱ������ռ������λ�ã����������ᣬ���������ҵĿڡ� 
+　　管不了什麽面子不面子了，我决定要大喊。不过现在我已喊不出来了。当我 被拉入屋的同时，他抢占了有利位置，闪到我身後，用手捂着我的口。 
 
-�����@�@����һֻ��Ҳ���ƹ����ҵľ�������͸���������� 
+　　而另一只手也乘势箍着我的颈，让我透不过气来。 
 
-�����@�@����ʧȥ�ֿ������� 
+　　我逐渐失去抵抗能力。 
 
-�����@�@����������˯�������������ѹ�ڴ��ϣ�Ȼ�����˫�ַ��������ᣬ������ �����ҵ����� 
+　　他把我拉入睡房，从後面把我压在床上，然後把我双手反过来背後，用绳子 缚着我的手腕。 
 
-�����@�@�����������ܿ��֪��û���������ѣ�Ψ�г�˫�����л�ŵص�ʱ���� �����ߡ� 
+　　我挣扎，但很快便知道没法把绳挣脱，唯有趁双脚尚有活动馀地的时候，向 後乱踢。 
 
-�����@�@��û�������£�����˫��Ҳ����ס�ˡ����ô��ȼ����ҵ��ҽţ��ְ������ ����Ҹ�¡� 
+　　但没踢了两下，便连双脚也给制住了。他用大腿夹着我的右脚，又把我左脚 制在腋下。 
 
-�����@�@ʣ������һֻ�֣�̽���ҵ�ȹ�ڡ� 
+　　剩下来的一只手，探进我的裙内。 
 
-�����@�@��ֻ�к��У������Ѿ�û�������г������ˡ� 
+　　我只有喊叫，不过已经没有气力叫出声来了。 
 
-�����@�@��һ�ְ��ҵ��ڿ㳶�ã�Ȼ�����ְ������̧�ߣ�ʹ�Ҳ����ţ��ҽ�ȴ���� ��������ѹ�ڴ��ϣ��ҵ�˫�ű��ŵÿ����ģ�����������һ�ͣ���ֻ�е������� ��һ���ʹ�о�������֪�����Ѿ����˶�ȥ����ˡ� 
+　　他一手把我的内裤扯烂，然後用手把我左脚抬高，使我侧卧着，右脚却反而 被紧紧的压在床上，我的双脚被张得开开的，而他的腰部一送，我只感到下身传 来一阵刺痛感觉──我知道我已经被人夺去贞操了。 
 
-�����@�@�����ĵ������������Ȼ�������飬������һ�����µġ����ɫ�������� ����ͣ����������������������ﻹ˵�Ų�Ǭ����˵���������ҡ� 
+　　我伤心得想哭起来。当然这种事情，并不是一插了事的。这个色情的肉棒， 还不停的在我下体进进出出，唇里还说着不乾净的说话来羞辱我。 
 
-�����@�@�����СѨ��ʪ���ģ�������һ����ȥ�ˡ��� 
+　　『你的小穴还湿答答的，所以我一插便进去了。』 
 
-�����@�@������˵ʲ�ᣬ��ֻĬĬ�����š�ϣ����������¡� 
+　　不管他说什麽，我只默默忍受着、希望他早点完事。 
 
-�����@�@���ֱ��Ķ��������Ҿ������Խ�Ҳʹ�÷��飬�����У��о���һ��������� �ҵ����壬�漴����˹�ȥ���� 
+　　他粗暴的动作，令我觉得连脑筋也痛得发麻，蒙胧中，感觉到一股热流喷进 我的身体，随即便昏了过去┅┅ 
 
-�����@�@��֪���˶�ã�һ�´�ʹ�����ѹ����� 
+　　不知过了多久，一下刺痛让我醒过来。 
 
-�����@�@��ʹ�о�һֱ����ǰ�������ҵ�ͷһ����ԭ���鷿��һ��ľ���Ӽ�ס�� 
+　　刺痛感觉一直从胸前传来，我低头一看，原来乳房给一个木夹子夹住。 
 
-�����@�@����������ߣ���ʱ�ŷ��������������ֺͽũ���ȫ���������廨�󸿡��� �ӻ����ҵ�����������Ȧ��������������ò����Ρ� 
+　　我想把它拿走，这时才发觉──不单是手和脚──全身都给大五花大缚。绳 子还在我的奶子绕了两圈，两团嫩肉给挤得不成形。 
 
-�����@�@��̧ͷһ���������Ǽ�˯���������Ǹ�ɫ��񩤩�ԭ���һ�û������ħ�ơ� 
+　　我抬头一看，还是那间睡房，还有那个色情狂──原来我还没有脱离魔掌。 
 
-�����@�@���һ��ñ�̬���ֶ����Ը��ҡ� 
+　　而且还用变态的手段来对付我。 
 
-�����@�@���۰Ͱ͵Ŀ���������ľ�е��֣�������ǰ�ӽ������Ҿ�û���ӱܣ������� ���������ҵ���⡣ 
+　　我眼巴巴的看着他拿着木夹的手，向我胸前接近，而我竟没处逃避，就这样 给它夹在我的乳尖。 
 
-�����@�@��ʹ���� 
+　　好痛啊！ 
 
-�����@�@�������������ɣ�����ү�� 
+　　求你让我死掉吧！老天爷！ 
 
-�����@�@����û���г�������Ϊ��Ҳ���������� 
+　　但是没法叫出来，因为口也给缚起来。 
 
-�����@�@���������Ϸ��˺ܶ�����ӣ���ʹ���ڵذ��ϴ���������úܸ��ˡ� 
+　　他在我身上放了很多个夹子，我痛得在地板上打滚。他看得很高兴。 
 
-�����@�@������û�����򣬷�����һ����������������ϡ� 
+　　还好他没有蜡烛，否则他一定会把蜡滴在我身上。 
 
-�����@�@������������Ű��Ҳͬ�����ܡ� 
+　　不过接下来的虐待也同样难受。 
 
-�����@�@���Ѽ���һ��һ���Ĵ����������ߣ������ǰѼ����ɿ������ߡ������ӻ��� ס�ҵ����ʱ�����Ѽ����������������ҵ���Ҳ�����ó����ġ� 
+　　他把夹子一个一个的从我身上拿走，但不是把夹子松开才拿走。当夹子还夹 住我的肉的时候，他把夹子慢慢拉出来，我的肉也给拉得长长的。 
 
-�����@�@�������ҵ�Ƥ������������ѣ����������������ɿ����ӣ������������ĵ� ������ʹ�ѵ�������������ĺ�ӡ�� 
+　　我真怕我的皮肉就这样给拉脱，还好最後他都会松开夹子，不过给拉过的地 方都疼痛难当，还留下深深的红印。 
 
-�����@�@�����⣬�������ᣬ������ʵ�ı�ü��ġ���ʱֻ��ʹ����ԣ��Һܵ� ����������ٻ᲻����л������Ǹ����������ʧȥ���еĸо��Ͳҡ� 
+　　至於乳尖，给拉过後，名副其实的变得尖尖的。当时只觉痛得麻痹，我很担 心那里的神经腺会不会给夹坏或者是给拉坏，如果失去敏感的感觉就惨。 
 
-�����@�@���Ѽ���ȫ�õ��ᣬ����ѹ�ڵ��ϣ����ٺݺݵİ�������һ����Ȼ��Ÿ��� �ɸ��� 
+　　他把夹子全拿掉後，把我压在地上，又再狠狠的把我蹂躏一番，然後才给我 松缚。 
 
-�����@�@����������������Ҳû�У������뵽������������������ջ��Ǻܿ�Ĵ��� У��ȹ��Ь�࣬����ȹ���ڿ�ȶ��ܲ����ˡ� 
+　　我连爬起来的力气也没有，不过想到这里有如地狱，我最终还是很快的穿回 校服裙和鞋袜，内衣裙和内裤等都管不得了。 
 
-�����@�@�о����������� 
+　　感觉有如逃命。 
 
-�����@�@֮�ᣬ����Ҳ���������¥�ȵ��ݣ�������ħצ����֪ʲ��ʱ�����ٴ���բ �������������ץ������ȥ�� 
+　　之後，我再也不敢在这层楼等电梯，怕他的魔爪，不知什麽时候又再从铁闸 里伸出来，把我抓进地狱去。 
 
-�����@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@�@���꣩ 
+　　（完） 
 
-���������������������������������������� 
+　　☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆ 
 
-�����@�@�@�@����á��þ��ˣ��ԴӰ�͹ʱ��֮�ᣬ�þ�һ��ʱ��û�����Ҽ��ֵ������ˡ��� 
+　　凡夫∶「好久了，自从凹凸时期之後，好久一段时间没看到我见兄的文章了。」 
 
-�����@�@�@�@�Ҽ������á��ǵģ�Ǳˮ��һ���ӣ������ʮ��̸�ټ������ر�д�㶫���ġ��� 
+　　我见犹怜∶「是的，潜水好一阵子，是这次十日谈召集，才特别写点东西的。」 
 
-�����@�@�@�@Ǳͧ�á����ǣ������ȥ�ģ̾��Ĺ��£�����ˮ׼����һ�㡣�� 
+　　潜艇∶「但是，比起过去的Ｌ君的故事，好像水准差了一点。」 
 
-�����@�@�@�@�Ҽ������á��������Ҵ�������һƪ��ҹΣ�����μӣ�����ʱ���������������Ծ�����һƪ������ˡ��� 
+　　我见犹怜∶「本来，我打算拿另一篇黑夜危机来参加，不过时间上来不及，所以就拿这一篇来垫底了。」 
 
-�����@�@�@�@�ټ��ˡá������һƪ����ʲ����������𣿡� 
+　　召集人∶「对於这一篇，有什麽特殊感言吗？」 
 
-�����@�@�@�@�Ҽ������á��Ҽ���ľ��Ƕ��ŵ��ݴ��ã�Ҳ���и�Ů��ס��ͬһ��¥��żȻ���ڼҿ���Ƭ��ʱ�����պþ��ڴ��õȵ��ݡ�ʲ�᣿�ǹ��¾�������ޣ����У��Ҳ�û�����̬���򿪴��ſ���Ƭ����������������л�����������Ŵ򿪣�����Ҳ��һ�¡��� 
+　　我见犹怜∶「我家真的就是对着电梯大堂，也真有个女生住在同一层楼。偶然我在家看Ａ片的时候，她刚好就在大堂等电梯。什麽？那故事就是真的罗？拜托，我才没那麽变态、打开大门看Ａ片。不过就真的曾经有幻想过，将大门打开，让她也看一下。」 
 
-�����@�@�@�@�����á�ͦ��Ȥ�����鰡���� 
+　　无名∶「挺有趣的心情啊！」 
 
-�����@�@�@�@�Ҽ������á��е㱧Ǹ���ǣ������Ƕ���һ�㡣��Ů�������Ǳ�̬��ǿ�������Σ���˵����д�ô̼�Щ���������������������ˣ�Ψ�����ҷ���һ�����������Բ����㡣�� 
+　　我见犹怜∶「有点抱歉的是，文章是短了一点。少女自摸、那变态狂强暴这两段，照说可以写得刺激些，不过个人是力不从心了，唯有请大家发挥一下意淫想像，以补不足。」 
 
-�����@�@�@�@ӥħ�á�������Σ�����лл�Ҽ��֡�����������ʮ��̸�ĵ�ʮ��ҹ����˹���ȡ���<!--bodyend-->
+　　鹰魔∶「不管如何，我们谢谢我见兄。接下来，是十日谈的第十三夜·茱斯蒂娜。」<!--bodyend-->
 </pre>
 <div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
 </td></tr>
 	<tr bgcolor='#E6E6DD'>
 		<td height=25>
-			<center>ϲ���Ӵ���������ѵ�������ӵĻ���[<a href="javascript:void(0)" onclick='dovote(13867108)'><font color=FF0000>�������ͶƱ�ӷ�֧��</font></a>]
+			<center>喜欢接触零距离朋友的这个贴子的话，[<a href="javascript:void(0)" onclick='dovote(13867108)'><font color=FF0000>请点这里投票加分支持</font></a>]
 		</td>
 	</tr>
 	<tr bgcolor='#E6E6DD'><td>
-			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=�Ӵ������">�Ӵ���������԰����</a>]��[<a href="index.php?app=forum&act=userview&username=�Ӵ������" >IDǰ����������</a>]��[<a href="./index.php">���ؽ���������ҳ</a>]��[<a href="#followups">���и���</a>]��[<a href="#postfp">-->>�Ӹ���</a>]��[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13867108">--�������Ƽ�--</a>]��[<a href="javascript:history.go(-1)">����ǰҳ</a>]
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="index.php?app=forum&act=userview&username=接触零距离" >ID前期主贴发言</a>]·[<a href="./index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">-->>加跟贴</a>]·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13867108">--向朋友推荐--</a>]·[<a href="javascript:history.go(-1)">返回前页</a>]
 			</div>
 		</td>
 	</tr>
-	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">���������������������Ϸ������������Ϊ��������Υ������ַ�������Ȩ�棬����������ϵ�����Ǻ�ʵ����һʱ��ɾ����</td></tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">贴子内容是网友自行贴上分享，如果您认为其中内容违规或者侵犯了您的权益，请与我们联系，我们核实后会第一时间删除。</td></tr>
 </table>
 <center><center>
 <IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
 </center></center>
-<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>���и���:</a></p>
-<ul></ul><hr size=1 width=100%><a name="postfp">�Ӹ�������������֧�ַ��������ѣ��������͵����ྫƷ��������</a>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>所有跟贴:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">加跟贴（积极回贴支持发贴的朋友，才能欣赏到更多精品好贴！）</a>
 <div style="width:530px;float:left;border-right:1px #cccccc dashed">
 <form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
-				<p style='margin-top:5px;margin-bottom:5px;'>�û���:<input type="text" name="username" >����:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--ע��ID--]</a></p>
+				<p style='margin-top:5px;margin-bottom:5px;'>用户名:<input type="text" name="username" >密码:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--注册ID--]</a></p>
 					<input type="hidden" name="uptid" id="in_uptid" value="13867108" />
 		<input type="hidden" name="rootid" value="13867088" />
 		<input type="hidden" name="fid" value="" />
 		<input type='hidden' id="rename" name='rename' value='0'>
-		<span id="subject_info">�ꡡ��:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
-		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">����������|Ԥ��ģʽ</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">�ɰ淢������</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">���������÷�������</a>]<br>
+		<span id="subject_info">标　题:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">所见即所得|预览模式</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">旧版发帖帮助</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">所见即所得发帖帮助</a>]<br>
 		<p>
 			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
 			<p id="parktools">
-				<img onclick="Cbold()" height=37 alt="����" src="./images/parkeditor/bold.gif"  border=0 alt="��ѡ����������Ϊ����">
-				<img onclick="Citalic()" height=37 alt="б��" src="./images/parkeditor/italicize.gif"  alt="��ѡ����������Ϊ��б��ʽ"   border=0>
-				<img onclick="Cunder()" height=37 alt="�»���" src="./images/parkeditor/underline.gif"  alt="��ѡ�����������»���"  border=0>
-				<img onclick="Ccenter()" height=37 alt="����" src="./images/parkeditor/center.gif"  alt="��ѡ�����־���"  border=0>
-				<a onclick="Cimage()"><u>����ͼƬ</u><img height=22 alt="����ͼƬ" src="./images/parkeditor/image.gif" width=23 border=0></a>
-				<a onclick="flash()"><u>����Flash</u><img height=22 alt="����Flash����" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
-				<a onclick="music()"><u>��������</u><img src="./images/parkeditor/av.gif" alt="��������" width="16" height="16"></a>&nbsp;
-				<a onClick="real()"><u>������Ƶ</u></a>
+				<img onclick="Cbold()" height=37 alt="粗体" src="./images/parkeditor/bold.gif"  border=0 alt="将选中文字设置为粗体">
+				<img onclick="Citalic()" height=37 alt="斜体" src="./images/parkeditor/italicize.gif"  alt="将选中文字设置为倾斜样式"   border=0>
+				<img onclick="Cunder()" height=37 alt="下划线" src="./images/parkeditor/underline.gif"  alt="将选中文字添加下划线"  border=0>
+				<img onclick="Ccenter()" height=37 alt="居中" src="./images/parkeditor/center.gif"  alt="将选中文字居中"  border=0>
+				<a onclick="Cimage()"><u>插入图片</u><img height=22 alt="插入图片" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>插入Flash</u><img height=22 alt="插入Flash动画" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>插入音乐</u><img src="./images/parkeditor/av.gif" alt="插入音乐" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>插入视频</u></a>
 			</p>
-			<br><input type="submit" name="submit" value="ȷ�Ϸ���" /> &nbsp;<a href="#replyView" class="replyViewBtn">����ǰԤ��</a>
+			<br><input type="submit" name="submit" value="确认发布" /> &nbsp;<a href="#replyView" class="replyViewBtn">发布前预览</a>
 		</p>
 	</form>
 </div>
 <div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
-<p><b>��ػ����Ƽ���</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=һ��' target='_blank'>һ��</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ʮ��' target='_blank'>ʮ��</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=͵��' target='_blank'>͵��</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=��Ů' target='_blank'>��Ů</a>&nbsp;</span></p>
+<p><b>相关话题推荐：</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=一届' target='_blank'>一届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=十二' target='_blank'>十二</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=偷窥' target='_blank'>偷窥</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=少女' target='_blank'>少女</a>&nbsp;</span></p>
 <ul style="">
-	<li><a href="index.php?app=forum&act=threadview&tid=13867107" target="_blank">��һ�죩��ʮһҹ 5~8</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867106" target="_blank">��һ�죩��ʮһҹ 1~4</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867104" target="_blank">��һ�죩��ʮһҹ ���˵ ���ߡã٣ӣţ���</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867102" target="_blank">��һ�죩��ʮҹ ��ɫ�ɲ�</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867101" target="_blank">��һ�죩�ھ�ҹ ��ħ�Ļ�ǰ��ʽ ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867100" target="_blank">��һ�죩�ھ�ҹ ��ħ�Ļ�ǰ��ʽ ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867099" target="_blank">��һ�죩�ڰ�ҹ ��ҹŮ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867098" target="_blank">��һ�죩����ҹ ������</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867097" target="_blank">��һ�죩����ҹ �������⴫</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867096" target="_blank">��һ�죩����ҹ ��������Ů�� ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867095" target="_blank">��һ�죩����ҹ ��������Ů��  ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867093" target="_blank">��һ�죩����ҹ �ڼұ�ķ</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867092" target="_blank">��һ�죩����ҹ ǿ��Ů������Ա</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867091" target="_blank">��һ�죩�ڶ�ҹ��ͷ��β��ȱ��</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867107" target="_blank">（一届）第十一夜 5~8</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867106" target="_blank">（一届）第十一夜 1~4</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867104" target="_blank">（一届）第十一夜 疯狂传说 作者∶ＹＳＥ９９</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867102" target="_blank">（一届）第十夜 秀色可餐</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867101" target="_blank">（一届）第九夜 恶魔的婚前仪式 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867100" target="_blank">（一届）第九夜 恶魔的婚前仪式 上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867099" target="_blank">（一届）第八夜 暗夜女警</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867098" target="_blank">（一届）第七夜 仙人跳</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867097" target="_blank">（一届）第六夜 美肉娘外传</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867096" target="_blank">（一届）第五夜 征服神奇女侠 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867095" target="_blank">（一届）第五夜 征服神奇女侠  上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867093" target="_blank">（一届）第四夜 邻家保姆</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867092" target="_blank">（一届）第三夜 强暴女子银行员</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867091" target="_blank">（一届）第二夜虎头狗尾（缺）</a></li>
 	
 </ul>
 </div>
 <div style="clear:both;">
 </div>
 	</td></tr></table>
-<script src="http://t.6park.com/index.php?mod=showid&username=�Ӵ������" language="javascript" ></script> <br>
+<script src="http://t.6park.com/index.php?mod=showid&username=接触零距离" language="javascript" ></script> <br>
 
-<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> ������ </a>] [<a href="http://www.6park.com/contact/con2.htm"> ��ϵ���� </a>] [<a href="http://www.rich98.com/home/index.php"> �����ʻ� </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> �������� </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> 广告服务 </a>] [<a href="http://www.6park.com/contact/con2.htm"> 联系我们 </a>] [<a href="http://www.rich98.com/home/index.php"> 个人帐户 </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> 版主申请 </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
 <script language="JavaScript" type="text/javascript">
 	$("input[type='image']").each(function (){
 		if($(this).width()>940){
@@ -591,13 +591,13 @@ Selection = function(input){
 	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
         <table border="0" id='login_form_tab'>
             <tbody><tr>
-                   <td width='45px'>�û���:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+                   <td width='45px'>用户名:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
             </tr>
             <tr>
-                    <td>����:</td><td><input type="password" class="ulogin" name="password"></td>
+                    <td>密码:</td><td><input type="password" class="ulogin" name="password"></td>
             </tr>
 	    <tr>
-                    <td align="center" colspan="2"><input type="submit" value="��¼" name="login"></td>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="login"></td>
             </tr>
 				
 				

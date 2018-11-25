@@ -1,4 +1,4 @@
-
+ï»¿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
@@ -7,7 +7,7 @@
 		<!-- 
 		 a{text-transform: none; text-decoration: none;} 
 		 a:hover {color: #FF0000; text-decoration: underline} 
-		 td {  font: 11pt 'ËÎÌå'} 
+		 td {  font: 11pt 'å®‹ä½“'} 
 		 -->
 		pre { 
 		
@@ -20,9 +20,9 @@
 			overflow:hidden;
 		} 
 	</STYLE>	
-    <title>£¨¶þ½ì£©Ø¥ÈýÒ¹ £²£±¸öÒùµ´Å®Ñ§Éú£¨4£© -rich98.com</title>
-	<meta name="Keywords" content="¶þ½ì,£²£±¸ö,£²£±,£±¸ö,Òùµ´,Ñ§Éú,£¨¶þ½ì£©Ø¥ÈýÒ¹ £²£±¸öÒùµ´Å®Ñ§Éú£¨4£©,½Ó´¥Áã¾àÀë,">
-	<meta name="Description" content="£¨¶þ½ì£©Ø¥ÈýÒ¹ £²£±¸öÒùµ´Å®Ñ§Éú£¨4£©">
+    <title>ï¼ˆäºŒå±Šï¼‰å»¿ä¸‰å¤œ ï¼’ï¼‘ä¸ªæ·«è¡å¥³å­¦ç”Ÿï¼ˆ4ï¼‰ -rich98.com</title>
+	<meta name="Keywords" content="äºŒå±Š,ï¼’ï¼‘ä¸ª,ï¼’ï¼‘,ï¼‘ä¸ª,æ·«è¡,å­¦ç”Ÿ,ï¼ˆäºŒå±Šï¼‰å»¿ä¸‰å¤œ ï¼’ï¼‘ä¸ªæ·«è¡å¥³å­¦ç”Ÿï¼ˆ4ï¼‰,æŽ¥è§¦é›¶è·ç¦»,">
+	<meta name="Description" content="ï¼ˆäºŒå±Šï¼‰å»¿ä¸‰å¤œ ï¼’ï¼‘ä¸ªæ·«è¡å¥³å­¦ç”Ÿï¼ˆ4ï¼‰">
   </head>
 <body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
 <div class="body_center" id="head_ad">
@@ -45,7 +45,7 @@
 			editor.sync();
 			editor.remove('textarea[name="content"]');
 			editor = undefined;
-			obj.innerHTML='¼´¼û¼´ËùµÃÄ£Ê½|Ô¤ÀÀÄ£Ê½';
+			obj.innerHTML='å³è§å³æ‰€å¾—æ¨¡å¼|é¢„è§ˆæ¨¡å¼';
 			$("#parktools").show();
 		}
 		else{
@@ -57,7 +57,7 @@
 			width:"470px",
 			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
 			});
-			obj.innerHTML='¾É°æ·¢ÌûÄ£Ê½';
+			obj.innerHTML='æ—§ç‰ˆå‘å¸–æ¨¡å¼';
 		}
 	}
 	
@@ -76,7 +76,7 @@
 		_content = nl2br_js(_content);
 		$("#content").get(0).value = _content;
 		if(_title.length>60){
-			alert("±êÌâ³¤¶È¹ý³¤£¬±êÌâ³¤¶È²»ÄÜ³¬¹ý60¸ö×Ö·û»ò30¸öºº×Ö³¤¶È");
+			alert("æ ‡é¢˜é•¿åº¦è¿‡é•¿ï¼Œæ ‡é¢˜é•¿åº¦ä¸èƒ½è¶…è¿‡60ä¸ªå­—ç¬¦æˆ–30ä¸ªæ±‰å­—é•¿åº¦");
 			return false;
 		}
 		else{
@@ -132,7 +132,7 @@
 
 
 
-//ÁôÔ°±à¼­Æ÷
+//ç•™å›­ç¼–è¾‘å™¨
 Selection = function(input){
 					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
 			};
@@ -168,12 +168,12 @@ Selection = function(input){
 							return {start: 0, end: 0};
 					};
 					o.getText = function(){
-							//»ñÈ¡Ñ¡ÖÐÄÚÈÝ
+							//èŽ·å–é€‰ä¸­å†…å®¹
 							var o = this.getCaret();
 							return this.input.value.slice(o.start, o.end);
 					};
 					o.setText = function(text){
-							//ÉèÖÃÑ¡ÖÐÄÚÈÝ
+							//è®¾ç½®é€‰ä¸­å†…å®¹
 							var o = this.getCaret(), i = this.input, s = i.value;
 							i.value = s.slice(0, o.start) + text + s.slice(o.end);
 							this.setCaret(o.start += text.length, o.start);
@@ -186,56 +186,56 @@ Selection = function(input){
 			}
 			var selection;
 			var textId = "content";
-			//ÉèÖÃ´ÖÌå
+			//è®¾ç½®ç²—ä½“
 			function Cbold(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<b>"+selection.getText()+"</b>";
 				selection.setText(s);
 			}
-			//ÉèÖÃÐ±Ìå
+			//è®¾ç½®æ–œä½“
 			function Citalic(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<i>"+selection.getText()+"</i>";
 				selection.setText(s);
 			}
-			//ÉèÖÃÏÂ»®Ïß
+			//è®¾ç½®ä¸‹åˆ’çº¿
 			function Cunder(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<u>"+selection.getText()+"</u>";
 				selection.setText(s);
 			}
-			//ÉèÖÃÏÂ»®Ïß
+			//è®¾ç½®ä¸‹åˆ’çº¿
 			function Ccenter(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<center>"+selection.getText()+"</center>";
 				selection.setText(s);
 			}
-			//²åÈëÍ¼Æ¬
+			//æ’å…¥å›¾ç‰‡
 			function Cimage(){
 				selection = new Selection(document.getElementById(textId));
-				var s = prompt("ÇëÊäÈëÍ¼Æ¬µÄÍøÂçµØÖ·:", selection.getText());
+				var s = prompt("è¯·è¾“å…¥å›¾ç‰‡çš„ç½‘ç»œåœ°å€:", selection.getText());
 				if(s !== null){
 					s = "<img src='"+s+"' />";
 					selection.setText(s);
 				}
 				else if(s == ''){
-					alert('ÄúÊäÈëµÄÄÚÈÝÎª¿Õ');
+					alert('æ‚¨è¾“å…¥çš„å†…å®¹ä¸ºç©º');
 				}
 			}
-			//²åÈëflash
+			//æ’å…¥flash
 			function flash() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("Flash URL µØÖ·","http://");      
+				txt=prompt("Flash URL åœ°å€","http://");      
 				if (txt!=null) {
 					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
 					selection.setText(AddTxt);
 					} 
 					else if(s == ''){
-					alert('ÄúÊäÈëµÄÄÚÈÝÎª¿Õ');
+					alert('æ‚¨è¾“å…¥çš„å†…å®¹ä¸ºç©º');
 				} 
 			}
 			function music() {
-				txt=prompt("ÒôÀÖÎÄ¼þµØÖ·","http://");      
+				txt=prompt("éŸ³ä¹æ–‡ä»¶åœ°å€","http://");      
 				if (txt!=null) {
 					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
 					selection.setText(AddTxt);
@@ -244,7 +244,7 @@ Selection = function(input){
 
 			function real() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("ÇëÊäÈëµçÓ°ÎÄ¼þµØÖ·","http://");  
+				txt=prompt("è¯·è¾“å…¥ç”µå½±æ–‡ä»¶åœ°å€","http://");  
 				if (txt!=null) {
 					$.get("./public/movie.php", {url:txt,width:0,height:0},
 						function(data){
@@ -252,7 +252,7 @@ Selection = function(input){
 						});        
 				}
 				else if(s == ''){
-					alert('ÄúÊäÈëµÄÄÚÈÝÎª¿Õ');
+					alert('æ‚¨è¾“å…¥çš„å†…å®¹ä¸ºç©º');
 				}
 			}
 			function nl2br_js(text){
@@ -266,404 +266,404 @@ Selection = function(input){
 				if(_status == 1){
 					$("#login_hidden").hide();
 					$("#rename").val('0');
-					$(obj).html('ÇÐ»»·¢ÌûÕËºÅ');
+					$(obj).html('åˆ‡æ¢å‘å¸–è´¦å·');
 				}
 				else{
 					$("#login_hidden").show();
 					$("#rename").val('1');
-					$(obj).html('È¡ÏûÇÐ»»');
+					$(obj).html('å–æ¶ˆåˆ‡æ¢');
 				}
 			}
 			
 </script>
-<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">·µ»Ø½û¼ÉÊéÎÝÊ×Ò³</a>]¡¤[<a href="#followups">ËùÓÐ¸úÌù</a>]¡¤[<a href="#postfp">¼Ó¸úÌù</a>]¡¤[<a href="index.php?app=sys&act=threadmanage&tid=13868091">°æÖ÷¹ÜÀí</a>]¡¤[<a href="http://blog.6park.com/search.php?step=2&author=½Ó´¥Áã¾àÀë">½Ó´¥Áã¾àÀëµÄÁôÔ°²©¿Í</a>]¡¤[<a href="http://news.6park.com" target='_blank'>·ÖÇøÐÂÎÅ</a>]¡¤[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">·±ówé†×x</span></a>]</td></tr>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">è¿”å›žç¦å¿Œä¹¦å±‹é¦–é¡µ</a>]Â·[<a href="#followups">æ‰€æœ‰è·Ÿè´´</a>]Â·[<a href="#postfp">åŠ è·Ÿè´´</a>]Â·[<a href="index.php?app=sys&act=threadmanage&tid=13868091">ç‰ˆä¸»ç®¡ç†</a>]Â·[<a href="http://blog.6park.com/search.php?step=2&author=æŽ¥è§¦é›¶è·ç¦»">æŽ¥è§¦é›¶è·ç¦»çš„ç•™å›­åšå®¢</a>]Â·[<a href="http://news.6park.com" target='_blank'>åˆ†åŒºæ–°é—»</a>]Â·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">ç¹é«”é–±è®€</span></a>]</td></tr>
  <tr bgcolor='#E6E6DD'> <td class="show_content">
- <center><font size=6><b>£¨¶þ½ì£©Ø¥ÈýÒ¹ £²£±¸öÒùµ´Å®Ñ§Éú£¨4£©</b></font></center>
+ <center><font size=6><b>ï¼ˆäºŒå±Šï¼‰å»¿ä¸‰å¤œ ï¼’ï¼‘ä¸ªæ·«è¡å¥³å­¦ç”Ÿï¼ˆ4ï¼‰</b></font></center>
 
-ËÍ½»Õß: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=½Ó´¥Áã¾àÀë' target=_blank>½Ó´¥Áã¾àÀë</a>[»¢Íþ½«¾ü¡ï¡ï¡î] ÓÚ 2013-09-01 19:14 ÒÑ¶Á 414 ´Î <a href="http://t.6park.com/index.php?mod=½Ó´¥Áã¾àÀë" target=_blank>@½Ó´¥Áã¾àÀë@µÄÎ¢²©</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13868091&tag=½û¼ÉÊéÎÝ&title=£¨¶þ½ì£©Ø¥ÈýÒ¹ £²£±¸öÒùµ´Å®Ñ§Éú£¨4£©&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='×ª·¢±¾Ìùµ½Î¢²©'></a><p></p>
-	<p>»Ø´ð: <a href="index.php?app=forum&act=threadview&tid=13868067">¡¾Ê®ÈÕÌ¸¡¿£¨µÚ¶þ½ì£© ×÷Õß£º¶àÈË</a> ÓÉ ½Ó´¥Áã¾àÀë ÓÚ 2013-09-01 18:53</p>
+é€äº¤è€…: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=æŽ¥è§¦é›¶è·ç¦»' target=_blank>æŽ¥è§¦é›¶è·ç¦»</a>[è™Žå¨å°†å†›â˜…â˜…â˜†] äºŽ 2013-09-01 19:14 å·²è¯» 414 æ¬¡ <a href="http://t.6park.com/index.php?mod=æŽ¥è§¦é›¶è·ç¦»" target=_blank>@æŽ¥è§¦é›¶è·ç¦»@çš„å¾®åš</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13868091&tag=ç¦å¿Œä¹¦å±‹&title=ï¼ˆäºŒå±Šï¼‰å»¿ä¸‰å¤œ ï¼’ï¼‘ä¸ªæ·«è¡å¥³å­¦ç”Ÿï¼ˆ4ï¼‰&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='è½¬å‘æœ¬è´´åˆ°å¾®åš'></a><p></p>
+	<p>å›žç­”: <a href="index.php?app=forum&act=threadview&tid=13868067">ã€åæ—¥è°ˆã€‘ï¼ˆç¬¬äºŒå±Šï¼‰ ä½œè€…ï¼šå¤šäºº</a> ç”± æŽ¥è§¦é›¶è·ç¦» äºŽ 2013-09-01 18:53</p>
 	<!--bodybegin-->
 <pre>
-À´Ô´:¾Þ¶¹ÇéÉ«Íø ×÷Õß:³¬ÄñÒ»ºÅ 
+æ¥æº:å·¨è±†æƒ…è‰²ç½‘ ä½œè€…:è¶…é¸Ÿä¸€å· 
 
-¡¡¡¡ÕûÀí¡Ã³¬ÄñÒ»ºÅ 
+ã€€ã€€æ•´ç†âˆ¶è¶…é¸Ÿä¸€å· 
 
-¡¡¡¡¸ôÌì£¬µ±ÎÒÕÕ¾µ×ÓÊ±£¬·¢¾õÎÒ±ä³ÉÁËÐÜÃ¨¡£ 
+ã€€ã€€éš”å¤©ï¼Œå½“æˆ‘ç…§é•œå­æ—¶ï¼Œå‘è§‰æˆ‘å˜æˆäº†ç†ŠçŒ«ã€‚ 
 
-¡¡¡¡ÎÒÐÄÀïÏë×Å¡Ã¡¸°¦£¡¶¼ÊÇ³ÂÃ÷Õä¡¢¹ù¾²´¾º¦µÄ£¡¡¹ 
+ã€€ã€€æˆ‘å¿ƒé‡Œæƒ³ç€âˆ¶ã€Œå”‰ï¼éƒ½æ˜¯é™ˆæ˜Žçã€éƒ­é™æ·³å®³çš„ï¼ã€ 
 
-¡¡¡¡µ½ÁËÑ§Ð£Ê±£¬ÒÑ¾­³Ùµ½ÁË£¬Á¬ÉýÆì¶¼¹ýÁË¡£ÓÚÊÇ£¬ÎÒ¿ì²½ÅÜµ½½ÌÊÒ£¬Ö»¼û°à µ¼Ê¦ÖÜ»ÝÃôÕý¸úÍ¬Ñ§Ñµ»°¡£ 
+ã€€ã€€åˆ°äº†å­¦æ ¡æ—¶ï¼Œå·²ç»è¿Ÿåˆ°äº†ï¼Œè¿žå‡æ——éƒ½è¿‡äº†ã€‚äºŽæ˜¯ï¼Œæˆ‘å¿«æ­¥è·‘åˆ°æ•™å®¤ï¼Œåªè§ç­ å¯¼å¸ˆå‘¨æƒ æ•æ­£è·ŸåŒå­¦è®­è¯ã€‚ 
 
-¡¡¡¡Ëý¿´µ½ÎÒ½ø½ÌÊÒ£¬¾ÍËµ¡Ã¡¸¡Á¡Á¡Á£¬ÎªÊ²Ã´ÕâÑùÍíÀ´£¿¡¹ 
+ã€€ã€€å¥¹çœ‹åˆ°æˆ‘è¿›æ•™å®¤ï¼Œå°±è¯´âˆ¶ã€ŒÃ—Ã—Ã—ï¼Œä¸ºä»€ä¹ˆè¿™æ ·æ™šæ¥ï¼Ÿã€ 
 
-¡¡¡¡ÎÒÖ»ºÃ±àÒ»¸ö¹ÊÊÂ·óÑÜËý£¬ÎÒ×Ü²»ÄÜÀÏÊµ¸æËßËý£¬ÊÇ±»Á½Î»ÃÀÅ®¡º²Ù¡»³ÉÕâ ÖÖÄ£Ñù°É£¡ 
+ã€€ã€€æˆ‘åªå¥½ç¼–ä¸€ä¸ªæ•…äº‹æ•·è¡å¥¹ï¼Œæˆ‘æ€»ä¸èƒ½è€å®žå‘Šè¯‰å¥¹ï¼Œæ˜¯è¢«ä¸¤ä½ç¾Žå¥³ã€Žæ“ã€æˆè¿™ ç§æ¨¡æ ·å§ï¼ 
 
-¡¡¡¡ÖÜ»ÝÃôµÀ¡Ã¡¸¡Á¡Á¡Á£¬Õâ´ÎÔ­ÁÂÄã£¬µ«ÒªÇáÎ¢´¦·£Ò»ÏÂ¡£ÄãÔÚµÚ¶þ½ÚÉÏ¿ÎÖ® Ç°£¬°ÑÕâ·ÝÎÄ¼þËÍµ½ÌåÓý×é¡£¡¹ 
+ã€€ã€€å‘¨æƒ æ•é“âˆ¶ã€ŒÃ—Ã—Ã—ï¼Œè¿™æ¬¡åŽŸè°…ä½ ï¼Œä½†è¦è½»å¾®å¤„ç½šä¸€ä¸‹ã€‚ä½ åœ¨ç¬¬äºŒèŠ‚ä¸Šè¯¾ä¹‹ å‰ï¼ŒæŠŠè¿™ä»½æ–‡ä»¶é€åˆ°ä½“è‚²ç»„ã€‚ã€ 
 
-¡¡¡¡ÎÒÐÄÀïÇìÐÒ×Å¡Ã¡¸¡ººÃ¼ÒÔÙ¡»£¡½ñÌìÕâÎ»Å®ÂÞÉ²´ó·¢´È±¯£¬ÎûÎû©©©©¡¹ 
+ã€€ã€€æˆ‘å¿ƒé‡Œåº†å¹¸ç€âˆ¶ã€Œã€Žå¥½å®¶å†ã€ï¼ä»Šå¤©è¿™ä½å¥³ç½—åˆ¹å¤§å‘æ…ˆæ‚²ï¼Œå˜»å˜»â”…â”…ã€ 
 
-¡¡¡¡ÓÚÊÇ£¬ÎÒ¾Í¸Ï¿ì×øÏÂÀ´Ìý¿Î¡£ 
+ã€€ã€€äºŽæ˜¯ï¼Œæˆ‘å°±èµ¶å¿«åä¸‹æ¥å¬è¯¾ã€‚ 
 
-¡¡¡¡©©©© 
+ã€€ã€€â”…â”… 
 
-¡¡¡¡¡ºßË©©©©ßË©©©©¡» 
+ã€€ã€€ã€Žå’šâ”…â”…å’šâ”…â”…ã€ 
 
-¡¡¡¡µÚÒ»½ÚÏÂ¿ÎÁË£¬ÎÒ±ãÒªÄÃÕâ·ÝÎÄ¼þ£¬¿ì²½µÄÍùÌåÓý×é³åÈ¥¡£ 
+ã€€ã€€ç¬¬ä¸€èŠ‚ä¸‹è¯¾äº†ï¼Œæˆ‘ä¾¿è¦æ‹¿è¿™ä»½æ–‡ä»¶ï¼Œå¿«æ­¥çš„å¾€ä½“è‚²ç»„å†²åŽ»ã€‚ 
 
-¡¡¡¡ÎÒÃÇÑ§Ð£µÄÌåÓý×é°ì¹«ÊÒÊÇÔÚ²Ù³¡µÄÄÇÒ»±ß£¬ÊÇ¶ÀÁ¢Ò»¶°½¨ÖþÎï£¬ÍùÍù×ßµ½ ÄÇ±ßÍ¨³£ÒªÎå¡¢Áù·ÖÖÓ¡£ 
+ã€€ã€€æˆ‘ä»¬å­¦æ ¡çš„ä½“è‚²ç»„åŠžå…¬å®¤æ˜¯åœ¨æ“åœºçš„é‚£ä¸€è¾¹ï¼Œæ˜¯ç‹¬ç«‹ä¸€æ ‹å»ºç­‘ç‰©ï¼Œå¾€å¾€èµ°åˆ° é‚£è¾¹é€šå¸¸è¦äº”ã€å…­åˆ†é’Ÿã€‚ 
 
-¡¡¡¡°¦£¡ÎÒÐÄÏë¡Ã¡¸ÀÏÊ¦ÔõÃ´½ÐÎÒËÍÄØ£¿Òª×ßÄÇÃ´Ô¶£¬Í¬Ñ§¶¼²»¸úÎÒÈ¥£¬ìóºÃ×Ô ¼ºÈ¥¡£¡¹ 
+ã€€ã€€å”‰ï¼æˆ‘å¿ƒæƒ³âˆ¶ã€Œè€å¸ˆæ€Žä¹ˆå«æˆ‘é€å‘¢ï¼Ÿè¦èµ°é‚£ä¹ˆè¿œï¼ŒåŒå­¦éƒ½ä¸è·Ÿæˆ‘åŽ»ï¼Œç¥—å¥½è‡ª å·±åŽ»ã€‚ã€ 
 
-¡¡¡¡ÎÒÃÇÑ§Ð£µÄÌåÓý×éÊÇÈ«Ê¡×îºÃµÄ£¬¸÷ÖÖÌåÓýÓÃÆ·¡¢ÇòÀàÓ¦ÓÐ¾¡ÓÐ£¬»¹ÓÐÄÐÉú ¸üÒÂÊÒ¡¢Å®Éú¸üÒÂÊÒ¡£Õâ¶°Å·ÃÀÊ½½¨ÖþÎïÊÇÈ«Ì¨ÖÐµÚÒ»¶°£¬ÓÐÒ»ÌõºÜ³¤µÄ×ßÀÈ£¬ Æ½Ê±²»¿ªµÆ£¬»áÓÐµãÒ»°µ¡£ 
+ã€€ã€€æˆ‘ä»¬å­¦æ ¡çš„ä½“è‚²ç»„æ˜¯å…¨çœæœ€å¥½çš„ï¼Œå„ç§ä½“è‚²ç”¨å“ã€çƒç±»åº”æœ‰å°½æœ‰ï¼Œè¿˜æœ‰ç”·ç”Ÿ æ›´è¡£å®¤ã€å¥³ç”Ÿæ›´è¡£å®¤ã€‚è¿™æ ‹æ¬§ç¾Žå¼å»ºç­‘ç‰©æ˜¯å…¨å°ä¸­ç¬¬ä¸€æ ‹ï¼Œæœ‰ä¸€æ¡å¾ˆé•¿çš„èµ°å»Šï¼Œ å¹³æ—¶ä¸å¼€ç¯ï¼Œä¼šæœ‰ç‚¹ä¸€æš—ã€‚ 
 
-¡¡¡¡ÎÒ×ß½øÈ¥ºó£¬ÓÒÊÖ±ßÊÇÄÐÉú¸üÒÂÊÒ£¬×óÊÖ±ßÊÇ½è¸÷ÖÖÇòÀàµÄµÇ¼Ç´¦¡£½ñÌìÔõ Ã´Ã»¿ªµÆ£¿°ì¹«ÊÒÔÚ¶þÂ¥£¬ÎÒ±ãÒª×ßµ½µ×£¬ÒòÎªÂ¥ÌÝÊÇÔÚ×ßÀÈµÄÄÇÒ»¶Ë£¬ÉÏÈ¥¶þ Â¥£¬ÓÒÊÖ±ßÊÇÌåÓý×é°ì¹«ÊÒ£¬×óÊÖ±ßÊÇÅ®Éú¸üÒÂÊÒ£¬ÎÒ±ãÏòÌåÓý×é°ì¹«ÊÒ×ßÁË¹ý È¥£¬ÄÇÀïÃæÊÇÈ«²¿¶¼ÊÇÖÐÑë¿Õµ÷Éè±¸£¬×ß½øÒ»¿´£¬ÀïÃæÃ»ÈËìóÓÐ¿ª×ÅµÆ¡£ 
+ã€€ã€€æˆ‘èµ°è¿›åŽ»åŽï¼Œå³æ‰‹è¾¹æ˜¯ç”·ç”Ÿæ›´è¡£å®¤ï¼Œå·¦æ‰‹è¾¹æ˜¯å€Ÿå„ç§çƒç±»çš„ç™»è®°å¤„ã€‚ä»Šå¤©æ€Ž ä¹ˆæ²¡å¼€ç¯ï¼ŸåŠžå…¬å®¤åœ¨äºŒæ¥¼ï¼Œæˆ‘ä¾¿è¦èµ°åˆ°åº•ï¼Œå› ä¸ºæ¥¼æ¢¯æ˜¯åœ¨èµ°å»Šçš„é‚£ä¸€ç«¯ï¼Œä¸ŠåŽ»äºŒ æ¥¼ï¼Œå³æ‰‹è¾¹æ˜¯ä½“è‚²ç»„åŠžå…¬å®¤ï¼Œå·¦æ‰‹è¾¹æ˜¯å¥³ç”Ÿæ›´è¡£å®¤ï¼Œæˆ‘ä¾¿å‘ä½“è‚²ç»„åŠžå…¬å®¤èµ°äº†è¿‡ åŽ»ï¼Œé‚£é‡Œé¢æ˜¯å…¨éƒ¨éƒ½æ˜¯ä¸­å¤®ç©ºè°ƒè®¾å¤‡ï¼Œèµ°è¿›ä¸€çœ‹ï¼Œé‡Œé¢æ²¡äººç¥—æœ‰å¼€ç€ç¯ã€‚ 
 
-¡¡¡¡ÎÒÐÄÏë¡Ã¡¸ÈËÄØ£¿¶¼ÄÇÈ¥ÁË£¿¡¹ 
+ã€€ã€€æˆ‘å¿ƒæƒ³âˆ¶ã€Œäººå‘¢ï¼Ÿéƒ½é‚£åŽ»äº†ï¼Ÿã€ 
 
-¡¡¡¡ÐÄÖÐÆðÁËÒÉÎÊ£¬µ«»¹ÊÇÍÆ¿ªÃÅ½øÈ¥£¬°ÑÎÄ¼þ·ÅÔÚÄÇÀïÃæ×îÅÔ±ßµÄ×À×ÓÉÏ£¬Õâ Ê±ÎÒ·¢ÏÖ©©©© 
+ã€€ã€€å¿ƒä¸­èµ·äº†ç–‘é—®ï¼Œä½†è¿˜æ˜¯æŽ¨å¼€é—¨è¿›åŽ»ï¼ŒæŠŠæ–‡ä»¶æ”¾åœ¨é‚£é‡Œé¢æœ€æ—è¾¹çš„æ¡Œå­ä¸Šï¼Œè¿™ æ—¶æˆ‘å‘çŽ°â”…â”… 
 
-¡¡¡¡ÌåÓý×é³¤µÄ×ÀÉÏÓÐ¼«»úÃÜÎÄ¼þ£¬ÎÒ·ÅÏÂÊÖÉÏµÄÎÄ¼þ£¬Ë³ÊÖÄÃÁË×ÀÉÏµÄÄÇ·ÝÎÄ ¼þ£¬´óÂÔ·­ÁËÒ»ÏÂ£¬ºÕÈ»·¢ÏÖÀïÃæ¼ÇÔØµÄ¶¼ÊÇ±¾Ð£ÃÀÅ®µÄ²»¿É¸æÈËµÄ×ÊÁÏ¡£ 
+ã€€ã€€ä½“è‚²ç»„é•¿çš„æ¡Œä¸Šæœ‰æžæœºå¯†æ–‡ä»¶ï¼Œæˆ‘æ”¾ä¸‹æ‰‹ä¸Šçš„æ–‡ä»¶ï¼Œé¡ºæ‰‹æ‹¿äº†æ¡Œä¸Šçš„é‚£ä»½æ–‡ ä»¶ï¼Œå¤§ç•¥ç¿»äº†ä¸€ä¸‹ï¼Œèµ«ç„¶å‘çŽ°é‡Œé¢è®°è½½çš„éƒ½æ˜¯æœ¬æ ¡ç¾Žå¥³çš„ä¸å¯å‘Šäººçš„èµ„æ–™ã€‚ 
 
-¡¡¡¡ÎÒÐÄÏë¡Ã¡¸Ì«ºÃÁË£¡ÓÐÁËÕâÐ©×ÊÁÏ£¬È«Ð£ËùÓÐµÄÃÀÅ®¶¼ÌÓ²»³öÎÒµÄÕÆÐÄ£¬ÎÒ ¶¼¿ÉÒ»¸öÒ»¸öÈ¥Ç¿¼éËýÃÇÁË£¬Ë¬£¡¡¹ 
+ã€€ã€€æˆ‘å¿ƒæƒ³âˆ¶ã€Œå¤ªå¥½äº†ï¼æœ‰äº†è¿™äº›èµ„æ–™ï¼Œå…¨æ ¡æ‰€æœ‰çš„ç¾Žå¥³éƒ½é€ƒä¸å‡ºæˆ‘çš„æŽŒå¿ƒï¼Œæˆ‘ éƒ½å¯ä¸€ä¸ªä¸€ä¸ªåŽ»å¼ºå¥¸å¥¹ä»¬äº†ï¼Œçˆ½ï¼ã€ 
 
-¡¡¡¡ÔÚÕâ·ÝÎÄ¼þµÄÓÕ»óÏÂ£¬ÎÒÓÃ°ì¹«ÊÒµÄÓ°Ó¡»ú£¬½«ËüÃÇÈ«²¿£Ã£Ï£Ð£ÙÏÂÀ´£¬ÕÛ ºÃ·ÅÔÚÎÒµÄ¿Ú´üÖÐ¡£ 
+ã€€ã€€åœ¨è¿™ä»½æ–‡ä»¶çš„è¯±æƒ‘ä¸‹ï¼Œæˆ‘ç”¨åŠžå…¬å®¤çš„å½±å°æœºï¼Œå°†å®ƒä»¬å…¨éƒ¨ï¼£ï¼¯ï¼°ï¼¹ä¸‹æ¥ï¼ŒæŠ˜ å¥½æ”¾åœ¨æˆ‘çš„å£è¢‹ä¸­ã€‚ 
 
-¡¡¡¡ÎÒ¸ÕÒªÍÆÃÅ³öÈ¥Ê±£¬ÔÚ²£Á§´°Íâ¿´µ½Å®Éú¸üÒÂÊÒ£¬ÓÐÈËÓ°ÔÚ»Î¶¯¡£ÉíÊÖÑ¸ËÙ µÄÎÒ£¬Á¬Ã¦¶ãÔÚÇ½±ÚÅÔ£¬ÍùÅ®Éú¸üÒÂÊÒ¿´ÁË¹ýÈ¥¡£ 
+ã€€ã€€æˆ‘åˆšè¦æŽ¨é—¨å‡ºåŽ»æ—¶ï¼Œåœ¨çŽ»ç’ƒçª—å¤–çœ‹åˆ°å¥³ç”Ÿæ›´è¡£å®¤ï¼Œæœ‰äººå½±åœ¨æ™ƒåŠ¨ã€‚èº«æ‰‹è¿…é€Ÿ çš„æˆ‘ï¼Œè¿žå¿™èº²åœ¨å¢™å£æ—ï¼Œå¾€å¥³ç”Ÿæ›´è¡£å®¤çœ‹äº†è¿‡åŽ»ã€‚ 
 
-¡¡¡¡¹ýÁËÒ»»á¶ù£¬´ÓÅ®Éú¸üÒÂÊÒÀï£¬ÓÐÈËÉì³öÍ·³öÀ´Ì½Íû£¬ÎÒ±ã¼±Ã¦»ØÍ·£¬²ÂÏë Ëý¿ÉÄÜÃ»¿´µ½ÎÒ°É£¿ 
+ã€€ã€€è¿‡äº†ä¸€ä¼šå„¿ï¼Œä»Žå¥³ç”Ÿæ›´è¡£å®¤é‡Œï¼Œæœ‰äººä¼¸å‡ºå¤´å‡ºæ¥æŽ¢æœ›ï¼Œæˆ‘ä¾¿æ€¥å¿™å›žå¤´ï¼ŒçŒœæƒ³ å¥¹å¯èƒ½æ²¡çœ‹åˆ°æˆ‘å§ï¼Ÿ 
 
-¡¡¡¡ÓÖ¹ýÒ»»á¶ù£¬ÎÒÔÙ»ØÍ·ÓÃÑÛÃèÁËÒ»ÏÂ£¬·¢ÏÖÄÇÎ»Å®Éú¾¹È»ÊÇ×ÊÁÏÖÐµÚÒ»Î»ÃÀ ÉÙÅ®£­£­ÑîÀö¾§¡£ 
+ã€€ã€€åˆè¿‡ä¸€ä¼šå„¿ï¼Œæˆ‘å†å›žå¤´ç”¨çœ¼æäº†ä¸€ä¸‹ï¼Œå‘çŽ°é‚£ä½å¥³ç”Ÿç«Ÿç„¶æ˜¯èµ„æ–™ä¸­ç¬¬ä¸€ä½ç¾Ž å°‘å¥³ï¼ï¼æ¨ä¸½æ™¶ã€‚ 
 
-¡¡¡¡Ëý¾¹È»ìó´©×ÅÄÚÒÂÄÚ¿ã£¬¶øÇÒÑ¸ËÙ´ÓÅ®Éú¸üÒÂÊÒÅÜÁË¹ýÀ´£¬ÎÒÏÅÁËÒ»´óÌø£¬ Á¬Ã¦ÅÀµ½°ì¹«×À×Óµ×ÏÂ¶ã×Å¡£ 
+ã€€ã€€å¥¹ç«Ÿç„¶ç¥—ç©¿ç€å†…è¡£å†…è£¤ï¼Œè€Œä¸”è¿…é€Ÿä»Žå¥³ç”Ÿæ›´è¡£å®¤è·‘äº†è¿‡æ¥ï¼Œæˆ‘å“äº†ä¸€å¤§è·³ï¼Œ è¿žå¿™çˆ¬åˆ°åŠžå…¬æ¡Œå­åº•ä¸‹èº²ç€ã€‚ 
 
-¡¡¡¡ÕâÊ±¿Ì£¬ÎÒ²ÂÏë¡Ã¡¸¿ÉÄÜËýÊÇÍü¼Ç´øÒÂ·þ½øÈ¥°É£¿¶øÇÒ°ì¹«ÊÒ¶¼Ã»ÓÐÈË£¬Õû ¸ö¶¼ÄÖ¿Õ³Ç¼Æ£¬ËùÒÔËý²ÅÄÇÃ´´óµ¨¡£¡¹ 
+ã€€ã€€è¿™æ—¶åˆ»ï¼Œæˆ‘çŒœæƒ³âˆ¶ã€Œå¯èƒ½å¥¹æ˜¯å¿˜è®°å¸¦è¡£æœè¿›åŽ»å§ï¼Ÿè€Œä¸”åŠžå…¬å®¤éƒ½æ²¡æœ‰äººï¼Œæ•´ ä¸ªéƒ½é—¹ç©ºåŸŽè®¡ï¼Œæ‰€ä»¥å¥¹æ‰é‚£ä¹ˆå¤§èƒ†ã€‚ã€ 
 
-¡¡¡¡Ö»¼ûÑîÀö¾§²»¶ÏµØÔÚÑ°ÕÒÊ²Ã´¶«Î÷ËÆµÄ£¬×îºóµ±Ëý¿´¼ûÌåÓý×é³¤×ÀÉÏµÄ×ÊÁÏ Ê±£¬Èç»ñÖÁ±¦°ãµÄ¸ßÐË£¬ÂíÉÏ´ÓÀïÃæ³é³öÒ»ÕÅÖ½£¬²¢×ªÉíÏëÀë¿ª¡£ 
+ã€€ã€€åªè§æ¨ä¸½æ™¶ä¸æ–­åœ°åœ¨å¯»æ‰¾ä»€ä¹ˆä¸œè¥¿ä¼¼çš„ï¼Œæœ€åŽå½“å¥¹çœ‹è§ä½“è‚²ç»„é•¿æ¡Œä¸Šçš„èµ„æ–™ æ—¶ï¼Œå¦‚èŽ·è‡³å®èˆ¬çš„é«˜å…´ï¼Œé©¬ä¸Šä»Žé‡Œé¢æŠ½å‡ºä¸€å¼ çº¸ï¼Œå¹¶è½¬èº«æƒ³ç¦»å¼€ã€‚ 
 
-¡¡¡¡ÕâÊ±£¬ÎÒÖÕÓÚÃ÷°×ËýµÄÆóÍ¼£¬Ô­À´ËýÏëÈ¡»ØËýµÄ×ÊÁÏ£¬ÒòÎªÀïÃæ¼ÇÔØ×ÅÒ»¼þ ËýËù·¸ÏÂÐ£¹æµÄ»Ú¹ýÊé¡£ 
+ã€€ã€€è¿™æ—¶ï¼Œæˆ‘ç»ˆäºŽæ˜Žç™½å¥¹çš„ä¼å›¾ï¼ŒåŽŸæ¥å¥¹æƒ³å–å›žå¥¹çš„èµ„æ–™ï¼Œå› ä¸ºé‡Œé¢è®°è½½ç€ä¸€ä»¶ å¥¹æ‰€çŠ¯ä¸‹æ ¡è§„çš„æ‚”è¿‡ä¹¦ã€‚ 
 
-¡¡¡¡ÎÒ·¢ÏÖ»ú»áÀ´ÁÙÁË£¬ÎÒÂíÉÏ´Ó×Àµ××ê³ö£¬º°×Å¡Ã¡¸Î¹£¡ÄãÔÚ×öÊ²Ã´£¿¡¹ 
+ã€€ã€€æˆ‘å‘çŽ°æœºä¼šæ¥ä¸´äº†ï¼Œæˆ‘é©¬ä¸Šä»Žæ¡Œåº•é’»å‡ºï¼Œå–Šç€âˆ¶ã€Œå–‚ï¼ä½ åœ¨åšä»€ä¹ˆï¼Ÿã€ 
 
-¡¡¡¡Ëý¶ÔÎÒµÄ³öÏÖ£¬¸Ðµ½ÎÞ±ÈµÄ¾ªãµ£¬ËýÒ»Ê±ã¶ÔÚÄÇÀï£¬²»ÖªÈçºÎÊÇºÃ¡£¿ÉÊÇ£¬ ÎÒÎ´³¢²»ÊÇÐÄÀïÒ²ÅÂÅÂµÄ£¬Èç¹ûËý·´ÎÊÎÒ¡Ã¡¸ÎªÊ²Ã´ÔÚÕâÀï£¿¡¹ÄÇÎÒÒ²²»ÖªÈçºÎ »Ø´ð¡£ 
+ã€€ã€€å¥¹å¯¹æˆ‘çš„å‡ºçŽ°ï¼Œæ„Ÿåˆ°æ— æ¯”çš„æƒŠæ„•ï¼Œå¥¹ä¸€æ—¶æ„£åœ¨é‚£é‡Œï¼Œä¸çŸ¥å¦‚ä½•æ˜¯å¥½ã€‚å¯æ˜¯ï¼Œ æˆ‘æœªå°ä¸æ˜¯å¿ƒé‡Œä¹Ÿæ€•æ€•çš„ï¼Œå¦‚æžœå¥¹åé—®æˆ‘âˆ¶ã€Œä¸ºä»€ä¹ˆåœ¨è¿™é‡Œï¼Ÿã€é‚£æˆ‘ä¹Ÿä¸çŸ¥å¦‚ä½• å›žç­”ã€‚ 
 
-¡¡¡¡Ò²ÐíËýÒòÎª×öÁË¿÷ÐÄÊÂ£¬ËùÒÔËýÒ²»ÅÁË£¬Ö»¼ûËýÁ³É«·¢°×£¬¿ÚÖÐ¡Ã¡¸ÎÒ©©©© ÎÒ©©©©¡¹µØ²»ÖªÈçºÎ»Ø´ð¡£ 
+ã€€ã€€ä¹Ÿè®¸å¥¹å› ä¸ºåšäº†äºå¿ƒäº‹ï¼Œæ‰€ä»¥å¥¹ä¹Ÿæ…Œäº†ï¼Œåªè§å¥¹è„¸è‰²å‘ç™½ï¼Œå£ä¸­âˆ¶ã€Œæˆ‘â”…â”… æˆ‘â”…â”…ã€åœ°ä¸çŸ¥å¦‚ä½•å›žç­”ã€‚ 
 
-¡¡¡¡ÕâÊ±£¬ÎÒÐÀÉÍ×Å±¾Ð£µÄµÚÒ»ÃÀÅ®£­£­ÑîÀö¾§£¬ËýµÄÑÛÎ²ÉÏÑï¡¢·ïÑÛÎ¢ºì£¬ÓÐ ×ÅÎÞ·¨ÐÎÈÝµÄÃÀ¸Ð£¬ÎÞ±ÈÃÀÃîµÄÉí²ÄÉ¢·¢³öÅ®ÈË³ÉÊìµÄÐÔ¸Ð¡£ 
+ã€€ã€€è¿™æ—¶ï¼Œæˆ‘æ¬£èµç€æœ¬æ ¡çš„ç¬¬ä¸€ç¾Žå¥³ï¼ï¼æ¨ä¸½æ™¶ï¼Œå¥¹çš„çœ¼å°¾ä¸Šæ‰¬ã€å‡¤çœ¼å¾®çº¢ï¼Œæœ‰ ç€æ— æ³•å½¢å®¹çš„ç¾Žæ„Ÿï¼Œæ— æ¯”ç¾Žå¦™çš„èº«ææ•£å‘å‡ºå¥³äººæˆç†Ÿçš„æ€§æ„Ÿã€‚ 
 
-¡¡¡¡¹ýÁËÒ»»á¶ù£¬ÑîÀö¾§ÉñÖÇÉÔÎª»Ö¸´ÁË¡£ËýÃæ¶ÔÃæµÄ¿´×ÅÎÒ£¬Ëý²»Ï£ÍûÔÚÎÒÕâ ¸öÓ¢¿¡µÄÄÐÈËÃæÇ°Â¶³ö×Ô¼ºµÄÈõµã¡£ 
+ã€€ã€€è¿‡äº†ä¸€ä¼šå„¿ï¼Œæ¨ä¸½æ™¶ç¥žæ™ºç¨ä¸ºæ¢å¤äº†ã€‚å¥¹é¢å¯¹é¢çš„çœ‹ç€æˆ‘ï¼Œå¥¹ä¸å¸Œæœ›åœ¨æˆ‘è¿™ ä¸ªè‹±ä¿Šçš„ç”·äººé¢å‰éœ²å‡ºè‡ªå·±çš„å¼±ç‚¹ã€‚ 
 
-¡¡¡¡ËýËµ¡Ã¡¸ÄãÒªÔõÑù£¿ÔõÃ´×ö²Å»áÊ¹ÄãÂúÒâÄØ£¿¡¹ 
+ã€€ã€€å¥¹è¯´âˆ¶ã€Œä½ è¦æ€Žæ ·ï¼Ÿæ€Žä¹ˆåšæ‰ä¼šä½¿ä½ æ»¡æ„å‘¢ï¼Ÿã€ 
 
-¡¡¡¡ÎÒ¹ÊÒâ³ÁË¼Ò»ÏÂ£¬È»ºóËµµÀ¡Ã¡¸Õâ¸öÂï©©©©ÏñÄãÕâÖÖÃÀÅ®£¬ÎÒµ±È»ÊÇÏë¸ÉÄã ÂÞ£¡¡¹ 
+ã€€ã€€æˆ‘æ•…æ„æ²‰æ€ä¸€ä¸‹ï¼Œç„¶åŽè¯´é“âˆ¶ã€Œè¿™ä¸ªå˜›â”…â”…åƒä½ è¿™ç§ç¾Žå¥³ï¼Œæˆ‘å½“ç„¶æ˜¯æƒ³å¹²ä½  ç½—ï¼ã€ 
 
-¡¡¡¡ÑîÀö¾§ÌýµÃÑÆ¿ÚÎÞÑÔ£¬ÍêÈ«²»¸ÒÏàÐÅ×Ô¼ºµÄ¶ú¶ä£¬ËýµÄÁ³É«±äÁË£¬×·ÎÊ×Å¡Ã ¡¸ÄãËµÊ²Ã´£¿©©©©¡¹ 
+ã€€ã€€æ¨ä¸½æ™¶å¬å¾—å“‘å£æ— è¨€ï¼Œå®Œå…¨ä¸æ•¢ç›¸ä¿¡è‡ªå·±çš„è€³æœµï¼Œå¥¹çš„è„¸è‰²å˜äº†ï¼Œè¿½é—®ç€âˆ¶ ã€Œä½ è¯´ä»€ä¹ˆï¼Ÿâ”…â”…ã€ 
 
-¡¡¡¡ÎÒµÄÁ³ÉÏÂ¶³öÅ°´ý¿ñµÄÐ¦ÈÝ£¬ÓÃÊ¤ÀûÕßµÄ¿ÚÎÇËµ£»¡¸ÎÒÏë¸ÉÄã£¡¡¹ 
+ã€€ã€€æˆ‘çš„è„¸ä¸Šéœ²å‡ºè™å¾…ç‹‚çš„ç¬‘å®¹ï¼Œç”¨èƒœåˆ©è€…çš„å£å»è¯´ï¼›ã€Œæˆ‘æƒ³å¹²ä½ ï¼ã€ 
 
-¡¡¡¡ËýÌýµÃÏàµ±ÉúÆø£¬ÏëµôÍ·¾Í×ß¡£ 
+ã€€ã€€å¥¹å¬å¾—ç›¸å½“ç”Ÿæ°”ï¼Œæƒ³æŽ‰å¤´å°±èµ°ã€‚ 
 
-¡¡¡¡ÕâÊ±ºò£¬ÎÒ»º»ºËµµÀ¡Ã¡¸ÑîÀö¾§ÓÚÃñ¹ú¡Á¡ÁÄê¡ÁÔÂ¡ÁÈÕ£¬ÔÚÐ£Íâ·¢ÉúÍµÇÔÐÐ Îª£¬±»±¾Ð£ÀÏÊ¦·¢ÏÖºó£¬²»½ö²»Ìý¸æ½ë»¹³öÊÖÅ·´òÀÏÊ¦£¬¾­¸ÃÎ»ÀÏÊ¦Ìá±¨Ð£·½Òé ´¦£¬ÌØ¼Ç´ó¹ýÁ½´ÎÐ¡¹ýÁ½´Î£¬ÁôÐ£²é¿´£¬ÒÔÊ¾¾¯Ìè¡£¡¹ 
+ã€€ã€€è¿™æ—¶å€™ï¼Œæˆ‘ç¼“ç¼“è¯´é“âˆ¶ã€Œæ¨ä¸½æ™¶äºŽæ°‘å›½Ã—Ã—å¹´Ã—æœˆÃ—æ—¥ï¼Œåœ¨æ ¡å¤–å‘ç”Ÿå·çªƒè¡Œ ä¸ºï¼Œè¢«æœ¬æ ¡è€å¸ˆå‘çŽ°åŽï¼Œä¸ä»…ä¸å¬å‘Šè¯«è¿˜å‡ºæ‰‹æ¬§æ‰“è€å¸ˆï¼Œç»è¯¥ä½è€å¸ˆææŠ¥æ ¡æ–¹è®® å¤„ï¼Œç‰¹è®°å¤§è¿‡ä¸¤æ¬¡å°è¿‡ä¸¤æ¬¡ï¼Œç•™æ ¡æŸ¥çœ‹ï¼Œä»¥ç¤ºè­¦æƒ•ã€‚ã€ 
 
-¡¡¡¡µ±ÑîÀöÝ¼Ìýµ½Õâ¶Î»°ºó£¬Ëý¸Ð¾õ³ö×Ô¼ºµÄÁ³É«±ä³É²Ô°×£¬½Å²½Ò²Ç÷»ºÁË¡£ 
+ã€€ã€€å½“æ¨ä¸½èå¬åˆ°è¿™æ®µè¯åŽï¼Œå¥¹æ„Ÿè§‰å‡ºè‡ªå·±çš„è„¸è‰²å˜æˆè‹ç™½ï¼Œè„šæ­¥ä¹Ÿè¶‹ç¼“äº†ã€‚ 
 
-¡¡¡¡ËýÖªµÀËýÍêÁË£¬Ô­À´ÊÇ×ÊÁÏÔÚÎÒÊÖÉÏÒ²ÓÐ£¬Èç¹ûÎÒ°Ñ¸Õ²ÅµÄÊÂ±¨¸æÐ£·½£¬Ëý Ìú¶¨»á±»ÍËÑ§µÄ¡£ 
+ã€€ã€€å¥¹çŸ¥é“å¥¹å®Œäº†ï¼ŒåŽŸæ¥æ˜¯èµ„æ–™åœ¨æˆ‘æ‰‹ä¸Šä¹Ÿæœ‰ï¼Œå¦‚æžœæˆ‘æŠŠåˆšæ‰çš„äº‹æŠ¥å‘Šæ ¡æ–¹ï¼Œå¥¹ é“å®šä¼šè¢«é€€å­¦çš„ã€‚ 
 
-¡¡¡¡ÎÒ·¢ÏÖ´Ó×ÊÁÏÖÐµÃµ½µÄÊÂÇé·¢ÉúÐ§¹û£¬ÎÒÂ¶³öµÃÒâµÄÐ¦ÈÝ£¬ÎÒÏëÕâ¸öÅ®ÈËÍ¶ ½µÖ»ÊÇÊ±¼äµÄÎÊÌâÁË£¬ÓÚÊÇÎÒÓÃºÃÉ«µÄÑÛ¹âÔÚËýµÄÉíÌåÉÏÏÂÃéÀ´ÃéÈ¥¡£ 
+ã€€ã€€æˆ‘å‘çŽ°ä»Žèµ„æ–™ä¸­å¾—åˆ°çš„äº‹æƒ…å‘ç”Ÿæ•ˆæžœï¼Œæˆ‘éœ²å‡ºå¾—æ„çš„ç¬‘å®¹ï¼Œæˆ‘æƒ³è¿™ä¸ªå¥³äººæŠ• é™åªæ˜¯æ—¶é—´çš„é—®é¢˜äº†ï¼ŒäºŽæ˜¯æˆ‘ç”¨å¥½è‰²çš„çœ¼å…‰åœ¨å¥¹çš„èº«ä½“ä¸Šä¸‹çž„æ¥çž„åŽ»ã€‚ 
 
-¡¡¡¡¡¸ÄãÕæÊÇ¸öÑ§ÉúµÄºÃ°ñÑù°¡£¡¡¹ÎÒ³Ã×ÅÕâ¸ö»ú»áºÁ²»ÁôÇéµÄÃÍÁÒ¹¥»÷£¬ÑîÀö ¾§Ò²²»¸Ò·´²µ¡£ 
+ã€€ã€€ã€Œä½ çœŸæ˜¯ä¸ªå­¦ç”Ÿçš„å¥½æ¦œæ ·å•Šï¼ã€æˆ‘è¶ç€è¿™ä¸ªæœºä¼šæ¯«ä¸ç•™æƒ…çš„çŒ›çƒˆæ”»å‡»ï¼Œæ¨ä¸½ æ™¶ä¹Ÿä¸æ•¢åé©³ã€‚ 
 
-¡¡¡¡ÄÇÒ»Ò¹µÄÊÂÇéÊÇ²»ÄÜÔ­ÁÂ£¬ÊÜµ½Ôð±¸Ò²ÊÇÓ¦¸ÃµÄ¡£ÑîÀö¾§ÇáÇá±ÕÉÏË«ÑÛ£¬ÃÀ ÀöµÄ×ì´½Î¢Î¢²ü¶¶£¬ÓÃÊÖ·ö×¡×À×Ó£¬Ëý»¹ÄÜÖ§³ÅÉíÌåÒÑ¾­ÊÇ¾¡ÁË×î´óµÄÁ¦Á¿ÁË¡£ 
+ã€€ã€€é‚£ä¸€å¤œçš„äº‹æƒ…æ˜¯ä¸èƒ½åŽŸè°…ï¼Œå—åˆ°è´£å¤‡ä¹Ÿæ˜¯åº”è¯¥çš„ã€‚æ¨ä¸½æ™¶è½»è½»é—­ä¸ŠåŒçœ¼ï¼Œç¾Ž ä¸½çš„å˜´å”‡å¾®å¾®é¢¤æŠ–ï¼Œç”¨æ‰‹æ‰¶ä½æ¡Œå­ï¼Œå¥¹è¿˜èƒ½æ”¯æ’‘èº«ä½“å·²ç»æ˜¯å°½äº†æœ€å¤§çš„åŠ›é‡äº†ã€‚ 
 
-¡¡¡¡ÎÒ¿´µ½ÑîÀö¾§ÃæÁÙ±ÀÀ£µÄÑù×Ó£¬ÌÕ×íÔÚÅ°´ý¿ñµÄÏ²ÔÃÀï£¬ÐÄÏë¡Ã¡¸¿ìÁË£¡Õâ ¿éµ½¿ÚµÄ·ÊÈâÅÜ²»µôÁË©©©©¡¹ 
+ã€€ã€€æˆ‘çœ‹åˆ°æ¨ä¸½æ™¶é¢ä¸´å´©æºƒçš„æ ·å­ï¼Œé™¶é†‰åœ¨è™å¾…ç‹‚çš„å–œæ‚¦é‡Œï¼Œå¿ƒæƒ³âˆ¶ã€Œå¿«äº†ï¼è¿™ å—åˆ°å£çš„è‚¥è‚‰è·‘ä¸æŽ‰äº†â”…â”…ã€ 
 
-¡¡¡¡ÎÒ×ßµ½ÑîÀö¾§µÄÉíºó£¬´Ó±³ºóÉìÊÖÈ¥ÃþËýµÄÈâÌå¡£ 
+ã€€ã€€æˆ‘èµ°åˆ°æ¨ä¸½æ™¶çš„èº«åŽï¼Œä»ŽèƒŒåŽä¼¸æ‰‹åŽ»æ‘¸å¥¹çš„è‚‰ä½“ã€‚ 
 
-¡¡¡¡¡¸²»Òª£¡¡¹ÑîÀö¾§¶ÔÐ°¶ñµÄ¸Ð¾õ·´ÉäÐÔµÄÒ¡Í·¡£ 
+ã€€ã€€ã€Œä¸è¦ï¼ã€æ¨ä¸½æ™¶å¯¹é‚ªæ¶çš„æ„Ÿè§‰åå°„æ€§çš„æ‘‡å¤´ã€‚ 
 
-¡¡¡¡ÎÒ²»Àí»áËý£¬°Ñ»ðÈÈµÄºôÎüÅçÔÚÑîÀö¾§µÄ¶ú¸ùÉÏ£¬ÓÃÉ«ÃÐÃÐµÄÉùÒôËµ¡Ã¡¸ÎÒ °Ñ½ñÌìµÄÊÂ¸æËßÈÎºÎÒ»Î»ÀÏÊ¦£¬ÄÇÃ´Äã¾Í»á±»ÍËÑ§µÄ£¬ÄãËµ¶Ô²»¶Ô£¿¡¹ 
+ã€€ã€€æˆ‘ä¸ç†ä¼šå¥¹ï¼ŒæŠŠç«çƒ­çš„å‘¼å¸å–·åœ¨æ¨ä¸½æ™¶çš„è€³æ ¹ä¸Šï¼Œç”¨è‰²çœ¯çœ¯çš„å£°éŸ³è¯´âˆ¶ã€Œæˆ‘ æŠŠä»Šå¤©çš„äº‹å‘Šè¯‰ä»»ä½•ä¸€ä½è€å¸ˆï¼Œé‚£ä¹ˆä½ å°±ä¼šè¢«é€€å­¦çš„ï¼Œä½ è¯´å¯¹ä¸å¯¹ï¼Ÿã€ 
 
-¡¡¡¡ÎÒµÄ»°ºÃÏñ¼ýÒ»°ãµØ´©Í¸ÑîÀö¾§µÄÐÄ·À£¬ËýÂýÂý·ÅÆú·´¿¹ÁË¡£ 
+ã€€ã€€æˆ‘çš„è¯å¥½åƒç®­ä¸€èˆ¬åœ°ç©¿é€æ¨ä¸½æ™¶çš„å¿ƒé˜²ï¼Œå¥¹æ…¢æ…¢æ”¾å¼ƒåæŠ—äº†ã€‚ 
 
-¡¡¡¡ÎÒËµ¡Ã¡¸Ö»ÊÇÒ»´Î£¬Äã¿ÏÈÃÎÒ¸ÉÒ»´Î£¬ÎÒ¾ÍÈÄÁËÄã£¬²»°ÑÕâ¼þÊÂËµ³öÈ¥¡£¡¹ 
+ã€€ã€€æˆ‘è¯´âˆ¶ã€Œåªæ˜¯ä¸€æ¬¡ï¼Œä½ è‚¯è®©æˆ‘å¹²ä¸€æ¬¡ï¼Œæˆ‘å°±é¥¶äº†ä½ ï¼Œä¸æŠŠè¿™ä»¶äº‹è¯´å‡ºåŽ»ã€‚ã€ 
 
-¡¡¡¡ÎÒ³Ã»ú·¢¶¯¹¥ÊÆ£¬ÔÚËýÑ©°×µÄ²±×ÓÉÏ²»Í£µÄÎÇ£¬À­¿ªËý¿¹¾ÜµÄÊÖ£¬´ÓÄÌÕÖÉÏ ÍùÈé·¿×¥È¥£¬ÊÖÖ¸ÉÏÁ¢¿Ì¸Ðµ½ÃÀÃîµÄµ¯ÐÔ¡£ 
+ã€€ã€€æˆ‘è¶æœºå‘åŠ¨æ”»åŠ¿ï¼Œåœ¨å¥¹é›ªç™½çš„è„–å­ä¸Šä¸åœçš„å»ï¼Œæ‹‰å¼€å¥¹æŠ—æ‹’çš„æ‰‹ï¼Œä»Žå¥¶ç½©ä¸Š å¾€ä¹³æˆ¿æŠ“åŽ»ï¼Œæ‰‹æŒ‡ä¸Šç«‹åˆ»æ„Ÿåˆ°ç¾Žå¦™çš„å¼¹æ€§ã€‚ 
 
-¡¡¡¡ËýÅ¤¶¯ÉíÌå¿¹¾ÜÊ±£¬·áÂúµÄÆ¨¹ÉÕýºÃÔÚÎÒ²ªÆðµÄÈâ°ôÉÏÄ¦²Á£¬´øÀ´ÎÞ±ÈÃÀÃî µÄ´Ì¼¤¸Ð¡£ 
+ã€€ã€€å¥¹æ‰­åŠ¨èº«ä½“æŠ—æ‹’æ—¶ï¼Œä¸°æ»¡çš„å±è‚¡æ­£å¥½åœ¨æˆ‘å‹ƒèµ·çš„è‚‰æ£’ä¸Šæ‘©æ“¦ï¼Œå¸¦æ¥æ— æ¯”ç¾Žå¦™ çš„åˆºæ¿€æ„Ÿã€‚ 
 
-¡¡¡¡¡¸Å¶©©©©ÕæÊÇÃî¼«ÁË£¡¡¹ÎÒµÄÈâ°ô¶ÙÊ±³äÂúÁËÁ¦Á¿£¬¶ÔÕýËýµÄÆ¨¹É¹µ·ìÓÃÁ¦ Í¦¹ýÈ¥¡£ 
+ã€€ã€€ã€Œå“¦â”…â”…çœŸæ˜¯å¦™æžäº†ï¼ã€æˆ‘çš„è‚‰æ£’é¡¿æ—¶å……æ»¡äº†åŠ›é‡ï¼Œå¯¹æ­£å¥¹çš„å±è‚¡æ²Ÿç¼ç”¨åŠ› æŒºè¿‡åŽ»ã€‚ 
 
-¡¡¡¡ÑîÀö¾§¸Ð¾õ³ö¼áÓ²µÄÈâ°ôÍ¦ÔÚÆ¨¹ÉÉÏ£¬Ëý¼±Ã¦ÏòÇ°ÇãÌÓ¡£¿ÉÊÇÎÒµÄÊÖ¿ìËÙµØ ²åÈëËýµÄË«ÍÈÖ®¼ä£¬Í¬Ê±°ÑËýµÄÉíÌåÀ­»ØÀ´¡£ 
+ã€€ã€€æ¨ä¸½æ™¶æ„Ÿè§‰å‡ºåšç¡¬çš„è‚‰æ£’æŒºåœ¨å±è‚¡ä¸Šï¼Œå¥¹æ€¥å¿™å‘å‰å€¾é€ƒã€‚å¯æ˜¯æˆ‘çš„æ‰‹å¿«é€Ÿåœ° æ’å…¥å¥¹çš„åŒè…¿ä¹‹é—´ï¼ŒåŒæ—¶æŠŠå¥¹çš„èº«ä½“æ‹‰å›žæ¥ã€‚ 
 
-¡¡¡¡Ñá¶ñ¸ÐÊ¹ËýÈ«Éí¶¼²ü¶¶ÆðÀ´£¬Ëý½ÐµÀ¡Ã¡¸ÎÒ²»Òª£¡¡¹ 
+ã€€ã€€åŽŒæ¶æ„Ÿä½¿å¥¹å…¨èº«éƒ½é¢¤æŠ–èµ·æ¥ï¼Œå¥¹å«é“âˆ¶ã€Œæˆ‘ä¸è¦ï¼ã€ 
 
-¡¡¡¡ÑîÀö¾§ÃÍÁÒÅ¤¶¯×ÅÆ¨¹É£¬¿ÉÊÇÎÒµÄÊÖÖ¸ÏñÊÇÓÐÎüÅÌ°ãÌùÔÚËýµÄ´óÍÈÉÏ¸§Ãþ¡£ 
+ã€€ã€€æ¨ä¸½æ™¶çŒ›çƒˆæ‰­åŠ¨ç€å±è‚¡ï¼Œå¯æ˜¯æˆ‘çš„æ‰‹æŒ‡åƒæ˜¯æœ‰å¸ç›˜èˆ¬è´´åœ¨å¥¹çš„å¤§è…¿ä¸ŠæŠšæ‘¸ã€‚ 
 
-¡¡¡¡ÑîÀö¾§Á¬Éùº°µÀ¡Ã¡¸²»Òª£¡×¡ÊÖ£¡ÎÒ²»©©©©ßí©©©©¡¹ 
+ã€€ã€€æ¨ä¸½æ™¶è¿žå£°å–Šé“âˆ¶ã€Œä¸è¦ï¼ä½æ‰‹ï¼æˆ‘ä¸â”…â”…å””â”…â”…ã€ 
 
-¡¡¡¡ÕâÊ±£¬Ëý´Ó±Ç¿×·¢³öºßÉù£¬Í¬Ê±ÍäÏÂÉÏÉí£¬Èç´ËÒ»À´£¬ÎÒÄÇÍ¦Á¢µÄÈâ°ô¸üÌù ½ôËýµÄÆ¨¹É¹µÀï¡£ 
+ã€€ã€€è¿™æ—¶ï¼Œå¥¹ä»Žé¼»å­”å‘å‡ºå“¼å£°ï¼ŒåŒæ—¶å¼¯ä¸‹ä¸Šèº«ï¼Œå¦‚æ­¤ä¸€æ¥ï¼Œæˆ‘é‚£æŒºç«‹çš„è‚‰æ£’æ›´è´´ ç´§å¥¹çš„å±è‚¡æ²Ÿé‡Œã€‚ 
 
-¡¡¡¡Ç°ºóÊÜµ½ÒùÐ°µÄ°®¸§£¬ÎÒ³ÃËý²»ÄÜ¶¯£¬Ë«ÊÖ¸üÃÍÁÒ»î¶¯×Å¡£ÎÒµÄºôÎü±äµÃ¼± ´ÙÆðÀ´£¬ÎÒÉìÊÖ´ÓÄÌÕÖ±ß½øÈ¥×¥×¡Èé·¿£¬ÁíÒ»Ö»ÊÖÔÚÑîÀö¾§µÄ½ûµØÉÏÄ¦²Á×Å£¬Ëý ÎÞ·¨¿¹¾Ü£¬Ö»ÓÐ¼Ð½ô´óÍÈ£¬²»Í£µÄÅ¤¶¯ÉíÌå¡£ 
+ã€€ã€€å‰åŽå—åˆ°æ·«é‚ªçš„çˆ±æŠšï¼Œæˆ‘è¶å¥¹ä¸èƒ½åŠ¨ï¼ŒåŒæ‰‹æ›´çŒ›çƒˆæ´»åŠ¨ç€ã€‚æˆ‘çš„å‘¼å¸å˜å¾—æ€¥ ä¿ƒèµ·æ¥ï¼Œæˆ‘ä¼¸æ‰‹ä»Žå¥¶ç½©è¾¹è¿›åŽ»æŠ“ä½ä¹³æˆ¿ï¼Œå¦ä¸€åªæ‰‹åœ¨æ¨ä¸½æ™¶çš„ç¦åœ°ä¸Šæ‘©æ“¦ç€ï¼Œå¥¹ æ— æ³•æŠ—æ‹’ï¼Œåªæœ‰å¤¹ç´§å¤§è…¿ï¼Œä¸åœçš„æ‰­åŠ¨èº«ä½“ã€‚ 
 
-¡¡¡¡Ã»ÓÐ¶à¾Ã£¬ËýµÄË«Ï¥¿ªÊ¼²ü¶¶£¬Á¬¼Ð½ô´óÍÈµÄÁ¦Á¿¶¼Ã»ÓÐÁË¡£ÎÒ³Ã»úÓÃÊÖÖ¸ Èà´êËýµÄÄÌÍ·ÓëÐ¡Ñ¨µÄÒõºË¡£ 
+ã€€ã€€æ²¡æœ‰å¤šä¹…ï¼Œå¥¹çš„åŒè†å¼€å§‹é¢¤æŠ–ï¼Œè¿žå¤¹ç´§å¤§è…¿çš„åŠ›é‡éƒ½æ²¡æœ‰äº†ã€‚æˆ‘è¶æœºç”¨æ‰‹æŒ‡ æ‰æ“å¥¹çš„å¥¶å¤´ä¸Žå°ç©´çš„é˜´æ ¸ã€‚ 
 
-¡¡¡¡ÎÒÔÚÑîÀö¾§µÄ¶ú±ßËµ¡Ã¡¸ÔõÃ´À²£¿²»µÖ¿¹ÁËÂð£¿¡¹ 
+ã€€ã€€æˆ‘åœ¨æ¨ä¸½æ™¶çš„è€³è¾¹è¯´âˆ¶ã€Œæ€Žä¹ˆå•¦ï¼Ÿä¸æŠµæŠ—äº†å—ï¼Ÿã€ 
 
-¡¡¡¡ÑîÀö¾§µÄÒâÊ¶ÉÔÐíÇåÐÑ£¬¼±Ã¦Ïë¼Ð½ô´óÍÈ£¬¿ÉÊÇÎÒÀÏÁ·µÄ¼¼ÇÉÊ¹ËýµÄ´óÍÈÓÃ ²»ÉÏÁ¦¡£ 
+ã€€ã€€æ¨ä¸½æ™¶çš„æ„è¯†ç¨è®¸æ¸…é†’ï¼Œæ€¥å¿™æƒ³å¤¹ç´§å¤§è…¿ï¼Œå¯æ˜¯æˆ‘è€ç»ƒçš„æŠ€å·§ä½¿å¥¹çš„å¤§è…¿ç”¨ ä¸ä¸ŠåŠ›ã€‚ 
 
-¡¡¡¡ÑîÀö¾§²»¸ÒÏàÐÅ×Ô¼ºµÄÈâÌå£¬¶ÔÕâÖÖÄÐÈËµÄ°®¸§Ò²»áÃô¸ÐµÄ²úÉú¿ì¸Ð£¬ÐÄÖÐ °µ½ÐµÀ¡Ã¡¸ÎÒÔõÃ´»á±ä³ÉÕâÖÖÑù×Ó£¿ÎÒ¸ÃÔõÃ´°ì©©©©¡¹ 
+ã€€ã€€æ¨ä¸½æ™¶ä¸æ•¢ç›¸ä¿¡è‡ªå·±çš„è‚‰ä½“ï¼Œå¯¹è¿™ç§ç”·äººçš„çˆ±æŠšä¹Ÿä¼šæ•æ„Ÿçš„äº§ç”Ÿå¿«æ„Ÿï¼Œå¿ƒä¸­ æš—å«é“âˆ¶ã€Œæˆ‘æ€Žä¹ˆä¼šå˜æˆè¿™ç§æ ·å­ï¼Ÿæˆ‘è¯¥æ€Žä¹ˆåŠžâ”…â”…ã€ 
 
-¡¡¡¡ÎÒ·¢ÏÖÑîÀö¾§µÄ±ä»¯ºó£¬ºÞ²»µÃÂíÉÏ¾ÍÄÜ³¢µ½Î¶µÀ¡£ÓÚÊÇ£¬ÎÒ´ÓºóÃæÒÔÑ¹µ¹ µÄ·½Ê½£¬°ÑËýµÄÉíÌåÍÆµ¹ÔÚµØÉÏ¡£ 
+ã€€ã€€æˆ‘å‘çŽ°æ¨ä¸½æ™¶çš„å˜åŒ–åŽï¼Œæ¨ä¸å¾—é©¬ä¸Šå°±èƒ½å°åˆ°å‘³é“ã€‚äºŽæ˜¯ï¼Œæˆ‘ä»ŽåŽé¢ä»¥åŽ‹å€’ çš„æ–¹å¼ï¼ŒæŠŠå¥¹çš„èº«ä½“æŽ¨å€’åœ¨åœ°ä¸Šã€‚ 
 
-¡¡¡¡È«ÉíÊÜµ½ÄÐÈËµÄÑ¹ÆÈ£¬ÑîÀö¾§·¢³öÍ´¿àµÄÉëÒ÷Éù¡Ã¡¸²»ÒªÕâÑù£¬°ÝÍÐ£¡¡¹ 
+ã€€ã€€å…¨èº«å—åˆ°ç”·äººçš„åŽ‹è¿«ï¼Œæ¨ä¸½æ™¶å‘å‡ºç—›è‹¦çš„å‘»åŸå£°âˆ¶ã€Œä¸è¦è¿™æ ·ï¼Œæ‹œæ‰˜ï¼ã€ 
 
-¡¡¡¡ÎÒ²»Àí»áËý£¬ÉìÊÖµ½ÑîÀö¾§ÏÂÃæ£¬½«ÄÇ½ö´æµÄÄÚ¿ãÒ²ÍÑÏÂÀ´¡£ 
+ã€€ã€€æˆ‘ä¸ç†ä¼šå¥¹ï¼Œä¼¸æ‰‹åˆ°æ¨ä¸½æ™¶ä¸‹é¢ï¼Œå°†é‚£ä»…å­˜çš„å†…è£¤ä¹Ÿè„±ä¸‹æ¥ã€‚ 
 
-¡¡¡¡ÕâÊ±£¬ÎÒ·¢³ö¾ªÌ¾Éù¡Ã¡¸ºÃÃÀ°¡£¡¡¹ 
+ã€€ã€€è¿™æ—¶ï¼Œæˆ‘å‘å‡ºæƒŠå¹å£°âˆ¶ã€Œå¥½ç¾Žå•Šï¼ã€ 
 
-¡¡¡¡ÒòÎªÎÒ¿´µ½ËýÄÇ÷îºÚµÄÒõÃ«ºÍÃÔÈËµÄÐ¡Ñ¨£¬ÑîÀöÝ¼ÐßµÃÂúÁ³Í¨ºì£¬Æ´ÃüÏëÓÃ ÊÖÑÚ¸ÇÄÇ¸öµØ·½¡£ 
+ã€€ã€€å› ä¸ºæˆ‘çœ‹åˆ°å¥¹é‚£é»é»‘çš„é˜´æ¯›å’Œè¿·äººçš„å°ç©´ï¼Œæ¨ä¸½èç¾žå¾—æ»¡è„¸é€šçº¢ï¼Œæ‹¼å‘½æƒ³ç”¨ æ‰‹æŽ©ç›–é‚£ä¸ªåœ°æ–¹ã€‚ 
 
-¡¡¡¡ÎÒ°ÑËýµÄÊÖ±ÛÅ¤¹ýÈ¥£¬ËµµÀ¡Ã¡¸Ãî¼«ÁË£¡ÍêÈ«Ïñ³ÉÈË°ãµÄÃÔÈËµØ·½£¬ÎÒÏëÄã Ò»¶¨¸ú±ðÈË×ö¹ý°É£¿¡¹ÎÒËµÍê£¬¾ÍÓÃË«ÊÖÂ§×¡³ÉÊìµÄÆ¨¹É£¬ÈÃËýÏòºóÍ¦Æð¡£ 
+ã€€ã€€æˆ‘æŠŠå¥¹çš„æ‰‹è‡‚æ‰­è¿‡åŽ»ï¼Œè¯´é“âˆ¶ã€Œå¦™æžäº†ï¼å®Œå…¨åƒæˆäººèˆ¬çš„è¿·äººåœ°æ–¹ï¼Œæˆ‘æƒ³ä½  ä¸€å®šè·Ÿåˆ«äººåšè¿‡å§ï¼Ÿã€æˆ‘è¯´å®Œï¼Œå°±ç”¨åŒæ‰‹æ‚ä½æˆç†Ÿçš„å±è‚¡ï¼Œè®©å¥¹å‘åŽæŒºèµ·ã€‚ 
 
-¡¡¡¡¡¸°¡£¡©©©©²»Òª£¡©©©©¡¹±ä³ÉÕâÑùÎÞ³ÜµÄ×ËÊÆ£¬ÑîÀö¾§·¢³ö·è¿ñ°ãµÄ½ÐÉù£¬ Å¤¶¯Æ¨¹ÉÏëÒªÌÓ×ß¡£¿ÉÊÇÎÒÓÃÁ¦±§×¡ËýµÄÆ¨¹É£¬µÉ´óÑÛ¾¦ÐÀÉÍ×ÅÅ¤¶¯µÄÆ¨¹É¡£ 
+ã€€ã€€ã€Œå•Šï¼â”…â”…ä¸è¦ï¼â”…â”…ã€å˜æˆè¿™æ ·æ— è€»çš„å§¿åŠ¿ï¼Œæ¨ä¸½æ™¶å‘å‡ºç–¯ç‹‚èˆ¬çš„å«å£°ï¼Œ æ‰­åŠ¨å±è‚¡æƒ³è¦é€ƒèµ°ã€‚å¯æ˜¯æˆ‘ç”¨åŠ›æŠ±ä½å¥¹çš„å±è‚¡ï¼Œçžªå¤§çœ¼ç›æ¬£èµç€æ‰­åŠ¨çš„å±è‚¡ã€‚ 
 
-¡¡¡¡×ÐÏ¸¿´Ê±£¬ÔÚºÚºÚµÄ³ÜÃ«¸½½ü£¬Òç³öµÄÃÛÖ­Ê¹µÃÒõ´½·¢³öÓÕÈËµÄ¹âÔó¡£µ±Å¤ ¶¯Æ¨¹ÉÊ±£¬É¢·¢³öÎÞ±ÈÒùµ´µÄÑ¶Ï¢£¬Á¬Éí¾­°ÙÕ½µÄÎÒ£¬ÏñÕâÑùÃÀÃîµÄ¹â¾°»¹ÊÇµÚ Ò»´Î¼û¹ý£¬¶øÇÒÕâ¸öÅ®ÈËÓÖÊÇÑ§Ð£Àï×îÃÀµÄÑ§ÉúÖ®Ò»¡£ 
+ã€€ã€€ä»”ç»†çœ‹æ—¶ï¼Œåœ¨é»‘é»‘çš„è€»æ¯›é™„è¿‘ï¼Œæº¢å‡ºçš„èœœæ±ä½¿å¾—é˜´å”‡å‘å‡ºè¯±äººçš„å…‰æ³½ã€‚å½“æ‰­ åŠ¨å±è‚¡æ—¶ï¼Œæ•£å‘å‡ºæ— æ¯”æ·«è¡çš„è®¯æ¯ï¼Œè¿žèº«ç»ç™¾æˆ˜çš„æˆ‘ï¼Œåƒè¿™æ ·ç¾Žå¦™çš„å…‰æ™¯è¿˜æ˜¯ç¬¬ ä¸€æ¬¡è§è¿‡ï¼Œè€Œä¸”è¿™ä¸ªå¥³äººåˆæ˜¯å­¦æ ¡é‡Œæœ€ç¾Žçš„å­¦ç”Ÿä¹‹ä¸€ã€‚ 
 
-¡¡¡¡´ËÊ±£¬ÎÒµÄÈâ°ô¸üÎª²ªÆð£¬°ºÍ·Í¦ÐØµÄ´£Á¢×Å£¬ÏñÒ»ÃûÓÂ¸ÒµÄÕ½Ê¿×¼±¸³å·æ ÏÝÕó¡£ 
+ã€€ã€€æ­¤æ—¶ï¼Œæˆ‘çš„è‚‰æ£’æ›´ä¸ºå‹ƒèµ·ï¼Œæ˜‚å¤´æŒºèƒ¸çš„çŸ—ç«‹ç€ï¼Œåƒä¸€åå‹‡æ•¢çš„æˆ˜å£«å‡†å¤‡å†²é”‹ é™·é˜µã€‚ 
 
-¡¡¡¡ÎÒÉìÊÖÃþÃþÑîÀö¾§µÄÈâ·ì£¬Ëý¡Ã¡¸°¡£¡¡¹µØ½ÐÁËÒ»Éù£¬Æ¨¹ÉÈÌ²»×¡¸üÓÃÁ¦Å¤ ¶¯£¬ºôÎü±äµÃ¼±´Ù£¬ÒâÏë²»µ½µÄÇ¿ÁÒ´Ì¼¤£¬³åÏòËýÉíÌåµÄÃ¿Ò»¸ö½ÇÂä¡£ 
+ã€€ã€€æˆ‘ä¼¸æ‰‹æ‘¸æ‘¸æ¨ä¸½æ™¶çš„è‚‰ç¼ï¼Œå¥¹âˆ¶ã€Œå•Šï¼ã€åœ°å«äº†ä¸€å£°ï¼Œå±è‚¡å¿ä¸ä½æ›´ç”¨åŠ›æ‰­ åŠ¨ï¼Œå‘¼å¸å˜å¾—æ€¥ä¿ƒï¼Œæ„æƒ³ä¸åˆ°çš„å¼ºçƒˆåˆºæ¿€ï¼Œå†²å‘å¥¹èº«ä½“çš„æ¯ä¸€ä¸ªè§’è½ã€‚ 
 
-¡¡¡¡¡¸ºÙºÙºÙ©©©©ÄãÏÂÃæµÄ×ì°ÍÒÑ¾­Á÷³ö¸ßÐËµÄÑÛÀáÁË¡£¡¹ÎÒÒùÉùËµ×Å¡£Í¬Ê±£¬ ÎÒ´Ö´óµÄÊÖÖ¸ÔÚÈáÈíµÄ»¨°êÉÏ¸§ÃþÆðÀ´¡£ 
+ã€€ã€€ã€Œå˜¿å˜¿å˜¿â”…â”…ä½ ä¸‹é¢çš„å˜´å·´å·²ç»æµå‡ºé«˜å…´çš„çœ¼æ³ªäº†ã€‚ã€æˆ‘æ·«å£°è¯´ç€ã€‚åŒæ—¶ï¼Œ æˆ‘ç²—å¤§çš„æ‰‹æŒ‡åœ¨æŸ”è½¯çš„èŠ±ç“£ä¸ŠæŠšæ‘¸èµ·æ¥ã€‚ 
 
-¡¡¡¡¡¸Å¶©©©©°¥Ñ½©©©©ßí©©©©¡¹ÑîÀöÝ¼ºÃÏñºôÎüºÜÀ§ÄÑ£¬±»ÆÈ²ÉÈ¡ËÄ½Å×ÅµØµÄ³Ü Èè×ËÌ¬£¬Ê¹ËýÈ«Éí¿ªÊ¼¾·ÂÎ¡£ 
+ã€€ã€€ã€Œå“¦â”…â”…å“Žå‘€â”…â”…å””â”…â”…ã€æ¨ä¸½èå¥½åƒå‘¼å¸å¾ˆå›°éš¾ï¼Œè¢«è¿«é‡‡å–å››è„šç€åœ°çš„è€» è¾±å§¿æ€ï¼Œä½¿å¥¹å…¨èº«å¼€å§‹ç—‰æŒ›ã€‚ 
 
-¡¡¡¡ÎÒËµ¡Ã¡¸²»ÓÃÔÙµÖ¿¹ÁË£¬ÒªÍ¶½µÁËÂð£¿¡¹ 
+ã€€ã€€æˆ‘è¯´âˆ¶ã€Œä¸ç”¨å†æŠµæŠ—äº†ï¼Œè¦æŠ•é™äº†å—ï¼Ÿã€ 
 
-¡¡¡¡ÑîÀö¾§½ôÒ§×Å×ì´½¼¸ºõ¿ìÒª³öÑª£¬Ò»·½ÃæÆø×Ô¼ºÕæÃ»ÓÃ£¬¿ÉÊÇÉíÌåºÃÏñÔ½À´ Ô½²»ÌýÊ¹»½ÁË¡£ 
+ã€€ã€€æ¨ä¸½æ™¶ç´§å’¬ç€å˜´å”‡å‡ ä¹Žå¿«è¦å‡ºè¡€ï¼Œä¸€æ–¹é¢æ°”è‡ªå·±çœŸæ²¡ç”¨ï¼Œå¯æ˜¯èº«ä½“å¥½åƒè¶Šæ¥ è¶Šä¸å¬ä½¿å”¤äº†ã€‚ 
 
-¡¡¡¡¡¸¿´°É£¡ÄãµÎ³öÀ´µÄÃÛÖ­£¬°ÑÎÒµÄÊÖÖ¸Åª³ÉÕâÑùÁË¡£¡¹ÎÒ°ÑÕ´ÉÏÕ³Õ³ÒºÌåµÄ ÊÖÖ¸£¬¹ÊÒâÉìµ½ÑîÀö¾§µÄÑÛÇ°¡£ 
+ã€€ã€€ã€Œçœ‹å§ï¼ä½ æ»´å‡ºæ¥çš„èœœæ±ï¼ŒæŠŠæˆ‘çš„æ‰‹æŒ‡å¼„æˆè¿™æ ·äº†ã€‚ã€æˆ‘æŠŠæ²¾ä¸Šç²˜ç²˜æ¶²ä½“çš„ æ‰‹æŒ‡ï¼Œæ•…æ„ä¼¸åˆ°æ¨ä¸½æ™¶çš„çœ¼å‰ã€‚ 
 
-¡¡¡¡¡¸²»Òª£¡¡¹ÑîÀö¾§Á¢¿Ì°ÑÍ·×ª¹ýÈ¥¡£ 
+ã€€ã€€ã€Œä¸è¦ï¼ã€æ¨ä¸½æ™¶ç«‹åˆ»æŠŠå¤´è½¬è¿‡åŽ»ã€‚ 
 
-¡¡¡¡ÎÒÔÚËýµÄ±Ç×ÓÇ°£¬Ò¡»Î×ÅÊÖÖ¸£¬ËµµÀ¡Ã¡¸ÓÐºÜÏãµÄÎ¶µÀ°É£¿×Ô¼ºµÄ¶«Î÷ÅÂÊ² Ã´£¿¡¹ 
+ã€€ã€€æˆ‘åœ¨å¥¹çš„é¼»å­å‰ï¼Œæ‘‡æ™ƒç€æ‰‹æŒ‡ï¼Œè¯´é“âˆ¶ã€Œæœ‰å¾ˆé¦™çš„å‘³é“å§ï¼Ÿè‡ªå·±çš„ä¸œè¥¿æ€•ä»€ ä¹ˆï¼Ÿã€ 
 
-¡¡¡¡±»ÆÈÎÅµ½·ÖÃÚÎïÒì³£µÄÆøÎ¶£¬ÑîÀö¾§¾øÍûµÄÌ¾Ò»¿ÚÆø¡£ 
+ã€€ã€€è¢«è¿«é—»åˆ°åˆ†æ³Œç‰©å¼‚å¸¸çš„æ°”å‘³ï¼Œæ¨ä¸½æ™¶ç»æœ›çš„å¹ä¸€å£æ°”ã€‚ 
 
-¡¡¡¡¡¸ÉÏÃæµÄ×ì°ÍËµ²»Òª£¬µ«ÏÂÃæµÄ×ì°ÍÁ÷³öÅ¨ÃÜµÄÖ­Òº£¬Äã¾ÍÊÇ°Ú³öÉñÊ¥µÄÑù ×Ó£¬ÖÕ¾¿»¹ÊÇÒ»¸öºÃÉ«µÄÅ®ÈË¡£¡¹ÎÒµÄ»°°ÑÑîÀö¾§ÍÆÈëÐßÈèµÄÉîÔ¨Àï¡£ 
+ã€€ã€€ã€Œä¸Šé¢çš„å˜´å·´è¯´ä¸è¦ï¼Œä½†ä¸‹é¢çš„å˜´å·´æµå‡ºæµ“å¯†çš„æ±æ¶²ï¼Œä½ å°±æ˜¯æ‘†å‡ºç¥žåœ£çš„æ · å­ï¼Œç»ˆç©¶è¿˜æ˜¯ä¸€ä¸ªå¥½è‰²çš„å¥³äººã€‚ã€æˆ‘çš„è¯æŠŠæ¨ä¸½æ™¶æŽ¨å…¥ç¾žè¾±çš„æ·±æ¸Šé‡Œã€‚ 
 
-¡¡¡¡ÎÒ¼ÌÐø×·ÎÊ×Å¡Ã¡¸Äã²»·ñÈÏ°É£¿¡¹ 
+ã€€ã€€æˆ‘ç»§ç»­è¿½é—®ç€âˆ¶ã€Œä½ ä¸å¦è®¤å§ï¼Ÿã€ 
 
-¡¡¡¡¡¸ÎÒ²»ÊÇÄÇÖÖÅ®ÈË£¡¡¹ÑîÀö¾§µÄÑÛ¾¦º¬×ÅÀáË®£¬ÓÃ±¯Í´µÄÉùÒôËµ¡£ 
+ã€€ã€€ã€Œæˆ‘ä¸æ˜¯é‚£ç§å¥³äººï¼ã€æ¨ä¸½æ™¶çš„çœ¼ç›å«ç€æ³ªæ°´ï¼Œç”¨æ‚²ç—›çš„å£°éŸ³è¯´ã€‚ 
 
-¡¡¡¡¡¸ºÙºÙºÙ©©©©ÄÇÊÇÕæµÄÂð£¿Î¹£¡°ÑÆ¨¹ÉÌ§¸ßÒ»µã£¡¡¹ 
+ã€€ã€€ã€Œå˜¿å˜¿å˜¿â”…â”…é‚£æ˜¯çœŸçš„å—ï¼Ÿå–‚ï¼æŠŠå±è‚¡æŠ¬é«˜ä¸€ç‚¹ï¼ã€ 
 
-¡¡¡¡ÎÒÔÚË«ÊÖÉÏÓÃÁ¦£¬½«ËýÄÇ³ÉÊìµÄÆ¨¹É¸ß¸ßÍ¦Æð¡£ 
+ã€€ã€€æˆ‘åœ¨åŒæ‰‹ä¸Šç”¨åŠ›ï¼Œå°†å¥¹é‚£æˆç†Ÿçš„å±è‚¡é«˜é«˜æŒºèµ·ã€‚ 
 
-¡¡¡¡¡¸¶Ô©©©©¾ÍÊÇÕâÑù£¡¡¹ 
+ã€€ã€€ã€Œå¯¹â”…â”…å°±æ˜¯è¿™æ ·ï¼ã€ 
 
-¡¡¡¡ÎÒ´ÓËýµÄÆ¨¹Éºó·½£¬¿´×Å±©Â¶³öÀ´µÄÒõ´½£¬ÐÄÖÐÒ»¹É³å¶¯Ö®¸ÐÓÍÈ»¶øÉú¡£ÎÒ Ñ¸ËÙµØÍÑÏÂ¿ã×Ó£¬½«ÄÇÒýÒÔÎªÈÙµÄ¾ÞÅÚ¸ß¸ßµÄ¾ÙÆð¡£ 
+ã€€ã€€æˆ‘ä»Žå¥¹çš„å±è‚¡åŽæ–¹ï¼Œçœ‹ç€æš´éœ²å‡ºæ¥çš„é˜´å”‡ï¼Œå¿ƒä¸­ä¸€è‚¡å†²åŠ¨ä¹‹æ„Ÿæ²¹ç„¶è€Œç”Ÿã€‚æˆ‘ è¿…é€Ÿåœ°è„±ä¸‹è£¤å­ï¼Œå°†é‚£å¼•ä»¥ä¸ºè£çš„å·¨ç‚®é«˜é«˜çš„ä¸¾èµ·ã€‚ 
 
-¡¡¡¡ÎÒËµ¡Ã¡¸ÏëÒªÕâ¸ö¶«Î÷Âð£¿ÏëÒª¾ÍËµ³öÀ´¡£¡¹ 
+ã€€ã€€æˆ‘è¯´âˆ¶ã€Œæƒ³è¦è¿™ä¸ªä¸œè¥¿å—ï¼Ÿæƒ³è¦å°±è¯´å‡ºæ¥ã€‚ã€ 
 
-¡¡¡¡ÎÒÓÃÊÖÎÕ×¡Èâ°ô£¬°Ñ¹êÍ·¶ÔÕýËýµÄÆ¨¹É¹µ£¬È»ºóÂýÂýµØÉÏÏÂÄ¦²Á¡£ 
+ã€€ã€€æˆ‘ç”¨æ‰‹æ¡ä½è‚‰æ£’ï¼ŒæŠŠé¾Ÿå¤´å¯¹æ­£å¥¹çš„å±è‚¡æ²Ÿï¼Œç„¶åŽæ…¢æ…¢åœ°ä¸Šä¸‹æ‘©æ“¦ã€‚ 
 
-¡¡¡¡¡¸°¡£¡©©©©¡¹ 
+ã€€ã€€ã€Œå•Šï¼â”…â”…ã€ 
 
-¡¡¡¡ÑîÀö¾§µÄÆ¨¹ÉÔÚ²ü¶¶£¬ËýÒÑ¾­ÎÞ·¨Ë¼¿¼ºÍÅÐ¶Ï£¬´ÓÈâÌåÀïÓ¿³ö»ðÈÈµÄÇéÓû£¬ Ê¹µÃÑÛÇ°±ä³ÉÒ»Æ¬ëüëÊ¡£ 
+ã€€ã€€æ¨ä¸½æ™¶çš„å±è‚¡åœ¨é¢¤æŠ–ï¼Œå¥¹å·²ç»æ— æ³•æ€è€ƒå’Œåˆ¤æ–­ï¼Œä»Žè‚‰ä½“é‡Œæ¶Œå‡ºç«çƒ­çš„æƒ…æ¬²ï¼Œ ä½¿å¾—çœ¼å‰å˜æˆä¸€ç‰‡æœ¦èƒ§ã€‚ 
 
-¡¡¡¡¡¸ÄãÈô²»Ïë±»Ñ§Ð£¿ª³ýµÄ»°£¬Äã¿ìËµ£¬ÇóÎÒ¸øÄã²å½øÈ¥¡£¡¹ 
+ã€€ã€€ã€Œä½ è‹¥ä¸æƒ³è¢«å­¦æ ¡å¼€é™¤çš„è¯ï¼Œä½ å¿«è¯´ï¼Œæ±‚æˆ‘ç»™ä½ æ’è¿›åŽ»ã€‚ã€ 
 
-¡¡¡¡ÎÒºÁ²»ÁôÇéµØÒ»ÔÙ±ÆËý×ö³ö¾ö¶¨£¬ÆäÊµÄÇ¸ù±¾ÊÇ¶àâÅµÄ¡£ÏÖÔÚÎÒÖ»Òª½«Ñü²¿ Ò»Í¦£¬¼´¿É²åÈëËýµÄÐ¡Ñ¨ÖÐ£¬µ«ÊÇÎÒËùÒÔÕâÑù×ö£¬ÓÃÒâÔÚÓÚÈÃËýÐÄ·þ¿Ú·þ¶øÒÑ¡£ 
+ã€€ã€€æˆ‘æ¯«ä¸ç•™æƒ…åœ°ä¸€å†é€¼å¥¹åšå‡ºå†³å®šï¼Œå…¶å®žé‚£æ ¹æœ¬æ˜¯å¤šé¦€çš„ã€‚çŽ°åœ¨æˆ‘åªè¦å°†è…°éƒ¨ ä¸€æŒºï¼Œå³å¯æ’å…¥å¥¹çš„å°ç©´ä¸­ï¼Œä½†æ˜¯æˆ‘æ‰€ä»¥è¿™æ ·åšï¼Œç”¨æ„åœ¨äºŽè®©å¥¹å¿ƒæœå£æœè€Œå·²ã€‚ 
 
-¡¡¡¡¡¸Ö»ÓÐÒ»´Î£¬ÈÃÎÒ¸ÉÒ»´Î¾ÍÈÄÄã¡£¡¹ÎÒËµµÄ»°ÔÚÑîÀö¾§µÄÐÄÀïÅÌËã×Å¡£ 
+ã€€ã€€ã€Œåªæœ‰ä¸€æ¬¡ï¼Œè®©æˆ‘å¹²ä¸€æ¬¡å°±é¥¶ä½ ã€‚ã€æˆ‘è¯´çš„è¯åœ¨æ¨ä¸½æ™¶çš„å¿ƒé‡Œç›˜ç®—ç€ã€‚ 
 
-¡¡¡¡×îºó£¬ËýÇü·þÁË£¬ËýÇáÉùËµ×Å¡Ã¡¸²å°É£¡Çë´ó¼¦°Í²å½øÀ´°É£¡¡¹ÑîÀö¾§ËµÍê ÒÔºó£¬Ç¿ÁÒµÄÐß³Ü¸ÐÊ¹Ëý²»ÓÉµÃÅ¤¶¯ÉíÌå¡£ 
+ã€€ã€€æœ€åŽï¼Œå¥¹å±ˆæœäº†ï¼Œå¥¹è½»å£°è¯´ç€âˆ¶ã€Œæ’å§ï¼è¯·å¤§é¸¡å·´æ’è¿›æ¥å§ï¼ã€æ¨ä¸½æ™¶è¯´å®Œ ä»¥åŽï¼Œå¼ºçƒˆçš„ç¾žè€»æ„Ÿä½¿å¥¹ä¸ç”±å¾—æ‰­åŠ¨èº«ä½“ã€‚ 
 
-¡¡¡¡ÎÒËµ¡Ã¡¸Ã»ÓÐÌýÇå³þ£¬ÔÙËµÒ»´Î£¬µ«Õâ´ÎÒªÒ»ÃæËµ£¬Ò»Ãæ°Ú¶¯Æ¨¹É¡£¡¹ 
+ã€€ã€€æˆ‘è¯´âˆ¶ã€Œæ²¡æœ‰å¬æ¸…æ¥šï¼Œå†è¯´ä¸€æ¬¡ï¼Œä½†è¿™æ¬¡è¦ä¸€é¢è¯´ï¼Œä¸€é¢æ‘†åŠ¨å±è‚¡ã€‚ã€ 
 
-¡¡¡¡Ëý°§ÇóµÀ¡Ã¡¸Õâ©©©©ÇóÇóÄã£¬ÈÄÁËÎÒ°É©©©©¡¹ 
+ã€€ã€€å¥¹å“€æ±‚é“âˆ¶ã€Œè¿™â”…â”…æ±‚æ±‚ä½ ï¼Œé¥¶äº†æˆ‘å§â”…â”…ã€ 
 
-¡¡¡¡ÎÒËµ¡Ã¡¸Äã²»ÅÂÎÒ°ÑÕâ¼þÊÂ¸æËßÑ§Ð£µÄÀÏÊ¦Âð£¿¡¹ 
+ã€€ã€€æˆ‘è¯´âˆ¶ã€Œä½ ä¸æ€•æˆ‘æŠŠè¿™ä»¶äº‹å‘Šè¯‰å­¦æ ¡çš„è€å¸ˆå—ï¼Ÿã€ 
 
-¡¡¡¡ÑîÀö¾§ÐÄÀïÏë£¬ÏÖÔÚÊÇÃ»ÓÐ°ì·¨¾Ü¾øÁË©©©© 
+ã€€ã€€æ¨ä¸½æ™¶å¿ƒé‡Œæƒ³ï¼ŒçŽ°åœ¨æ˜¯æ²¡æœ‰åŠžæ³•æ‹’ç»äº†â”…â”… 
 
-¡¡¡¡¡¸Çë©©©©ÇëÓÃ´ó¼¦°Í²åÐ¡Ñ¨°É©©©©¡¹ËýÓÃ²ü¶¶µÄÉùÒôËµ×Å£¬ËµÍêºóÒ§×¡ÏÂ×ì ´½£¬ÂýÂýµÄÅ¤¶¯ÆðÆ¨¹É¡£ 
+ã€€ã€€ã€Œè¯·â”…â”…è¯·ç”¨å¤§é¸¡å·´æ’å°ç©´å§â”…â”…ã€å¥¹ç”¨é¢¤æŠ–çš„å£°éŸ³è¯´ç€ï¼Œè¯´å®ŒåŽå’¬ä½ä¸‹å˜´ å”‡ï¼Œæ…¢æ…¢çš„æ‰­åŠ¨èµ·å±è‚¡ã€‚ 
 
-¡¡¡¡¡¸ºÙºÙºÙ©©©©¡¹ÎÒÂ¶³öÒùÐ°µÄÐ¦ÈÝ£¬ÓÃÊÖÎÕ×¡Èâ°ô¶¥ÔÚ»¨°êÉÏ¡£ 
+ã€€ã€€ã€Œå˜¿å˜¿å˜¿â”…â”…ã€æˆ‘éœ²å‡ºæ·«é‚ªçš„ç¬‘å®¹ï¼Œç”¨æ‰‹æ¡ä½è‚‰æ£’é¡¶åœ¨èŠ±ç“£ä¸Šã€‚ 
 
-¡¡¡¡¡¸°¡£¡²»Òª©©©©¡¹ 
+ã€€ã€€ã€Œå•Šï¼ä¸è¦â”…â”…ã€ 
 
-¡¡¡¡ÑîÀö¾§ÏëÌÓ±Ü£¬¿ÉÊÇÎÒ´Ó±³ºóÓÃÁ¦±§×¡£¬ºÃÏñÒªÏíÊÜ²åÈë¸Ð°ãµÄÂýÂýÏòÇ°Í¦ ½ø£¬¾Þ´óµÄ¹êÍ·ÍÆ¿ªÈáÈíµÄÈâÃÅ½øÈëÀïÃæ¡£ 
+ã€€ã€€æ¨ä¸½æ™¶æƒ³é€ƒé¿ï¼Œå¯æ˜¯æˆ‘ä»ŽèƒŒåŽç”¨åŠ›æŠ±ä½ï¼Œå¥½åƒè¦äº«å—æ’å…¥æ„Ÿèˆ¬çš„æ…¢æ…¢å‘å‰æŒº è¿›ï¼Œå·¨å¤§çš„é¾Ÿå¤´æŽ¨å¼€æŸ”è½¯çš„è‚‰é—¨è¿›å…¥é‡Œé¢ã€‚ 
 
-¡¡¡¡¡¸Å¶©©©©¡¹ÌÛÍ´Ê¹ÑîÀö¾§ºßÒ»ÉùÒ§½ôÁËÑÀ¹Ø£¬¼òÖ±Ïñ¾Þ´óÄ¾°ôÇ¿ÆÈ´òÈëË«ÍÈ Ö®¼ä¡£ 
+ã€€ã€€ã€Œå“¦â”…â”…ã€ç–¼ç—›ä½¿æ¨ä¸½æ™¶å“¼ä¸€å£°å’¬ç´§äº†ç‰™å…³ï¼Œç®€ç›´åƒå·¨å¤§æœ¨æ£’å¼ºè¿«æ‰“å…¥åŒè…¿ ä¹‹é—´ã€‚ 
 
-¡¡¡¡¡¸Ì«´óÁËÂð£¿²»¹ýÂíÉÏ»áÏ°¹ßµÄ¡£¡¹ÎÒÏñÊ¤ÀûÕßÒ»Ñù£¬ËµÍê¾Í¸üÓÃÁ¦´ÌÈë¡£ 
+ã€€ã€€ã€Œå¤ªå¤§äº†å—ï¼Ÿä¸è¿‡é©¬ä¸Šä¼šä¹ æƒ¯çš„ã€‚ã€æˆ‘åƒèƒœåˆ©è€…ä¸€æ ·ï¼Œè¯´å®Œå°±æ›´ç”¨åŠ›åˆºå…¥ã€‚ 
 
-¡¡¡¡¡¸ßí©©©©¡¹Èâ°ôÉîÈëµÄ³å»÷£¬ÑîÀö¾§ÈÌ²»×¡ÑöÆðÍ·¡£ 
+ã€€ã€€ã€Œå””â”…â”…ã€è‚‰æ£’æ·±å…¥çš„å†²å‡»ï¼Œæ¨ä¸½æ™¶å¿ä¸ä½ä»°èµ·å¤´ã€‚ 
 
-¡¡¡¡ÎÒËµ¡Ã¡¸Í´Âð£¿²»¹ý²Å¸Õ½øÈ¥Ò»°ë¡£¡¹ 
+ã€€ã€€æˆ‘è¯´âˆ¶ã€Œç—›å—ï¼Ÿä¸è¿‡æ‰åˆšè¿›åŽ»ä¸€åŠã€‚ã€ 
 
-¡¡¡¡¡¸°¡©©©©ÔõÃ´¿ÉÄÜ£¿©©©©¡¹ÑîÀö¾§ÔÚÍ´¿àÖÐ¸Ðµ½¾ªÑÈ£¬µ«¾ÍÔÚÕâÊ±ºò£¬ËýÖª µÀÄÇÊÇÊÂÊµ£¬ÒòÎªÈâ°ô±È¸Õ²Å¸üÉîÈë¡£ 
+ã€€ã€€ã€Œå•Šâ”…â”…æ€Žä¹ˆå¯èƒ½ï¼Ÿâ”…â”…ã€æ¨ä¸½æ™¶åœ¨ç—›è‹¦ä¸­æ„Ÿåˆ°æƒŠè®¶ï¼Œä½†å°±åœ¨è¿™æ—¶å€™ï¼Œå¥¹çŸ¥ é“é‚£æ˜¯äº‹å®žï¼Œå› ä¸ºè‚‰æ£’æ¯”åˆšæ‰æ›´æ·±å…¥ã€‚ 
 
-¡¡¡¡¡¸ßí©©©©¡¹´óÍÈÖ®¼ä³äÂúÑ¹ÆÈ¸Ð£¬ÄÇÖÖ¸Ð¾õÖ±±ÆºíÍ·£¬ÑÛ¾¦¶¼²»ÄÜÕ£Ò»ÏÂ£¬ ÑîÀö¾§ÕÅ¿ª×ì£¬ÉíÌå´óÀíÊ¯Ò»ÑùÍ£ÔÚÄÇÀï²»ÄÜ¶¯¡£ 
+ã€€ã€€ã€Œå””â”…â”…ã€å¤§è…¿ä¹‹é—´å……æ»¡åŽ‹è¿«æ„Ÿï¼Œé‚£ç§æ„Ÿè§‰ç›´é€¼å–‰å¤´ï¼Œçœ¼ç›éƒ½ä¸èƒ½çœ¨ä¸€ä¸‹ï¼Œ æ¨ä¸½æ™¶å¼ å¼€å˜´ï¼Œèº«ä½“å¤§ç†çŸ³ä¸€æ ·åœåœ¨é‚£é‡Œä¸èƒ½åŠ¨ã€‚ 
 
-¡¡¡¡¡¸»¹Ã»ÓÐÕýÊ½¿ªÊ¼°¡©©©©¡¹ÎÒµÄ»°Ê¹ÑîÀö¾§µôÈë¾øÍûµÄÉîÔ¨Àï¡£ 
+ã€€ã€€ã€Œè¿˜æ²¡æœ‰æ­£å¼å¼€å§‹å•Šâ”…â”…ã€æˆ‘çš„è¯ä½¿æ¨ä¸½æ™¶æŽ‰å…¥ç»æœ›çš„æ·±æ¸Šé‡Œã€‚ 
 
-¡¡¡¡´Ö´óµÄÈâ°ôÇ°ºó»î¶¯Ê±£¬ÈáÈíµÄÈâ±Ú²øÔÚÉÏÃæ£¬Ëæ×ÅÈâ°ôµÄ½ø³ö¶ø·­Æð»òÏÝ Èë£¬Ã¿Ò»´Î£¬ÑîÀö¾§¶¼ÉîÉîÌ¾Ï¢£¬Ç¿ÁÒµÄ³å»÷¸Ð£¬Ê¹ËýÏÂ¸¹²¿¸Ð¾õµ½¿ìÒªÁÑ¿ªµÄ Ñù×Ó¡£ 
+ã€€ã€€ç²—å¤§çš„è‚‰æ£’å‰åŽæ´»åŠ¨æ—¶ï¼ŒæŸ”è½¯çš„è‚‰å£ç¼ åœ¨ä¸Šé¢ï¼Œéšç€è‚‰æ£’çš„è¿›å‡ºè€Œç¿»èµ·æˆ–é™· å…¥ï¼Œæ¯ä¸€æ¬¡ï¼Œæ¨ä¸½æ™¶éƒ½æ·±æ·±å¹æ¯ï¼Œå¼ºçƒˆçš„å†²å‡»æ„Ÿï¼Œä½¿å¥¹ä¸‹è…¹éƒ¨æ„Ÿè§‰åˆ°å¿«è¦è£‚å¼€çš„ æ ·å­ã€‚ 
 
-¡¡¡¡¡¸ÄãÂíÉÏ¾Í»á¾õµÃÊæ·þÁË£¡¡¹ÎÒ¿ªÊ¼·¢»Ó¾­¹ý°ÙÕ½µÄ¼¼ÇÉ£¬ÔÚÇ³´¦³ä·ÝÒ¡¶¯ ºó£¬Í»È»ÉîÈëµ½µ×£¬ËÀÃüµÄ½ôµÖ»¨ÐÄ²»¶¯¡£ 
+ã€€ã€€ã€Œä½ é©¬ä¸Šå°±ä¼šè§‰å¾—èˆ’æœäº†ï¼ã€æˆ‘å¼€å§‹å‘æŒ¥ç»è¿‡ç™¾æˆ˜çš„æŠ€å·§ï¼Œåœ¨æµ…å¤„å……ä»½æ‘‡åŠ¨ åŽï¼Œçªç„¶æ·±å…¥åˆ°åº•ï¼Œæ­»å‘½çš„ç´§æŠµèŠ±å¿ƒä¸åŠ¨ã€‚ 
 
-¡¡¡¡¾ÍÔÚÕâÑù¾²Ö¹¼¸ÃëÖÓÒÔºó£¬ÓÖÂýÂý½«Èâ°ôÏòÍâ³é³ö£¬Í¬Ê±£¬´Ö´óµÄÊÖÖ¸ÔÚ×î Ãô¸ÐµÄÒõºËÉÏ´øÓÐ½Ú×àÇ¿ÈõµÄÈà´ê¡£ 
+ã€€ã€€å°±åœ¨è¿™æ ·é™æ­¢å‡ ç§’é’Ÿä»¥åŽï¼Œåˆæ…¢æ…¢å°†è‚‰æ£’å‘å¤–æŠ½å‡ºï¼ŒåŒæ—¶ï¼Œç²—å¤§çš„æ‰‹æŒ‡åœ¨æœ€ æ•æ„Ÿçš„é˜´æ ¸ä¸Šå¸¦æœ‰èŠ‚å¥å¼ºå¼±çš„æ‰æ“ã€‚ 
 
-¡¡¡¡Ã¿Ò»´Î¶¼Ê¹ÑîÀö¾§ÏñÄ¾Å¼Ò»ÑùµÄÅ¤¶¯Æ¨¹É£¬·¢¾õ¹êÍ·Åöµ½×Ó¹¬ÉÏ£¬ÑîÀö¾§²» ÓÉµÃ·¢³öÒ°Ã¨°ãµÄºßÉù¡£ 
+ã€€ã€€æ¯ä¸€æ¬¡éƒ½ä½¿æ¨ä¸½æ™¶åƒæœ¨å¶ä¸€æ ·çš„æ‰­åŠ¨å±è‚¡ï¼Œå‘è§‰é¾Ÿå¤´ç¢°åˆ°å­å®«ä¸Šï¼Œæ¨ä¸½æ™¶ä¸ ç”±å¾—å‘å‡ºé‡ŽçŒ«èˆ¬çš„å“¼å£°ã€‚ 
 
-¡¡¡¡ÎÒÒ»Ãæ³é²å£¬Ò»Ãæ´ÓÒÂ·þÉÏ×¥×¡Èé·¿²»Í£µØ´êÈà×ÅËýµÄÈéÍ·¡£ 
+ã€€ã€€æˆ‘ä¸€é¢æŠ½æ’ï¼Œä¸€é¢ä»Žè¡£æœä¸ŠæŠ“ä½ä¹³æˆ¿ä¸åœåœ°æ“æ‰ç€å¥¹çš„ä¹³å¤´ã€‚ 
 
-¡¡¡¡¡¸°¡©©©©¡¹ÑîÀöÝ¼ºÃÏñÊÜµ½µç»÷°ã£¬·¢³öºßÉùµÄÍ¬Ê±£¬ÉíÌåÏñ²¨ÀËÒ»Ñù²»Í£ µØÆð·ü£¬ÏÂÒâÊ¶ÀïÏ£ÍûÄÜ¸§ÃþµÄÈé·¿ÊÜµ½¹¥»÷£¬ÉíÌåÀïÈÌ²»×¡Ó¿³öÃÀÃî¸Ð¡£ 
+ã€€ã€€ã€Œå•Šâ”…â”…ã€æ¨ä¸½èå¥½åƒå—åˆ°ç”µå‡»èˆ¬ï¼Œå‘å‡ºå“¼å£°çš„åŒæ—¶ï¼Œèº«ä½“åƒæ³¢æµªä¸€æ ·ä¸åœ åœ°èµ·ä¼ï¼Œä¸‹æ„è¯†é‡Œå¸Œæœ›èƒ½æŠšæ‘¸çš„ä¹³æˆ¿å—åˆ°æ”»å‡»ï¼Œèº«ä½“é‡Œå¿ä¸ä½æ¶Œå‡ºç¾Žå¦™æ„Ÿã€‚ 
 
-¡¡¡¡µ±ÎÒ¿´µ½ËýÄÇÒùµ´µÄ±íÇé£¬¼¤ÆðÁËÇ¿ÁÒµÄÕ÷·þÓû£¬ÎÒ¸üÓÃÁ¦µÄÈà´êÈé·¿£¬ÏÂ ÃæµÄÈâ°ôÒ²¸ü¿ìËÙµÄ³éËÍ×Å¡£ 
+ã€€ã€€å½“æˆ‘çœ‹åˆ°å¥¹é‚£æ·«è¡çš„è¡¨æƒ…ï¼Œæ¿€èµ·äº†å¼ºçƒˆçš„å¾æœæ¬²ï¼Œæˆ‘æ›´ç”¨åŠ›çš„æ‰æ“ä¹³æˆ¿ï¼Œä¸‹ é¢çš„è‚‰æ£’ä¹Ÿæ›´å¿«é€Ÿçš„æŠ½é€ç€ã€‚ 
 
-¡¡¡¡¡¸°¡©©©©ÈÄÁËÎÒ°É£¡¡¹ÑîÀö¾§Æ´ÃüÒ§½ôÑÀ¹Ø£¬µÖ¿¹Ô½À´Ô½Ç¿ÁÒµÄ¿ì¸Ð¡£ 
+ã€€ã€€ã€Œå•Šâ”…â”…é¥¶äº†æˆ‘å§ï¼ã€æ¨ä¸½æ™¶æ‹¼å‘½å’¬ç´§ç‰™å…³ï¼ŒæŠµæŠ—è¶Šæ¥è¶Šå¼ºçƒˆçš„å¿«æ„Ÿã€‚ 
 
-¡¡¡¡¿ÉÊÇµ±±³ºóÓÐ¾Þ´óÈâ°ôÃÍÁÒ´ÌÈëÊ±£¬Ò§½ôµÄÑÀ¹ØÒ²²»ÓÉµÃËÉ¿ª£¬²úÉú»èÃÔµÄ ¸Ð¾õ¡£¶ÔÕâÀïÊÇÑ§Ð£µÄÑµµ¼ÊÒÕâÑùµÄÊÂÊµºÃÏñÒÑ¾­²»´æÔÚ£¬ÏÖÔÚµÄÑîÀö¾§¼¸ºõÒª ±ä³ÉÒùµ´µÄÒ°ÊÞ¡£ 
+ã€€ã€€å¯æ˜¯å½“èƒŒåŽæœ‰å·¨å¤§è‚‰æ£’çŒ›çƒˆåˆºå…¥æ—¶ï¼Œå’¬ç´§çš„ç‰™å…³ä¹Ÿä¸ç”±å¾—æ¾å¼€ï¼Œäº§ç”Ÿæ˜è¿·çš„ æ„Ÿè§‰ã€‚å¯¹è¿™é‡Œæ˜¯å­¦æ ¡çš„è®­å¯¼å®¤è¿™æ ·çš„äº‹å®žå¥½åƒå·²ç»ä¸å­˜åœ¨ï¼ŒçŽ°åœ¨çš„æ¨ä¸½æ™¶å‡ ä¹Žè¦ å˜æˆæ·«è¡çš„é‡Žå…½ã€‚ 
 
-¡¡¡¡¡¸ºÙºÙºÙ©©©©¿ªÊ¼¸Ï¹¤ÁË£¡¡¹ÑîÀö¾§ºÃÏñÒÑ¾­Ìý²»µ½ÎÒËµµÄ»°£¬Ö»ÊÇÒ»Î¶Í¦ ËÍ×ÅÍÎ²¿Ó­ºÏÎÒµÄ³å×²¡£ 
+ã€€ã€€ã€Œå˜¿å˜¿å˜¿â”…â”…å¼€å§‹èµ¶å·¥äº†ï¼ã€æ¨ä¸½æ™¶å¥½åƒå·²ç»å¬ä¸åˆ°æˆ‘è¯´çš„è¯ï¼Œåªæ˜¯ä¸€å‘³æŒº é€ç€è‡€éƒ¨è¿Žåˆæˆ‘çš„å†²æ’žã€‚ 
 
-¡¡¡¡ÎÒÒâÍâµÄ·¢¾õÑîÀö¾§ºÜ¿ì¾ÍË³´ÓÁË£¬¶øÇÒºÜÓÐ·´Ó¦£¬ÐÄÀï¸Ðµ½Ê®·ÖµÃÒâ£¬ÐÄ Àï²»½ûÅÌËã×Å¡Ã¡¸Õâ¸öÅ®ÈËºÜÓÐËØÖÊ£¬¿´Ñù×Ó¿ÉÒÔºÃºÃµÄµ÷½ÌÒ»·¬©©©©¡¹ 
+ã€€ã€€æˆ‘æ„å¤–çš„å‘è§‰æ¨ä¸½æ™¶å¾ˆå¿«å°±é¡ºä»Žäº†ï¼Œè€Œä¸”å¾ˆæœ‰ååº”ï¼Œå¿ƒé‡Œæ„Ÿåˆ°ååˆ†å¾—æ„ï¼Œå¿ƒ é‡Œä¸ç¦ç›˜ç®—ç€âˆ¶ã€Œè¿™ä¸ªå¥³äººå¾ˆæœ‰ç´ è´¨ï¼Œçœ‹æ ·å­å¯ä»¥å¥½å¥½çš„è°ƒæ•™ä¸€ç•ªâ”…â”…ã€ 
 
-¡¡¡¡ÕâÊ±£¬ÎÒ¿ªÊ¼×ö×îºóµÄÁÏÀí£¬Ë«ÊÖ±§×¡Ëý·áÂúµÄÆ¨¹É£¬ÊÖÖ¸½ô×¥×Å¼¸ºõÒªÁô ÏÂÑªºÛ£¬Èâ°ô½ø³öµÄËÙ¶ÈÖð½¥¼Ó¿ì¡£ 
+ã€€ã€€è¿™æ—¶ï¼Œæˆ‘å¼€å§‹åšæœ€åŽçš„æ–™ç†ï¼ŒåŒæ‰‹æŠ±ä½å¥¹ä¸°æ»¡çš„å±è‚¡ï¼Œæ‰‹æŒ‡ç´§æŠ“ç€å‡ ä¹Žè¦ç•™ ä¸‹è¡€ç—•ï¼Œè‚‰æ£’è¿›å‡ºçš„é€Ÿåº¦é€æ¸åŠ å¿«ã€‚ 
 
-¡¡¡¡Ëý¸ß¸ßÍ¦ÆðÑ©°×µÄÆ¨¹É£¬ºó±³ÏòÉÏ·­×ª£¬¹â»¬µÄ¶Ç×ÓÏò²¨ÀËÒ»ÑùÆð·ü£¬ÉíÌå ¿ªÊ¼·´Ó¦£¬Ã¿µ±ÎÒÉîÉî²åÈëÊ±£¬Ëý¾Í·¢³öÒùµ´µÄºßÉù£¬ÖåÆðÃÀÀöµÄÃ¼Í·¡£ 
+ã€€ã€€å¥¹é«˜é«˜æŒºèµ·é›ªç™½çš„å±è‚¡ï¼ŒåŽèƒŒå‘ä¸Šç¿»è½¬ï¼Œå…‰æ»‘çš„è‚šå­å‘æ³¢æµªä¸€æ ·èµ·ä¼ï¼Œèº«ä½“ å¼€å§‹ååº”ï¼Œæ¯å½“æˆ‘æ·±æ·±æ’å…¥æ—¶ï¼Œå¥¹å°±å‘å‡ºæ·«è¡çš„å“¼å£°ï¼Œçš±èµ·ç¾Žä¸½çš„çœ‰å¤´ã€‚ 
 
-¡¡¡¡Èç½ñÁ¬²åÔÚÏÂÌåÀïµÄ´Ö´óÈâ°ôËù´øÀ´µÄÅòÕÍ¸Ð£¬Ò²¸Ðµ½ºÜÊæ·þ£¬Ëæ×Å³é²åËÙ ¶ÈµÄ¼Ó¿ì£¬ÑîÀö¾§ÏÂÌåµÄ¿ì¸ÐÒ²¸ú×ÅÑ¸ËÙÅòÕÍ¡£ 
+ã€€ã€€å¦‚ä»Šè¿žæ’åœ¨ä¸‹ä½“é‡Œçš„ç²—å¤§è‚‰æ£’æ‰€å¸¦æ¥çš„è†¨èƒ€æ„Ÿï¼Œä¹Ÿæ„Ÿåˆ°å¾ˆèˆ’æœï¼Œéšç€æŠ½æ’é€Ÿ åº¦çš„åŠ å¿«ï¼Œæ¨ä¸½æ™¶ä¸‹ä½“çš„å¿«æ„Ÿä¹Ÿè·Ÿç€è¿…é€Ÿè†¨èƒ€ã€‚ 
 
-¡¡¡¡¡¸ßí©©©©ßí©©©©¡¹´Ó±Ç¿×·¢³öºßÉù£¬ÊÖÖ¸ÓÃÁ¦×¥×ÅµØÌº£¬ÎÒÄÇ³¤´ïÊ®Îå¹«·Ö µÄÐÛÎ°Èâ°ô£¬ÔÚÑîÀö¾§µÄÈâ¶´ÀïÃÍÁÒ½ø³ö£¬¼¸ºõÎÞ·¨ºôÎüµÄÍ´¿àºÍÇ¿ÁÒµÄ¿ì¸Ð»ì ÔÚÒ»Æð£¬ÑîÀö¾§±»´øµ½¹ýÈ¥´ÓÃ»ÓÐ¾­Ñé¹ýµÄÐÔ¸Ð¸ß·å¡£ 
+ã€€ã€€ã€Œå””â”…â”…å””â”…â”…ã€ä»Žé¼»å­”å‘å‡ºå“¼å£°ï¼Œæ‰‹æŒ‡ç”¨åŠ›æŠ“ç€åœ°æ¯¯ï¼Œæˆ‘é‚£é•¿è¾¾åäº”å…¬åˆ† çš„é›„ä¼Ÿè‚‰æ£’ï¼Œåœ¨æ¨ä¸½æ™¶çš„è‚‰æ´žé‡ŒçŒ›çƒˆè¿›å‡ºï¼Œå‡ ä¹Žæ— æ³•å‘¼å¸çš„ç—›è‹¦å’Œå¼ºçƒˆçš„å¿«æ„Ÿæ·· åœ¨ä¸€èµ·ï¼Œæ¨ä¸½æ™¶è¢«å¸¦åˆ°è¿‡åŽ»ä»Žæ²¡æœ‰ç»éªŒè¿‡çš„æ€§æ„Ÿé«˜å³°ã€‚ 
 
-¡¡¡¡¡¸ºÙºÙ£¡ÒªÐ¹³öÀ´ÁË°É£¿¡¹ 
+ã€€ã€€ã€Œå˜¿å˜¿ï¼è¦æ³„å‡ºæ¥äº†å§ï¼Ÿã€ 
 
-¡¡¡¡·áÂúµÄÆ¨¹ÉÒòÇ¿ÁÒµÄ³å×²¶ø·¢³öÆæÃîµÄÉùÒô£¬¶îÍ·ÉÏÂúÊÇº¹ÖéµÄÎÒ£¬¿ªÊ¼½ø Èë×îºó³å»÷¡£ 
+ã€€ã€€ä¸°æ»¡çš„å±è‚¡å› å¼ºçƒˆçš„å†²æ’žè€Œå‘å‡ºå¥‡å¦™çš„å£°éŸ³ï¼Œé¢å¤´ä¸Šæ»¡æ˜¯æ±—ç çš„æˆ‘ï¼Œå¼€å§‹è¿› å…¥æœ€åŽå†²å‡»ã€‚ 
 
-¡¡¡¡¡¸°¡©©©©°¡©©©©ÄÇÀïÒª»µÁË©©©©ÈÄÁËÎÒ°É©©©©¡¹ 
+ã€€ã€€ã€Œå•Šâ”…â”…å•Šâ”…â”…é‚£é‡Œè¦åäº†â”…â”…é¥¶äº†æˆ‘å§â”…â”…ã€ 
 
-¡¡¡¡ËýÐÄÀïËäÈ»¶ÔÎÒ»¹ÓÐÑá¶ñ¸Ð£¬µ«ÕâÖÖ¸Ð¾õºÜ¿ì¾Í±»ÄÇ¹ÉÇ¿ÁÒµÄ¿ì¸ÐËùÈ¡´ú¡£ 
+ã€€ã€€å¥¹å¿ƒé‡Œè™½ç„¶å¯¹æˆ‘è¿˜æœ‰åŽŒæ¶æ„Ÿï¼Œä½†è¿™ç§æ„Ÿè§‰å¾ˆå¿«å°±è¢«é‚£è‚¡å¼ºçƒˆçš„å¿«æ„Ÿæ‰€å–ä»£ã€‚ 
 
-¡¡¡¡¡¸À´ÁË£¡¡¹ÎÒÒùÐ°µÄ´óºðÒ»Éù£¬¹êÍ·ÉîÉî½øÈëµ½×Ó¹¬¡£ 
+ã€€ã€€ã€Œæ¥äº†ï¼ã€æˆ‘æ·«é‚ªçš„å¤§å¼ä¸€å£°ï¼Œé¾Ÿå¤´æ·±æ·±è¿›å…¥åˆ°å­å®«ã€‚ 
 
-¡¡¡¡¡¸°¡©©©©°¥Ó´©©©©°¡©©©©¡¹ÑîÀö¾§·¢³ö²Ò½ÐÉù£¬È«Éí¿ªÊ¼²ü¶¶£¬ÑÛ¾¦ÀïÏñÊÇ ÓÐÉÁ¹â±¬Õ¨£¬È«Éí±»Ä°ÉúµÄÐÔ¸Ð¸ß³±ÍÌÃ»¡£ 
+ã€€ã€€ã€Œå•Šâ”…â”…å“Žå“Ÿâ”…â”…å•Šâ”…â”…ã€æ¨ä¸½æ™¶å‘å‡ºæƒ¨å«å£°ï¼Œå…¨èº«å¼€å§‹é¢¤æŠ–ï¼Œçœ¼ç›é‡Œåƒæ˜¯ æœ‰é—ªå…‰çˆ†ç‚¸ï¼Œå…¨èº«è¢«é™Œç”Ÿçš„æ€§æ„Ÿé«˜æ½®åžæ²¡ã€‚ 
 
-¡¡¡¡ÎÒÔÚÕâ¸öÊ±ºò£¬ÈÔ¾É²»Í£µÄ³é²å£¬ËýºÜ¿ì±»ËÍÉÏµÚ¶þ´ÎµÄ¸ß³±¾ø¶¥£¬¾õµÃÈ« ÉíºÃÏñÒªÆÆËé°ã¡£ 
+ã€€ã€€æˆ‘åœ¨è¿™ä¸ªæ—¶å€™ï¼Œä»æ—§ä¸åœçš„æŠ½æ’ï¼Œå¥¹å¾ˆå¿«è¢«é€ä¸Šç¬¬äºŒæ¬¡çš„é«˜æ½®ç»é¡¶ï¼Œè§‰å¾—å…¨ èº«å¥½åƒè¦ç ´ç¢Žèˆ¬ã€‚ 
 
-¡¡¡¡¡¸ºÙºÙ£¡ÔÙÐ¹³öÀ´Ò»´Î°É£¡¡¹ÔÚÎÒÃÍÁÒµÄ³å»÷ÏÂ£¬ÑîÀö¾§½øÈëµÚÈý´Î¸ß³±¡£ 
+ã€€ã€€ã€Œå˜¿å˜¿ï¼å†æ³„å‡ºæ¥ä¸€æ¬¡å§ï¼ã€åœ¨æˆ‘çŒ›çƒˆçš„å†²å‡»ä¸‹ï¼Œæ¨ä¸½æ™¶è¿›å…¥ç¬¬ä¸‰æ¬¡é«˜æ½®ã€‚ 
 
-¡¡¡¡¡¸ÎØ©©©©ÎØ©©©©ÒªËÀÁË©©©©¡¹ÔÚÁ¬Ðø²»¶ÏµÄ¸ß³±ÖÐ£¬ÑîÀö¾§²»¹ËÒ»ÇÐµØ·¢³ö ¿ÞÉù¡£ 
+ã€€ã€€ã€Œå‘œâ”…â”…å‘œâ”…â”…è¦æ­»äº†â”…â”…ã€åœ¨è¿žç»­ä¸æ–­çš„é«˜æ½®ä¸­ï¼Œæ¨ä¸½æ™¶ä¸é¡¾ä¸€åˆ‡åœ°å‘å‡º å“­å£°ã€‚ 
 
-¡¡¡¡ÎÒ´ÓÈâ°ô¸ÐÊÜµ½Èâ¶´Á¬Ðø´ïµ½¸ß³±µÄ¾·ÂÎ£¬ÕâÊ±ÎÒ½«Èâ°ô¼²ËÙµÄÍù»¨ÐÄÃÍ¶¥ Ò»Õóºó£¬²Å½«¾«ÒºÉäÈëÑîÀö¾§µÄÉíÌåÀï¡£ 
+ã€€ã€€æˆ‘ä»Žè‚‰æ£’æ„Ÿå—åˆ°è‚‰æ´žè¿žç»­è¾¾åˆ°é«˜æ½®çš„ç—‰æŒ›ï¼Œè¿™æ—¶æˆ‘å°†è‚‰æ£’ç–¾é€Ÿçš„å¾€èŠ±å¿ƒçŒ›é¡¶ ä¸€é˜µåŽï¼Œæ‰å°†ç²¾æ¶²å°„å…¥æ¨ä¸½æ™¶çš„èº«ä½“é‡Œã€‚ 
 
-¡¡¡¡¡¸ÒÔºó£¬ÄãÊÇÎÒµÄÅ®ÈËÁË£¡¡¹°Î³öÕ´ÂúÃÛÖ­µÄÈâ°ôÊ±£¬ÑîÀö¾§ÈíÃàÃàµÄµ¹ÔÚ µØÉÏ£¬ÔÚ¿ìÀÖµÄâÅÔÏÖÐ£¬Å¼¶û»áÊ¹ÉíÌå²ü¶¶£¬Í¬Ê±´Ó´óÍÈ¸ùµÄÉî´¦£¬Á÷³öÖ¤Ã÷ÊÜ µ½ÁèÈèµÄ°××ÇÒºÌå£¬ÔÚµØÌºÉÏÐÎ³ÉµØÍ¼°ãµÄºÛ¼£¡£ 
+ã€€ã€€ã€Œä»¥åŽï¼Œä½ æ˜¯æˆ‘çš„å¥³äººäº†ï¼ã€æ‹”å‡ºæ²¾æ»¡èœœæ±çš„è‚‰æ£’æ—¶ï¼Œæ¨ä¸½æ™¶è½¯ç»µç»µçš„å€’åœ¨ åœ°ä¸Šï¼Œåœ¨å¿«ä¹çš„é¦€éŸµä¸­ï¼Œå¶å°”ä¼šä½¿èº«ä½“é¢¤æŠ–ï¼ŒåŒæ—¶ä»Žå¤§è…¿æ ¹çš„æ·±å¤„ï¼Œæµå‡ºè¯æ˜Žå— åˆ°å‡Œè¾±çš„ç™½æµŠæ¶²ä½“ï¼Œåœ¨åœ°æ¯¯ä¸Šå½¢æˆåœ°å›¾èˆ¬çš„ç—•è¿¹ã€‚ 
 
-¡¡¡¡ÎÒÉîÉîµØºôÁËÒ»¿ÚÆø£¬ºÃÏñÍê³ÉÒ»Ïî¼è¾çµÄÈÎÎñ£¬ÍäÑü¼ðÆðÉ¢ÂäÔÚµØÉÏµÄÒÂ ·þ£¬±ß´©±ß×¢ÊÓ×ÅËý¡£ 
+ã€€ã€€æˆ‘æ·±æ·±åœ°å‘¼äº†ä¸€å£æ°”ï¼Œå¥½åƒå®Œæˆä¸€é¡¹è‰°å‰§çš„ä»»åŠ¡ï¼Œå¼¯è…°æ‹£èµ·æ•£è½åœ¨åœ°ä¸Šçš„è¡£ æœï¼Œè¾¹ç©¿è¾¹æ³¨è§†ç€å¥¹ã€‚ 
 
-¡¡¡¡ÑîÀö¾§Ä¬Ä¬µÄ´©ÉÏÒÂ·þ£¬ÂýÂýµÄ×ßÁË³öÈ¥£¬ÎÒ¿´×ÅËýµÄ±³Ó°£¬Ö±µ½ËýÏûÊ§ÔÚ Å®Éú¸üÒÂÊÒÊ±£¬²Å´Ó»Ðã±ÖÐ¾õÐÑ¹ýÀ´¡£ 
+ã€€ã€€æ¨ä¸½æ™¶é»˜é»˜çš„ç©¿ä¸Šè¡£æœï¼Œæ…¢æ…¢çš„èµ°äº†å‡ºåŽ»ï¼Œæˆ‘çœ‹ç€å¥¹çš„èƒŒå½±ï¼Œç›´åˆ°å¥¹æ¶ˆå¤±åœ¨ å¥³ç”Ÿæ›´è¡£å®¤æ—¶ï¼Œæ‰ä»Žææƒšä¸­è§‰é†’è¿‡æ¥ã€‚ 
 
-¡¡¡¡ÎÒ´ò¿ªÁËÃÅ£¬×ßÁË³öÈ¥£¬ËÆºõÌý¼ûÔÚÅ®Éú¸üÒÂÊÒÓÐÈËÔÚ¿ÞÆü£¬ÎÒÖªµÀÒ»¶¨ÊÇ ËýÁË£¬ÎÒÕæÏëÔÙ¸ÉËýÒ»´Î¡£ 
+ã€€ã€€æˆ‘æ‰“å¼€äº†é—¨ï¼Œèµ°äº†å‡ºåŽ»ï¼Œä¼¼ä¹Žå¬è§åœ¨å¥³ç”Ÿæ›´è¡£å®¤æœ‰äººåœ¨å“­æ³£ï¼Œæˆ‘çŸ¥é“ä¸€å®šæ˜¯ å¥¹äº†ï¼Œæˆ‘çœŸæƒ³å†å¹²å¥¹ä¸€æ¬¡ã€‚ 
 
-¡¡¡¡ÎÒÏÂÁËÂ¥£¬×øÔÚÒ»Â¥Â¥ÌÝÉÏµÈËý£¬Ïë¸úËýËµÉù¡¸¶Ô²»Æð£¬ÎÒ²»ÊÇ¹ÊÒâµÄ£¡¡¹ ¿ÉÊÇµÈÁËºÃ¾Ã£¬Ò»Ö±µ½ÖÓÉùÒ²ÏìÁË£¬ÉÏ¿ÎÁË£¬»¹ÊÇ²»¼ûËýÏÂÀ´¡£ 
+ã€€ã€€æˆ‘ä¸‹äº†æ¥¼ï¼Œååœ¨ä¸€æ¥¼æ¥¼æ¢¯ä¸Šç­‰å¥¹ï¼Œæƒ³è·Ÿå¥¹è¯´å£°ã€Œå¯¹ä¸èµ·ï¼Œæˆ‘ä¸æ˜¯æ•…æ„çš„ï¼ã€ å¯æ˜¯ç­‰äº†å¥½ä¹…ï¼Œä¸€ç›´åˆ°é’Ÿå£°ä¹Ÿå“äº†ï¼Œä¸Šè¯¾äº†ï¼Œè¿˜æ˜¯ä¸è§å¥¹ä¸‹æ¥ã€‚ 
 
-¡¡¡¡ÔÚÕâ¶ÎÊ±Àï£¬ÎÒ»ØÏë¸Õ²ÅµÄÄÇÒ»Ä»©©©© 
+ã€€ã€€åœ¨è¿™æ®µæ—¶é‡Œï¼Œæˆ‘å›žæƒ³åˆšæ‰çš„é‚£ä¸€å¹•â”…â”… 
 
-¡¡¡¡¡¸ÑîÀö¾§£¬³¤µÃÂùÇåÐã£¬Éí²ÄÒ²ÂùºÃµÄ£¬ÆäÊµ£¬ÎÒ¿´µ½µÄµØ·½ÇÒ¶àÁË©©©©Ëý ´©µÄÄÇ¼þÈý½Ç¿ãºÃÎüÒýÈËÅ¶£¬¿ÉÄÜÊÇÃÞ»¨×ö³ÉµÄ£¬ÄÇµØ·½µÄÃ«¶¼ÈôÒþÈôÏÖ£¬Á½¿Å ÓñÈéÒ²Âù´óµÄ£¬ÄÇ¸öÄÌÕÖ¼¸ºõ¿ìÕÖ²»×¡ÁË©©©©¡¹ 
+ã€€ã€€ã€Œæ¨ä¸½æ™¶ï¼Œé•¿å¾—è›®æ¸…ç§€ï¼Œèº«æä¹Ÿè›®å¥½çš„ï¼Œå…¶å®žï¼Œæˆ‘çœ‹åˆ°çš„åœ°æ–¹ä¸”å¤šäº†â”…â”…å¥¹ ç©¿çš„é‚£ä»¶ä¸‰è§’è£¤å¥½å¸å¼•äººå“¦ï¼Œå¯èƒ½æ˜¯æ£‰èŠ±åšæˆçš„ï¼Œé‚£åœ°æ–¹çš„æ¯›éƒ½è‹¥éšè‹¥çŽ°ï¼Œä¸¤é¢— çŽ‰ä¹³ä¹Ÿè›®å¤§çš„ï¼Œé‚£ä¸ªå¥¶ç½©å‡ ä¹Žå¿«ç½©ä¸ä½äº†â”…â”…ã€ 
 
-¡¡¡¡ÎÒÕý»ØÒäµ½Ò»°ëÊ±£¬Â¥ÉÏ´«À´³ÁÖØµÄ½Å²½Éù£¬ÎÒÖªµÀÓÐÈËÏÂÀ´ÁË¡£ 
+ã€€ã€€æˆ‘æ­£å›žå¿†åˆ°ä¸€åŠæ—¶ï¼Œæ¥¼ä¸Šä¼ æ¥æ²‰é‡çš„è„šæ­¥å£°ï¼Œæˆ‘çŸ¥é“æœ‰äººä¸‹æ¥äº†ã€‚ 
 
-¡¡¡¡¡¸Ó¦¸ÃÊÇÑîÀö¾§°É£¿ÕýºÃ©©©©Ë³±ãÔ¼¶¨ÏÂ´ÎÅöÃæµÄÊ±¼ä©©©©¡¹ 
+ã€€ã€€ã€Œåº”è¯¥æ˜¯æ¨ä¸½æ™¶å§ï¼Ÿæ­£å¥½â”…â”…é¡ºä¾¿çº¦å®šä¸‹æ¬¡ç¢°é¢çš„æ—¶é—´â”…â”…ã€ 
 
-¡¡¡¡ÎÒ»ØÍ·Ò»¿´£¬È´³öÏÖÁíÒ»ÕÅÆ¯ÁÁµÄÌìÊ¹Ãæ¿×£¬ËýÁô×Å³¤³¤µÄÍ··¢£¬´©×ÅÌåÓý ·þ×°£¬ÎÒ×¢Òâµ½ËýµÄË«ÑÛË®ÍôÍôµÄ£¬ËýµÍ×ÅÍ·²»¶ÏÔÚµØÃæÉÏÑ°ÕÒ£¬ºÃÏñ¸Õ¸ÕÊ§È¥ ¹óÖØµÄ¶«Î÷¡£ 
+ã€€ã€€æˆ‘å›žå¤´ä¸€çœ‹ï¼Œå´å‡ºçŽ°å¦ä¸€å¼ æ¼‚äº®çš„å¤©ä½¿é¢å­”ï¼Œå¥¹ç•™ç€é•¿é•¿çš„å¤´å‘ï¼Œç©¿ç€ä½“è‚² æœè£…ï¼Œæˆ‘æ³¨æ„åˆ°å¥¹çš„åŒçœ¼æ°´æ±ªæ±ªçš„ï¼Œå¥¹ä½Žç€å¤´ä¸æ–­åœ¨åœ°é¢ä¸Šå¯»æ‰¾ï¼Œå¥½åƒåˆšåˆšå¤±åŽ» è´µé‡çš„ä¸œè¥¿ã€‚ 
 
-¡¡¡¡ÎÒËµÁË¡Ã¡¸ÃÀÅ®£¬Äã½ÐÊ²Ã´Ãû×Ö£¿ÄãÔÚÕÒÊ²Ã´£¿ÐèÒªÎÒ°ïÃ¦Âð£¿¡¹µ«ËýÂùÓÐ ¸öÐÔµÄ£¬Á¬¿´¶¼²»¿´ÎÒÒ»ÑÛ¡£ 
+ã€€ã€€æˆ‘è¯´äº†âˆ¶ã€Œç¾Žå¥³ï¼Œä½ å«ä»€ä¹ˆåå­—ï¼Ÿä½ åœ¨æ‰¾ä»€ä¹ˆï¼Ÿéœ€è¦æˆ‘å¸®å¿™å—ï¼Ÿã€ä½†å¥¹è›®æœ‰ ä¸ªæ€§çš„ï¼Œè¿žçœ‹éƒ½ä¸çœ‹æˆ‘ä¸€çœ¼ã€‚ 
 
-¡¡¡¡ÎÒ©©©©°¥£¡ÎÒÀã×¡ÁË£¬Ò»Ö±Íû×ÅËýµÄ±³Ó°ÏûÊ§ÔÚÕâÌõ³¤³¤µÄ×ßÀÈ¾¡Í·©©©© 
+ã€€ã€€æˆ‘â”…â”…å“Žï¼æˆ‘æ¥žä½äº†ï¼Œä¸€ç›´æœ›ç€å¥¹çš„èƒŒå½±æ¶ˆå¤±åœ¨è¿™æ¡é•¿é•¿çš„èµ°å»Šå°½å¤´â”…â”… 
 
-¡¡¡¡µ±ÎÒ»Ø¹ýÉñÀ´×·³öÈ¥Ê±£¬ÒÑ²»¼ûËýÈËÓ°£¬ÐÄÏë¡Ã¡¸ÔÚÕâÐ£Ô°ÖÐ£¬´ÓÀ´Ã»¿´¹ý Ëý£¬µ½µ×ÊÇÄÇÒ»°àµÄ£¿¡¹ 
+ã€€ã€€å½“æˆ‘å›žè¿‡ç¥žæ¥è¿½å‡ºåŽ»æ—¶ï¼Œå·²ä¸è§å¥¹äººå½±ï¼Œå¿ƒæƒ³âˆ¶ã€Œåœ¨è¿™æ ¡å›­ä¸­ï¼Œä»Žæ¥æ²¡çœ‹è¿‡ å¥¹ï¼Œåˆ°åº•æ˜¯é‚£ä¸€ç­çš„ï¼Ÿã€ 
 
-¡¡¡¡ÎÒÍ»È»ÏëÆð¿Ú´üÖÐµÄÄÇ·ÝÃûµ¥£¬ÐÄÖÐ¸¡ÏÖ¸Õ¸ÕµÄÄÇÒ»Ä»£¬¡¸¶ÔÁË£¬ÓÐÁËËü£¬ ÏëÒªÖªµÀËýÊÇÄÇÒ»°àµÄ£¬¼òÖ±Ò×Èç·´ÕÆ£¡¸ã²»ºÃËýÓÐÒ²Ê²Ã´²»¿É¸æÈËµÄÊÂ£¬µ½Ê± ºòÓÖ¿ÉÒÔ¹Ê¼Æ´ÓÊ©©©©©ºÙ©©©©ºÙ©©©©¡¹ 
+ã€€ã€€æˆ‘çªç„¶æƒ³èµ·å£è¢‹ä¸­çš„é‚£ä»½åå•ï¼Œå¿ƒä¸­æµ®çŽ°åˆšåˆšçš„é‚£ä¸€å¹•ï¼Œã€Œå¯¹äº†ï¼Œæœ‰äº†å®ƒï¼Œ æƒ³è¦çŸ¥é“å¥¹æ˜¯é‚£ä¸€ç­çš„ï¼Œç®€ç›´æ˜“å¦‚åæŽŒï¼æžä¸å¥½å¥¹æœ‰ä¹Ÿä»€ä¹ˆä¸å¯å‘Šäººçš„äº‹ï¼Œåˆ°æ—¶ å€™åˆå¯ä»¥æ•…è®¡ä»Žæ–½â”…â”…å˜¿â”…â”…å˜¿â”…â”…ã€ 
 
-¡¡¡¡ÎÒÁ³ÉÏ¶ÙÊ±¸¡ÏÖÐ¦Òâ£¬×ÔÑÔ×ÔÓï¡Ã¡¸ÎÒÕæÊÇ×ßÌÒ»¨ÔË°¡£¡¡¹±ãõçõÇµØ×ß»ØÁË ½ÌÊÒ¡£ 
+ã€€ã€€æˆ‘è„¸ä¸Šé¡¿æ—¶æµ®çŽ°ç¬‘æ„ï¼Œè‡ªè¨€è‡ªè¯­âˆ¶ã€Œæˆ‘çœŸæ˜¯èµ°æ¡ƒèŠ±è¿å•Šï¼ã€ä¾¿è¹’è·šåœ°èµ°å›žäº† æ•™å®¤ã€‚ 
 
-¡¡¡¡¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î¡ï¡î 
+ã€€ã€€â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜†â˜…â˜† 
 
-¡¡¡¡ÕÙ¼¯ÈË¡Ã¡¸ÓÉÓÚ³¬Äñ´ó´óÎ´×ö½øÒ»²½½âÊÍ£¬±¾ÆªµÄÇ°ÈýÆªÓëÓÐÃ» ÓÐµÚÎåÆª£¬È«È»²»µÃ¶øÖª£¬ÆªÄ©¸åÖ»µÃ¿Õ°×¡£¡¹ 
+ã€€ã€€å¬é›†äººâˆ¶ã€Œç”±äºŽè¶…é¸Ÿå¤§å¤§æœªåšè¿›ä¸€æ­¥è§£é‡Šï¼Œæœ¬ç¯‡çš„å‰ä¸‰ç¯‡ä¸Žæœ‰æ²¡ æœ‰ç¬¬äº”ç¯‡ï¼Œå…¨ç„¶ä¸å¾—è€ŒçŸ¥ï¼Œç¯‡æœ«ç¨¿åªå¾—ç©ºç™½ã€‚ã€ 
 
-¡¡¡¡Ó¥Ä§¡Ã¡¸Ð»Ð»³¬Äñ´ó´óµÄºÃÎÄ£¬ÎÒÃÇÏÖÔÚÖ±½Ó»¶Ó­Ê®ÈÕÌ¸µÄµÚ¶þ Ê®ËÄÒ¹?ÒùÊìÃÀ¸¾µÄÈâºø¡£¡¹<!--bodyend-->
+ã€€ã€€é¹°é­”âˆ¶ã€Œè°¢è°¢è¶…é¸Ÿå¤§å¤§çš„å¥½æ–‡ï¼Œæˆ‘ä»¬çŽ°åœ¨ç›´æŽ¥æ¬¢è¿Žåæ—¥è°ˆçš„ç¬¬äºŒ åå››å¤œ?æ·«ç†Ÿç¾Žå¦‡çš„è‚‰å£¶ã€‚ã€<!--bodyend-->
 </pre>
 <div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
 </td></tr>
 	<tr bgcolor='#E6E6DD'>
 		<td height=25>
-			<center>Ï²»¶½Ó´¥Áã¾àÀëÅóÓÑµÄÕâ¸öÌù×ÓµÄ»°£¬[<a href="javascript:void(0)" onclick='dovote(13868091)'><font color=FF0000>ÇëµãÕâÀïÍ¶Æ±¼Ó·ÖÖ§³Ö</font></a>]
+			<center>å–œæ¬¢æŽ¥è§¦é›¶è·ç¦»æœ‹å‹çš„è¿™ä¸ªè´´å­çš„è¯ï¼Œ[<a href="javascript:void(0)" onclick='dovote(13868091)'><font color=FF0000>è¯·ç‚¹è¿™é‡ŒæŠ•ç¥¨åŠ åˆ†æ”¯æŒ</font></a>]
 		</td>
 	</tr>
 	<tr bgcolor='#E6E6DD'><td>
-			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=½Ó´¥Áã¾àÀë">½Ó´¥Áã¾àÀëµÄÁôÔ°²©¿Í</a>]¡¤[<a href="index.php?app=forum&act=userview&username=½Ó´¥Áã¾àÀë" >IDÇ°ÆÚÖ÷Ìù·¢ÑÔ</a>]¡¤[<a href="./index.php">·µ»Ø½û¼ÉÊéÎÝÊ×Ò³</a>]¡¤[<a href="#followups">ËùÓÐ¸úÌù</a>]¡¤[<a href="#postfp">-->>¼Ó¸úÌù</a>]¡¤[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13868091">--ÏòÅóÓÑÍÆ¼ö--</a>]¡¤[<a href="javascript:history.go(-1)">·µ»ØÇ°Ò³</a>]
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=æŽ¥è§¦é›¶è·ç¦»">æŽ¥è§¦é›¶è·ç¦»çš„ç•™å›­åšå®¢</a>]Â·[<a href="index.php?app=forum&act=userview&username=æŽ¥è§¦é›¶è·ç¦»" >IDå‰æœŸä¸»è´´å‘è¨€</a>]Â·[<a href="./index.php">è¿”å›žç¦å¿Œä¹¦å±‹é¦–é¡µ</a>]Â·[<a href="#followups">æ‰€æœ‰è·Ÿè´´</a>]Â·[<a href="#postfp">-->>åŠ è·Ÿè´´</a>]Â·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13868091">--å‘æœ‹å‹æŽ¨è--</a>]Â·[<a href="javascript:history.go(-1)">è¿”å›žå‰é¡µ</a>]
 			</div>
 		</td>
 	</tr>
-	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">Ìù×ÓÄÚÈÝÊÇÍøÓÑ×ÔÐÐÌùÉÏ·ÖÏí£¬Èç¹ûÄúÈÏÎªÆäÖÐÄÚÈÝÎ¥¹æ»òÕßÇÖ·¸ÁËÄúµÄÈ¨Òæ£¬ÇëÓëÎÒÃÇÁªÏµ£¬ÎÒÃÇºËÊµºó»áµÚÒ»Ê±¼äÉ¾³ý¡£</td></tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">è´´å­å†…å®¹æ˜¯ç½‘å‹è‡ªè¡Œè´´ä¸Šåˆ†äº«ï¼Œå¦‚æžœæ‚¨è®¤ä¸ºå…¶ä¸­å†…å®¹è¿è§„æˆ–è€…ä¾µçŠ¯äº†æ‚¨çš„æƒç›Šï¼Œè¯·ä¸Žæˆ‘ä»¬è”ç³»ï¼Œæˆ‘ä»¬æ ¸å®žåŽä¼šç¬¬ä¸€æ—¶é—´åˆ é™¤ã€‚</td></tr>
 </table>
 <center><center>
 <IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
 </center></center>
-<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>ËùÓÐ¸úÌù:</a></p>
-<ul></ul><hr size=1 width=100%><a name="postfp">¼Ó¸úÌù£¨»ý¼«»ØÌùÖ§³Ö·¢ÌùµÄÅóÓÑ£¬²ÅÄÜÐÀÉÍµ½¸ü¶à¾«Æ·ºÃÌù£¡£©</a>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>æ‰€æœ‰è·Ÿè´´:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">åŠ è·Ÿè´´ï¼ˆç§¯æžå›žè´´æ”¯æŒå‘è´´çš„æœ‹å‹ï¼Œæ‰èƒ½æ¬£èµåˆ°æ›´å¤šç²¾å“å¥½è´´ï¼ï¼‰</a>
 <div style="width:530px;float:left;border-right:1px #cccccc dashed">
 <form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
-				<p style='margin-top:5px;margin-bottom:5px;'>ÓÃ»§Ãû:<input type="text" name="username" >ÃÜÂë:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--×¢²áID--]</a></p>
+				<p style='margin-top:5px;margin-bottom:5px;'>ç”¨æˆ·å:<input type="text" name="username" >å¯†ç :<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--æ³¨å†ŒID--]</a></p>
 					<input type="hidden" name="uptid" id="in_uptid" value="13868091" />
 		<input type="hidden" name="rootid" value="13868067" />
 		<input type="hidden" name="fid" value="" />
 		<input type='hidden' id="rename" name='rename' value='0'>
-		<span id="subject_info">±ê¡¡Ìâ:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
-		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">Ëù¼û¼´ËùµÃ|Ô¤ÀÀÄ£Ê½</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">¾É°æ·¢Ìû°ïÖú</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">Ëù¼û¼´ËùµÃ·¢Ìû°ïÖú</a>]<br>
+		<span id="subject_info">æ ‡ã€€é¢˜:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">æ‰€è§å³æ‰€å¾—|é¢„è§ˆæ¨¡å¼</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">æ—§ç‰ˆå‘å¸–å¸®åŠ©</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">æ‰€è§å³æ‰€å¾—å‘å¸–å¸®åŠ©</a>]<br>
 		<p>
 			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
 			<p id="parktools">
-				<img onclick="Cbold()" height=37 alt="´ÖÌå" src="./images/parkeditor/bold.gif"  border=0 alt="½«Ñ¡ÖÐÎÄ×ÖÉèÖÃÎª´ÖÌå">
-				<img onclick="Citalic()" height=37 alt="Ð±Ìå" src="./images/parkeditor/italicize.gif"  alt="½«Ñ¡ÖÐÎÄ×ÖÉèÖÃÎªÇãÐ±ÑùÊ½"   border=0>
-				<img onclick="Cunder()" height=37 alt="ÏÂ»®Ïß" src="./images/parkeditor/underline.gif"  alt="½«Ñ¡ÖÐÎÄ×ÖÌí¼ÓÏÂ»®Ïß"  border=0>
-				<img onclick="Ccenter()" height=37 alt="¾ÓÖÐ" src="./images/parkeditor/center.gif"  alt="½«Ñ¡ÖÐÎÄ×Ö¾ÓÖÐ"  border=0>
-				<a onclick="Cimage()"><u>²åÈëÍ¼Æ¬</u><img height=22 alt="²åÈëÍ¼Æ¬" src="./images/parkeditor/image.gif" width=23 border=0></a>
-				<a onclick="flash()"><u>²åÈëFlash</u><img height=22 alt="²åÈëFlash¶¯»­" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
-				<a onclick="music()"><u>²åÈëÒôÀÖ</u><img src="./images/parkeditor/av.gif" alt="²åÈëÒôÀÖ" width="16" height="16"></a>&nbsp;
-				<a onClick="real()"><u>²åÈëÊÓÆµ</u></a>
+				<img onclick="Cbold()" height=37 alt="ç²—ä½“" src="./images/parkeditor/bold.gif"  border=0 alt="å°†é€‰ä¸­æ–‡å­—è®¾ç½®ä¸ºç²—ä½“">
+				<img onclick="Citalic()" height=37 alt="æ–œä½“" src="./images/parkeditor/italicize.gif"  alt="å°†é€‰ä¸­æ–‡å­—è®¾ç½®ä¸ºå€¾æ–œæ ·å¼"   border=0>
+				<img onclick="Cunder()" height=37 alt="ä¸‹åˆ’çº¿" src="./images/parkeditor/underline.gif"  alt="å°†é€‰ä¸­æ–‡å­—æ·»åŠ ä¸‹åˆ’çº¿"  border=0>
+				<img onclick="Ccenter()" height=37 alt="å±…ä¸­" src="./images/parkeditor/center.gif"  alt="å°†é€‰ä¸­æ–‡å­—å±…ä¸­"  border=0>
+				<a onclick="Cimage()"><u>æ’å…¥å›¾ç‰‡</u><img height=22 alt="æ’å…¥å›¾ç‰‡" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>æ’å…¥Flash</u><img height=22 alt="æ’å…¥FlashåŠ¨ç”»" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>æ’å…¥éŸ³ä¹</u><img src="./images/parkeditor/av.gif" alt="æ’å…¥éŸ³ä¹" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>æ’å…¥è§†é¢‘</u></a>
 			</p>
-			<br><input type="submit" name="submit" value="È·ÈÏ·¢²¼" /> &nbsp;<a href="#replyView" class="replyViewBtn">·¢²¼Ç°Ô¤ÀÀ</a>
+			<br><input type="submit" name="submit" value="ç¡®è®¤å‘å¸ƒ" /> &nbsp;<a href="#replyView" class="replyViewBtn">å‘å¸ƒå‰é¢„è§ˆ</a>
 		</p>
 	</form>
 </div>
 <div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
-<p><b>Ïà¹Ø»°ÌâÍÆ¼ö£º</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=¶þ½ì' target='_blank'>¶þ½ì</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=£²£±¸ö' target='_blank'>£²£±¸ö</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=£²£±' target='_blank'>£²£±</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=£±¸ö' target='_blank'>£±¸ö</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=Òùµ´' target='_blank'>Òùµ´</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=Ñ§Éú' target='_blank'>Ñ§Éú</a>&nbsp;</span></p>
+<p><b>ç›¸å…³è¯é¢˜æŽ¨èï¼š</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=äºŒå±Š' target='_blank'>äºŒå±Š</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ï¼’ï¼‘ä¸ª' target='_blank'>ï¼’ï¼‘ä¸ª</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ï¼’ï¼‘' target='_blank'>ï¼’ï¼‘</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ï¼‘ä¸ª' target='_blank'>ï¼‘ä¸ª</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=æ·«è¡' target='_blank'>æ·«è¡</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=å­¦ç”Ÿ' target='_blank'>å­¦ç”Ÿ</a>&nbsp;</span></p>
 <ul style="">
-	<li><a href="index.php?app=forum&act=threadview&tid=13868090" target="_blank">£¨¶þ½ì£©Ø¥¶þÒ¹ Ò°¼äÖÇ»Ý×ÓÃ¦ÂµµÄÒ»Ìì</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868088" target="_blank">£¨¶þ½ì£©¶þÊ®Ò¹ 6~9</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868087" target="_blank">£¨¶þ½ì£©¶þÊ®Ò¹ Í¨ÁéÊ¦ÊÖ¼Ç ×÷Õß£º£Ù£Ó£Å£¹£¹ 1~5</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868084" target="_blank">£¨¶þ½ì£©Ê®¾ÅÒ¹ ÊµÑé</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868082" target="_blank">£¨¶þ½ì£©Ê®°ËÒ¹ ±©ÂÒ  ¡¡</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868081" target="_blank">£¨¶þ½ì£©Ê®ÁùÒ¹ ÓëÀÇ¹²Îè  ¡¡</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868080" target="_blank">£¨¶þ½ì£©Ê®ËÄÒ¹ ÑªÀá½¿ÍÞ</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868078" target="_blank">£¨¶þ½ì£©Ê®¶þÒ¹ ÃîÊÖÇÎÒöÔµ</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868077" target="_blank">£¨¶þ½ì£©µÚÊ®Ò¹ ¿É°®µÄ¼ÒÍ¥</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868076" target="_blank">£¨¶þ½ì£©µÚ°ËÒ¹ ´Ö×÷</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868075" target="_blank">£¨¶þ½ì£©µÚÁùÒ¹ ´ó¿ªÑÛ½ç</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868074" target="_blank">£¨¶þ½ì£©µÚËÄÒ¹ ºüÉ½ÐÐ</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868073" target="_blank">£¨¶þ½ì£©µÚÈýÒ¹ ÈËÉñÄ§(1-3)</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868072" target="_blank">£¨¶þ½ì£©µÚ¶þÒ¹ ÐÔÃü</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868090" target="_blank">ï¼ˆäºŒå±Šï¼‰å»¿äºŒå¤œ é‡Žé—´æ™ºæƒ å­å¿™ç¢Œçš„ä¸€å¤©</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868088" target="_blank">ï¼ˆäºŒå±Šï¼‰äºŒåå¤œ 6~9</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868087" target="_blank">ï¼ˆäºŒå±Šï¼‰äºŒåå¤œ é€šçµå¸ˆæ‰‹è®° ä½œè€…ï¼šï¼¹ï¼³ï¼¥ï¼™ï¼™ 1~5</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868084" target="_blank">ï¼ˆäºŒå±Šï¼‰åä¹å¤œ å®žéªŒ</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868082" target="_blank">ï¼ˆäºŒå±Šï¼‰åå…«å¤œ æš´ä¹±  ã€€</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868081" target="_blank">ï¼ˆäºŒå±Šï¼‰åå…­å¤œ ä¸Žç‹¼å…±èˆž  ã€€</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868080" target="_blank">ï¼ˆäºŒå±Šï¼‰åå››å¤œ è¡€æ³ªå¨‡å¨ƒ</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868078" target="_blank">ï¼ˆäºŒå±Šï¼‰åäºŒå¤œ å¦™æ‰‹ä¿å§»ç¼˜</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868077" target="_blank">ï¼ˆäºŒå±Šï¼‰ç¬¬åå¤œ å¯çˆ±çš„å®¶åº­</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868076" target="_blank">ï¼ˆäºŒå±Šï¼‰ç¬¬å…«å¤œ ç²—ä½œ</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868075" target="_blank">ï¼ˆäºŒå±Šï¼‰ç¬¬å…­å¤œ å¤§å¼€çœ¼ç•Œ</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868074" target="_blank">ï¼ˆäºŒå±Šï¼‰ç¬¬å››å¤œ ç‹å±±è¡Œ</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868073" target="_blank">ï¼ˆäºŒå±Šï¼‰ç¬¬ä¸‰å¤œ äººç¥žé­”(1-3)</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868072" target="_blank">ï¼ˆäºŒå±Šï¼‰ç¬¬äºŒå¤œ æ€§å‘½</a></li>
 	
 </ul>
 </div>
 <div style="clear:both;">
 </div>
 	</td></tr></table>
-<script src="http://t.6park.com/index.php?mod=showid&username=½Ó´¥Áã¾àÀë" language="javascript" ></script> <br>
+<script src="http://t.6park.com/index.php?mod=showid&username=æŽ¥è§¦é›¶è·ç¦»" language="javascript" ></script> <br>
 
-<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> ¹ã¸æ·þÎñ </a>] [<a href="http://www.6park.com/contact/con2.htm"> ÁªÏµÎÒÃÇ </a>] [<a href="http://www.rich98.com/home/index.php"> ¸öÈËÕÊ»§ </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> °æÖ÷ÉêÇë </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> å¹¿å‘ŠæœåŠ¡ </a>] [<a href="http://www.6park.com/contact/con2.htm"> è”ç³»æˆ‘ä»¬ </a>] [<a href="http://www.rich98.com/home/index.php"> ä¸ªäººå¸æˆ· </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> ç‰ˆä¸»ç”³è¯· </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
 <script language="JavaScript" type="text/javascript">
 	$("input[type='image']").each(function (){
 		if($(this).width()>940){
@@ -687,13 +687,13 @@ Selection = function(input){
 	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
         <table border="0" id='login_form_tab'>
             <tbody><tr>
-                   <td width='45px'>ÓÃ»§Ãû:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+                   <td width='45px'>ç”¨æˆ·å:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
             </tr>
             <tr>
-                    <td>ÃÜÂë:</td><td><input type="password" class="ulogin" name="password"></td>
+                    <td>å¯†ç :</td><td><input type="password" class="ulogin" name="password"></td>
             </tr>
 	    <tr>
-                    <td align="center" colspan="2"><input type="submit" value="µÇÂ¼" name="login"></td>
+                    <td align="center" colspan="2"><input type="submit" value="ç™»å½•" name="login"></td>
             </tr>
 				
 				

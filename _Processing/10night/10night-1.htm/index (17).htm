@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
@@ -7,7 +7,7 @@
 		<!-- 
 		 a{text-transform: none; text-decoration: none;} 
 		 a:hover {color: #FF0000; text-decoration: underline} 
-		 td {  font: 11pt '����'} 
+		 td {  font: 11pt '宋体'} 
 		 -->
 		pre { 
 		
@@ -20,9 +20,9 @@
 			overflow:hidden;
 		} 
 	</STYLE>	
-    <title>��һ�죩��ʮһҹ ���˵ ���ߡã٣ӣţ��� -rich98.com</title>
-	<meta name="Keywords" content="һ��,��ʮһ,��ʮ,ʮһ,���,��˵,����,�٣ӣ�,�٣�,�ӣ�,����,��һ�죩��ʮһҹ ���˵ ���ߡã٣ӣţ���,�Ӵ������,">
-	<meta name="Description" content="��һ�죩��ʮһҹ ���˵ ���ߡã٣ӣţ���">
+    <title>（一届）第十一夜 疯狂传说 作者∶ＹＳＥ９９ -rich98.com</title>
+	<meta name="Keywords" content="一届,第十一,第十,十一,疯狂,传说,作者,ＹＳＥ,ＹＳ,ＳＥ,９９,（一届）第十一夜 疯狂传说 作者∶ＹＳＥ９９,接触零距离,">
+	<meta name="Description" content="（一届）第十一夜 疯狂传说 作者∶ＹＳＥ９９">
   </head>
 <body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
 <div class="body_center" id="head_ad">
@@ -45,7 +45,7 @@
 			editor.sync();
 			editor.remove('textarea[name="content"]');
 			editor = undefined;
-			obj.innerHTML='����������ģʽ|Ԥ��ģʽ';
+			obj.innerHTML='即见即所得模式|预览模式';
 			$("#parktools").show();
 		}
 		else{
@@ -57,7 +57,7 @@
 			width:"470px",
 			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
 			});
-			obj.innerHTML='�ɰ淢��ģʽ';
+			obj.innerHTML='旧版发帖模式';
 		}
 	}
 	
@@ -76,7 +76,7 @@
 		_content = nl2br_js(_content);
 		$("#content").get(0).value = _content;
 		if(_title.length>60){
-			alert("���ⳤ�ȹ��������ⳤ�Ȳ��ܳ���60���ַ���30�����ֳ���");
+			alert("标题长度过长，标题长度不能超过60个字符或30个汉字长度");
 			return false;
 		}
 		else{
@@ -132,7 +132,7 @@
 
 
 
-//��԰�༭��
+//留园编辑器
 Selection = function(input){
 					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
 			};
@@ -168,12 +168,12 @@ Selection = function(input){
 							return {start: 0, end: 0};
 					};
 					o.getText = function(){
-							//��ȡѡ������
+							//获取选中内容
 							var o = this.getCaret();
 							return this.input.value.slice(o.start, o.end);
 					};
 					o.setText = function(text){
-							//����ѡ������
+							//设置选中内容
 							var o = this.getCaret(), i = this.input, s = i.value;
 							i.value = s.slice(0, o.start) + text + s.slice(o.end);
 							this.setCaret(o.start += text.length, o.start);
@@ -186,56 +186,56 @@ Selection = function(input){
 			}
 			var selection;
 			var textId = "content";
-			//���ô���
+			//设置粗体
 			function Cbold(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<b>"+selection.getText()+"</b>";
 				selection.setText(s);
 			}
-			//����б��
+			//设置斜体
 			function Citalic(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<i>"+selection.getText()+"</i>";
 				selection.setText(s);
 			}
-			//�����»���
+			//设置下划线
 			function Cunder(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<u>"+selection.getText()+"</u>";
 				selection.setText(s);
 			}
-			//�����»���
+			//设置下划线
 			function Ccenter(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<center>"+selection.getText()+"</center>";
 				selection.setText(s);
 			}
-			//����ͼƬ
+			//插入图片
 			function Cimage(){
 				selection = new Selection(document.getElementById(textId));
-				var s = prompt("������ͼƬ�������ַ:", selection.getText());
+				var s = prompt("请输入图片的网络地址:", selection.getText());
 				if(s !== null){
 					s = "<img src='"+s+"' />";
 					selection.setText(s);
 				}
 				else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				}
 			}
-			//����flash
+			//插入flash
 			function flash() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("Flash URL ��ַ","http://");      
+				txt=prompt("Flash URL 地址","http://");      
 				if (txt!=null) {
 					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
 					selection.setText(AddTxt);
 					} 
 					else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				} 
 			}
 			function music() {
-				txt=prompt("�����ļ���ַ","http://");      
+				txt=prompt("音乐文件地址","http://");      
 				if (txt!=null) {
 					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
 					selection.setText(AddTxt);
@@ -244,7 +244,7 @@ Selection = function(input){
 
 			function real() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("�������Ӱ�ļ���ַ","http://");  
+				txt=prompt("请输入电影文件地址","http://");  
 				if (txt!=null) {
 					$.get("./public/movie.php", {url:txt,width:0,height:0},
 						function(data){
@@ -252,7 +252,7 @@ Selection = function(input){
 						});        
 				}
 				else if(s == ''){
-					alert('�����������Ϊ��');
+					alert('您输入的内容为空');
 				}
 			}
 			function nl2br_js(text){
@@ -266,126 +266,126 @@ Selection = function(input){
 				if(_status == 1){
 					$("#login_hidden").hide();
 					$("#rename").val('0');
-					$(obj).html('�л������˺�');
+					$(obj).html('切换发帖账号');
 				}
 				else{
 					$("#login_hidden").show();
 					$("#rename").val('1');
-					$(obj).html('ȡ���л�');
+					$(obj).html('取消切换');
 				}
 			}
 			
 </script>
-<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">���ؽ���������ҳ</a>]��[<a href="#followups">���и���</a>]��[<a href="#postfp">�Ӹ���</a>]��[<a href="index.php?app=sys&act=threadmanage&tid=13867104">��������</a>]��[<a href="http://blog.6park.com/search.php?step=2&author=�Ӵ������">�Ӵ���������԰����</a>]��[<a href="http://news.6park.com" target='_blank'>��������</a>]��[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">���w��x</span></a>]</td></tr>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">加跟贴</a>]·[<a href="index.php?app=sys&act=threadmanage&tid=13867104">版主管理</a>]·[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="http://news.6park.com" target='_blank'>分区新闻</a>]·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">繁體閱讀</span></a>]</td></tr>
  <tr bgcolor='#E6E6DD'> <td class="show_content">
- <center><font size=6><b>��һ�죩��ʮһҹ ���˵ ���ߡã٣ӣţ���</b></font></center>
+ <center><font size=6><b>（一届）第十一夜 疯狂传说 作者∶ＹＳＥ９９</b></font></center>
 
-�ͽ���: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=�Ӵ������' target=_blank>�Ӵ������</a>[������������] �� 2013-08-25 18:13 �Ѷ� 966 �� <a href="http://t.6park.com/index.php?mod=�Ӵ������" target=_blank>@�Ӵ������@��΢��</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13867104&tag=��������&title=��һ�죩��ʮһҹ ���˵ ���ߡã٣ӣţ���&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='ת��������΢��'></a><p></p>
-	<p>�ش�: <a href="index.php?app=forum&act=threadview&tid=13867088">��ʮ��̸�� ���ߣ�����</a> �� �Ӵ������ �� 2013-08-25 18:00</p>
+送交者: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=接触零距离' target=_blank>接触零距离</a>[虎威将军★★☆] 于 2013-08-25 18:13 已读 966 次 <a href="http://t.6park.com/index.php?mod=接触零距离" target=_blank>@接触零距离@的微博</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13867104&tag=禁忌书屋&title=（一届）第十一夜 疯狂传说 作者∶ＹＳＥ９９&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='转发本贴到微博'></a><p></p>
+	<p>回答: <a href="index.php?app=forum&act=threadview&tid=13867088">【十日谈】 作者：多人</a> 由 接触零距离 于 2013-08-25 18:00</p>
 	<!--bodybegin-->
 <pre>
-�����ǳ������
+　　登场人物∶
 
-�����������ñȰ��������Ĺ�������춸������϶ಡ�����������ʴȿ���������ͳ������������������ʵ���ϵ�ͳ���ߡ�
+　　阿妮塔∶比奥提王国的公主，由於父王年老多病而摄政，以仁慈开明的手腕统治她的王国，是王国实际上的统治者。
 
-����������櫡ñȰ��������ѹʵ�������ŵ��������Ů�������������������ε��̴ӳ�������������⽻��
+　　娜塔西娅∶比奥提王国已故的宰相米诺拉公爵的女儿，阿妮塔公主最信任的侍从长，精於内政和外交。
 
-���������šñ���Ϊ���Ȱ���֮������ƽ������ıȰ����˾��٣����������һ��һ�丨��������������
+　　奥丽雅∶被称为“比奥提之花”的平民出身的比奥提军司令官，与娜塔西娅一文一武辅佐阿妮塔公主。
 
-��������˹�ñȰ��������ĸ��������յĹ���������а�����������ŵ������������ң�Ϊ�˽�թ�б���
+　　卡洛斯∶比奥提王国的附属国雷普的国王，利用邪恶的异生物兵团的力量发动叛乱，为人狡诈残暴。
 
-������³�ÿ���˹�����ӳ���һ����Ѫ���ı�ͽ��
+　　库鲁∶卡洛斯的卫队长，一个嗜血如狂的暴徒。
 
-����������ͳ�ΰ�¡���﹫���Ĵ󹫣��������������õܣ�����Ȣ������Ϊ�޵���ܾ���һ��������顢Ұ�Ĳ����ļһ
+　　查理∶统治巴隆特里公国的大公，阿妮塔公主的堂弟，曾想娶奥丽雅为妻但遭拒绝，一个冷酷无情、野心勃勃的家伙。
 
-����������
+　　背景∶
 
-��������һ����õ����磬�����ĿƼ������������Ų��棬û��ʱ��Ϳռ�ĸ��û�йŴ����ִ������֣��ǻ�������۳ҵ����硣
+　　这是一个虚幻的世界，昌明的科技和愚昧的迷信并存，没有时间和空间的概念，没有古代和现代的区分，是幻想任意驰骋的世界。
 
-����������˹����һ���ڱȰ�������ͳ���µĴ�½����ǿ��ıȰ����������������������С������ɡ��������ڵ�ͳ�����������İ����������������ĸ��ף����Ϲ�������������ʮ��ǰ�з���һֱ�Դ�����������һ�о�������Ͷ�����������İ����������������İ�����������������ò�������Ҵ������ˣ���½�����ʴ�������ͳ�����Ѿ�������ʮ��ĺ�ƽ����һ���п�Ѫ�ȵ�ս������������˹�İ�����
+　　“塞克斯”是一个在比奥提王国统治下的大陆，由强大的比奥提王国和无数臣服於它的小藩国组成。王国现在的统治者是贤明的阿妮塔公主，公主的父亲－－老国王年老体弱，十年前中风後一直卧床不起，王国的一切军政事务就都交给了年轻的阿妮塔公主。摄政的阿妮塔公主不仅年轻貌美，而且聪明过人，大陆在她仁慈贤明的统治下已经享受了十年的和平，但一场残酷血腥的战争打破了塞克斯的安宁。
 
-���������ⳡս�����ǱȰ�����������գ����յĹ�������˹������ʱ������Ϊ�����ڱȰ���ȹ��˶�ʮ�ꡣ�Ȱ������������ŵ�����������鰢�����������������С�Ͳ�ʱ��¶�����Ǳ��Ե����꣬���ʴȵ�Ů��û������������Ľ��飬���Ƿſ���˹�ع��̳������յ���λ��
+　　发动这场战争的是比奥提的属国雷普，雷普的国王卡洛斯在少年时曾经做为人质在比奥提度过了二十年。比奥提的老宰相米诺拉公爵曾建议阿妮塔公主除掉这个从小就不时显露出豺狼本性的少年，但仁慈的女王没有听从老宰相的建议，而是放卡洛斯回国继承了雷普的王位。
 
-��������˹��λ����湧˳��������ȴ�ӽ��б������������ñ��������ɽ�ֹ�ķ��˵��Ļ�������ʿ������ɱ����ǿ׳���̡�ʧȥ���Ե������
+　　卡洛斯即位後表面恭顺，背地里却加紧招兵买马，并利用被王国法律禁止的非人道的基因技术将士兵改造成变异的强壮残忍、失去理性的异生物。
 
-������������ľ���׼���Ͳ߻�������˹��춺�Ȼ�����˶ԱȰ���������ս����
+　　经过几年的精心准备和策划，卡洛斯终於悍然发动了对比奥提王国的战争。
 
-������ս�����ڣ�����˹�����������������ʤ������ʹ�Ȱ���ľ���ʧȥ�˵ֿ�������������������������ȡ���������Ů�����Ľ��飬�����˾��л����Եĺ˱�����������춰����ŵȽ���ĳ�ɫָ�ӣ���Ťת��ս�֣�ʹս����������ֽ׶Ρ���춱Ȱ��������Ĺ���Զ�ȿ���˹ǿ������ս����������ȥ���Ȱ���������ʤ��ֻ��ʱ�����⡣
+　　在战争初期，卡洛斯的异生物兵团连连获胜，几乎使比奥提的军队失去了抵抗能力。但後来阿妮塔公主听取了娜塔西娅女公爵的建议，采用了具有毁灭性的核爆武器，并由於奥丽雅等将领的出色指挥，逐渐扭转了战局，使战争进入了相持阶段。由於比奥提王国的国力远比卡洛斯强大，所以战争如果相持下去，比奥提获得最终胜利只是时间问题。
 
-������ʱ�Ŀ���˹ͻȻ�������͵����󣬾��ܰ����ŵȽ��켫�����ԣ����������������ǵ����ճ־õ�ս����������½��������ľ޴��ˣ����ǽ����˿���˹����ͣ��ɳ����������ε��̴ӳ����������Ϊʹ��ǰ�����ա�
+　　此时的卡洛斯突然提出了议和的请求，尽管奥丽雅等将领极力反对，但阿妮塔公主考虑到旷日持久的战争给整个大陆人民带来的巨大创伤，还是接受了卡洛斯的求和，派出了她最信任的侍从长娜塔西娅做为使者前往雷普。
 
-�������¾ʹ˷�����������������������������������������������������������������������������<!--bodyend-->
+　　故事就此发生┅┅＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝<!--bodyend-->
 </pre>
 <div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
 </td></tr>
 	<tr bgcolor='#E6E6DD'>
 		<td height=25>
-			<center>ϲ���Ӵ���������ѵ�������ӵĻ���[<a href="javascript:void(0)" onclick='dovote(13867104)'><font color=FF0000>�������ͶƱ�ӷ�֧��</font></a>]
+			<center>喜欢接触零距离朋友的这个贴子的话，[<a href="javascript:void(0)" onclick='dovote(13867104)'><font color=FF0000>请点这里投票加分支持</font></a>]
 		</td>
 	</tr>
 	<tr bgcolor='#E6E6DD'><td>
-			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=�Ӵ������">�Ӵ���������԰����</a>]��[<a href="index.php?app=forum&act=userview&username=�Ӵ������" >IDǰ����������</a>]��[<a href="./index.php">���ؽ���������ҳ</a>]��[<a href="#followups">���и���</a>]��[<a href="#postfp">-->>�Ӹ���</a>]��[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13867104">--�������Ƽ�--</a>]��[<a href="javascript:history.go(-1)">����ǰҳ</a>]
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=接触零距离">接触零距离的留园博客</a>]·[<a href="index.php?app=forum&act=userview&username=接触零距离" >ID前期主贴发言</a>]·[<a href="./index.php">返回禁忌书屋首页</a>]·[<a href="#followups">所有跟贴</a>]·[<a href="#postfp">-->>加跟贴</a>]·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13867104">--向朋友推荐--</a>]·[<a href="javascript:history.go(-1)">返回前页</a>]
 			</div>
 		</td>
 	</tr>
-	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">���������������������Ϸ������������Ϊ��������Υ������ַ�������Ȩ�棬����������ϵ�����Ǻ�ʵ����һʱ��ɾ����</td></tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">贴子内容是网友自行贴上分享，如果您认为其中内容违规或者侵犯了您的权益，请与我们联系，我们核实后会第一时间删除。</td></tr>
 </table>
 <center><center>
 <IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
 </center></center>
-<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>���и���:</a></p>
-<ul></ul><hr size=1 width=100%><a name="postfp">�Ӹ�������������֧�ַ��������ѣ��������͵����ྫƷ��������</a>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>所有跟贴:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">加跟贴（积极回贴支持发贴的朋友，才能欣赏到更多精品好贴！）</a>
 <div style="width:530px;float:left;border-right:1px #cccccc dashed">
 <form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
-				<p style='margin-top:5px;margin-bottom:5px;'>�û���:<input type="text" name="username" >����:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--ע��ID--]</a></p>
+				<p style='margin-top:5px;margin-bottom:5px;'>用户名:<input type="text" name="username" >密码:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--注册ID--]</a></p>
 					<input type="hidden" name="uptid" id="in_uptid" value="13867104" />
 		<input type="hidden" name="rootid" value="13867088" />
 		<input type="hidden" name="fid" value="" />
 		<input type='hidden' id="rename" name='rename' value='0'>
-		<span id="subject_info">�ꡡ��:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
-		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">����������|Ԥ��ģʽ</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">�ɰ淢������</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">���������÷�������</a>]<br>
+		<span id="subject_info">标　题:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">所见即所得|预览模式</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">旧版发帖帮助</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">所见即所得发帖帮助</a>]<br>
 		<p>
 			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
 			<p id="parktools">
-				<img onclick="Cbold()" height=37 alt="����" src="./images/parkeditor/bold.gif"  border=0 alt="��ѡ����������Ϊ����">
-				<img onclick="Citalic()" height=37 alt="б��" src="./images/parkeditor/italicize.gif"  alt="��ѡ����������Ϊ��б��ʽ"   border=0>
-				<img onclick="Cunder()" height=37 alt="�»���" src="./images/parkeditor/underline.gif"  alt="��ѡ�����������»���"  border=0>
-				<img onclick="Ccenter()" height=37 alt="����" src="./images/parkeditor/center.gif"  alt="��ѡ�����־���"  border=0>
-				<a onclick="Cimage()"><u>����ͼƬ</u><img height=22 alt="����ͼƬ" src="./images/parkeditor/image.gif" width=23 border=0></a>
-				<a onclick="flash()"><u>����Flash</u><img height=22 alt="����Flash����" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
-				<a onclick="music()"><u>��������</u><img src="./images/parkeditor/av.gif" alt="��������" width="16" height="16"></a>&nbsp;
-				<a onClick="real()"><u>������Ƶ</u></a>
+				<img onclick="Cbold()" height=37 alt="粗体" src="./images/parkeditor/bold.gif"  border=0 alt="将选中文字设置为粗体">
+				<img onclick="Citalic()" height=37 alt="斜体" src="./images/parkeditor/italicize.gif"  alt="将选中文字设置为倾斜样式"   border=0>
+				<img onclick="Cunder()" height=37 alt="下划线" src="./images/parkeditor/underline.gif"  alt="将选中文字添加下划线"  border=0>
+				<img onclick="Ccenter()" height=37 alt="居中" src="./images/parkeditor/center.gif"  alt="将选中文字居中"  border=0>
+				<a onclick="Cimage()"><u>插入图片</u><img height=22 alt="插入图片" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>插入Flash</u><img height=22 alt="插入Flash动画" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>插入音乐</u><img src="./images/parkeditor/av.gif" alt="插入音乐" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>插入视频</u></a>
 			</p>
-			<br><input type="submit" name="submit" value="ȷ�Ϸ���" /> &nbsp;<a href="#replyView" class="replyViewBtn">����ǰԤ��</a>
+			<br><input type="submit" name="submit" value="确认发布" /> &nbsp;<a href="#replyView" class="replyViewBtn">发布前预览</a>
 		</p>
 	</form>
 </div>
 <div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
-<p><b>��ػ����Ƽ���</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=һ��' target='_blank'>һ��</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=��ʮһ' target='_blank'>��ʮһ</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=��ʮ' target='_blank'>��ʮ</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ʮһ' target='_blank'>ʮһ</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=���' target='_blank'>���</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=��˵' target='_blank'>��˵</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=����' target='_blank'>����</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=�٣ӣ�' target='_blank'>�٣ӣ�</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=�٣�' target='_blank'>�٣�</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=�ӣ�' target='_blank'>�ӣ�</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=����' target='_blank'>����</a>&nbsp;</span></p>
+<p><b>相关话题推荐：</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=一届' target='_blank'>一届</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=第十一' target='_blank'>第十一</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=第十' target='_blank'>第十</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=十一' target='_blank'>十一</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=疯狂' target='_blank'>疯狂</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=传说' target='_blank'>传说</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=作者' target='_blank'>作者</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ＹＳＥ' target='_blank'>ＹＳＥ</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ＹＳ' target='_blank'>ＹＳ</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ＳＥ' target='_blank'>ＳＥ</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=９９' target='_blank'>９９</a>&nbsp;</span></p>
 <ul style="">
-	<li><a href="index.php?app=forum&act=threadview&tid=13867102" target="_blank">��һ�죩��ʮҹ ��ɫ�ɲ�</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867101" target="_blank">��һ�죩�ھ�ҹ ��ħ�Ļ�ǰ��ʽ ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867100" target="_blank">��һ�죩�ھ�ҹ ��ħ�Ļ�ǰ��ʽ ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867099" target="_blank">��һ�죩�ڰ�ҹ ��ҹŮ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867098" target="_blank">��һ�죩����ҹ ������</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867097" target="_blank">��һ�죩����ҹ �������⴫</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867096" target="_blank">��һ�죩����ҹ ��������Ů�� ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867095" target="_blank">��һ�죩����ҹ ��������Ů��  ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867093" target="_blank">��һ�죩����ҹ �ڼұ�ķ</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867092" target="_blank">��һ�죩����ҹ ǿ��Ů������Ա</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867091" target="_blank">��һ�죩�ڶ�ҹ��ͷ��β��ȱ��</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867090" target="_blank">��һ�죩��һҹ����ͥ԰</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867089" target="_blank">ʮ��̸��һ��ǰҹ</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867088" target="_blank">��ʮ��̸�� ���ߣ�����</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867102" target="_blank">（一届）第十夜 秀色可餐</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867101" target="_blank">（一届）第九夜 恶魔的婚前仪式 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867100" target="_blank">（一届）第九夜 恶魔的婚前仪式 上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867099" target="_blank">（一届）第八夜 暗夜女警</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867098" target="_blank">（一届）第七夜 仙人跳</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867097" target="_blank">（一届）第六夜 美肉娘外传</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867096" target="_blank">（一届）第五夜 征服神奇女侠 下</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867095" target="_blank">（一届）第五夜 征服神奇女侠  上</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867093" target="_blank">（一届）第四夜 邻家保姆</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867092" target="_blank">（一届）第三夜 强暴女子银行员</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867091" target="_blank">（一届）第二夜虎头狗尾（缺）</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867090" target="_blank">（一届）第一夜虚像庭园</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867089" target="_blank">十日谈第一届前夜</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867088" target="_blank">【十日谈】 作者：多人</a></li>
 	
 </ul>
 </div>
 <div style="clear:both;">
 </div>
 	</td></tr></table>
-<script src="http://t.6park.com/index.php?mod=showid&username=�Ӵ������" language="javascript" ></script> <br>
+<script src="http://t.6park.com/index.php?mod=showid&username=接触零距离" language="javascript" ></script> <br>
 
-<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> ������ </a>] [<a href="http://www.6park.com/contact/con2.htm"> ��ϵ���� </a>] [<a href="http://www.rich98.com/home/index.php"> �����ʻ� </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> �������� </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> 广告服务 </a>] [<a href="http://www.6park.com/contact/con2.htm"> 联系我们 </a>] [<a href="http://www.rich98.com/home/index.php"> 个人帐户 </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> 版主申请 </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
 <script language="JavaScript" type="text/javascript">
 	$("input[type='image']").each(function (){
 		if($(this).width()>940){
@@ -409,13 +409,13 @@ Selection = function(input){
 	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
         <table border="0" id='login_form_tab'>
             <tbody><tr>
-                   <td width='45px'>�û���:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+                   <td width='45px'>用户名:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
             </tr>
             <tr>
-                    <td>����:</td><td><input type="password" class="ulogin" name="password"></td>
+                    <td>密码:</td><td><input type="password" class="ulogin" name="password"></td>
             </tr>
 	    <tr>
-                    <td align="center" colspan="2"><input type="submit" value="��¼" name="login"></td>
+                    <td align="center" colspan="2"><input type="submit" value="登录" name="login"></td>
             </tr>
 				
 				

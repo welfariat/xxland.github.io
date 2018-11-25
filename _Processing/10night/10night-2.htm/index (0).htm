@@ -1,4 +1,4 @@
-
+ï»¿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
@@ -7,7 +7,7 @@
 		<!-- 
 		 a{text-transform: none; text-decoration: none;} 
 		 a:hover {color: #FF0000; text-decoration: underline} 
-		 td {  font: 11pt 'ËÎÌå'} 
+		 td {  font: 11pt 'å®‹ä½“'} 
 		 -->
 		pre { 
 		
@@ -20,9 +20,9 @@
 			overflow:hidden;
 		} 
 	</STYLE>	
-    <title>£¨¶þ½ì£©µÚÒ»Ò¹ Ä§ÒùÖ®Ñç ×÷Õß£ºÎÞÃû -rich98.com</title>
-	<meta name="Keywords" content="¶þ½ì,µÚÒ»,×÷Õß,ÎÞÃû,£¨¶þ½ì£©µÚÒ»Ò¹ Ä§ÒùÖ®Ñç ×÷Õß£ºÎÞÃû,½Ó´¥Áã¾àÀë,">
-	<meta name="Description" content="£¨¶þ½ì£©µÚÒ»Ò¹ Ä§ÒùÖ®Ñç ×÷Õß£ºÎÞÃû">
+    <title>ï¼ˆäºŒå±Šï¼‰ç¬¬ä¸€å¤œ é­”æ·«ä¹‹å®´ ä½œè€…ï¼šæ— å -rich98.com</title>
+	<meta name="Keywords" content="äºŒå±Š,ç¬¬ä¸€,ä½œè€…,æ— å,ï¼ˆäºŒå±Šï¼‰ç¬¬ä¸€å¤œ é­”æ·«ä¹‹å®´ ä½œè€…ï¼šæ— å,æŽ¥è§¦é›¶è·ç¦»,">
+	<meta name="Description" content="ï¼ˆäºŒå±Šï¼‰ç¬¬ä¸€å¤œ é­”æ·«ä¹‹å®´ ä½œè€…ï¼šæ— å">
   </head>
 <body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' bgcolor='#ffffff'> 
 <div class="body_center" id="head_ad">
@@ -45,7 +45,7 @@
 			editor.sync();
 			editor.remove('textarea[name="content"]');
 			editor = undefined;
-			obj.innerHTML='¼´¼û¼´ËùµÃÄ£Ê½|Ô¤ÀÀÄ£Ê½';
+			obj.innerHTML='å³è§å³æ‰€å¾—æ¨¡å¼|é¢„è§ˆæ¨¡å¼';
 			$("#parktools").show();
 		}
 		else{
@@ -57,7 +57,7 @@
 			width:"470px",
 			items :['source', '|','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline','removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', '|', 'image', 'link']
 			});
-			obj.innerHTML='¾É°æ·¢ÌûÄ£Ê½';
+			obj.innerHTML='æ—§ç‰ˆå‘å¸–æ¨¡å¼';
 		}
 	}
 	
@@ -76,7 +76,7 @@
 		_content = nl2br_js(_content);
 		$("#content").get(0).value = _content;
 		if(_title.length>60){
-			alert("±êÌâ³¤¶È¹ý³¤£¬±êÌâ³¤¶È²»ÄÜ³¬¹ý60¸ö×Ö·û»ò30¸öºº×Ö³¤¶È");
+			alert("æ ‡é¢˜é•¿åº¦è¿‡é•¿ï¼Œæ ‡é¢˜é•¿åº¦ä¸èƒ½è¶…è¿‡60ä¸ªå­—ç¬¦æˆ–30ä¸ªæ±‰å­—é•¿åº¦");
 			return false;
 		}
 		else{
@@ -132,7 +132,7 @@
 
 
 
-//ÁôÔ°±à¼­Æ÷
+//ç•™å›­ç¼–è¾‘å™¨
 Selection = function(input){
 					this.isTA = (this.input = input).nodeName.toLowerCase() == "textarea";
 			};
@@ -168,12 +168,12 @@ Selection = function(input){
 							return {start: 0, end: 0};
 					};
 					o.getText = function(){
-							//»ñÈ¡Ñ¡ÖÐÄÚÈÝ
+							//èŽ·å–é€‰ä¸­å†…å®¹
 							var o = this.getCaret();
 							return this.input.value.slice(o.start, o.end);
 					};
 					o.setText = function(text){
-							//ÉèÖÃÑ¡ÖÐÄÚÈÝ
+							//è®¾ç½®é€‰ä¸­å†…å®¹
 							var o = this.getCaret(), i = this.input, s = i.value;
 							i.value = s.slice(0, o.start) + text + s.slice(o.end);
 							this.setCaret(o.start += text.length, o.start);
@@ -186,56 +186,56 @@ Selection = function(input){
 			}
 			var selection;
 			var textId = "content";
-			//ÉèÖÃ´ÖÌå
+			//è®¾ç½®ç²—ä½“
 			function Cbold(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<b>"+selection.getText()+"</b>";
 				selection.setText(s);
 			}
-			//ÉèÖÃÐ±Ìå
+			//è®¾ç½®æ–œä½“
 			function Citalic(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<i>"+selection.getText()+"</i>";
 				selection.setText(s);
 			}
-			//ÉèÖÃÏÂ»®Ïß
+			//è®¾ç½®ä¸‹åˆ’çº¿
 			function Cunder(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<u>"+selection.getText()+"</u>";
 				selection.setText(s);
 			}
-			//ÉèÖÃÏÂ»®Ïß
+			//è®¾ç½®ä¸‹åˆ’çº¿
 			function Ccenter(){
 				selection = new Selection(document.getElementById(textId));
 				s = "<center>"+selection.getText()+"</center>";
 				selection.setText(s);
 			}
-			//²åÈëÍ¼Æ¬
+			//æ’å…¥å›¾ç‰‡
 			function Cimage(){
 				selection = new Selection(document.getElementById(textId));
-				var s = prompt("ÇëÊäÈëÍ¼Æ¬µÄÍøÂçµØÖ·:", selection.getText());
+				var s = prompt("è¯·è¾“å…¥å›¾ç‰‡çš„ç½‘ç»œåœ°å€:", selection.getText());
 				if(s !== null){
 					s = "<img src='"+s+"' />";
 					selection.setText(s);
 				}
 				else if(s == ''){
-					alert('ÄúÊäÈëµÄÄÚÈÝÎª¿Õ');
+					alert('æ‚¨è¾“å…¥çš„å†…å®¹ä¸ºç©º');
 				}
 			}
-			//²åÈëflash
+			//æ’å…¥flash
 			function flash() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("Flash URL µØÖ·","http://");      
+				txt=prompt("Flash URL åœ°å€","http://");      
 				if (txt!=null) {
 					AddTxt="<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0\" width=\"550\" height=\"375\"><param name=movie value=\""+txt+"\"><param name=quality value=high><embed src=\""+txt+"\" quality=high pluginspage=\"http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" width=\"520\" height=\"400\"></embed> </object> "
 					selection.setText(AddTxt);
 					} 
 					else if(s == ''){
-					alert('ÄúÊäÈëµÄÄÚÈÝÎª¿Õ');
+					alert('æ‚¨è¾“å…¥çš„å†…å®¹ä¸ºç©º');
 				} 
 			}
 			function music() {
-				txt=prompt("ÒôÀÖÎÄ¼þµØÖ·","http://");      
+				txt=prompt("éŸ³ä¹æ–‡ä»¶åœ°å€","http://");      
 				if (txt!=null) {
 					AddTxt="<embed src=\""+txt+"\" width=300 height=40 controls=ControlPanel loop=true autostart=true volume=100 type=audio/x-pn-realaudio-plugin Initfn=load-types mime-types=mime.types >"
 					selection.setText(AddTxt);
@@ -244,7 +244,7 @@ Selection = function(input){
 
 			function real() {
 				selection = new Selection(document.getElementById(textId));
-				txt=prompt("ÇëÊäÈëµçÓ°ÎÄ¼þµØÖ·","http://");  
+				txt=prompt("è¯·è¾“å…¥ç”µå½±æ–‡ä»¶åœ°å€","http://");  
 				if (txt!=null) {
 					$.get("./public/movie.php", {url:txt,width:0,height:0},
 						function(data){
@@ -252,7 +252,7 @@ Selection = function(input){
 						});        
 				}
 				else if(s == ''){
-					alert('ÄúÊäÈëµÄÄÚÈÝÎª¿Õ');
+					alert('æ‚¨è¾“å…¥çš„å†…å®¹ä¸ºç©º');
 				}
 			}
 			function nl2br_js(text){
@@ -266,234 +266,234 @@ Selection = function(input){
 				if(_status == 1){
 					$("#login_hidden").hide();
 					$("#rename").val('0');
-					$(obj).html('ÇÐ»»·¢ÌûÕËºÅ');
+					$(obj).html('åˆ‡æ¢å‘å¸–è´¦å·');
 				}
 				else{
 					$("#login_hidden").show();
 					$("#rename").val('1');
-					$(obj).html('È¡ÏûÇÐ»»');
+					$(obj).html('å–æ¶ˆåˆ‡æ¢');
 				}
 			}
 			
 </script>
-<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">·µ»Ø½û¼ÉÊéÎÝÊ×Ò³</a>]¡¤[<a href="#followups">ËùÓÐ¸úÌù</a>]¡¤[<a href="#postfp">¼Ó¸úÌù</a>]¡¤[<a href="index.php?app=sys&act=threadmanage&tid=13868068">°æÖ÷¹ÜÀí</a>]¡¤[<a href="http://blog.6park.com/search.php?step=2&author=½Ó´¥Áã¾àÀë">½Ó´¥Áã¾àÀëµÄÁôÔ°²©¿Í</a>]¡¤[<a href="http://news.6park.com" target='_blank'>·ÖÇøÐÂÎÅ</a>]¡¤[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">·±ówé†×x</span></a>]</td></tr>
+<table width=1000 border=0 align=center><tr bgcolor='#E6E6DD'><td>[<a href="index.php">è¿”å›žç¦å¿Œä¹¦å±‹é¦–é¡µ</a>]Â·[<a href="#followups">æ‰€æœ‰è·Ÿè´´</a>]Â·[<a href="#postfp">åŠ è·Ÿè´´</a>]Â·[<a href="index.php?app=sys&act=threadmanage&tid=13868068">ç‰ˆä¸»ç®¡ç†</a>]Â·[<a href="http://blog.6park.com/search.php?step=2&author=æŽ¥è§¦é›¶è·ç¦»">æŽ¥è§¦é›¶è·ç¦»çš„ç•™å›­åšå®¢</a>]Â·[<a href="http://news.6park.com" target='_blank'>åˆ†åŒºæ–°é—»</a>]Â·[<A id=StranLink href="" name=StranLink><span style="FONT-SIZE: 14px">ç¹é«”é–±è®€</span></a>]</td></tr>
  <tr bgcolor='#E6E6DD'> <td class="show_content">
- <center><font size=6><b>£¨¶þ½ì£©µÚÒ»Ò¹ Ä§ÒùÖ®Ñç ×÷Õß£ºÎÞÃû</b></font></center>
+ <center><font size=6><b>ï¼ˆäºŒå±Šï¼‰ç¬¬ä¸€å¤œ é­”æ·«ä¹‹å®´ ä½œè€…ï¼šæ— å</b></font></center>
 
-ËÍ½»Õß: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=½Ó´¥Áã¾àÀë' target=_blank>½Ó´¥Áã¾àÀë</a>[»¢Íþ½«¾ü¡ï¡ï¡î] ÓÚ 2013-09-01 18:57 ÒÑ¶Á 453 ´Î <a href="http://t.6park.com/index.php?mod=½Ó´¥Áã¾àÀë" target=_blank>@½Ó´¥Áã¾àÀë@µÄÎ¢²©</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13868068&tag=½û¼ÉÊéÎÝ&title=£¨¶þ½ì£©µÚÒ»Ò¹ Ä§ÒùÖ®Ñç ×÷Õß£ºÎÞÃû&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='×ª·¢±¾Ìùµ½Î¢²©'></a><p></p>
-	<p>»Ø´ð: <a href="index.php?app=forum&act=threadview&tid=13868067">¡¾Ê®ÈÕÌ¸¡¿£¨µÚ¶þ½ì£© ×÷Õß£º¶àÈË</a> ÓÉ ½Ó´¥Áã¾àÀë ÓÚ 2013-09-01 18:53</p>
+é€äº¤è€…: <a href='http://t.6park.com/?mod=pm&code=send&folder=send&to_user=æŽ¥è§¦é›¶è·ç¦»' target=_blank>æŽ¥è§¦é›¶è·ç¦»</a>[è™Žå¨å°†å†›â˜…â˜…â˜†] äºŽ 2013-09-01 18:57 å·²è¯» 453 æ¬¡ <a href="http://t.6park.com/index.php?mod=æŽ¥è§¦é›¶è·ç¦»" target=_blank>@æŽ¥è§¦é›¶è·ç¦»@çš„å¾®åš</a>  <a href="http://t.6park.com/index.php?mod=topic&code=share&url=http%3A%2F%2Fwww.rich98.com%2Fbbs4%2Findex.php%3Fapp%3Dforum%26act%3Dthreadview%26tid%3D13868068&tag=ç¦å¿Œä¹¦å±‹&title=ï¼ˆäºŒå±Šï¼‰ç¬¬ä¸€å¤œ é­”æ·«ä¹‹å®´ ä½œè€…ï¼šæ— å&date=1969-12-31 18:00:00" target=_blank><img height=20 width=20 src="panda.gif" border=0 title='è½¬å‘æœ¬è´´åˆ°å¾®åš'></a><p></p>
+	<p>å›žç­”: <a href="index.php?app=forum&act=threadview&tid=13868067">ã€åæ—¥è°ˆã€‘ï¼ˆç¬¬äºŒå±Šï¼‰ ä½œè€…ï¼šå¤šäºº</a> ç”± æŽ¥è§¦é›¶è·ç¦» äºŽ 2013-09-01 18:53</p>
 	<!--bodybegin-->
 <pre>
-¡@Ðò¡@ÕÂ
+î“†åºî“†ç« 
 
-¡¡
+ã€€
  
-¡¡¡¡×°ÂúçúçêÉ«ÒºÌåµÄ²£Á§±­ÖÐ£¬ÏìÆðÁË±ù¿é»¥ÏàÅö×²µÄÉùÒô¡£ÔÚ»¬ÁïµÄ°×É«×ÀÃæÉÏ£¬ÈÌÊÜ±ùÀäµÄÉíÌåÔç¾ÍòéÇúÆðÀ´ÁË¡£
+ã€€ã€€è£…æ»¡ç¥ç€è‰²æ¶²ä½“çš„çŽ»ç’ƒæ¯ä¸­ï¼Œå“èµ·äº†å†°å—äº’ç›¸ç¢°æ’žçš„å£°éŸ³ã€‚åœ¨æ»‘æºœçš„ç™½è‰²æ¡Œé¢ä¸Šï¼Œå¿å—å†°å†·çš„èº«ä½“æ—©å°±èœ·æ›²èµ·æ¥äº†ã€‚
 
-¡¡¡¡¡¸Ôõ÷áÑù°¡¡¢ÔÚ×À×ÓÉÏµÄ¸Ð¾õÒ²²»´í°É£¡¡¹
+ã€€ã€€ã€Œæ€Žéº½æ ·å•Šã€åœ¨æ¡Œå­ä¸Šçš„æ„Ÿè§‰ä¹Ÿä¸é”™å§ï¼ã€
 
-¡¡¡¡¡¸ÕæÊÇ±§Ç¸¡¢Ö÷ÈË¡£¡¹
+ã€€ã€€ã€ŒçœŸæ˜¯æŠ±æ­‰ã€ä¸»äººã€‚ã€
 
-¡¡¡¡È«ÂãµÄ±»°óÔÚ×À×ÓµÄËÄ½Ç£¬±³ÉÏ¶¥×Å²£Á§±­µÄÂéÓÉÃÀÒ»¶¯Ò²²»¶¯µÄ¿´×Å×øÔÚµØÉÏµÄÎÒ¡£
+ã€€ã€€å…¨è£¸çš„è¢«ç»‘åœ¨æ¡Œå­çš„å››è§’ï¼ŒèƒŒä¸Šé¡¶ç€çŽ»ç’ƒæ¯çš„éº»ç”±ç¾Žä¸€åŠ¨ä¹Ÿä¸åŠ¨çš„çœ‹ç€ååœ¨åœ°ä¸Šçš„æˆ‘ã€‚
 
-¡¡¡¡Ö®Ç°Ó¡ÏóÖÐµÄÂéÓÉÃÀÊÇ¸öÐÐÊÂÄÜÁ¦¸ßÇ¿µÄÅ®Ö°Ô±¡£
+ã€€ã€€ä¹‹å‰å°è±¡ä¸­çš„éº»ç”±ç¾Žæ˜¯ä¸ªè¡Œäº‹èƒ½åŠ›é«˜å¼ºçš„å¥³èŒå‘˜ã€‚
 
-¡¡¡¡ÏÖÔÚ¡¢Ëý°×ÌìÔÚÍèÖ®ÄÚµÄÊÂÎñËùÉÏ°à£¬ÍíÉÏÔò³ÉÎªÎÒ×¨ÊôµÄÅ«Á¥ÊÌ·îÌÖºÃÎÒ¡£
+ã€€ã€€çŽ°åœ¨ã€å¥¹ç™½å¤©åœ¨ä¸¸ä¹‹å†…çš„äº‹åŠ¡æ‰€ä¸Šç­ï¼Œæ™šä¸Šåˆ™æˆä¸ºæˆ‘ä¸“å±žçš„å¥´éš¶ä¾å¥‰è®¨å¥½æˆ‘ã€‚
 
-¡¡¡¡ÎÒÄÃÏÂÂéÓÉÃÀ±³ÉÏµÄ²£Á§±­£¬ºÈÏÂÒ»¿ÚÍþÊ¿¼É£¬Ë²¼ä¡¢×ÆÈÈµÄ¸Ð¾õ´Óºí¼ä»¬Âä£¬È«Éí¶¼Êæ³©ÁËÆðÀ´¡£
+ã€€ã€€æˆ‘æ‹¿ä¸‹éº»ç”±ç¾ŽèƒŒä¸Šçš„çŽ»ç’ƒæ¯ï¼Œå–ä¸‹ä¸€å£å¨å£«å¿Œï¼Œçž¬é—´ã€ç¼çƒ­çš„æ„Ÿè§‰ä»Žå–‰é—´æ»‘è½ï¼Œå…¨èº«éƒ½èˆ’ç•…äº†èµ·æ¥ã€‚
 
-¡¡¡¡½«²£Á§±­·Å»ØÂéÓÉÃÀµÄÑü¼ÊÊ±£¬ÂéÓÉÃÀÏìÆðÅó¶Ì´Ù¿É°®µÄ±¯Ãù£¬²£Á§±­µÄË®µÎÑÓ×ÅÆ¨¹ÉµÄÏßÌõ»¬Âä¡£
+ã€€ã€€å°†çŽ»ç’ƒæ¯æ”¾å›žéº»ç”±ç¾Žçš„è…°é™…æ—¶ï¼Œéº»ç”±ç¾Žå“èµ·æœ‹çŸ­ä¿ƒå¯çˆ±çš„æ‚²é¸£ï¼ŒçŽ»ç’ƒæ¯çš„æ°´æ»´å»¶ç€å±è‚¡çš„çº¿æ¡æ»‘è½ã€‚
 
-¡¡¡¡ÂéÓÉÃÀ»¹ÕæÊÇ¸ö±»Å°´ý¿ñ°¡£¡
+ã€€ã€€éº»ç”±ç¾Žè¿˜çœŸæ˜¯ä¸ªè¢«è™å¾…ç‹‚å•Šï¼
 
-¡¡¡¡µ«Òý·¢ËýÕâÖÖÇ±ÖÊµÄÈË¿ÉÊÇÎÒÄØ©©
+ã€€ã€€ä½†å¼•å‘å¥¹è¿™ç§æ½œè´¨çš„äººå¯æ˜¯æˆ‘å‘¢â”…
 
-¡¡¡¡ÎÒ½«²£Á§±­ÔÚÂéÓÉÃÀÉíÉÏÇá»ºµÄÒÆ¶¯×Å¡¢¸§Åª×Å¡£
+ã€€ã€€æˆ‘å°†çŽ»ç’ƒæ¯åœ¨éº»ç”±ç¾Žèº«ä¸Šè½»ç¼“çš„ç§»åŠ¨ç€ã€æŠšå¼„ç€ã€‚
 
-¡¡¡¡ÂéÓÉÃÀÒ»¶¯Ò²²»¶¯µÄÅ¿ÔÚ×ÀÉÏÈÌÄÍ×Å¡£ÒòÎªËýÖªµÀÔÚÎÒËµ¡¸¿ÉÒÔ¡¹Ö®Ç°ÊÇ¾ø¶Ô²»ÄÜ¶¯µÄ¡£
+ã€€ã€€éº»ç”±ç¾Žä¸€åŠ¨ä¹Ÿä¸åŠ¨çš„è¶´åœ¨æ¡Œä¸Šå¿è€ç€ã€‚å› ä¸ºå¥¹çŸ¥é“åœ¨æˆ‘è¯´ã€Œå¯ä»¥ã€ä¹‹å‰æ˜¯ç»å¯¹ä¸èƒ½åŠ¨çš„ã€‚
 
-¡¡¡¡¡¸°¡°¡£¡¡¹
+ã€€ã€€ã€Œå•Šå•Šï¼ã€
 
-¡¡¡¡ÎÒ½«²£Á§±­ÀïµÄÍþÊ¿¼ÉÈ«µ¹ÔÚÂéÓÉÃÀµÄ±³ÉÏ£¬Ëý·¢³öÁËÏ¸Î¢¶Ì´ÙµÄ±¯ÃùááÈÔÊÇÒ»¶¯Ò²²»¶¯µÄÈÌÄÍ×Å¡£ÏÖÔÚËýÒÑ¾­ÊÇ¸öË³´ÓµÄÈâÅ«ÁË¡£
+ã€€ã€€æˆ‘å°†çŽ»ç’ƒæ¯é‡Œçš„å¨å£«å¿Œå…¨å€’åœ¨éº»ç”±ç¾Žçš„èƒŒä¸Šï¼Œå¥¹å‘å‡ºäº†ç»†å¾®çŸ­ä¿ƒçš„æ‚²é¸£å¾Œä»æ˜¯ä¸€åŠ¨ä¹Ÿä¸åŠ¨çš„å¿è€ç€ã€‚çŽ°åœ¨å¥¹å·²ç»æ˜¯ä¸ªé¡ºä»Žçš„è‚‰å¥´äº†ã€‚
 
-¡¡¡¡ÎÒ´Ó²£Á§±­ÖÐÈ¡³öÒ»¿é±ù¿é£¬´ÓËýµÄ¾±¹Ç¿ªÊ¼ÂýÂýÒÆÏòËýµÄ¹É¼ä£¬³Å¿ªËýµÄÈâ±Ú´Ì¼¤×ÅËýµÄ»¨Èï¡£
+ã€€ã€€æˆ‘ä»ŽçŽ»ç’ƒæ¯ä¸­å–å‡ºä¸€å—å†°å—ï¼Œä»Žå¥¹çš„é¢ˆéª¨å¼€å§‹æ…¢æ…¢ç§»å‘å¥¹çš„è‚¡é—´ï¼Œæ’‘å¼€å¥¹çš„è‚‰å£åˆºæ¿€ç€å¥¹çš„èŠ±è•Šã€‚
 
-¡¡¡¡ÂéÓÉÃÀ´Ó±ÇÇ»ÖÐºô³ö±¯Ãù£¬µ«²¢Ã»ÓÐÌÓ¿ª¡£ÎÒ¼ÓÖØÊÖÖ¸µÄÁ¦Á¿½«Õû¿é±ù¿éËÍ½øËýµÄÈá±ÚÄÚ¡£
+ã€€ã€€éº»ç”±ç¾Žä»Žé¼»è…”ä¸­å‘¼å‡ºæ‚²é¸£ï¼Œä½†å¹¶æ²¡æœ‰é€ƒå¼€ã€‚æˆ‘åŠ é‡æ‰‹æŒ‡çš„åŠ›é‡å°†æ•´å—å†°å—é€è¿›å¥¹çš„æŸ”å£å†…ã€‚
 
-¡¡¡¡ÂéÓÉÃÀÍäÏÂÑü£¬ËýµÄÀïÃæÒ»¶¨ºÜ±ùÀä°É£¡
+ã€€ã€€éº»ç”±ç¾Žå¼¯ä¸‹è…°ï¼Œå¥¹çš„é‡Œé¢ä¸€å®šå¾ˆå†°å†·å§ï¼
 
-¡¡¡¡ÄÇÒ²Ã»°ì·¨Âï¡¢ÒòÎªÎÒÈûÁËÒ»´ó¿é±ù¿éÔÚËýÌåÄÚ£¬¼¼Êõ²»ºÃµÄÈË»¹»áÒò´Ë¶³ÉËÄØ¡£
+ã€€ã€€é‚£ä¹Ÿæ²¡åŠžæ³•å˜›ã€å› ä¸ºæˆ‘å¡žäº†ä¸€å¤§å—å†°å—åœ¨å¥¹ä½“å†…ï¼ŒæŠ€æœ¯ä¸å¥½çš„äººè¿˜ä¼šå› æ­¤å†»ä¼¤å‘¢ã€‚
 
-¡¡¡¡µ«ÂéÓÉÃÀÈÔÊÇ²»·¢Ò»ÓïµÄ³ÐÊÜ×Å¡£
+ã€€ã€€ä½†éº»ç”±ç¾Žä»æ˜¯ä¸å‘ä¸€è¯­çš„æ‰¿å—ç€ã€‚
 
-¡¡¡¡ÔÚÈÌÄÍµÄÍ¬Ê±£¬ÂéÓÉÃÀÖËÈÈµÄÄÇÀïÒ²ÈÜ»¯ÁË±ù¿é£¬ÊªÁÜÁÜµÄµÎÁËÏÂÀ´¡£
+ã€€ã€€åœ¨å¿è€çš„åŒæ—¶ï¼Œéº»ç”±ç¾Žç‚™çƒ­çš„é‚£é‡Œä¹Ÿæº¶åŒ–äº†å†°å—ï¼Œæ¹¿æ·‹æ·‹çš„æ»´äº†ä¸‹æ¥ã€‚
 
-¡¡¡¡ð¤³íµÄË®µÎ£¬ÄÇÊÇÂéÓÉÃÀµÄ°®Òº¡£ÕæÊÇµÄ£¬Ëý¹ûÈ»ÊÇ¸ö±»Å°´ý¿ñ¡£
+ã€€ã€€é»ç¨ çš„æ°´æ»´ï¼Œé‚£æ˜¯éº»ç”±ç¾Žçš„çˆ±æ¶²ã€‚çœŸæ˜¯çš„ï¼Œå¥¹æžœç„¶æ˜¯ä¸ªè¢«è™å¾…ç‹‚ã€‚
 
-¡¡¡¡¡¸ÔÙÕâÑùÏÂÈ¥Äã»á¶³ÉËµÄ£¬È¥°Ñ±ù¿éÄÃ³öÀ´°É¡£¡¹
+ã€€ã€€ã€Œå†è¿™æ ·ä¸‹åŽ»ä½ ä¼šå†»ä¼¤çš„ï¼ŒåŽ»æŠŠå†°å—æ‹¿å‡ºæ¥å§ã€‚ã€
 
-¡¡¡¡¡¸ÊÇµÄ£¬Ö÷ÈË¡£¡¹
+ã€€ã€€ã€Œæ˜¯çš„ï¼Œä¸»äººã€‚ã€
 
-¡¡¡¡ÂéÓÉÃÀ»ðºì×ÅË«¼Õ£¬´ø×Å»ÅÂÒµÄ±ÇÏ¢³¯ÎÒ×ßÁË¹ýÀ´£¬ºÁÎÞÕÚÑÚµÄÉíÌåÈÃÈËÒ»ÀÀÎÞÒÅ¡£
+ã€€ã€€éº»ç”±ç¾Žç«çº¢ç€åŒé¢Šï¼Œå¸¦ç€æ…Œä¹±çš„é¼»æ¯æœæˆ‘èµ°äº†è¿‡æ¥ï¼Œæ¯«æ— é®æŽ©çš„èº«ä½“è®©äººä¸€è§ˆæ— é—ã€‚
 
-¡¡¡¡´ò¿ªºÍÊ½²ÞËùµÄÃÅ£¬ÂéÓÉÃÀ¶×ÔÚÂíÍ°ÉÏ£¬ËùÓÐµÄÃÀ¾°¶¼Ó³ÔÚÎÒÑÛÖÐ¡£¹«Ë¾ÀïµÄÄÇÐ©¼Ò»ïÄÄÓÐ¿ÉÄÜ¿´µ½ÂéÓÉÃÀµÄÕâÖÖ×ËÌ¬¡£
+ã€€ã€€æ‰“å¼€å’Œå¼åŽ•æ‰€çš„é—¨ï¼Œéº»ç”±ç¾Žè¹²åœ¨é©¬æ¡¶ä¸Šï¼Œæ‰€æœ‰çš„ç¾Žæ™¯éƒ½æ˜ åœ¨æˆ‘çœ¼ä¸­ã€‚å…¬å¸é‡Œçš„é‚£äº›å®¶ä¼™å“ªæœ‰å¯èƒ½çœ‹åˆ°éº»ç”±ç¾Žçš„è¿™ç§å§¿æ€ã€‚
 
-¡¡¡¡ÂéÓÉÃÀÂ£¹­Â£³¤·¢£¬ÓÃÁ¦µÄÏë¼·³ö²ÐÁôÔÚÌåÄÚµÄ±ù¿é£¬Ëý°×É«µÄ¼¡·ôÐ¹ÉÏºìÔÎµÄÍ¬Ê±£¬±ù¿éÒ²´ÓËýµÄÄÇÀïÅçÁË³öÀ´£¬µôÔÚµØÌºÉÏ¡£
+ã€€ã€€éº»ç”±ç¾Žæ‹¢å¼“æ‹¢é•¿å‘ï¼Œç”¨åŠ›çš„æƒ³æŒ¤å‡ºæ®‹ç•™åœ¨ä½“å†…çš„å†°å—ï¼Œå¥¹ç™½è‰²çš„è‚Œè‚¤æ³„ä¸Šçº¢æ™•çš„åŒæ—¶ï¼Œå†°å—ä¹Ÿä»Žå¥¹çš„é‚£é‡Œå–·äº†å‡ºæ¥ï¼ŒæŽ‰åœ¨åœ°æ¯¯ä¸Šã€‚
 
-¡¡¡¡ÂéÓÉÃÀ´ø×ÅµÃÒâµÄ±íÇé×ßÏòÎÒ£¬µÈ×ÅÎÒÔÞÃÀËý¡£ÎÒÇáÇáµÄÃþÁËÒ»ÏÂËýµÄÍ·¡£
+ã€€ã€€éº»ç”±ç¾Žå¸¦ç€å¾—æ„çš„è¡¨æƒ…èµ°å‘æˆ‘ï¼Œç­‰ç€æˆ‘èµžç¾Žå¥¹ã€‚æˆ‘è½»è½»çš„æ‘¸äº†ä¸€ä¸‹å¥¹çš„å¤´ã€‚
 
-¡¡¡¡ÂéÓÉÃÀÊÇÄÇÖÖ×ßÔÚ½ÖÉÏ´ó¼Ò¶¼»á»ØÍ·¿´µÄ´óÃÀÅ®£¬¶øÏÖÔÚËýÈ´ÊÇÎÒµÄÈâÅ«£¬Ò²´ÓÎÒÕâÀïµÃµ½Ç°ËùÎ´ÓÐµÄ´Ì¼¤Óë¿ìÀÖ£¬»¹ÓÐÊ²÷á½ÐÈË²»Âú×ãµÄ¡£
+ã€€ã€€éº»ç”±ç¾Žæ˜¯é‚£ç§èµ°åœ¨è¡—ä¸Šå¤§å®¶éƒ½ä¼šå›žå¤´çœ‹çš„å¤§ç¾Žå¥³ï¼Œè€ŒçŽ°åœ¨å¥¹å´æ˜¯æˆ‘çš„è‚‰å¥´ï¼Œä¹Ÿä»Žæˆ‘è¿™é‡Œå¾—åˆ°å‰æ‰€æœªæœ‰çš„åˆºæ¿€ä¸Žå¿«ä¹ï¼Œè¿˜æœ‰ä»€éº½å«äººä¸æ»¡è¶³çš„ã€‚
 
-¡¡¡¡ÊÇ°¡£¬Ö»ÒªÎÒ½«ÊÖÉìÈëËýÌåÄÚ£¬Ëý¾ÍË¬µÄ¸úÊ²÷áÒ»Ñù£¬Ö»ÒªÒ»½øÈëËýÌåÄÚËý¾ÍÊÜ²»ÁËÁË¡£
+ã€€ã€€æ˜¯å•Šï¼Œåªè¦æˆ‘å°†æ‰‹ä¼¸å…¥å¥¹ä½“å†…ï¼Œå¥¹å°±çˆ½çš„è·Ÿä»€éº½ä¸€æ ·ï¼Œåªè¦ä¸€è¿›å…¥å¥¹ä½“å†…å¥¹å°±å—ä¸äº†äº†ã€‚
 
-¡¡¡¡ÕâÊÇÎÒµÄ»µÏ°¹ß¡£
+ã€€ã€€è¿™æ˜¯æˆ‘çš„åä¹ æƒ¯ã€‚
 
-¡¡¡¡µ«ÎÒµÄÁíÒ»Ãæ£¬È´ÓÐÒ»¸ö·Ç³£ÏëµÃµ½µÄ¶«Î÷£¬ÔÚÎÒµÃµ½Ö®Ç°ÊÇ²»»áÉÆ°Õ¸ÊÐÝµÄ£¬ÎÒ¶ÔÄÇ¸ö¶«Î÷¾ÓÈ»ÓÐ×ÅÈç´ËÉîµÄÖ´Äî£¬Á¬ÎÒ×Ô¼ºÒ²¾õµÃ²»¿ÉË¼Òé¡£
+ã€€ã€€ä½†æˆ‘çš„å¦ä¸€é¢ï¼Œå´æœ‰ä¸€ä¸ªéžå¸¸æƒ³å¾—åˆ°çš„ä¸œè¥¿ï¼Œåœ¨æˆ‘å¾—åˆ°ä¹‹å‰æ˜¯ä¸ä¼šå–„ç½¢ç”˜ä¼‘çš„ï¼Œæˆ‘å¯¹é‚£ä¸ªä¸œè¥¿å±…ç„¶æœ‰ç€å¦‚æ­¤æ·±çš„æ‰§å¿µï¼Œè¿žæˆ‘è‡ªå·±ä¹Ÿè§‰å¾—ä¸å¯æ€è®®ã€‚
 
-¡¡¡¡´ÓÐØÇ°µÄ¿Ú´üÖÐÄÃ³öÒ»ÕÅÕÕÆ¬£¬·ÅÔÚ¹ò×øÔÚÎÒÏ¥Ç°µÈÎÒ·¢ºÅÏÂÒ»¸öÃüÁîµÄÂéÓÉÃÀÃæÇ°¡£
+ã€€ã€€ä»Žèƒ¸å‰çš„å£è¢‹ä¸­æ‹¿å‡ºä¸€å¼ ç…§ç‰‡ï¼Œæ”¾åœ¨è·ªååœ¨æˆ‘è†å‰ç­‰æˆ‘å‘å·ä¸‹ä¸€ä¸ªå‘½ä»¤çš„éº»ç”±ç¾Žé¢å‰ã€‚
 
-¡¡¡¡¡¸ÈÏÊ¶Õâ¸öÅ®ÈËÂð£¿¡¹
+ã€€ã€€ã€Œè®¤è¯†è¿™ä¸ªå¥³äººå—ï¼Ÿã€
 
-¡¡¡¡¡¸ÊÇ©©Ô°ÄÚÐ¡½ãÂð£¿¡¹
+ã€€ã€€ã€Œæ˜¯â”…å›­å†…å°å§å—ï¼Ÿã€
 
-¡¡¡¡ÂéÓÉÃÀµÄ±íÇéË²¼ä²»°²ÁËÆðÀ´¡£Ô°ÄÚÇ§º×©©ÏÖÔÚÒò½á»é¶ø¸ÄÐÕÎª¹¬ÎèÇ§º×¡£
+ã€€ã€€éº»ç”±ç¾Žçš„è¡¨æƒ…çž¬é—´ä¸å®‰äº†èµ·æ¥ã€‚å›­å†…åƒé¹¤â”…çŽ°åœ¨å› ç»“å©šè€Œæ”¹å§“ä¸ºå®«èˆžåƒé¹¤ã€‚
 
-¡¡¡¡ÂéÓÉÃÀµ±È»ÈÏµÃ¹¬ÎèÇ§º×£¬µ±³õÁ½ÈËÍ¬Ê±½øÈë¹«Ë¾£¬ÓÖÒòÃÀÃ²Ïàµ±Ò²³£ÈÃÈËÄÃÀ´±È½Ï£¬µ±Ê±»¹ÔÚ¹«Ë¾ÎµÎªÒ»Ê±µÄ»°Ìâ¡£
+ã€€ã€€éº»ç”±ç¾Žå½“ç„¶è®¤å¾—å®«èˆžåƒé¹¤ï¼Œå½“åˆä¸¤äººåŒæ—¶è¿›å…¥å…¬å¸ï¼Œåˆå› ç¾Žè²Œç›¸å½“ä¹Ÿå¸¸è®©äººæ‹¿æ¥æ¯”è¾ƒï¼Œå½“æ—¶è¿˜åœ¨å…¬å¸è”šä¸ºä¸€æ—¶çš„è¯é¢˜ã€‚
 
-¡¡¡¡ÎÒµ±È»Ò²ÖªµÀÕâÐ©ÊÂ£¬´ò´ÓËýÃÇ½ø¹«Ë¾Ê±£¬ÎÒ¾Í·Ç³£×¢ÒâËýÃÇÁË¡£
+ã€€ã€€æˆ‘å½“ç„¶ä¹ŸçŸ¥é“è¿™äº›äº‹ï¼Œæ‰“ä»Žå¥¹ä»¬è¿›å…¬å¸æ—¶ï¼Œæˆ‘å°±éžå¸¸æ³¨æ„å¥¹ä»¬äº†ã€‚
 
-¡¡¡¡¶øÈç½ñÂéÓÉÃÀÒÑ³ÉÁËÎÒµÄÄÒÖÐÎï£¬Ç§º×È´³ÉÎªÎÒÍ¬ÆÚÍ¬ÊÂµÄÆÞ×Ó¡£
+ã€€ã€€è€Œå¦‚ä»Šéº»ç”±ç¾Žå·²æˆäº†æˆ‘çš„å›Šä¸­ç‰©ï¼Œåƒé¹¤å´æˆä¸ºæˆ‘åŒæœŸåŒäº‹çš„å¦»å­ã€‚
 
-¡¡¡¡µ±Ê±£¬ÎÒµÄÈ·Âú×ãì¶ÄÇÖÖÆÕÍ¨µÄÉú»î¡¢Õý³£µÄÉÏÏÂ°à¡¢Ã¿Ìì¹ý×ÅÆ½·²µÄÈÕ×Ó¡£
+ã€€ã€€å½“æ—¶ï¼Œæˆ‘çš„ç¡®æ»¡è¶³æ–¼é‚£ç§æ™®é€šçš„ç”Ÿæ´»ã€æ­£å¸¸çš„ä¸Šä¸‹ç­ã€æ¯å¤©è¿‡ç€å¹³å‡¡çš„æ—¥å­ã€‚
 
-¡¡¡¡µ«Ç§º×È´Ñ¡ÔñÁËºÁÎÞÈÎºÎÄÜÁ¦µÄ¹¬Îè£¬Ò»ÇÐ¶¼´íÂÒÁË¡£
+ã€€ã€€ä½†åƒé¹¤å´é€‰æ‹©äº†æ¯«æ— ä»»ä½•èƒ½åŠ›çš„å®«èˆžï¼Œä¸€åˆ‡éƒ½é”™ä¹±äº†ã€‚
 
-¡¡¡¡ÎÒµÄ¸¸Ç×ÔÚÃØÃÜ½áÉçÀïÊÇ¸öÊýÒ»Êý¶þµÄÊµÁ¦Õß£¬µ«ÎÒÊ®·ÖÌÖÑáÄÇÖÖ±©Á¦µÄ×éÖ¯£¬ËùÒÔ²ÅÑ¡ÔñÁËÕâÖÖÆÕÍ¨µÄ¹¤×÷¡£ËäÈ»Èç´Ë£¬µ«ÄÇ¸öÃ»Â·ÓÃµÄ¹¬Îè¾ÓÈ»ÄÜµÃµ½Ç§º×£¬ÎÒ¿ªÊ¼¶Ô×Ô¼ºµÄÑ¡Ôñ¸Ðµ½ÒÉ»ó¡£
+ã€€ã€€æˆ‘çš„çˆ¶äº²åœ¨ç§˜å¯†ç»“ç¤¾é‡Œæ˜¯ä¸ªæ•°ä¸€æ•°äºŒçš„å®žåŠ›è€…ï¼Œä½†æˆ‘ååˆ†è®¨åŽŒé‚£ç§æš´åŠ›çš„ç»„ç»‡ï¼Œæ‰€ä»¥æ‰é€‰æ‹©äº†è¿™ç§æ™®é€šçš„å·¥ä½œã€‚è™½ç„¶å¦‚æ­¤ï¼Œä½†é‚£ä¸ªæ²¡è·¯ç”¨çš„å®«èˆžå±…ç„¶èƒ½å¾—åˆ°åƒé¹¤ï¼Œæˆ‘å¼€å§‹å¯¹è‡ªå·±çš„é€‰æ‹©æ„Ÿåˆ°ç–‘æƒ‘ã€‚
 
-¡¡¡¡ÏëÒªµÄ¶«Î÷Ã»°ì·¨µÃµ½ÊÖ£¬ÕâÖÖÈËÉú¸ùÄ¾ºÁÎÞÒâÒå¡£ÒòÎªÎÒÊÇÄÇÖÖÏëÒªµÄ¶«Î÷·ÇµÃµ½ÊÖ²»¿ÉµÄÈË£¬¹ûÈ»ÎÒµÄÌåÄÚ»¹ÊÇÁ÷×ÅºÚµÀÊÀ¼ÒµÄÑªÒº°¡£¡
+ã€€ã€€æƒ³è¦çš„ä¸œè¥¿æ²¡åŠžæ³•å¾—åˆ°æ‰‹ï¼Œè¿™ç§äººç”Ÿæ ¹æœ¨æ¯«æ— æ„ä¹‰ã€‚å› ä¸ºæˆ‘æ˜¯é‚£ç§æƒ³è¦çš„ä¸œè¥¿éžå¾—åˆ°æ‰‹ä¸å¯çš„äººï¼Œæžœç„¶æˆ‘çš„ä½“å†…è¿˜æ˜¯æµç€é»‘é“ä¸–å®¶çš„è¡€æ¶²å•Šï¼
 
-¡¡¡¡Ç§º×ºÍ¹¬Îè½á»éµÄÄÇÒ»Ìì£¬ÎÒ±ã´ÇÖ°×ªÈë¸¸Ç×µÄÃØÃÜ½áÉç¡£¿¿×Å¸¸Ç×µÄ¹ØÏµ£¬ÎÒÔÚºÚÉç»áÀïµÄµØÎ»Ñ¸ËÙÅÀÉý¡£
+ã€€ã€€åƒé¹¤å’Œå®«èˆžç»“å©šçš„é‚£ä¸€å¤©ï¼Œæˆ‘ä¾¿è¾žèŒè½¬å…¥çˆ¶äº²çš„ç§˜å¯†ç»“ç¤¾ã€‚é ç€çˆ¶äº²çš„å…³ç³»ï¼Œæˆ‘åœ¨é»‘ç¤¾ä¼šé‡Œçš„åœ°ä½è¿…é€Ÿçˆ¬å‡ã€‚
 
-¡¡¡¡ÎÒ£­ºÚÌïÁú¶þ£­ÏÖÔÚÒÑ¾­ÊÇ¹Ø¶«µØÇøÎÞÈË²»ÖªÎÞÈË²»ÏþµÄ´óÈËÎïÁË¡£
+ã€€ã€€æˆ‘ï¼é»‘ç”°é¾™äºŒï¼çŽ°åœ¨å·²ç»æ˜¯å…³ä¸œåœ°åŒºæ— äººä¸çŸ¥æ— äººä¸æ™“çš„å¤§äººç‰©äº†ã€‚
 
-¡¡¡¡ÏÖÔÚµÄÉú»î£¬ÏëÒªÊ²÷á¾ÍÄÜµÃµ½Ê²÷á¡£
+ã€€ã€€çŽ°åœ¨çš„ç”Ÿæ´»ï¼Œæƒ³è¦ä»€éº½å°±èƒ½å¾—åˆ°ä»€éº½ã€‚
 
-¡¡¡¡ÎÒºÜÂú×ã¡£
+ã€€ã€€æˆ‘å¾ˆæ»¡è¶³ã€‚
 
-¡¡¡¡µ«ÕâÑùµÄÉú»îÖÐ£¬Î¨Ò»»¹Ã»ÓÐµÃµ½µÄ¾ÍÊÇ£­¹¬ÎèÇ§º×¡£
+ã€€ã€€ä½†è¿™æ ·çš„ç”Ÿæ´»ä¸­ï¼Œå”¯ä¸€è¿˜æ²¡æœ‰å¾—åˆ°çš„å°±æ˜¯ï¼å®«èˆžåƒé¹¤ã€‚
 
-¡¡¡¡¡¸ÎÒÏëÒªµ÷½ÌËý¡£¡¹
+ã€€ã€€ã€Œæˆ‘æƒ³è¦è°ƒæ•™å¥¹ã€‚ã€
 
-¡¡¡¡¡¸©©Ô°ÄÚÐ¡½ãÂð£¿¡¹
+ã€€ã€€ã€Œâ”…å›­å†…å°å§å—ï¼Ÿã€
 
-¡¡¡¡ÂéÓÉÃÀµÄÌ¬¶È±íÂ¶ÎÞÒÅ£¬Á³ÉÏÐ´ÂúÁË²»ÔÃ¡£
+ã€€ã€€éº»ç”±ç¾Žçš„æ€åº¦è¡¨éœ²æ— é—ï¼Œè„¸ä¸Šå†™æ»¡äº†ä¸æ‚¦ã€‚
 
-¡¡¡¡ËýÕý²»°²µÄÏë×Å£¬ÒªÊÇÎÒÓÐÐÂµÄÅ«Á¥£¬Ò²Ðí¾Í»á²»ÒªËýÁË¡£
+ã€€ã€€å¥¹æ­£ä¸å®‰çš„æƒ³ç€ï¼Œè¦æ˜¯æˆ‘æœ‰æ–°çš„å¥´éš¶ï¼Œä¹Ÿè®¸å°±ä¼šä¸è¦å¥¹äº†ã€‚
 
-¡¡¡¡¡¸Äã·ÅÐÄ°É¡£ÎÒ²»»áÈÃÄãÏÐ×ÅÎÞÁÄµÄ£¬µÈÎÒµ÷½ÌÍêÇ§º×£¬ÄãÒ²ÓÐ¹¦ÀÍ¡£¡¹
+ã€€ã€€ã€Œä½ æ”¾å¿ƒå§ã€‚æˆ‘ä¸ä¼šè®©ä½ é—²ç€æ— èŠçš„ï¼Œç­‰æˆ‘è°ƒæ•™å®Œåƒé¹¤ï¼Œä½ ä¹Ÿæœ‰åŠŸåŠ³ã€‚ã€
 
-¡¡¡¡¡¸ÕæÊÇÌ«¸ÐÐ»ÄúÁË£¬Ö÷ÈË¡£¡¹
+ã€€ã€€ã€ŒçœŸæ˜¯å¤ªæ„Ÿè°¢æ‚¨äº†ï¼Œä¸»äººã€‚ã€
 
-¡¡¡¡¡¸´ÓÃ÷Ìì¿ªÊ¼Ò»¸öÀñ°Ý£¬Äã¾ÍÏò¹«Ë¾Çë¼Ù¡£¡¹
+ã€€ã€€ã€Œä»Žæ˜Žå¤©å¼€å§‹ä¸€ä¸ªç¤¼æ‹œï¼Œä½ å°±å‘å…¬å¸è¯·å‡ã€‚ã€
 
-¡¡¡¡ÎÒ²Å¸ÕËµÍê»°£¬ÃÅÁå±ãÏìÁËÆðÀ´£¬ÄÇÊÇ·Ç³£¿ñ±©µÄÁåÉù¡£
+ã€€ã€€æˆ‘æ‰åˆšè¯´å®Œè¯ï¼Œé—¨é“ƒä¾¿å“äº†èµ·æ¥ï¼Œé‚£æ˜¯éžå¸¸ç‹‚æš´çš„é“ƒå£°ã€‚
 
-¡¡¡¡Ã÷Ã÷×Ô¼ºÓÐÔ¿³×È´»¹°´ÃÅÁå£¬ÕæÊÇ¸ö¼±ÔêµÄ¼Ò»ï¡£
+ã€€ã€€æ˜Žæ˜Žè‡ªå·±æœ‰é’¥åŒ™å´è¿˜æŒ‰é—¨é“ƒï¼ŒçœŸæ˜¯ä¸ªæ€¥èºçš„å®¶ä¼™ã€‚
 
-¡¡¡¡ÂéÓÉÃÀ»ÅÂÒµÄÕ¾ÁËÆðÀ´£¬È«ÉíÉÏÏÂ½ö×ÅÒ»¼þÐ¡Î§È¹µÄËý£¬Á¢¼´×ßµ½Ðþ¹Ø½«ÃÅ´ò¿ª¡£
+ã€€ã€€éº»ç”±ç¾Žæ…Œä¹±çš„ç«™äº†èµ·æ¥ï¼Œå…¨èº«ä¸Šä¸‹ä»…ç€ä¸€ä»¶å°å›´è£™çš„å¥¹ï¼Œç«‹å³èµ°åˆ°çŽ„å…³å°†é—¨æ‰“å¼€ã€‚
 
-¡¡¡¡ÊÇÎÒµÄÖ÷Òâ£¬ÎÒÔÊÐíÂéÓÉÃÀ´©×ÅÎ§È¹¡£
+ã€€ã€€æ˜¯æˆ‘çš„ä¸»æ„ï¼Œæˆ‘å…è®¸éº»ç”±ç¾Žç©¿ç€å›´è£™ã€‚
 
-¡¡¡¡ÃÅ¿ªÁËÖ®áá£¬·¿ÄÚÏìÆðÁËÊìÏ¤µÄÉùÒô¡£¹âÌý½Å²½Éù¾ÍÖªµÀÊÇË­ÁË£¬ËûÊÇÎÒ¸¸Ç×±¾¼ÒµÄÐÖµÜ£­³à³Ç¡£
+ã€€ã€€é—¨å¼€äº†ä¹‹å¾Œï¼Œæˆ¿å†…å“èµ·äº†ç†Ÿæ‚‰çš„å£°éŸ³ã€‚å…‰å¬è„šæ­¥å£°å°±çŸ¥é“æ˜¯è°äº†ï¼Œä»–æ˜¯æˆ‘çˆ¶äº²æœ¬å®¶çš„å…„å¼Ÿï¼èµ¤åŸŽã€‚
 
-¡¡¡¡¡¸Bon¡¢Äã»¹ÔÚ¸ãÕâÖÖÎÞÁÄµÄ°ÑÏ·°¡¡«¡¹
+ã€€ã€€ã€ŒBonã€ä½ è¿˜åœ¨æžè¿™ç§æ— èŠçš„æŠŠæˆå•Šï½žã€
 
-¡¡¡¡´ÓÎÒÐ¡Ê±ºò¿ªÊ¼£¬³à³Ç¾Í¿´×ÅÎÒ³¤´ó£¬ËûÒ»Ö±¶¼½ÐÎÒ¡¸Bon¡¹¡£ÕæµÄÊÇÓÐµã¶ªÁ³£¬¿ÉÊÇ³à³ÇµÄÈ·ÊÇ¸öÖµµÃÐÅÀµµÄ¼Ò»ï¡£
+ã€€ã€€ä»Žæˆ‘å°æ—¶å€™å¼€å§‹ï¼Œèµ¤åŸŽå°±çœ‹ç€æˆ‘é•¿å¤§ï¼Œä»–ä¸€ç›´éƒ½å«æˆ‘ã€ŒBonã€ã€‚çœŸçš„æ˜¯æœ‰ç‚¹ä¸¢è„¸ï¼Œå¯æ˜¯èµ¤åŸŽçš„ç¡®æ˜¯ä¸ªå€¼å¾—ä¿¡èµ–çš„å®¶ä¼™ã€‚
 
-¡¡¡¡¿öÇÒ³à³Ç»¹ÊÇ×éÖ¯ÖÐ×¨ÃÅ¶Ô¸¶Å®ÈËµÄºÃÊÖ£¬Õâ¶ÔÎÒÒªµ÷½ÌÇ§º×µÄ¼Æ»®ÓÐºÜ´óµÄÖúÒæ¡£
+ã€€ã€€å†µä¸”èµ¤åŸŽè¿˜æ˜¯ç»„ç»‡ä¸­ä¸“é—¨å¯¹ä»˜å¥³äººçš„å¥½æ‰‹ï¼Œè¿™å¯¹æˆ‘è¦è°ƒæ•™åƒé¹¤çš„è®¡åˆ’æœ‰å¾ˆå¤§çš„åŠ©ç›Šã€‚
 
-¡¡¡¡³à³ÇÉíáá»¹Õ¾×ÅÒ»¸ö¸ß´óµÄÄÐÈË£¬ÊÇ¸öÓÐ²èÉ«Í··¢£¬ÃæÂ¶Ð×¹âµÄ¸ß´óÄÐ×Ó¡£
+ã€€ã€€èµ¤åŸŽèº«å¾Œè¿˜ç«™ç€ä¸€ä¸ªé«˜å¤§çš„ç”·äººï¼Œæ˜¯ä¸ªæœ‰èŒ¶è‰²å¤´å‘ï¼Œé¢éœ²å‡¶å…‰çš„é«˜å¤§ç”·å­ã€‚
 
-¡¡¡¡¡¸Õâ¼Ò»ï×î½üÔÚÎÒÊÖµ×ÏÂ×öÊÂ£¬½Ð×ö½üÌÙ¡£ÈëÎÒÃÇÕâÒ»ÐÐÒÔÇ°ÊÇÔÚµØ©©ÊÇÔÚÍæË¤½ÇµÄ¡£¡¹
+ã€€ã€€ã€Œè¿™å®¶ä¼™æœ€è¿‘åœ¨æˆ‘æ‰‹åº•ä¸‹åšäº‹ï¼Œå«åšè¿‘è—¤ã€‚å…¥æˆ‘ä»¬è¿™ä¸€è¡Œä»¥å‰æ˜¯åœ¨åœ°â”…æ˜¯åœ¨çŽ©æ‘”è§’çš„ã€‚ã€
 
-¡¡¡¡³à³ÇËæ±ãµÄ½éÉÜÁËÒ»ÏÂËûÉíááµÄ½üÌÙ¡£ÆäÊµËûËùÒªËµµÄÓ¦¸ÃÊÇ¡¸µØÏÂË¤½ÇÒµ¡¹°É¡£
+ã€€ã€€èµ¤åŸŽéšä¾¿çš„ä»‹ç»äº†ä¸€ä¸‹ä»–èº«å¾Œçš„è¿‘è—¤ã€‚å…¶å®žä»–æ‰€è¦è¯´çš„åº”è¯¥æ˜¯ã€Œåœ°ä¸‹æ‘”è§’ä¸šã€å§ã€‚
 
-¡¡¡¡Õ¾ÔÚÕâÅÓ´óÉíÌåááµÄÂéÓÉÃÀÁ³ÉÏÐ´ÂúÁË²»°²£¬ºÍËýÖ®Ç°µÄ±íÇé½ØÈ»²»Í¬¡£
+ã€€ã€€ç«™åœ¨è¿™åºžå¤§èº«ä½“å¾Œçš„éº»ç”±ç¾Žè„¸ä¸Šå†™æ»¡äº†ä¸å®‰ï¼Œå’Œå¥¹ä¹‹å‰çš„è¡¨æƒ…æˆªç„¶ä¸åŒã€‚
 
-¡¡¡¡¸Õ²ÅÊÇµ£ÐÄ×Ô¼º½«±»ÉáÆúµÄ²»°²±íÇé£¬¶øÏÖÔÚÔòÊÇÎªÁËÇ§º×µÄÎ´À´¶ø¸Ðµ½²»°²¡£µ½µ×Ç§º×»áÊÜµ½Ôõ÷áÑùµÄÅ°´ýÄØ£¿Ò»¶¨ÊÇÏÖÔÚ¹ý×ÅÐÒ¸£¿ìÀÖÉú»îµÄÇ§º×ËùÎÞ·¨ÏëÏñµÄ¿Ö²À°É¡£
+ã€€ã€€åˆšæ‰æ˜¯æ‹…å¿ƒè‡ªå·±å°†è¢«èˆå¼ƒçš„ä¸å®‰è¡¨æƒ…ï¼Œè€ŒçŽ°åœ¨åˆ™æ˜¯ä¸ºäº†åƒé¹¤çš„æœªæ¥è€Œæ„Ÿåˆ°ä¸å®‰ã€‚åˆ°åº•åƒé¹¤ä¼šå—åˆ°æ€Žéº½æ ·çš„è™å¾…å‘¢ï¼Ÿä¸€å®šæ˜¯çŽ°åœ¨è¿‡ç€å¹¸ç¦å¿«ä¹ç”Ÿæ´»çš„åƒé¹¤æ‰€æ— æ³•æƒ³åƒçš„ææ€–å§ã€‚
 
-¡¡¡¡µ«Õâ¸öµØÓü°ãµÄµØ·½È´ÊÇÄÇ÷áÊÊºÏÇ§º×£¬ÎÒ»áÈÃËý¹òÔÚÎÒ¸úÇ°£¬ÈÃËýÁìÂÔµ½ÉíÎªÎÒµÄÅ«Á¥ÊÇ¶à÷áÁîÈËÓäÔÃµÄÊÂ£¬ÎÒÒ»¶¨»áÈÃËýÁ÷ÏÂ¸Ð¶¯µÄÀáË®¡£<!--bodyend-->
+ã€€ã€€ä½†è¿™ä¸ªåœ°ç‹±èˆ¬çš„åœ°æ–¹å´æ˜¯é‚£éº½é€‚åˆåƒé¹¤ï¼Œæˆ‘ä¼šè®©å¥¹è·ªåœ¨æˆ‘è·Ÿå‰ï¼Œè®©å¥¹é¢†ç•¥åˆ°èº«ä¸ºæˆ‘çš„å¥´éš¶æ˜¯å¤šéº½ä»¤äººæ„‰æ‚¦çš„äº‹ï¼Œæˆ‘ä¸€å®šä¼šè®©å¥¹æµä¸‹æ„ŸåŠ¨çš„æ³ªæ°´ã€‚<!--bodyend-->
 </pre>
 <div id="weibozkinfo" style="border:1px solid #EEEEEE;height:30px;width:790px;margin-top:20px;" align='center'></div>
 </td></tr>
 	<tr bgcolor='#E6E6DD'>
 		<td height=25>
-			<center>Ï²»¶½Ó´¥Áã¾àÀëÅóÓÑµÄÕâ¸öÌù×ÓµÄ»°£¬[<a href="javascript:void(0)" onclick='dovote(13868068)'><font color=FF0000>ÇëµãÕâÀïÍ¶Æ±¼Ó·ÖÖ§³Ö</font></a>]
+			<center>å–œæ¬¢æŽ¥è§¦é›¶è·ç¦»æœ‹å‹çš„è¿™ä¸ªè´´å­çš„è¯ï¼Œ[<a href="javascript:void(0)" onclick='dovote(13868068)'><font color=FF0000>è¯·ç‚¹è¿™é‡ŒæŠ•ç¥¨åŠ åˆ†æ”¯æŒ</font></a>]
 		</td>
 	</tr>
 	<tr bgcolor='#E6E6DD'><td>
-			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=½Ó´¥Áã¾àÀë">½Ó´¥Áã¾àÀëµÄÁôÔ°²©¿Í</a>]¡¤[<a href="index.php?app=forum&act=userview&username=½Ó´¥Áã¾àÀë" >IDÇ°ÆÚÖ÷Ìù·¢ÑÔ</a>]¡¤[<a href="./index.php">·µ»Ø½û¼ÉÊéÎÝÊ×Ò³</a>]¡¤[<a href="#followups">ËùÓÐ¸úÌù</a>]¡¤[<a href="#postfp">-->>¼Ó¸úÌù</a>]¡¤[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13868068">--ÏòÅóÓÑÍÆ¼ö--</a>]¡¤[<a href="javascript:history.go(-1)">·µ»ØÇ°Ò³</a>]
+			<div align='center'>[<a href="http://blog.6park.com/search.php?step=2&author=æŽ¥è§¦é›¶è·ç¦»">æŽ¥è§¦é›¶è·ç¦»çš„ç•™å›­åšå®¢</a>]Â·[<a href="index.php?app=forum&act=userview&username=æŽ¥è§¦é›¶è·ç¦»" >IDå‰æœŸä¸»è´´å‘è¨€</a>]Â·[<a href="./index.php">è¿”å›žç¦å¿Œä¹¦å±‹é¦–é¡µ</a>]Â·[<a href="#followups">æ‰€æœ‰è·Ÿè´´</a>]Â·[<a href="#postfp">-->>åŠ è·Ÿè´´</a>]Â·[<a href="mailto:?subject=Recommended Article&body=URL: http://forum.6park.com/bbs/index.php?app=forum&act=threadview&tid=13868068">--å‘æœ‹å‹æŽ¨è--</a>]Â·[<a href="javascript:history.go(-1)">è¿”å›žå‰é¡µ</a>]
 			</div>
 		</td>
 	</tr>
-	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">Ìù×ÓÄÚÈÝÊÇÍøÓÑ×ÔÐÐÌùÉÏ·ÖÏí£¬Èç¹ûÄúÈÏÎªÆäÖÐÄÚÈÝÎ¥¹æ»òÕßÇÖ·¸ÁËÄúµÄÈ¨Òæ£¬ÇëÓëÎÒÃÇÁªÏµ£¬ÎÒÃÇºËÊµºó»áµÚÒ»Ê±¼äÉ¾³ý¡£</td></tr>
+	<tr bgcolor='#E6E6DD'><td align="center" style="font-size:13px;">è´´å­å†…å®¹æ˜¯ç½‘å‹è‡ªè¡Œè´´ä¸Šåˆ†äº«ï¼Œå¦‚æžœæ‚¨è®¤ä¸ºå…¶ä¸­å†…å®¹è¿è§„æˆ–è€…ä¾µçŠ¯äº†æ‚¨çš„æƒç›Šï¼Œè¯·ä¸Žæˆ‘ä»¬è”ç³»ï¼Œæˆ‘ä»¬æ ¸å®žåŽä¼šç¬¬ä¸€æ—¶é—´åˆ é™¤ã€‚</td></tr>
 </table>
 <center><center>
 <IFRAME ID=topicdown FRAMEBORDER=NO SCROLLING=NO name=iframe_topicdown SRC=http://list.6park.com/web/topicdown.html width=1000 height=64></IFRAME>
 </center></center>
-<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>ËùÓÐ¸úÌù:</a></p>
-<ul></ul><hr size=1 width=100%><a name="postfp">¼Ó¸úÌù£¨»ý¼«»ØÌùÖ§³Ö·¢ÌùµÄÅóÓÑ£¬²ÅÄÜÐÀÉÍµ½¸ü¶à¾«Æ·ºÃÌù£¡£©</a>
+<table width=1000 border=0 align=center><tr><td><p style='margin-top:5px;margin-bottom:5px;'><a name="followups" style=''>æ‰€æœ‰è·Ÿè´´:</a></p>
+<ul></ul><hr size=1 width=100%><a name="postfp">åŠ è·Ÿè´´ï¼ˆç§¯æžå›žè´´æ”¯æŒå‘è´´çš„æœ‹å‹ï¼Œæ‰èƒ½æ¬£èµåˆ°æ›´å¤šç²¾å“å¥½è´´ï¼ï¼‰</a>
 <div style="width:530px;float:left;border-right:1px #cccccc dashed">
 <form name="myform" id="myform" method=POST action="index.php?app=forum&act=dopost" onsubmit="return checktitle()">
-				<p style='margin-top:5px;margin-bottom:5px;'>ÓÃ»§Ãû:<input type="text" name="username" >ÃÜÂë:<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--×¢²áID--]</a></p>
+				<p style='margin-top:5px;margin-bottom:5px;'>ç”¨æˆ·å:<input type="text" name="username" >å¯†ç :<input type="password" name="password" ><a href="http://home.6park.com/index.php?app=member&act=reg"  target='_blank'>[--æ³¨å†ŒID--]</a></p>
 					<input type="hidden" name="uptid" id="in_uptid" value="13868068" />
 		<input type="hidden" name="rootid" value="13868067" />
 		<input type="hidden" name="fid" value="" />
 		<input type='hidden' id="rename" name='rename' value='0'>
-		<span id="subject_info">±ê¡¡Ìâ:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
-		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">Ëù¼û¼´ËùµÃ|Ô¤ÀÀÄ£Ê½</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">¾É°æ·¢Ìû°ïÖú</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">Ëù¼û¼´ËùµÃ·¢Ìû°ïÖú</a>]<br>
+		<span id="subject_info">æ ‡ã€€é¢˜:</span><input type="text" name="subject" id="subject" class="post_input" size=53 /></p>
+		<p>[<a href='javascript:void(0)' onclick="changeeditor(this)">æ‰€è§å³æ‰€å¾—|é¢„è§ˆæ¨¡å¼</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('http://area.6park.com/edithelp/edithelp.html')">æ—§ç‰ˆå‘å¸–å¸®åŠ©</a>]&nbsp;&nbsp;[<a href='javascript:void(0)' onclick="window.open('./help/info.html')">æ‰€è§å³æ‰€å¾—å‘å¸–å¸®åŠ©</a>]<br>
 		<p>
 			<textarea style="width:473px;height:300px;" name="content" id="content"></textarea>
 			<p id="parktools">
-				<img onclick="Cbold()" height=37 alt="´ÖÌå" src="./images/parkeditor/bold.gif"  border=0 alt="½«Ñ¡ÖÐÎÄ×ÖÉèÖÃÎª´ÖÌå">
-				<img onclick="Citalic()" height=37 alt="Ð±Ìå" src="./images/parkeditor/italicize.gif"  alt="½«Ñ¡ÖÐÎÄ×ÖÉèÖÃÎªÇãÐ±ÑùÊ½"   border=0>
-				<img onclick="Cunder()" height=37 alt="ÏÂ»®Ïß" src="./images/parkeditor/underline.gif"  alt="½«Ñ¡ÖÐÎÄ×ÖÌí¼ÓÏÂ»®Ïß"  border=0>
-				<img onclick="Ccenter()" height=37 alt="¾ÓÖÐ" src="./images/parkeditor/center.gif"  alt="½«Ñ¡ÖÐÎÄ×Ö¾ÓÖÐ"  border=0>
-				<a onclick="Cimage()"><u>²åÈëÍ¼Æ¬</u><img height=22 alt="²åÈëÍ¼Æ¬" src="./images/parkeditor/image.gif" width=23 border=0></a>
-				<a onclick="flash()"><u>²åÈëFlash</u><img height=22 alt="²åÈëFlash¶¯»­" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
-				<a onclick="music()"><u>²åÈëÒôÀÖ</u><img src="./images/parkeditor/av.gif" alt="²åÈëÒôÀÖ" width="16" height="16"></a>&nbsp;
-				<a onClick="real()"><u>²åÈëÊÓÆµ</u></a>
+				<img onclick="Cbold()" height=37 alt="ç²—ä½“" src="./images/parkeditor/bold.gif"  border=0 alt="å°†é€‰ä¸­æ–‡å­—è®¾ç½®ä¸ºç²—ä½“">
+				<img onclick="Citalic()" height=37 alt="æ–œä½“" src="./images/parkeditor/italicize.gif"  alt="å°†é€‰ä¸­æ–‡å­—è®¾ç½®ä¸ºå€¾æ–œæ ·å¼"   border=0>
+				<img onclick="Cunder()" height=37 alt="ä¸‹åˆ’çº¿" src="./images/parkeditor/underline.gif"  alt="å°†é€‰ä¸­æ–‡å­—æ·»åŠ ä¸‹åˆ’çº¿"  border=0>
+				<img onclick="Ccenter()" height=37 alt="å±…ä¸­" src="./images/parkeditor/center.gif"  alt="å°†é€‰ä¸­æ–‡å­—å±…ä¸­"  border=0>
+				<a onclick="Cimage()"><u>æ’å…¥å›¾ç‰‡</u><img height=22 alt="æ’å…¥å›¾ç‰‡" src="./images/parkeditor/image.gif" width=23 border=0></a>
+				<a onclick="flash()"><u>æ’å…¥Flash</u><img height=22 alt="æ’å…¥FlashåŠ¨ç”»" src="./images/parkeditor/swf.gif" width=23 border=0></a> 
+				<a onclick="music()"><u>æ’å…¥éŸ³ä¹</u><img src="./images/parkeditor/av.gif" alt="æ’å…¥éŸ³ä¹" width="16" height="16"></a>&nbsp;
+				<a onClick="real()"><u>æ’å…¥è§†é¢‘</u></a>
 			</p>
-			<br><input type="submit" name="submit" value="È·ÈÏ·¢²¼" /> &nbsp;<a href="#replyView" class="replyViewBtn">·¢²¼Ç°Ô¤ÀÀ</a>
+			<br><input type="submit" name="submit" value="ç¡®è®¤å‘å¸ƒ" /> &nbsp;<a href="#replyView" class="replyViewBtn">å‘å¸ƒå‰é¢„è§ˆ</a>
 		</p>
 	</form>
 </div>
 <div style="width:380px;float:left;margin-left:5px;font-size:12px;line-height:20px;">
-<p><b>Ïà¹Ø»°ÌâÍÆ¼ö£º</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=¶þ½ì' target='_blank'>¶þ½ì</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=µÚÒ»' target='_blank'>µÚÒ»</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=×÷Õß' target='_blank'>×÷Õß</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ÎÞÃû' target='_blank'>ÎÞÃû</a>&nbsp;</span></p>
+<p><b>ç›¸å…³è¯é¢˜æŽ¨èï¼š</b><span style='color:gray'><a href='index.php?action=search&act=threadsearch&app=forum&keywords=äºŒå±Š' target='_blank'>äºŒå±Š</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ç¬¬ä¸€' target='_blank'>ç¬¬ä¸€</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=ä½œè€…' target='_blank'>ä½œè€…</a>&nbsp;<a href='index.php?action=search&act=threadsearch&app=forum&keywords=æ— å' target='_blank'>æ— å</a>&nbsp;</span></p>
 <ul style="">
-	<li><a href="index.php?app=forum&act=threadview&tid=13868067" target="_blank">¡¾Ê®ÈÕÌ¸¡¿£¨µÚ¶þ½ì£© ×÷Õß£º¶àÈË</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868034" target="_blank">¡¾ÇéÃÔÃÎÐÑ¡¿1~73 ×÷Õß£ºkomojo</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868024" target="_blank">µÚÒ»ÕÂ¡¡´¦Å®³õ»¶</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868022" target="_blank">¡¾ÃÀÀöµÄ´¦Å®¶ùÏ±¡¿£¨1¡«8£©×÷Õß£º²»Ïê</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868015" target="_blank">¡¾ÃÀÉÙ¸¾µÄ°§Ðß-Ü·ÈØ²¿·Ö¡¿£¨21-35£©×÷Õß£º¹ÛÖÚ</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13868001" target="_blank">²»ºÃÒâË¼,×÷Õß£ºSSE</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867998" target="_blank">¡¾ÈË¡­¡­ÊÂ¡­¡­¡¿£¨1-26Íê½á£©×÷Õß£ºcaty112956</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867990" target="_blank">²»ÙN×÷ÕßÃû†á£¿</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867928" target="_blank">¡¶Ê¥¶·Ê¿¡ª¡ªÈËÆÞÅ®¾¯´ºÀöµÄ¹ÊÊÂ¡·£¨È«£©×÷Õß£ºguodong44</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867923" target="_blank">¡¾¿É¶÷µÄÒ»ÈÕÈâºøÐÂÄï¿Î³Ì¡¿(1-11) ×÷Õß£ºCHRISTOPHER1628</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867922" target="_blank">¡¾Õ¬ÄÐµÄÐÔ¸£Éú»î¡¿µÚÒ»¾í£ºÈÈÑª´«Ææ£¨24£©</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867913" target="_blank">¡¾ÊÚÈ¨´úÌù¡¿¡¶Ä³Æ½ÎÑ°¸¡·£¨£±£³£­£±£µ£©×÷Õß£ºÍòËêÍòËêÍòÍòËê</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867881" target="_blank">¡¶°®ÉÏËýÍ¬Ê±°®ÉÏËýµÄÂèÂè¡·£¨1-27£©×÷Õß£ºº«°Ø</a></li>
-	<li><a href="index.php?app=forum&act=threadview&tid=13867872" target="_blank">µÚÒ»²¿¡¡³õÈë¾¯Ì³</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868067" target="_blank">ã€åæ—¥è°ˆã€‘ï¼ˆç¬¬äºŒå±Šï¼‰ ä½œè€…ï¼šå¤šäºº</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868034" target="_blank">ã€æƒ…è¿·æ¢¦é†’ã€‘1~73 ä½œè€…ï¼škomojo</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868024" target="_blank">ç¬¬ä¸€ç« ã€€å¤„å¥³åˆæ¬¢</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868022" target="_blank">ã€ç¾Žä¸½çš„å¤„å¥³å„¿åª³ã€‘ï¼ˆ1ï½ž8ï¼‰ä½œè€…ï¼šä¸è¯¦</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868015" target="_blank">ã€ç¾Žå°‘å¦‡çš„å“€ç¾ž-èŠŠè“‰éƒ¨åˆ†ã€‘ï¼ˆ21-35ï¼‰ä½œè€…ï¼šè§‚ä¼—</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13868001" target="_blank">ä¸å¥½æ„æ€,ä½œè€…ï¼šSSE</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867998" target="_blank">ã€äººâ€¦â€¦äº‹â€¦â€¦ã€‘ï¼ˆ1-26å®Œç»“ï¼‰ä½œè€…ï¼šcaty112956</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867990" target="_blank">ä¸è²¼ä½œè€…åå—Žï¼Ÿ</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867928" target="_blank">ã€Šåœ£æ–—å£«â€”â€”äººå¦»å¥³è­¦æ˜¥ä¸½çš„æ•…äº‹ã€‹ï¼ˆå…¨ï¼‰ä½œè€…ï¼šguodong44</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867923" target="_blank">ã€å¯æ©çš„ä¸€æ—¥è‚‰å£¶æ–°å¨˜è¯¾ç¨‹ã€‘(1-11) ä½œè€…ï¼šCHRISTOPHER1628</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867922" target="_blank">ã€å®…ç”·çš„æ€§ç¦ç”Ÿæ´»ã€‘ç¬¬ä¸€å·ï¼šçƒ­è¡€ä¼ å¥‡ï¼ˆ24ï¼‰</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867913" target="_blank">ã€æŽˆæƒä»£è´´ã€‘ã€ŠæŸå¹³çªæ¡ˆã€‹ï¼ˆï¼‘ï¼“ï¼ï¼‘ï¼•ï¼‰ä½œè€…ï¼šä¸‡å²ä¸‡å²ä¸‡ä¸‡å²</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867881" target="_blank">ã€Šçˆ±ä¸Šå¥¹åŒæ—¶çˆ±ä¸Šå¥¹çš„å¦ˆå¦ˆã€‹ï¼ˆ1-27ï¼‰ä½œè€…ï¼šéŸ©æŸ</a></li>
+	<li><a href="index.php?app=forum&act=threadview&tid=13867872" target="_blank">ç¬¬ä¸€éƒ¨ã€€åˆå…¥è­¦å›</a></li>
 	
 </ul>
 </div>
 <div style="clear:both;">
 </div>
 	</td></tr></table>
-<script src="http://t.6park.com/index.php?mod=showid&username=½Ó´¥Áã¾àÀë" language="javascript" ></script> <br>
+<script src="http://t.6park.com/index.php?mod=showid&username=æŽ¥è§¦é›¶è·ç¦»" language="javascript" ></script> <br>
 
-<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> ¹ã¸æ·þÎñ </a>] [<a href="http://www.6park.com/contact/con2.htm"> ÁªÏµÎÒÃÇ </a>] [<a href="http://www.rich98.com/home/index.php"> ¸öÈËÕÊ»§ </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> °æÖ÷ÉêÇë </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
+<br><span style="FONT-SIZE: 14px"><div align="center"><br><br> [<a href="http://www.6park.com/service.htm"> å¹¿å‘ŠæœåŠ¡ </a>] [<a href="http://www.6park.com/contact/con2.htm"> è”ç³»æˆ‘ä»¬ </a>] [<a href="http://www.rich98.com/home/index.php"> ä¸ªäººå¸æˆ· </a>] [<a href="http://home.6park.com/index.php?app=home&act=askforbz"> ç‰ˆä¸»ç”³è¯· </a>] [<a href="http://www.6park.com/contact/contact.html"> Contact us </a>]</div></span><br><br>
 <script language="JavaScript" type="text/javascript">
 	$("input[type='image']").each(function (){
 		if($(this).width()>940){
@@ -517,13 +517,13 @@ Selection = function(input){
 	<form style="display:inline;" method="post" action="http://home.6park.com/index.php?app=login&amp;act=dologin">
         <table border="0" id='login_form_tab'>
             <tbody><tr>
-                   <td width='45px'>ÓÃ»§Ãû:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
+                   <td width='45px'>ç”¨æˆ·å:</td><td><input type="text" class="ulogin" id="username" name="username"></td>
             </tr>
             <tr>
-                    <td>ÃÜÂë:</td><td><input type="password" class="ulogin" name="password"></td>
+                    <td>å¯†ç :</td><td><input type="password" class="ulogin" name="password"></td>
             </tr>
 	    <tr>
-                    <td align="center" colspan="2"><input type="submit" value="µÇÂ¼" name="login"></td>
+                    <td align="center" colspan="2"><input type="submit" value="ç™»å½•" name="login"></td>
             </tr>
 				
 				
